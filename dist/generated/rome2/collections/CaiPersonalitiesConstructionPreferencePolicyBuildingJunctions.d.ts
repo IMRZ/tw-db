@@ -1,0 +1,18 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { CaiPersonalitiesConstructionPreferencePolicies } from "./CaiPersonalitiesConstructionPreferencePolicies";
+import { BuildingLevels } from "./BuildingLevels";
+export declare namespace CaiPersonalitiesConstructionPreferencePolicyBuildingJunctions {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly _policyKey: string;
+        readonly _buildingKey: string;
+        readonly biasLevel: number;
+        readonly absoluteAdjustment: number;
+        readonly buildingDiscountLimitAdjustment: number;
+        constructor(collectionCache: CollectionCache, values: any);
+        readonly policyKey: CaiPersonalitiesConstructionPreferencePolicies.Entry | undefined;
+        readonly buildingKey: BuildingLevels.Entry | undefined;
+    }
+}
+export default CaiPersonalitiesConstructionPreferencePolicyBuildingJunctions;

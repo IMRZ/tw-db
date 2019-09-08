@@ -1,0 +1,15 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { RandomLocalisationStrings } from "./RandomLocalisationStrings";
+export declare namespace Stats {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly key: string;
+        readonly public: boolean;
+        readonly _label: string;
+        readonly ladder: boolean;
+        constructor(collectionCache: CollectionCache, values: any);
+        readonly label: RandomLocalisationStrings.Entry | undefined;
+    }
+}
+export default Stats;

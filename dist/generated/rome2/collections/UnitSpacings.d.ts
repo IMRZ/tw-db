@@ -1,0 +1,23 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+export declare namespace UnitSpacings {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly key: string;
+        readonly closeFormationSpacingHorizontal: number;
+        readonly closeFormationSpacingVertical: number;
+        readonly closeFormationSpacingVariation: number;
+        readonly looseFormationSpacingHorizontal: number;
+        readonly looseFormationSpacingVertical: number;
+        readonly looseFormationSpacingVariation: number;
+        readonly dismountedCloseFormationSpacingHorizontal: number;
+        readonly dismountedCloseFormationSpacingVertical: number;
+        readonly dismountedCloseFormationSpacingVariation: number;
+        readonly dismountedLooseFormationSpacingHorizontal: number;
+        readonly dismountedLooseFormationSpacingVertical: number;
+        readonly dismountedLooseFormationSpacingVariation: number;
+        readonly horde: boolean;
+        constructor(collectionCache: CollectionCache, values: any);
+    }
+}
+export default UnitSpacings;

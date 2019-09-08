@@ -1,0 +1,50 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { SpecialAbilityPhaseEffectTypes } from "./SpecialAbilityPhaseEffectTypes";
+import { SpecialAbilityStanceEnums } from "./SpecialAbilityStanceEnums";
+import { SpecialAbilityPhaseDisplays } from "./SpecialAbilityPhaseDisplays";
+import { AudioAbilityPhases } from "./AudioAbilityPhases";
+import { BattleVortexCompositeSceneGroups } from "./BattleVortexCompositeSceneGroups";
+export declare namespace SpecialAbilityPhases {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly id: string;
+        readonly duration: number;
+        readonly _effectType: string;
+        readonly _requestedStance: string;
+        readonly unbreakable: boolean;
+        readonly cantMove: boolean;
+        readonly freezeFatigue: boolean;
+        readonly fatigueChangeRatio: number;
+        readonly inspirationAuraRangeMod: number;
+        readonly abilityRechargeChange: number;
+        readonly onscreenName: string;
+        readonly resurrect: boolean;
+        readonly hpChangeFrequency: number;
+        readonly healAmount: number;
+        readonly damageChance: number;
+        readonly damageAmount: number;
+        readonly maxDamagedEntities: number;
+        readonly manaRegenMod: number;
+        readonly manaMaxDepletionMod: number;
+        readonly imbueMagical: boolean;
+        readonly imbueIgnition: number;
+        readonly _imbueContact: string;
+        readonly _phaseDisplay: string;
+        readonly _phaseAudio: string;
+        readonly rechargeTime: number;
+        readonly isHiddenInUi: boolean;
+        readonly affectsAllies: boolean;
+        readonly affectsEnemies: boolean;
+        readonly replenishAmmo: number;
+        readonly _compositeSceneGroup: string;
+        constructor(collectionCache: CollectionCache, values: any);
+        readonly effectType: SpecialAbilityPhaseEffectTypes.Entry | undefined;
+        readonly requestedStance: SpecialAbilityStanceEnums.Entry | undefined;
+        readonly imbueContact: SpecialAbilityPhases.Entry | undefined;
+        readonly phaseDisplay: SpecialAbilityPhaseDisplays.Entry | undefined;
+        readonly phaseAudio: AudioAbilityPhases.Entry | undefined;
+        readonly compositeSceneGroup: BattleVortexCompositeSceneGroups.Entry | undefined;
+    }
+}
+export default SpecialAbilityPhases;

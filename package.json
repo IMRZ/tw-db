@@ -1,0 +1,32 @@
+{
+  "name": "tw-db",
+  "description": "",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "IMRZ",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run generate && rollup -c",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "generate": "ts-node scripts/index.ts"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^3.12.18"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/lodash": "^4.14.136",
+    "@types/node": "^12.6.8",
+    "dotenv": "^8.1.0",
+    "fs-extra": "^8.1.0",
+    "jest": "^24.8.0",
+    "lodash": "^4.17.15",
+    "rollup": "^1.17.0",
+    "rollup-plugin-typescript2": "^0.23.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}

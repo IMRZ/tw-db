@@ -1,0 +1,50 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { Agents } from "./Agents";
+import { Abilities } from "./Abilities";
+import { AgentAttributes } from "./AgentAttributes";
+import { ActionResults } from "./ActionResults";
+import { AudioVoCampaignSpecialAbilityStates } from "./AudioVoCampaignSpecialAbilityStates";
+import { CulturesSubcultures } from "./CulturesSubcultures";
+export declare namespace AgentActions {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly _agent: string;
+        readonly _ability: string;
+        readonly _attribute: string;
+        readonly _criticalFailure: string;
+        readonly _failure: string;
+        readonly _opportuneFailure: string;
+        readonly _success: string;
+        readonly _criticalSuccess: string;
+        readonly _cannotFail: string;
+        readonly localisedActionName: string;
+        readonly localisedActionDescription: string;
+        readonly _targetAttribute: string;
+        readonly criticalSuccessProportionModifier: number;
+        readonly opportuneFailureProportionModifier: number;
+        readonly criticalFailureProportionModifier: number;
+        readonly uniqueId: string;
+        readonly chanceOfSuccess: number;
+        readonly _voiceover: string;
+        readonly iconPath: string;
+        readonly showActionInfoInUi: boolean;
+        readonly _subculture: string;
+        readonly succeedAlwaysOverride: boolean;
+        readonly order: number;
+        constructor(collectionCache: CollectionCache, values: any);
+        readonly agent: Agents.Entry | undefined;
+        readonly ability: Abilities.Entry | undefined;
+        readonly attribute: AgentAttributes.Entry | undefined;
+        readonly criticalFailure: ActionResults.Entry | undefined;
+        readonly failure: ActionResults.Entry | undefined;
+        readonly opportuneFailure: ActionResults.Entry | undefined;
+        readonly success: ActionResults.Entry | undefined;
+        readonly criticalSuccess: ActionResults.Entry | undefined;
+        readonly cannotFail: ActionResults.Entry | undefined;
+        readonly targetAttribute: AgentAttributes.Entry | undefined;
+        readonly voiceover: AudioVoCampaignSpecialAbilityStates.Entry | undefined;
+        readonly subculture: CulturesSubcultures.Entry | undefined;
+    }
+}
+export default AgentActions;

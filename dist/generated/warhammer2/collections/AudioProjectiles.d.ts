@@ -1,0 +1,58 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { AudioGroupSounds } from "./AudioGroupSounds";
+import { AudioRtpcAssignments } from "./AudioRtpcAssignments";
+import { AudioProjectileLimitations } from "./AudioProjectileLimitations";
+export declare namespace AudioProjectiles {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly key: string;
+        readonly maxAttenuationFire: number;
+        readonly maxAttenuationInflight: number;
+        readonly maxAttenuationIdle: number;
+        readonly maxAttenuationImpact: number;
+        readonly inflightMinSpeed: number;
+        readonly fireStartEvent: string;
+        readonly incomingEvent: string;
+        readonly impactEvent: string;
+        readonly impactBloodEvent: string;
+        readonly inflightStartEvent: string;
+        readonly inflightStopEvent: string;
+        readonly hitTreeStartEvent: string;
+        readonly hitTreeStopEvent: string;
+        readonly idleStartEvent: string;
+        readonly idleStopEvent: string;
+        readonly obstructionSize: number;
+        readonly useReverb: boolean;
+        readonly _groupFire: string;
+        readonly _groupInflight: string;
+        readonly _groupImpact: string;
+        readonly incomingTime: number;
+        readonly rtpc1Name: string;
+        readonly _rtpc1Assignment: string;
+        readonly rtpc2Name: string;
+        readonly _rtpc2Assignment: string;
+        readonly switch1: string;
+        readonly fireStopEvent: string;
+        readonly fireOnlyTriggerOncePerVolley: boolean;
+        readonly inflightOnlyTriggerOncePerVolley: boolean;
+        readonly impactOnlyTriggerOncePerVolley: boolean;
+        readonly flybyEvent: string;
+        readonly flybyDistance: number;
+        readonly dopplerRtpcName: string;
+        readonly _limitation: string;
+        readonly limitationScaleFire: number;
+        readonly limitationScaleInflight: number;
+        readonly limitationScaleImpact: number;
+        readonly limitationScaleIncoming: number;
+        readonly limitationScaleFlyby: number;
+        constructor(collectionCache: CollectionCache, values: any);
+        readonly groupFire: AudioGroupSounds.Entry | undefined;
+        readonly groupInflight: AudioGroupSounds.Entry | undefined;
+        readonly groupImpact: AudioGroupSounds.Entry | undefined;
+        readonly rtpc1Assignment: AudioRtpcAssignments.Entry | undefined;
+        readonly rtpc2Assignment: AudioRtpcAssignments.Entry | undefined;
+        readonly limitation: AudioProjectileLimitations.Entry | undefined;
+    }
+}
+export default AudioProjectiles;

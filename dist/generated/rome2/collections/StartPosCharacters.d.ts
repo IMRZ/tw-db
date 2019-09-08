@@ -1,0 +1,53 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { StartPosFactions } from "./StartPosFactions";
+import { Names } from "./Names";
+import { Agents } from "./Agents";
+import { MinisterialPositions } from "./MinisterialPositions";
+import { CampaignCharacterArtSets } from "./CampaignCharacterArtSets";
+import { MainUnits } from "./MainUnits";
+import { PoliticalParties } from "./PoliticalParties";
+import { DeathTypes } from "./DeathTypes";
+export declare namespace StartPosCharacters {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly id: number;
+        readonly _faction: number;
+        readonly _name: number;
+        readonly _surname: number;
+        readonly age: number;
+        readonly _type: string;
+        readonly startx: number;
+        readonly starty: number;
+        readonly _ministerialPosition: string;
+        readonly _portraitId: string;
+        readonly model: string;
+        readonly immortal: boolean;
+        readonly _overrideGeneralUnit: string;
+        readonly isInGeneralsPool: boolean;
+        readonly isMale: boolean;
+        readonly loyalty: number;
+        readonly _clanName: number;
+        readonly _otherName: number;
+        readonly ambition: number;
+        readonly _politicalParty: string;
+        readonly _deathType: string;
+        readonly turnsDiedBeforeStart: string;
+        readonly legacyOverride: string;
+        readonly progenitor: boolean;
+        readonly xp: number;
+        constructor(collectionCache: CollectionCache, values: any);
+        readonly faction: StartPosFactions.Entry | undefined;
+        readonly name: Names.Entry | undefined;
+        readonly surname: Names.Entry | undefined;
+        readonly type: Agents.Entry | undefined;
+        readonly ministerialPosition: MinisterialPositions.Entry | undefined;
+        readonly portraitId: CampaignCharacterArtSets.Entry | undefined;
+        readonly overrideGeneralUnit: MainUnits.Entry | undefined;
+        readonly clanName: Names.Entry | undefined;
+        readonly otherName: Names.Entry | undefined;
+        readonly politicalParty: PoliticalParties.Entry | undefined;
+        readonly deathType: DeathTypes.Entry | undefined;
+    }
+}
+export default StartPosCharacters;

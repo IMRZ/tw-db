@@ -1,0 +1,17 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { StartPosCharacters } from "./StartPosCharacters";
+import { CharacterTraitLevels } from "./CharacterTraitLevels";
+export declare namespace StartPosCharacterTraits {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly id: number;
+        readonly _characterId: number;
+        readonly _traitLevel: string;
+        readonly unique: boolean;
+        constructor(collectionCache: CollectionCache, values: any);
+        readonly characterId: StartPosCharacters.Entry | undefined;
+        readonly traitLevel: CharacterTraitLevels.Entry | undefined;
+    }
+}
+export default StartPosCharacterTraits;
