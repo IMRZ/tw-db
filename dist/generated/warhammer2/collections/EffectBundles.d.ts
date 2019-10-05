@@ -9,6 +9,7 @@ export declare namespace EffectBundles {
         readonly localisedDescription: string;
         readonly uiIcon: string;
         readonly _bundleTarget: string;
+        readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
         readonly bundleTarget: EffectBundleTargets.Entry | undefined;
     }

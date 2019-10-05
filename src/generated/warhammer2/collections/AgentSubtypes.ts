@@ -22,6 +22,7 @@ export namespace AgentSubtypes {
     readonly hasFemaleName: boolean;
     readonly canGainXp: boolean;
     readonly loyaltyIsApplicable: boolean;
+    readonly contributesToAgentCap: boolean;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -38,6 +39,7 @@ export namespace AgentSubtypes {
       this.hasFemaleName = !!values["has_female_name"];
       this.canGainXp = !!values["can_gain_xp"];
       this.loyaltyIsApplicable = !!values["loyalty_is_applicable"];
+      this.contributesToAgentCap = !!values["contributes_to_agent_cap"];
     }
     
     get associatedUnitOverride(): MainUnits.Entry | undefined {

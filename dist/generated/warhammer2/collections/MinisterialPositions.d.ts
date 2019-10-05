@@ -14,6 +14,7 @@ export declare namespace MinisterialPositions {
         readonly maximumTermLength: number;
         readonly maximumConcurrentMinisters: number;
         readonly requiredLoyalty: number;
+        readonly displayEndTurnNotificationsForPost: boolean;
         constructor(collectionCache: CollectionCache, values: any);
     }
 }

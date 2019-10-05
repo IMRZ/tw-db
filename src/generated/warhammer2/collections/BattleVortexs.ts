@@ -39,6 +39,7 @@ export namespace BattleVortexs {
     readonly affectsAllies: boolean;
     readonly launchSourceOffset: number;
     readonly _compositeSceneGroup: string;
+    readonly delayBetweenVortexes: number;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -68,6 +69,7 @@ export namespace BattleVortexs {
       this.affectsAllies = !!values["affects_allies"];
       this.launchSourceOffset = values["launch_source_offset"];
       this._compositeSceneGroup = values["composite_scene_group"];
+      this.delayBetweenVortexes = values["delay_between_vortexes"];
     }
     
     get contactEffect(): SpecialAbilityPhases.Entry | undefined {

@@ -11,6 +11,7 @@ export declare namespace AudioMetadataTagEntityOverrides {
         readonly soundEventBattleStop: string;
         readonly soundEventCampaignStart: string;
         readonly soundEventCampaignStop: string;
+        readonly cullingDistanceOverride: number;
         constructor(collectionCache: CollectionCache, values: any);
         readonly metadataTag: AudioMetadataTags.Entry | undefined;
         readonly entityType: AudioEntityTypes.Entry | undefined;

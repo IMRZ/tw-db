@@ -8,6 +8,7 @@ import { AudioEntityLoopingSounds } from "./AudioEntityLoopingSounds";
 import { AudioEntityActors } from "./AudioEntityActors";
 import { TexcExpansions } from "./TexcExpansions";
 import { AudioSphereOfInfluences } from "./AudioSphereOfInfluences";
+import { AudioEntityFocusPools } from "./AudioEntityFocusPools";
 
 export namespace AudioEntityTypes {
   export const KEY = new CollectionKey("audio_entity_types");
@@ -50,10 +51,12 @@ export namespace AudioEntityTypes {
     readonly maxCameraDistanceForFocus: number;
     readonly minCameraDistanceForFocus: number;
     readonly focusRtpc: string;
-    readonly ignoreMoving: boolean;
-    readonly ignoreMovingOutsideCombat: boolean;
+    readonly considerMoving: boolean;
     readonly _groupIdleShoot: string;
     readonly _groupIdleCombatReady: string;
+    readonly recordId: number;
+    readonly _focusPool: string;
+    readonly minUnitFocusVelocity: number;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -92,10 +95,12 @@ export namespace AudioEntityTypes {
       this.maxCameraDistanceForFocus = values["max_camera_distance_for_focus"];
       this.minCameraDistanceForFocus = values["min_camera_distance_for_focus"];
       this.focusRtpc = values["focus_rtpc"];
-      this.ignoreMoving = !!values["ignore_moving"];
-      this.ignoreMovingOutsideCombat = !!values["ignore_moving_outside_combat"];
+      this.considerMoving = !!values["consider_moving"];
       this._groupIdleShoot = values["group_idle_shoot"];
       this._groupIdleCombatReady = values["group_idle_combat_ready"];
+      this.recordId = values["record_id"];
+      this._focusPool = values["focus_pool"];
+      this.minUnitFocusVelocity = values["min_unit_focus_velocity"];
     }
     
     get idleRandomVocalisation(): AudioEntityRandomVocalisations.Entry | undefined {
@@ -216,6 +221,11 @@ export namespace AudioEntityTypes {
     get groupIdleCombatReady(): AudioGroupSounds.Entry | undefined {
       const collection = <AudioGroupSounds.Entry[]>this.collectionCache.getCollection(AudioGroupSounds.KEY, AudioGroupSounds.Entry);
       return collection.find(entry => entry.name === this._groupIdleCombatReady);
+    }
+    
+    get focusPool(): AudioEntityFocusPools.Entry | undefined {
+      const collection = <AudioEntityFocusPools.Entry[]>this.collectionCache.getCollection(AudioEntityFocusPools.KEY, AudioEntityFocusPools.Entry);
+      return collection.find(entry => entry.poolName === this._focusPool);
     }
   }
 }

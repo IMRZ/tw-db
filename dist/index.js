@@ -21168,6 +21168,7 @@ var EffectBundles$1;
             this.localisedDescription = values["localised_description"];
             this.uiIcon = values["ui_icon"];
             this._bundleTarget = values["bundle_target"];
+            this.priority = values["priority"];
         }
         get bundleTarget() {
             const collection = this.collectionCache.getCollection(EffectBundleTargets$1.KEY, EffectBundleTargets$1.Entry);
@@ -22031,6 +22032,7 @@ var AudioEntityTypeLimitations;
             this.canPlayAtBone = !!values["can_play_at_bone"];
             this.codeUncapped = !!values["code_uncapped"];
             this.containsUniqueEntitySwitches = !!values["contains_unique_entity_switches"];
+            this.allowsFocus = !!values["allows_focus"];
         }
     }
     AudioEntityTypeLimitations.Entry = Entry;
@@ -22118,6 +22120,21 @@ var AudioSphereOfInfluences;
     AudioSphereOfInfluences.Entry = Entry;
 })(AudioSphereOfInfluences || (AudioSphereOfInfluences = {}));
 
+var AudioEntityFocusPools;
+(function (AudioEntityFocusPools) {
+    AudioEntityFocusPools.KEY = new CollectionKey("audio_entity_focus_pools");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.poolName = values["pool_name"];
+            this.poolMinDistance = values["pool_min_distance"];
+            this.poolMaxDistance = values["pool_max_distance"];
+            this.poolId = values["pool_id"];
+        }
+    }
+    AudioEntityFocusPools.Entry = Entry;
+})(AudioEntityFocusPools || (AudioEntityFocusPools = {}));
+
 var AudioEntityTypes;
 (function (AudioEntityTypes) {
     AudioEntityTypes.KEY = new CollectionKey("audio_entity_types");
@@ -22159,10 +22176,12 @@ var AudioEntityTypes;
             this.maxCameraDistanceForFocus = values["max_camera_distance_for_focus"];
             this.minCameraDistanceForFocus = values["min_camera_distance_for_focus"];
             this.focusRtpc = values["focus_rtpc"];
-            this.ignoreMoving = !!values["ignore_moving"];
-            this.ignoreMovingOutsideCombat = !!values["ignore_moving_outside_combat"];
+            this.considerMoving = !!values["consider_moving"];
             this._groupIdleShoot = values["group_idle_shoot"];
             this._groupIdleCombatReady = values["group_idle_combat_ready"];
+            this.recordId = values["record_id"];
+            this._focusPool = values["focus_pool"];
+            this.minUnitFocusVelocity = values["min_unit_focus_velocity"];
         }
         get idleRandomVocalisation() {
             const collection = this.collectionCache.getCollection(AudioEntityRandomVocalisations.KEY, AudioEntityRandomVocalisations.Entry);
@@ -22259,6 +22278,10 @@ var AudioEntityTypes;
         get groupIdleCombatReady() {
             const collection = this.collectionCache.getCollection(AudioGroupSounds.KEY, AudioGroupSounds.Entry);
             return collection.find(entry => entry.name === this._groupIdleCombatReady);
+        }
+        get focusPool() {
+            const collection = this.collectionCache.getCollection(AudioEntityFocusPools.KEY, AudioEntityFocusPools.Entry);
+            return collection.find(entry => entry.poolName === this._focusPool);
         }
     }
     AudioEntityTypes.Entry = Entry;
@@ -23555,6 +23578,22 @@ var ProjectilePenetrationJunctions;
     ProjectilePenetrationJunctions.Entry = Entry;
 })(ProjectilePenetrationJunctions || (ProjectilePenetrationJunctions = {}));
 
+var ProjectilesScalingDamages;
+(function (ProjectilesScalingDamages) {
+    ProjectilesScalingDamages.KEY = new CollectionKey("projectiles_scaling_damages");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.key = values["key"];
+            this.minDamageMultiplier = values["min_damage_multiplier"];
+            this.maxDamageMultiplier = values["max_damage_multiplier"];
+            this.minHealthRatio = values["min_health_ratio"];
+            this.maxHealthRatio = values["max_health_ratio"];
+        }
+    }
+    ProjectilesScalingDamages.Entry = Entry;
+})(ProjectilesScalingDamages || (ProjectilesScalingDamages = {}));
+
 var Projectiles$1;
 (function (Projectiles) {
     Projectiles.KEY = new CollectionKey("projectiles");
@@ -23614,6 +23653,7 @@ var Projectiles$1;
             this.lockOnMultipleFirePos = !!values["lock_on_multiple_fire_pos"];
             this.preferCentralTargets = !!values["prefer_central_targets"];
             this.canDamageVehicles = !!values["can_damage_vehicles"];
+            this._scalingDamage = values["scaling_damage"];
         }
         get shotType() {
             const collection = this.collectionCache.getCollection(ProjectileShotTypeEnum$1.KEY, ProjectileShotTypeEnum$1.Entry);
@@ -23658,6 +23698,10 @@ var Projectiles$1;
         get gameExpansionKey() {
             const collection = this.collectionCache.getCollection(TexcExpansions$1.KEY, TexcExpansions$1.Entry);
             return collection.find(entry => entry.expansion === this._gameExpansionKey);
+        }
+        get scalingDamage() {
+            const collection = this.collectionCache.getCollection(ProjectilesScalingDamages.KEY, ProjectilesScalingDamages.Entry);
+            return collection.find(entry => entry.key === this._scalingDamage);
         }
     }
     Projectiles.Entry = Entry;
@@ -24758,6 +24802,7 @@ var AgentSubtypes;
             this.hasFemaleName = !!values["has_female_name"];
             this.canGainXp = !!values["can_gain_xp"];
             this.loyaltyIsApplicable = !!values["loyalty_is_applicable"];
+            this.contributesToAgentCap = !!values["contributes_to_agent_cap"];
         }
         get associatedUnitOverride() {
             const collection = this.collectionCache.getCollection(MainUnits$1.KEY, MainUnits$1.Entry);
@@ -25391,6 +25436,18 @@ var FactionFeatureForests;
     FactionFeatureForests.Entry = Entry;
 })(FactionFeatureForests || (FactionFeatureForests = {}));
 
+var FactionSets;
+(function (FactionSets) {
+    FactionSets.KEY = new CollectionKey("faction_sets");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.key = values["key"];
+        }
+    }
+    FactionSets.Entry = Entry;
+})(FactionSets || (FactionSets = {}));
+
 var Factions$1;
 (function (Factions) {
     Factions.KEY = new CollectionKey("factions");
@@ -25463,6 +25520,8 @@ var Factions$1;
             this._cdirMilitaryGeneratorConfig = values["cdir_military_generator_config"];
             this._featureForest = values["feature_forest"];
             this._defaultAudioActorVoGroup = values["default_audio_actor_vo_group"];
+            this._neutralReinforcementFactions = values["neutral_reinforcement_factions"];
+            this.canAcceptGiftsWhenDead = !!values["can_accept_gifts_when_dead"];
         }
         get subculture() {
             const collection = this.collectionCache.getCollection(CulturesSubcultures$1.KEY, CulturesSubcultures$1.Entry);
@@ -25527,6 +25586,10 @@ var Factions$1;
         get defaultAudioActorVoGroup() {
             const collection = this.collectionCache.getCollection(AudioVoActorGroups$1.KEY, AudioVoActorGroups$1.Entry);
             return collection.find(entry => entry.name === this._defaultAudioActorVoGroup);
+        }
+        get neutralReinforcementFactions() {
+            const collection = this.collectionCache.getCollection(FactionSets.KEY, FactionSets.Entry);
+            return collection.find(entry => entry.key === this._neutralReinforcementFactions);
         }
     }
     Factions.Entry = Entry;
@@ -25628,6 +25691,52 @@ var AgentSubcultureGenderOverrides$1;
     AgentSubcultureGenderOverrides.Entry = Entry;
 })(AgentSubcultureGenderOverrides$1 || (AgentSubcultureGenderOverrides$1 = {}));
 
+var MissionGroups;
+(function (MissionGroups) {
+    MissionGroups.KEY = new CollectionKey("mission_groups");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.groupKey = values["group_key"];
+        }
+    }
+    MissionGroups.Entry = Entry;
+})(MissionGroups || (MissionGroups = {}));
+
+var AgentSubtypesToMissionGroups;
+(function (AgentSubtypesToMissionGroups) {
+    AgentSubtypesToMissionGroups.KEY = new CollectionKey("agent_subtypes_to_mission_groups");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._agent = values["agent"];
+            this._missionGroup = values["mission_group"];
+            this.videoPath = values["video_path"];
+            this._effectBundle = values["effect_bundle"];
+            this._battleEffect = values["battle_effect"];
+            this.imagePath = values["image_path"];
+            this.order = values["order"];
+        }
+        get agent() {
+            const collection = this.collectionCache.getCollection(AgentSubtypes.KEY, AgentSubtypes.Entry);
+            return collection.find(entry => entry.key === this._agent);
+        }
+        get missionGroup() {
+            const collection = this.collectionCache.getCollection(MissionGroups.KEY, MissionGroups.Entry);
+            return collection.find(entry => entry.groupKey === this._missionGroup);
+        }
+        get effectBundle() {
+            const collection = this.collectionCache.getCollection(EffectBundles$1.KEY, EffectBundles$1.Entry);
+            return collection.find(entry => entry.key === this._effectBundle);
+        }
+        get battleEffect() {
+            const collection = this.collectionCache.getCollection(EffectBundles$1.KEY, EffectBundles$1.Entry);
+            return collection.find(entry => entry.key === this._battleEffect);
+        }
+    }
+    AgentSubtypesToMissionGroups.Entry = Entry;
+})(AgentSubtypesToMissionGroups || (AgentSubtypesToMissionGroups = {}));
+
 var FactionCivilWarSetups$1;
 (function (FactionCivilWarSetups) {
     FactionCivilWarSetups.KEY = new CollectionKey("faction_civil_war_setups");
@@ -25680,36 +25789,17 @@ var AgentSubtypeCivilWarFactionOverrides;
     AgentSubtypeCivilWarFactionOverrides.Entry = Entry;
 })(AgentSubtypeCivilWarFactionOverrides || (AgentSubtypeCivilWarFactionOverrides = {}));
 
-var SlotTemplates$1;
-(function (SlotTemplates) {
-    SlotTemplates.KEY = new CollectionKey("slot_templates");
+var CampaignGroups;
+(function (CampaignGroups) {
+    CampaignGroups.KEY = new CollectionKey("campaign_groups");
     class Entry {
         constructor(collectionCache, values) {
             this.collectionCache = collectionCache;
-            this.key = values["key"];
-            this._resource = values["resource"];
-        }
-        get resource() {
-            const collection = this.collectionCache.getCollection(Resources$1.KEY, Resources$1.Entry);
-            return collection.find(entry => entry.key === this._resource);
+            this.id = values["id"];
         }
     }
-    SlotTemplates.Entry = Entry;
-})(SlotTemplates$1 || (SlotTemplates$1 = {}));
-
-var SlotTypes$1;
-(function (SlotTypes) {
-    SlotTypes.KEY = new CollectionKey("slot_types");
-    class Entry {
-        constructor(collectionCache, values) {
-            this.collectionCache = collectionCache;
-            this.key = values["key"];
-            this.canDestroy = !!values["can_destroy"];
-            this.canConvert = !!values["can_convert"];
-        }
-    }
-    SlotTypes.Entry = Entry;
-})(SlotTypes$1 || (SlotTypes$1 = {}));
+    CampaignGroups.Entry = Entry;
+})(CampaignGroups || (CampaignGroups = {}));
 
 var MilitaryForceTypes;
 (function (MilitaryForceTypes) {
@@ -25718,24 +25808,6 @@ var MilitaryForceTypes;
         constructor(collectionCache, values) {
             this.collectionCache = collectionCache;
             this.key = values["key"];
-            this._primarySlotTemplate = values["primary_slot_template"];
-            this._secondarySlotTemplate = values["secondary_slot_template"];
-            this._primarySlotType = values["primary_slot_type"];
-            this.secondarySlotType = values["secondary_slot_type"];
-            this.generalCanBeReplaced = !!values["general_can_be_replaced"];
-            this.spawnOnSea = !!values["spawn_on_sea"];
-        }
-        get primarySlotTemplate() {
-            const collection = this.collectionCache.getCollection(SlotTemplates$1.KEY, SlotTemplates$1.Entry);
-            return collection.find(entry => entry.key === this._primarySlotTemplate);
-        }
-        get secondarySlotTemplate() {
-            const collection = this.collectionCache.getCollection(SlotTemplates$1.KEY, SlotTemplates$1.Entry);
-            return collection.find(entry => entry.key === this._secondarySlotTemplate);
-        }
-        get primarySlotType() {
-            const collection = this.collectionCache.getCollection(SlotTypes$1.KEY, SlotTypes$1.Entry);
-            return collection.find(entry => entry.key === this._primarySlotType);
         }
     }
     MilitaryForceTypes.Entry = Entry;
@@ -25747,12 +25819,12 @@ var AgentSubtypeMilitaryForceCreationOverrides;
     class Entry {
         constructor(collectionCache, values) {
             this.collectionCache = collectionCache;
-            this._agentSubtype = values["agent_subtype"];
+            this._validGroup = values["valid_group"];
             this._militaryForceType = values["military_force_type"];
         }
-        get agentSubtype() {
-            const collection = this.collectionCache.getCollection(AgentSubtypes.KEY, AgentSubtypes.Entry);
-            return collection.find(entry => entry.key === this._agentSubtype);
+        get validGroup() {
+            const collection = this.collectionCache.getCollection(CampaignGroups.KEY, CampaignGroups.Entry);
+            return collection.find(entry => entry.id === this._validGroup);
         }
         get militaryForceType() {
             const collection = this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry);
@@ -26875,6 +26947,7 @@ var BattleVortexs;
             this.affectsAllies = !!values["affects_allies"];
             this.launchSourceOffset = values["launch_source_offset"];
             this._compositeSceneGroup = values["composite_scene_group"];
+            this.delayBetweenVortexes = values["delay_between_vortexes"];
         }
         get contactEffect() {
             const collection = this.collectionCache.getCollection(SpecialAbilityPhases$1.KEY, SpecialAbilityPhases$1.Entry);
@@ -27829,10 +27902,25 @@ var AudioCampaignStances;
             this.uiSoundEvent = values["ui_sound_event"];
             this.enterEvent = values["enter_event"];
             this.leaveEvent = values["leave_event"];
+            this._subcultureRecord = values["subculture_record"];
+            this._factionRecord = values["faction_record"];
+            this._overridingVoStance = values["overriding_vo_stance"];
         }
         get stance() {
             const collection = this.collectionCache.getCollection(CampaignStances$1.KEY, CampaignStances$1.Entry);
             return collection.find(entry => entry.key === this._stance);
+        }
+        get subcultureRecord() {
+            const collection = this.collectionCache.getCollection(CulturesSubcultures$1.KEY, CulturesSubcultures$1.Entry);
+            return collection.find(entry => entry.subculture === this._subcultureRecord);
+        }
+        get factionRecord() {
+            const collection = this.collectionCache.getCollection(Factions$1.KEY, Factions$1.Entry);
+            return collection.find(entry => entry.key === this._factionRecord);
+        }
+        get overridingVoStance() {
+            const collection = this.collectionCache.getCollection(CampaignStances$1.KEY, CampaignStances$1.Entry);
+            return collection.find(entry => entry.key === this._overridingVoStance);
         }
     }
     AudioCampaignStances.Entry = Entry;
@@ -28050,6 +28138,7 @@ var AudioMetadataTagEntityOverrides;
             this.soundEventBattleStop = values["sound_event_battle_stop"];
             this.soundEventCampaignStart = values["sound_event_campaign_start"];
             this.soundEventCampaignStop = values["sound_event_campaign_stop"];
+            this.cullingDistanceOverride = values["culling_distance_override"];
         }
         get metadataTag() {
             const collection = this.collectionCache.getCollection(AudioMetadataTags.KEY, AudioMetadataTags.Entry);
@@ -34880,18 +34969,6 @@ var CampaignClimateChangePhases;
     CampaignClimateChangePhases.Entry = Entry;
 })(CampaignClimateChangePhases || (CampaignClimateChangePhases = {}));
 
-var CampaignGroups;
-(function (CampaignGroups) {
-    CampaignGroups.KEY = new CollectionKey("campaign_groups");
-    class Entry {
-        constructor(collectionCache, values) {
-            this.collectionCache = collectionCache;
-            this.id = values["id"];
-        }
-    }
-    CampaignGroups.Entry = Entry;
-})(CampaignGroups || (CampaignGroups = {}));
-
 var CampaignCompanionArmyDetails;
 (function (CampaignCompanionArmyDetails) {
     CampaignCompanionArmyDetails.KEY = new CollectionKey("campaign_companion_army_details");
@@ -35258,6 +35335,11 @@ var SlotSets;
             this.collectionCache = collectionCache;
             this.key = values["key"];
             this.useDiscoverabilityFeature = !!values["use_discoverability_feature"];
+            this._compositeScene = values["composite_scene"];
+        }
+        get compositeScene() {
+            const collection = this.collectionCache.getCollection(CampaignCompositeScenes.KEY, CampaignCompositeScenes.Entry);
+            return collection.find(entry => entry.id === this._compositeScene);
         }
     }
     SlotSets.Entry = Entry;
@@ -35830,6 +35912,7 @@ var CultureSettlementOccupationOptions$1;
             this.icon = values["icon"];
             this.baseLoot = values["base_loot"];
             this.buildingLootMod = values["building_loot_mod"];
+            this._resourceTransaction = values["resource_transaction"];
         }
         get group() {
             const collection = this.collectionCache.getCollection(CampaignGroups.KEY, CampaignGroups.Entry);
@@ -35850,6 +35933,10 @@ var CultureSettlementOccupationOptions$1;
         get actingArmyEffectBundle() {
             const collection = this.collectionCache.getCollection(EffectBundles$1.KEY, EffectBundles$1.Entry);
             return collection.find(entry => entry.key === this._actingArmyEffectBundle);
+        }
+        get resourceTransaction() {
+            const collection = this.collectionCache.getCollection(ResourceCosts.KEY, ResourceCosts.Entry);
+            return collection.find(entry => entry.id === this._resourceTransaction);
         }
     }
     CultureSettlementOccupationOptions.Entry = Entry;
@@ -35983,6 +36070,23 @@ var CampaignGroupMemberCriteriaInvolvesSettlements;
     CampaignGroupMemberCriteriaInvolvesSettlements.Entry = Entry;
 })(CampaignGroupMemberCriteriaInvolvesSettlements || (CampaignGroupMemberCriteriaInvolvesSettlements = {}));
 
+var CampaignGroupMemberCriteriaIsDead;
+(function (CampaignGroupMemberCriteriaIsDead) {
+    CampaignGroupMemberCriteriaIsDead.KEY = new CollectionKey("campaign_group_member_criteria_is_dead");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._member = values["member"];
+            this.value = !!values["value"];
+        }
+        get member() {
+            const collection = this.collectionCache.getCollection(CampaignGroupMembers.KEY, CampaignGroupMembers.Entry);
+            return collection.find(entry => entry.id === this._member);
+        }
+    }
+    CampaignGroupMemberCriteriaIsDead.Entry = Entry;
+})(CampaignGroupMemberCriteriaIsDead || (CampaignGroupMemberCriteriaIsDead = {}));
+
 var MinisterialPositions$1;
 (function (MinisterialPositions) {
     MinisterialPositions.KEY = new CollectionKey("ministerial_positions");
@@ -36000,6 +36104,7 @@ var MinisterialPositions$1;
             this.maximumTermLength = values["maximum_term_length"];
             this.maximumConcurrentMinisters = values["maximum_concurrent_ministers"];
             this.requiredLoyalty = values["required_loyalty"];
+            this.displayEndTurnNotificationsForPost = !!values["display_end_turn_notifications_for_post"];
         }
     }
     MinisterialPositions.Entry = Entry;
@@ -36670,7 +36775,7 @@ var RitualChains;
             this.collectionCache = collectionCache;
             this.key = values["key"];
             this.displayName = values["display_name"];
-            this.desctiption = values["desctiption"];
+            this.description = values["description"];
             this._category = values["category"];
             this.ritualSitesRequired = values["ritual_sites_required"];
             this.colourR = values["colour_r"];
@@ -36714,6 +36819,27 @@ var CampaignGroupRitualChains;
     }
     CampaignGroupRitualChains.Entry = Entry;
 })(CampaignGroupRitualChains || (CampaignGroupRitualChains = {}));
+
+var CampaignGroupSettlementOccupationGiftFactions;
+(function (CampaignGroupSettlementOccupationGiftFactions) {
+    CampaignGroupSettlementOccupationGiftFactions.KEY = new CollectionKey("campaign_group_settlement_occupation_gift_factions");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._campaignGroup = values["campaign_group"];
+            this._faction = values["faction"];
+        }
+        get campaignGroup() {
+            const collection = this.collectionCache.getCollection(CampaignGroups.KEY, CampaignGroups.Entry);
+            return collection.find(entry => entry.id === this._campaignGroup);
+        }
+        get faction() {
+            const collection = this.collectionCache.getCollection(Factions$1.KEY, Factions$1.Entry);
+            return collection.find(entry => entry.key === this._faction);
+        }
+    }
+    CampaignGroupSettlementOccupationGiftFactions.Entry = Entry;
+})(CampaignGroupSettlementOccupationGiftFactions || (CampaignGroupSettlementOccupationGiftFactions = {}));
 
 var CampaignGroupSettlementOccupationLootedPooledResources;
 (function (CampaignGroupSettlementOccupationLootedPooledResources) {
@@ -38277,6 +38403,26 @@ var CampaignVfxLookups$1;
     CampaignVfxLookups.Entry = Entry;
 })(CampaignVfxLookups$1 || (CampaignVfxLookups$1 = {}));
 
+var Pdlc$1;
+(function (Pdlc) {
+    Pdlc.KEY = new CollectionKey("pdlc");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.id = values["ID"];
+            this.steamId = values["SteamID"];
+            this.description = values["description"];
+            this.releaseOrder = values["release_order"];
+            this._gameExpansionKey = values["game_expansion_key"];
+        }
+        get gameExpansionKey() {
+            const collection = this.collectionCache.getCollection(TexcExpansions$1.KEY, TexcExpansions$1.Entry);
+            return collection.find(entry => entry.expansion === this._gameExpansionKey);
+        }
+    }
+    Pdlc.Entry = Entry;
+})(Pdlc$1 || (Pdlc$1 = {}));
+
 var CampaignVideos;
 (function (CampaignVideos) {
     CampaignVideos.KEY = new CollectionKey("campaign_videos");
@@ -38289,6 +38435,7 @@ var CampaignVideos;
             this.campaignLocked = !!values["campaign_locked"];
             this.stillPath = values["still_path"];
             this.sort = values["sort"];
+            this._pdlc = values["pdlc"];
         }
         get videoName() {
             const collection = this.collectionCache.getCollection(Videos$1.KEY, Videos$1.Entry);
@@ -38297,6 +38444,10 @@ var CampaignVideos;
         get culture() {
             const collection = this.collectionCache.getCollection(Cultures$1.KEY, Cultures$1.Entry);
             return collection.find(entry => entry.key === this._culture);
+        }
+        get pdlc() {
+            const collection = this.collectionCache.getCollection(Pdlc$1.KEY, Pdlc$1.Entry);
+            return collection.find(entry => entry.id === this._pdlc);
         }
     }
     CampaignVideos.Entry = Entry;
@@ -41866,6 +42017,60 @@ var EffectBundlesToEffectsJunctions$1;
     EffectBundlesToEffectsJunctions.Entry = Entry;
 })(EffectBundlesToEffectsJunctions$1 || (EffectBundlesToEffectsJunctions$1 = {}));
 
+var ElectorCounts;
+(function (ElectorCounts) {
+    ElectorCounts.KEY = new CollectionKey("elector_counts");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._ministerialKey = values["ministerial_key"];
+            this._capitalRegion = values["capital_region"];
+            this._ancillaryReward = values["ancillary_reward"];
+            this._unitReward = values["unit_reward"];
+            this.mapPosX = values["map_pos_x"];
+            this.mapPosY = values["map_pos_y"];
+        }
+        get ministerialKey() {
+            const collection = this.collectionCache.getCollection(MinisterialPositions$1.KEY, MinisterialPositions$1.Entry);
+            return collection.find(entry => entry.ministerKey === this._ministerialKey);
+        }
+        get capitalRegion() {
+            const collection = this.collectionCache.getCollection(Regions$1.KEY, Regions$1.Entry);
+            return collection.find(entry => entry.key === this._capitalRegion);
+        }
+        get ancillaryReward() {
+            const collection = this.collectionCache.getCollection(Ancillaries$1.KEY, Ancillaries$1.Entry);
+            return collection.find(entry => entry._key === this._ancillaryReward);
+        }
+        get unitReward() {
+            const collection = this.collectionCache.getCollection(MainUnits$1.KEY, MainUnits$1.Entry);
+            return collection.find(entry => entry.unit === this._unitReward);
+        }
+    }
+    ElectorCounts.Entry = Entry;
+})(ElectorCounts || (ElectorCounts = {}));
+
+var ElectorCountRegionToCapitalRegionJunctions;
+(function (ElectorCountRegionToCapitalRegionJunctions) {
+    ElectorCountRegionToCapitalRegionJunctions.KEY = new CollectionKey("elector_count_region_to_capital_region_junctions");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._region = values["region"];
+            this._capitalRegion = values["capital_region"];
+        }
+        get region() {
+            const collection = this.collectionCache.getCollection(Regions$1.KEY, Regions$1.Entry);
+            return collection.find(entry => entry.key === this._region);
+        }
+        get capitalRegion() {
+            const collection = this.collectionCache.getCollection(Regions$1.KEY, Regions$1.Entry);
+            return collection.find(entry => entry.key === this._capitalRegion);
+        }
+    }
+    ElectorCountRegionToCapitalRegionJunctions.Entry = Entry;
+})(ElectorCountRegionToCapitalRegionJunctions || (ElectorCountRegionToCapitalRegionJunctions = {}));
+
 var EncyclopediaPages$1;
 (function (EncyclopediaPages) {
     EncyclopediaPages.KEY = new CollectionKey("encyclopedia_pages");
@@ -42913,6 +43118,33 @@ var FactionFeatures;
     FactionFeatures.Entry = Entry;
 })(FactionFeatures || (FactionFeatures = {}));
 
+var FactionFeatureSetMilitaryForceTypes;
+(function (FactionFeatureSetMilitaryForceTypes) {
+    FactionFeatureSetMilitaryForceTypes.KEY = new CollectionKey("faction_feature_set_military_force_types");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.key = values["key"];
+            this._defaultArmy = values["default_army"];
+            this._defaultNavy = values["default_navy"];
+            this._seaLockedSpecialist = values["sea_locked_specialist"];
+        }
+        get defaultArmy() {
+            const collection = this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry);
+            return collection.find(entry => entry.key === this._defaultArmy);
+        }
+        get defaultNavy() {
+            const collection = this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry);
+            return collection.find(entry => entry.key === this._defaultNavy);
+        }
+        get seaLockedSpecialist() {
+            const collection = this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry);
+            return collection.find(entry => entry.key === this._seaLockedSpecialist);
+        }
+    }
+    FactionFeatureSetMilitaryForceTypes.Entry = Entry;
+})(FactionFeatureSetMilitaryForceTypes || (FactionFeatureSetMilitaryForceTypes = {}));
+
 var FactionFeatureTrees;
 (function (FactionFeatureTrees) {
     FactionFeatureTrees.KEY = new CollectionKey("faction_feature_trees");
@@ -42932,6 +43164,12 @@ var FeatureSets;
         constructor(collectionCache, values) {
             this.collectionCache = collectionCache;
             this.key = values["key"];
+            this.priority = values["priority"];
+            this._militaryForceTypes = values["military_force_types"];
+        }
+        get militaryForceTypes() {
+            const collection = this.collectionCache.getCollection(FactionFeatureSetMilitaryForceTypes.KEY, FactionFeatureSetMilitaryForceTypes.Entry);
+            return collection.find(entry => entry.key === this._militaryForceTypes);
         }
     }
     FeatureSets.Entry = Entry;
@@ -43094,6 +43332,39 @@ var FactionResourceConsumptions$1;
     }
     FactionResourceConsumptions.Entry = Entry;
 })(FactionResourceConsumptions$1 || (FactionResourceConsumptions$1 = {}));
+
+var FactionSetItems;
+(function (FactionSetItems) {
+    FactionSetItems.KEY = new CollectionKey("faction_set_items");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.id = values["id"];
+            this._set = values["set"];
+            this._faction = values["faction"];
+            this._subculture = values["subculture"];
+            this._culture = values["culture"];
+            this.remove = !!values["remove"];
+        }
+        get set() {
+            const collection = this.collectionCache.getCollection(FactionSets.KEY, FactionSets.Entry);
+            return collection.find(entry => entry.key === this._set);
+        }
+        get faction() {
+            const collection = this.collectionCache.getCollection(Factions$1.KEY, Factions$1.Entry);
+            return collection.find(entry => entry.key === this._faction);
+        }
+        get subculture() {
+            const collection = this.collectionCache.getCollection(CulturesSubcultures$1.KEY, CulturesSubcultures$1.Entry);
+            return collection.find(entry => entry.subculture === this._subculture);
+        }
+        get culture() {
+            const collection = this.collectionCache.getCollection(Cultures$1.KEY, Cultures$1.Entry);
+            return collection.find(entry => entry.key === this._culture);
+        }
+    }
+    FactionSetItems.Entry = Entry;
+})(FactionSetItems || (FactionSetItems = {}));
 
 var FactionToFactionGroupsJunctions$1;
 (function (FactionToFactionGroupsJunctions) {
@@ -43996,19 +44267,24 @@ var IntrigueActionsIncidentsJunctions;
     class Entry {
         constructor(collectionCache, values) {
             this.collectionCache = collectionCache;
-            this._culture = values["culture"];
+            this._targetCulture = values["target_culture"];
             this._incident = values["incident"];
             this.isPositive = !!values["is_positive"];
             this.weight = values["weight"];
             this.key = values["key"];
+            this._sourceCulture = values["source_culture"];
         }
-        get culture() {
+        get targetCulture() {
             const collection = this.collectionCache.getCollection(Cultures$1.KEY, Cultures$1.Entry);
-            return collection.find(entry => entry.key === this._culture);
+            return collection.find(entry => entry.key === this._targetCulture);
         }
         get incident() {
             const collection = this.collectionCache.getCollection(Incidents$1.KEY, Incidents$1.Entry);
             return collection.find(entry => entry.key === this._incident);
+        }
+        get sourceCulture() {
+            const collection = this.collectionCache.getCollection(Cultures$1.KEY, Cultures$1.Entry);
+            return collection.find(entry => entry.key === this._sourceCulture);
         }
     }
     IntrigueActionsIncidentsJunctions.Entry = Entry;
@@ -44318,6 +44594,7 @@ var MercenaryUnitGroups$1;
             this.maxReplenishPerTurn = values["max_replenish_per_turn"];
             this.chanceToReplenish = values["chance_to_replenish"];
             this.usePartialReplenishment = !!values["use_partial_replenishment"];
+            this.replenishmentReason = values["replenishment_reason"];
         }
         get unitRecord() {
             const collection = this.collectionCache.getCollection(MainUnits$1.KEY, MainUnits$1.Entry);
@@ -44442,6 +44719,129 @@ var MilitaryForceLegacyNames$1;
     MilitaryForceLegacyNames.Entry = Entry;
 })(MilitaryForceLegacyNames$1 || (MilitaryForceLegacyNames$1 = {}));
 
+var MilitaryForceTypeConversions;
+(function (MilitaryForceTypeConversions) {
+    MilitaryForceTypeConversions.KEY = new CollectionKey("military_force_type_conversions");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._from = values["from"];
+            this._to = values["to"];
+            this.automatic = !!values["automatic"];
+        }
+        get from() {
+            const collection = this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry);
+            return collection.find(entry => entry.key === this._from);
+        }
+        get to() {
+            const collection = this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry);
+            return collection.find(entry => entry.key === this._to);
+        }
+    }
+    MilitaryForceTypeConversions.Entry = Entry;
+})(MilitaryForceTypeConversions || (MilitaryForceTypeConversions = {}));
+
+var MilitaryForceTypeFeatures;
+(function (MilitaryForceTypeFeatures) {
+    MilitaryForceTypeFeatures.KEY = new CollectionKey("military_force_type_features");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.key = values["key"];
+            this.description = values["description"];
+        }
+    }
+    MilitaryForceTypeFeatures.Entry = Entry;
+})(MilitaryForceTypeFeatures || (MilitaryForceTypeFeatures = {}));
+
+var MilitaryForceTypeFeatureJunctions;
+(function (MilitaryForceTypeFeatureJunctions) {
+    MilitaryForceTypeFeatureJunctions.KEY = new CollectionKey("military_force_type_feature_junctions");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._forceType = values["force_type"];
+            this._feature = values["feature"];
+        }
+        get forceType() {
+            const collection = this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry);
+            return collection.find(entry => entry.key === this._forceType);
+        }
+        get feature() {
+            const collection = this.collectionCache.getCollection(MilitaryForceTypeFeatures.KEY, MilitaryForceTypeFeatures.Entry);
+            return collection.find(entry => entry.key === this._feature);
+        }
+    }
+    MilitaryForceTypeFeatureJunctions.Entry = Entry;
+})(MilitaryForceTypeFeatureJunctions || (MilitaryForceTypeFeatureJunctions = {}));
+
+var SlotTemplates$1;
+(function (SlotTemplates) {
+    SlotTemplates.KEY = new CollectionKey("slot_templates");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.key = values["key"];
+            this._resource = values["resource"];
+        }
+        get resource() {
+            const collection = this.collectionCache.getCollection(Resources$1.KEY, Resources$1.Entry);
+            return collection.find(entry => entry.key === this._resource);
+        }
+    }
+    SlotTemplates.Entry = Entry;
+})(SlotTemplates$1 || (SlotTemplates$1 = {}));
+
+var SlotTypes$1;
+(function (SlotTypes) {
+    SlotTypes.KEY = new CollectionKey("slot_types");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.key = values["key"];
+            this.canDestroy = !!values["can_destroy"];
+            this.canConvert = !!values["can_convert"];
+        }
+    }
+    SlotTypes.Entry = Entry;
+})(SlotTypes$1 || (SlotTypes$1 = {}));
+
+var MilitaryForceTypeHordeDetails;
+(function (MilitaryForceTypeHordeDetails) {
+    MilitaryForceTypeHordeDetails.KEY = new CollectionKey("military_force_type_horde_details");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._forceType = values["force_type"];
+            this._primarySlotTemplate = values["primary_slot_template"];
+            this._primarySlotType = values["primary_slot_type"];
+            this._secondarySlotTemplate = values["secondary_slot_template"];
+            this._secondarySlotType = values["secondary_slot_type"];
+        }
+        get forceType() {
+            const collection = this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry);
+            return collection.find(entry => entry.key === this._forceType);
+        }
+        get primarySlotTemplate() {
+            const collection = this.collectionCache.getCollection(SlotTemplates$1.KEY, SlotTemplates$1.Entry);
+            return collection.find(entry => entry.key === this._primarySlotTemplate);
+        }
+        get primarySlotType() {
+            const collection = this.collectionCache.getCollection(SlotTypes$1.KEY, SlotTypes$1.Entry);
+            return collection.find(entry => entry.key === this._primarySlotType);
+        }
+        get secondarySlotTemplate() {
+            const collection = this.collectionCache.getCollection(SlotTemplates$1.KEY, SlotTemplates$1.Entry);
+            return collection.find(entry => entry.key === this._secondarySlotTemplate);
+        }
+        get secondarySlotType() {
+            const collection = this.collectionCache.getCollection(SlotTypes$1.KEY, SlotTypes$1.Entry);
+            return collection.find(entry => entry.key === this._secondarySlotType);
+        }
+    }
+    MilitaryForceTypeHordeDetails.Entry = Entry;
+})(MilitaryForceTypeHordeDetails || (MilitaryForceTypeHordeDetails = {}));
+
 var MinisterialEffectivenessModifiers$1;
 (function (MinisterialEffectivenessModifiers) {
     MinisterialEffectivenessModifiers.KEY = new CollectionKey("ministerial_effectiveness_modifiers");
@@ -44537,6 +44937,27 @@ var MinisterialPositionsToGovernorships$1;
     }
     MinisterialPositionsToGovernorships.Entry = Entry;
 })(MinisterialPositionsToGovernorships$1 || (MinisterialPositionsToGovernorships$1 = {}));
+
+var MinisterialPositionsToRegionRestrictions;
+(function (MinisterialPositionsToRegionRestrictions) {
+    MinisterialPositionsToRegionRestrictions.KEY = new CollectionKey("ministerial_positions_to_region_restrictions");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._ministerialPosition = values["ministerial_position"];
+            this._requiredRegion = values["required_region"];
+        }
+        get ministerialPosition() {
+            const collection = this.collectionCache.getCollection(MinisterialPositions$1.KEY, MinisterialPositions$1.Entry);
+            return collection.find(entry => entry.ministerKey === this._ministerialPosition);
+        }
+        get requiredRegion() {
+            const collection = this.collectionCache.getCollection(Regions$1.KEY, Regions$1.Entry);
+            return collection.find(entry => entry.key === this._requiredRegion);
+        }
+    }
+    MinisterialPositionsToRegionRestrictions.Entry = Entry;
+})(MinisterialPositionsToRegionRestrictions || (MinisterialPositionsToRegionRestrictions = {}));
 
 var MinisterialPositionEffectBundles;
 (function (MinisterialPositionEffectBundles) {
@@ -44687,6 +45108,28 @@ var MissionCategoryThresholdValidSubcultures;
     }
     MissionCategoryThresholdValidSubcultures.Entry = Entry;
 })(MissionCategoryThresholdValidSubcultures || (MissionCategoryThresholdValidSubcultures = {}));
+
+var MissionGroupsToMissions;
+(function (MissionGroupsToMissions) {
+    MissionGroupsToMissions.KEY = new CollectionKey("mission_groups_to_missions");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._mission = values["mission"];
+            this._group = values["group"];
+            this.order = values["order"];
+        }
+        get mission() {
+            const collection = this.collectionCache.getCollection(Missions$1.KEY, Missions$1.Entry);
+            return collection.find(entry => entry.key === this._mission);
+        }
+        get group() {
+            const collection = this.collectionCache.getCollection(MissionGroups.KEY, MissionGroups.Entry);
+            return collection.find(entry => entry.groupKey === this._group);
+        }
+    }
+    MissionGroupsToMissions.Entry = Entry;
+})(MissionGroupsToMissions || (MissionGroupsToMissions = {}));
 
 var MissionText$1;
 (function (MissionText) {
@@ -44924,6 +45367,87 @@ var MpForceGenTemplateJunctions$1;
     MpForceGenTemplateJunctions.Entry = Entry;
 })(MpForceGenTemplateJunctions$1 || (MpForceGenTemplateJunctions$1 = {}));
 
+var UiColours;
+(function (UiColours) {
+    UiColours.KEY = new CollectionKey("ui_colours");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.key = values["key"];
+            this.red = values["red"];
+            this.green = values["green"];
+            this.blue = values["blue"];
+            this.description = values["description"];
+            this.showInUied = !!values["show_in_uied"];
+        }
+    }
+    UiColours.Entry = Entry;
+})(UiColours || (UiColours = {}));
+
+var NakaiTemples;
+(function (NakaiTemples) {
+    NakaiTemples.KEY = new CollectionKey("nakai_temples");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this.key = values["key"];
+            this.localisedName = values["localised_name"];
+            this.lore = values["lore"];
+            this.image = values["image"];
+            this._colour = values["colour"];
+            this._cultureSettlementOccupationOption = values["culture_settlement_occupation_option"];
+        }
+        get colour() {
+            const collection = this.collectionCache.getCollection(UiColours.KEY, UiColours.Entry);
+            return collection.find(entry => entry.key === this._colour);
+        }
+        get cultureSettlementOccupationOption() {
+            const collection = this.collectionCache.getCollection(CultureSettlementOccupationOptions$1.KEY, CultureSettlementOccupationOptions$1.Entry);
+            return collection.find(entry => entry.id === this._cultureSettlementOccupationOption);
+        }
+    }
+    NakaiTemples.Entry = Entry;
+})(NakaiTemples || (NakaiTemples = {}));
+
+var NakaiTempleLevels;
+(function (NakaiTempleLevels) {
+    NakaiTempleLevels.KEY = new CollectionKey("nakai_temple_levels");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._nakaiTemple = values["nakai_temple"];
+            this.level = values["level"];
+            this._factionSpawned = values["faction_spawned"];
+            this._building = values["building"];
+            this.minBuildingCount = values["min_building_count"];
+            this._effectBundle = values["effect_bundle"];
+            this.key = values["key"];
+            this._secondaryBuilding = values["secondary_building"];
+        }
+        get nakaiTemple() {
+            const collection = this.collectionCache.getCollection(NakaiTemples.KEY, NakaiTemples.Entry);
+            return collection.find(entry => entry.key === this._nakaiTemple);
+        }
+        get factionSpawned() {
+            const collection = this.collectionCache.getCollection(Factions$1.KEY, Factions$1.Entry);
+            return collection.find(entry => entry.key === this._factionSpawned);
+        }
+        get building() {
+            const collection = this.collectionCache.getCollection(BuildingLevels$1.KEY, BuildingLevels$1.Entry);
+            return collection.find(entry => entry.levelName === this._building);
+        }
+        get effectBundle() {
+            const collection = this.collectionCache.getCollection(EffectBundles$1.KEY, EffectBundles$1.Entry);
+            return collection.find(entry => entry.key === this._effectBundle);
+        }
+        get secondaryBuilding() {
+            const collection = this.collectionCache.getCollection(BuildingLevels$1.KEY, BuildingLevels$1.Entry);
+            return collection.find(entry => entry.levelName === this._secondaryBuilding);
+        }
+    }
+    NakaiTempleLevels.Entry = Entry;
+})(NakaiTempleLevels || (NakaiTempleLevels = {}));
+
 var NameOrders$1;
 (function (NameOrders) {
     NameOrders.KEY = new CollectionKey("name_orders");
@@ -45059,26 +45583,6 @@ var NewContentAlerts;
     NewContentAlerts.Entry = Entry;
 })(NewContentAlerts || (NewContentAlerts = {}));
 
-var Pdlc$1;
-(function (Pdlc) {
-    Pdlc.KEY = new CollectionKey("pdlc");
-    class Entry {
-        constructor(collectionCache, values) {
-            this.collectionCache = collectionCache;
-            this.id = values["ID"];
-            this.steamId = values["SteamID"];
-            this.description = values["description"];
-            this.releaseOrder = values["release_order"];
-            this._gameExpansionKey = values["game_expansion_key"];
-        }
-        get gameExpansionKey() {
-            const collection = this.collectionCache.getCollection(TexcExpansions$1.KEY, TexcExpansions$1.Entry);
-            return collection.find(entry => entry.expansion === this._gameExpansionKey);
-        }
-    }
-    Pdlc.Entry = Entry;
-})(Pdlc$1 || (Pdlc$1 = {}));
-
 var PoliticalActions$1;
 (function (PoliticalActions) {
     PoliticalActions.KEY = new CollectionKey("political_actions");
@@ -45186,6 +45690,33 @@ var PoliticalPartiesFrontendLeadersJunctions;
     }
     PoliticalPartiesFrontendLeadersJunctions.Entry = Entry;
 })(PoliticalPartiesFrontendLeadersJunctions || (PoliticalPartiesFrontendLeadersJunctions = {}));
+
+var PooledResourceInfluenceOverrides;
+(function (PooledResourceInfluenceOverrides) {
+    PooledResourceInfluenceOverrides.KEY = new CollectionKey("pooled_resource_influence_overrides");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._faction = values["faction"];
+            this._pooledResource = values["pooled_resource"];
+            this._pooledResourceFactor = values["pooled_resource_factor"];
+            this.influenceToPooledResourceConversionFactor = values["influence_to_pooled_resource_conversion_factor"];
+        }
+        get faction() {
+            const collection = this.collectionCache.getCollection(Factions$1.KEY, Factions$1.Entry);
+            return collection.find(entry => entry.key === this._faction);
+        }
+        get pooledResource() {
+            const collection = this.collectionCache.getCollection(PooledResources.KEY, PooledResources.Entry);
+            return collection.find(entry => entry.key === this._pooledResource);
+        }
+        get pooledResourceFactor() {
+            const collection = this.collectionCache.getCollection(PooledResourceFactors.KEY, PooledResourceFactors.Entry);
+            return collection.find(entry => entry.key === this._pooledResourceFactor);
+        }
+    }
+    PooledResourceInfluenceOverrides.Entry = Entry;
+})(PooledResourceInfluenceOverrides || (PooledResourceInfluenceOverrides = {}));
 
 var PrefabTypes;
 (function (PrefabTypes) {
@@ -45840,6 +46371,28 @@ var ResourceUiOverrides;
     ResourceUiOverrides.Entry = Entry;
 })(ResourceUiOverrides || (ResourceUiOverrides = {}));
 
+var RitualsToNakaiTempleLevels;
+(function (RitualsToNakaiTempleLevels) {
+    RitualsToNakaiTempleLevels.KEY = new CollectionKey("rituals_to_nakai_temple_levels");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._key = values["key"];
+            this._ritual = values["ritual"];
+            this.sort = values["sort"];
+        }
+        get key() {
+            const collection = this.collectionCache.getCollection(NakaiTempleLevels.KEY, NakaiTempleLevels.Entry);
+            return collection.find(entry => entry.key === this._key);
+        }
+        get ritual() {
+            const collection = this.collectionCache.getCollection(Rituals.KEY, Rituals.Entry);
+            return collection.find(entry => entry.key === this._ritual);
+        }
+    }
+    RitualsToNakaiTempleLevels.Entry = Entry;
+})(RitualsToNakaiTempleLevels || (RitualsToNakaiTempleLevels = {}));
+
 var RitualsToRitualChains;
 (function (RitualsToRitualChains) {
     RitualsToRitualChains.KEY = new CollectionKey("rituals_to_ritual_chains");
@@ -46413,7 +46966,6 @@ var SlotSetItems;
             this._slotType = values["slot_type"];
             this._slotTemplate = values["slot_template"];
             this._buildingLevel = values["building_level"];
-            this._compositeScene = values["composite_scene"];
         }
         get slotSet() {
             const collection = this.collectionCache.getCollection(SlotSets.KEY, SlotSets.Entry);
@@ -46430,10 +46982,6 @@ var SlotSetItems;
         get buildingLevel() {
             const collection = this.collectionCache.getCollection(BuildingLevels$1.KEY, BuildingLevels$1.Entry);
             return collection.find(entry => entry.levelName === this._buildingLevel);
-        }
-        get compositeScene() {
-            const collection = this.collectionCache.getCollection(CampaignCompositeScenes.KEY, CampaignCompositeScenes.Entry);
-            return collection.find(entry => entry.id === this._compositeScene);
         }
     }
     SlotSetItems.Entry = Entry;
@@ -48763,23 +49311,6 @@ var UiedComponentAddressesToTexts$1;
     UiedComponentAddressesToTexts.Entry = Entry;
 })(UiedComponentAddressesToTexts$1 || (UiedComponentAddressesToTexts$1 = {}));
 
-var UiColours;
-(function (UiColours) {
-    UiColours.KEY = new CollectionKey("ui_colours");
-    class Entry {
-        constructor(collectionCache, values) {
-            this.collectionCache = collectionCache;
-            this.key = values["key"];
-            this.red = values["red"];
-            this.green = values["green"];
-            this.blue = values["blue"];
-            this.description = values["description"];
-            this.showInUied = !!values["show_in_uied"];
-        }
-    }
-    UiColours.Entry = Entry;
-})(UiColours || (UiColours = {}));
-
 var UiColourProfiles;
 (function (UiColourProfiles) {
     UiColourProfiles.KEY = new CollectionKey("ui_colour_profiles");
@@ -49694,6 +50225,24 @@ var UnitRequiredTechnologyJunctions$1;
     UnitRequiredTechnologyJunctions.Entry = Entry;
 })(UnitRequiredTechnologyJunctions$1 || (UnitRequiredTechnologyJunctions$1 = {}));
 
+var UnitSetToMpUnitCaps;
+(function (UnitSetToMpUnitCaps) {
+    UnitSetToMpUnitCaps.KEY = new CollectionKey("unit_set_to_mp_unit_caps");
+    class Entry {
+        constructor(collectionCache, values) {
+            this.collectionCache = collectionCache;
+            this._unitSet = values["unit_set"];
+            this.localisedName = values["localised_name"];
+            this.cap = values["cap"];
+        }
+        get unitSet() {
+            const collection = this.collectionCache.getCollection(UnitSets$1.KEY, UnitSets$1.Entry);
+            return collection.find(entry => entry.key === this._unitSet);
+        }
+    }
+    UnitSetToMpUnitCaps.Entry = Entry;
+})(UnitSetToMpUnitCaps || (UnitSetToMpUnitCaps = {}));
+
 var UnitSetToUnitJunctions$1;
 (function (UnitSetToUnitJunctions) {
     UnitSetToUnitJunctions.KEY = new CollectionKey("unit_set_to_unit_junctions");
@@ -50539,6 +51088,7 @@ class Database$1 {
     get agentStringSubcultureOverrides() { return this.collectionCache.getCollection(AgentStringSubcultureOverrides$1.KEY, AgentStringSubcultureOverrides$1.Entry); }
     get agentSubcultureGenderOverrides() { return this.collectionCache.getCollection(AgentSubcultureGenderOverrides$1.KEY, AgentSubcultureGenderOverrides$1.Entry); }
     get agentSubtypes() { return this.collectionCache.getCollection(AgentSubtypes.KEY, AgentSubtypes.Entry); }
+    get agentSubtypesToMissionGroups() { return this.collectionCache.getCollection(AgentSubtypesToMissionGroups.KEY, AgentSubtypesToMissionGroups.Entry); }
     get agentSubtypeCivilWarFactionOverrides() { return this.collectionCache.getCollection(AgentSubtypeCivilWarFactionOverrides.KEY, AgentSubtypeCivilWarFactionOverrides.Entry); }
     get agentSubtypeMilitaryForceCreationOverrides() { return this.collectionCache.getCollection(AgentSubtypeMilitaryForceCreationOverrides.KEY, AgentSubtypeMilitaryForceCreationOverrides.Entry); }
     get agentSubtypeSubcultureOverrides() { return this.collectionCache.getCollection(AgentSubtypeSubcultureOverrides.KEY, AgentSubtypeSubcultureOverrides.Entry); }
@@ -50611,6 +51161,7 @@ class Database$1 {
     get audioCampaignStances() { return this.collectionCache.getCollection(AudioCampaignStances.KEY, AudioCampaignStances.Entry); }
     get audioCampaignTreeTypes() { return this.collectionCache.getCollection(AudioCampaignTreeTypes.KEY, AudioCampaignTreeTypes.Entry); }
     get audioEntityActors() { return this.collectionCache.getCollection(AudioEntityActors.KEY, AudioEntityActors.Entry); }
+    get audioEntityFocusPools() { return this.collectionCache.getCollection(AudioEntityFocusPools.KEY, AudioEntityFocusPools.Entry); }
     get audioEntityLoopingSounds() { return this.collectionCache.getCollection(AudioEntityLoopingSounds.KEY, AudioEntityLoopingSounds.Entry); }
     get audioEntityRandomVocalisations() { return this.collectionCache.getCollection(AudioEntityRandomVocalisations.KEY, AudioEntityRandomVocalisations.Entry); }
     get audioEntityTypes() { return this.collectionCache.getCollection(AudioEntityTypes.KEY, AudioEntityTypes.Entry); }
@@ -51011,6 +51562,7 @@ class Database$1 {
     get campaignGroupMemberCriteriaDiplomaticStances() { return this.collectionCache.getCollection(CampaignGroupMemberCriteriaDiplomaticStances.KEY, CampaignGroupMemberCriteriaDiplomaticStances.Entry); }
     get campaignGroupMemberCriteriaFactions() { return this.collectionCache.getCollection(CampaignGroupMemberCriteriaFactions.KEY, CampaignGroupMemberCriteriaFactions.Entry); }
     get campaignGroupMemberCriteriaInvolvesSettlements() { return this.collectionCache.getCollection(CampaignGroupMemberCriteriaInvolvesSettlements.KEY, CampaignGroupMemberCriteriaInvolvesSettlements.Entry); }
+    get campaignGroupMemberCriteriaIsDead() { return this.collectionCache.getCollection(CampaignGroupMemberCriteriaIsDead.KEY, CampaignGroupMemberCriteriaIsDead.Entry); }
     get campaignGroupMemberCriteriaMinisterialPositions() { return this.collectionCache.getCollection(CampaignGroupMemberCriteriaMinisterialPositions.KEY, CampaignGroupMemberCriteriaMinisterialPositions.Entry); }
     get campaignGroupMemberCriteriaNumericRanges() { return this.collectionCache.getCollection(CampaignGroupMemberCriteriaNumericRanges.KEY, CampaignGroupMemberCriteriaNumericRanges.Entry); }
     get campaignGroupMemberCriteriaOnSeas() { return this.collectionCache.getCollection(CampaignGroupMemberCriteriaOnSeas.KEY, CampaignGroupMemberCriteriaOnSeas.Entry); }
@@ -51036,6 +51588,7 @@ class Database$1 {
     get campaignGroupRacialSuitabilityEffects() { return this.collectionCache.getCollection(CampaignGroupRacialSuitabilityEffects.KEY, CampaignGroupRacialSuitabilityEffects.Entry); }
     get campaignGroupRituals() { return this.collectionCache.getCollection(CampaignGroupRituals.KEY, CampaignGroupRituals.Entry); }
     get campaignGroupRitualChains() { return this.collectionCache.getCollection(CampaignGroupRitualChains.KEY, CampaignGroupRitualChains.Entry); }
+    get campaignGroupSettlementOccupationGiftFactions() { return this.collectionCache.getCollection(CampaignGroupSettlementOccupationGiftFactions.KEY, CampaignGroupSettlementOccupationGiftFactions.Entry); }
     get campaignGroupSettlementOccupationLootedPooledResources() { return this.collectionCache.getCollection(CampaignGroupSettlementOccupationLootedPooledResources.KEY, CampaignGroupSettlementOccupationLootedPooledResources.Entry); }
     get campaignGroupSettlementOccupationOptionForeignSlots() { return this.collectionCache.getCollection(CampaignGroupSettlementOccupationOptionForeignSlots.KEY, CampaignGroupSettlementOccupationOptionForeignSlots.Entry); }
     get campaignGroupUniqueAgents() { return this.collectionCache.getCollection(CampaignGroupUniqueAgents.KEY, CampaignGroupUniqueAgents.Entry); }
@@ -51288,6 +51841,8 @@ class Database$1 {
     get effectBundleAdvancementStages() { return this.collectionCache.getCollection(EffectBundleAdvancementStages$1.KEY, EffectBundleAdvancementStages$1.Entry); }
     get effectBundleTargets() { return this.collectionCache.getCollection(EffectBundleTargets$1.KEY, EffectBundleTargets$1.Entry); }
     get effectCategories() { return this.collectionCache.getCollection(EffectCategories.KEY, EffectCategories.Entry); }
+    get electorCounts() { return this.collectionCache.getCollection(ElectorCounts.KEY, ElectorCounts.Entry); }
+    get electorCountRegionToCapitalRegionJunctions() { return this.collectionCache.getCollection(ElectorCountRegionToCapitalRegionJunctions.KEY, ElectorCountRegionToCapitalRegionJunctions.Entry); }
     get encyclopediaAgentManualBlockLinks() { return this.collectionCache.getCollection(EncyclopediaAgentManualBlockLinks$1.KEY, EncyclopediaAgentManualBlockLinks$1.Entry); }
     get encyclopediaAgentManualPageLinks() { return this.collectionCache.getCollection(EncyclopediaAgentManualPageLinks$1.KEY, EncyclopediaAgentManualPageLinks$1.Entry); }
     get encyclopediaBlocks() { return this.collectionCache.getCollection(EncyclopediaBlocks$1.KEY, EncyclopediaBlocks$1.Entry); }
@@ -51343,12 +51898,15 @@ class Database$1 {
     get factionFactionwideRecruitmentUnitExclusionsSetJunctions() { return this.collectionCache.getCollection(FactionFactionwideRecruitmentUnitExclusionsSetJunctions.KEY, FactionFactionwideRecruitmentUnitExclusionsSetJunctions.Entry); }
     get factionFeatures() { return this.collectionCache.getCollection(FactionFeatures.KEY, FactionFeatures.Entry); }
     get factionFeatureForests() { return this.collectionCache.getCollection(FactionFeatureForests.KEY, FactionFeatureForests.Entry); }
+    get factionFeatureSetMilitaryForceTypes() { return this.collectionCache.getCollection(FactionFeatureSetMilitaryForceTypes.KEY, FactionFeatureSetMilitaryForceTypes.Entry); }
     get factionFeatureTrees() { return this.collectionCache.getCollection(FactionFeatureTrees.KEY, FactionFeatureTrees.Entry); }
     get factionFeatureTreeToTransitions() { return this.collectionCache.getCollection(FactionFeatureTreeToTransitions.KEY, FactionFeatureTreeToTransitions.Entry); }
     get factionGroups() { return this.collectionCache.getCollection(FactionGroups$1.KEY, FactionGroups$1.Entry); }
     get factionPoliticalPartiesJunctions() { return this.collectionCache.getCollection(FactionPoliticalPartiesJunctions$1.KEY, FactionPoliticalPartiesJunctions$1.Entry); }
     get factionRebellionUnitsJunctions() { return this.collectionCache.getCollection(FactionRebellionUnitsJunctions$1.KEY, FactionRebellionUnitsJunctions$1.Entry); }
     get factionResourceConsumptions() { return this.collectionCache.getCollection(FactionResourceConsumptions$1.KEY, FactionResourceConsumptions$1.Entry); }
+    get factionSets() { return this.collectionCache.getCollection(FactionSets.KEY, FactionSets.Entry); }
+    get factionSetItems() { return this.collectionCache.getCollection(FactionSetItems.KEY, FactionSetItems.Entry); }
     get factionToFactionGroupsJunctions() { return this.collectionCache.getCollection(FactionToFactionGroupsJunctions$1.KEY, FactionToFactionGroupsJunctions$1.Entry); }
     get factionToMercenarySetJunctions() { return this.collectionCache.getCollection(FactionToMercenarySetJunctions$1.KEY, FactionToMercenarySetJunctions$1.Entry); }
     get factionUniformColours() { return this.collectionCache.getCollection(FactionUniformColours$1.KEY, FactionUniformColours$1.Entry); }
@@ -51436,11 +51994,16 @@ class Database$1 {
     get militaryForceLegacyEmblems() { return this.collectionCache.getCollection(MilitaryForceLegacyEmblems$1.KEY, MilitaryForceLegacyEmblems$1.Entry); }
     get militaryForceLegacyNames() { return this.collectionCache.getCollection(MilitaryForceLegacyNames$1.KEY, MilitaryForceLegacyNames$1.Entry); }
     get militaryForceTypes() { return this.collectionCache.getCollection(MilitaryForceTypes.KEY, MilitaryForceTypes.Entry); }
+    get militaryForceTypeConversions() { return this.collectionCache.getCollection(MilitaryForceTypeConversions.KEY, MilitaryForceTypeConversions.Entry); }
+    get militaryForceTypeFeatures() { return this.collectionCache.getCollection(MilitaryForceTypeFeatures.KEY, MilitaryForceTypeFeatures.Entry); }
+    get militaryForceTypeFeatureJunctions() { return this.collectionCache.getCollection(MilitaryForceTypeFeatureJunctions.KEY, MilitaryForceTypeFeatureJunctions.Entry); }
+    get militaryForceTypeHordeDetails() { return this.collectionCache.getCollection(MilitaryForceTypeHordeDetails.KEY, MilitaryForceTypeHordeDetails.Entry); }
     get ministerialEffectivenessModifiers() { return this.collectionCache.getCollection(MinisterialEffectivenessModifiers$1.KEY, MinisterialEffectivenessModifiers$1.Entry); }
     get ministerialPositions() { return this.collectionCache.getCollection(MinisterialPositions$1.KEY, MinisterialPositions$1.Entry); }
     get ministerialPositionsCultureDetails() { return this.collectionCache.getCollection(MinisterialPositionsCultureDetails.KEY, MinisterialPositionsCultureDetails.Entry); }
     get ministerialPositionsStrings() { return this.collectionCache.getCollection(MinisterialPositionsStrings$1.KEY, MinisterialPositionsStrings$1.Entry); }
     get ministerialPositionsToGovernorships() { return this.collectionCache.getCollection(MinisterialPositionsToGovernorships$1.KEY, MinisterialPositionsToGovernorships$1.Entry); }
+    get ministerialPositionsToRegionRestrictions() { return this.collectionCache.getCollection(MinisterialPositionsToRegionRestrictions.KEY, MinisterialPositionsToRegionRestrictions.Entry); }
     get ministerialPositionEffectBundles() { return this.collectionCache.getCollection(MinisterialPositionEffectBundles.KEY, MinisterialPositionEffectBundles.Entry); }
     get ministerialPositionToRequiredBuildingJunctions() { return this.collectionCache.getCollection(MinisterialPositionToRequiredBuildingJunctions.KEY, MinisterialPositionToRequiredBuildingJunctions.Entry); }
     get ministerialPosititionToSubtypeRestrictions() { return this.collectionCache.getCollection(MinisterialPosititionToSubtypeRestrictions.KEY, MinisterialPosititionToSubtypeRestrictions.Entry); }
@@ -51450,6 +52013,8 @@ class Database$1 {
     get missionCategoryAgeMultipliers() { return this.collectionCache.getCollection(MissionCategoryAgeMultipliers.KEY, MissionCategoryAgeMultipliers.Entry); }
     get missionCategoryThresholds() { return this.collectionCache.getCollection(MissionCategoryThresholds.KEY, MissionCategoryThresholds.Entry); }
     get missionCategoryThresholdValidSubcultures() { return this.collectionCache.getCollection(MissionCategoryThresholdValidSubcultures.KEY, MissionCategoryThresholdValidSubcultures.Entry); }
+    get missionGroups() { return this.collectionCache.getCollection(MissionGroups.KEY, MissionGroups.Entry); }
+    get missionGroupsToMissions() { return this.collectionCache.getCollection(MissionGroupsToMissions.KEY, MissionGroupsToMissions.Entry); }
     get missionIssuers() { return this.collectionCache.getCollection(MissionIssuers$1.KEY, MissionIssuers$1.Entry); }
     get missionText() { return this.collectionCache.getCollection(MissionText$1.KEY, MissionText$1.Entry); }
     get missionTypes() { return this.collectionCache.getCollection(MissionTypes$1.KEY, MissionTypes$1.Entry); }
@@ -51477,6 +52042,8 @@ class Database$1 {
     get mpForceGenCompositions() { return this.collectionCache.getCollection(MpForceGenCompositions.KEY, MpForceGenCompositions.Entry); }
     get mpForceGenTemplates() { return this.collectionCache.getCollection(MpForceGenTemplates$1.KEY, MpForceGenTemplates$1.Entry); }
     get mpForceGenTemplateJunctions() { return this.collectionCache.getCollection(MpForceGenTemplateJunctions$1.KEY, MpForceGenTemplateJunctions$1.Entry); }
+    get nakaiTemples() { return this.collectionCache.getCollection(NakaiTemples.KEY, NakaiTemples.Entry); }
+    get nakaiTempleLevels() { return this.collectionCache.getCollection(NakaiTempleLevels.KEY, NakaiTempleLevels.Entry); }
     get names() { return this.collectionCache.getCollection(Names$1.KEY, Names$1.Entry); }
     get namesGroups() { return this.collectionCache.getCollection(NamesGroups$1.KEY, NamesGroups$1.Entry); }
     get nameOrders() { return this.collectionCache.getCollection(NameOrders$1.KEY, NameOrders$1.Entry); }
@@ -51505,6 +52072,7 @@ class Database$1 {
     get pooledResourceEffectTypes() { return this.collectionCache.getCollection(PooledResourceEffectTypes.KEY, PooledResourceEffectTypes.Entry); }
     get pooledResourceFactors() { return this.collectionCache.getCollection(PooledResourceFactors.KEY, PooledResourceFactors.Entry); }
     get pooledResourceFactorJunctions() { return this.collectionCache.getCollection(PooledResourceFactorJunctions.KEY, PooledResourceFactorJunctions.Entry); }
+    get pooledResourceInfluenceOverrides() { return this.collectionCache.getCollection(PooledResourceInfluenceOverrides.KEY, PooledResourceInfluenceOverrides.Entry); }
     get populationClasses() { return this.collectionCache.getCollection(PopulationClasses$1.KEY, PopulationClasses$1.Entry); }
     get prefabTypes() { return this.collectionCache.getCollection(PrefabTypes.KEY, PrefabTypes.Entry); }
     get preBattleSpeeches() { return this.collectionCache.getCollection(PreBattleSpeeches$1.KEY, PreBattleSpeeches$1.Entry); }
@@ -51514,6 +52082,7 @@ class Database$1 {
     get projectilesDetonationTypesEnum() { return this.collectionCache.getCollection(ProjectilesDetonationTypesEnum$1.KEY, ProjectilesDetonationTypesEnum$1.Entry); }
     get projectilesDetonatorTypesEnum() { return this.collectionCache.getCollection(ProjectilesDetonatorTypesEnum$1.KEY, ProjectilesDetonatorTypesEnum$1.Entry); }
     get projectilesExplosions() { return this.collectionCache.getCollection(ProjectilesExplosions$1.KEY, ProjectilesExplosions$1.Entry); }
+    get projectilesScalingDamages() { return this.collectionCache.getCollection(ProjectilesScalingDamages.KEY, ProjectilesScalingDamages.Entry); }
     get projectilesSpinTypeEnum() { return this.collectionCache.getCollection(ProjectilesSpinTypeEnum$1.KEY, ProjectilesSpinTypeEnum$1.Entry); }
     get projectileBombardments() { return this.collectionCache.getCollection(ProjectileBombardments.KEY, ProjectileBombardments.Entry); }
     get projectileBombardmentLaunchSources() { return this.collectionCache.getCollection(ProjectileBombardmentLaunchSources.KEY, ProjectileBombardmentLaunchSources.Entry); }
@@ -51562,6 +52131,7 @@ class Database$1 {
     get resourceEffects() { return this.collectionCache.getCollection(ResourceEffects$1.KEY, ResourceEffects$1.Entry); }
     get resourceUiOverrides() { return this.collectionCache.getCollection(ResourceUiOverrides.KEY, ResourceUiOverrides.Entry); }
     get rituals() { return this.collectionCache.getCollection(Rituals.KEY, Rituals.Entry); }
+    get ritualsToNakaiTempleLevels() { return this.collectionCache.getCollection(RitualsToNakaiTempleLevels.KEY, RitualsToNakaiTempleLevels.Entry); }
     get ritualsToRitualChains() { return this.collectionCache.getCollection(RitualsToRitualChains.KEY, RitualsToRitualChains.Entry); }
     get ritualAdditionalUiExplanationTexts() { return this.collectionCache.getCollection(RitualAdditionalUiExplanationTexts.KEY, RitualAdditionalUiExplanationTexts.Entry); }
     get ritualBeams() { return this.collectionCache.getCollection(RitualBeams.KEY, RitualBeams.Entry); }
@@ -51779,6 +52349,7 @@ class Database$1 {
     get unitRegimentNamesLocalisationLookup() { return this.collectionCache.getCollection(UnitRegimentNamesLocalisationLookup$1.KEY, UnitRegimentNamesLocalisationLookup$1.Entry); }
     get unitRequiredTechnologyJunctions() { return this.collectionCache.getCollection(UnitRequiredTechnologyJunctions$1.KEY, UnitRequiredTechnologyJunctions$1.Entry); }
     get unitSets() { return this.collectionCache.getCollection(UnitSets$1.KEY, UnitSets$1.Entry); }
+    get unitSetToMpUnitCaps() { return this.collectionCache.getCollection(UnitSetToMpUnitCaps.KEY, UnitSetToMpUnitCaps.Entry); }
     get unitSetToUnitJunctions() { return this.collectionCache.getCollection(UnitSetToUnitJunctions$1.KEY, UnitSetToUnitJunctions$1.Entry); }
     get unitSetUnitAbilityJunctions() { return this.collectionCache.getCollection(UnitSetUnitAbilityJunctions.KEY, UnitSetUnitAbilityJunctions.Entry); }
     get unitSetUnitAttributeJunctions() { return this.collectionCache.getCollection(UnitSetUnitAttributeJunctions.KEY, UnitSetUnitAttributeJunctions.Entry); }

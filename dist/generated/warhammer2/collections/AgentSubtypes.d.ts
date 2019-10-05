@@ -18,6 +18,7 @@ export declare namespace AgentSubtypes {
         readonly hasFemaleName: boolean;
         readonly canGainXp: boolean;
         readonly loyaltyIsApplicable: boolean;
+        readonly contributesToAgentCap: boolean;
         constructor(collectionCache: CollectionCache, values: any);
         readonly associatedUnitOverride: MainUnits.Entry | undefined;
         readonly audioVoiceoverActorGroup: AudioVoActorGroups.Entry | undefined;

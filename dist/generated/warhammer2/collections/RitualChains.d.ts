@@ -6,7 +6,7 @@ export declare namespace RitualChains {
         private readonly collectionCache;
         readonly key: string;
         readonly displayName: string;
-        readonly desctiption: string;
+        readonly description: string;
         readonly _category: string;
         readonly ritualSitesRequired: number;
         readonly colourR: number;

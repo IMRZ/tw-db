@@ -19,6 +19,7 @@ export namespace AudioEntityTypeLimitations {
     readonly canPlayAtBone: boolean;
     readonly codeUncapped: boolean;
     readonly containsUniqueEntitySwitches: boolean;
+    readonly allowsFocus: boolean;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -33,6 +34,7 @@ export namespace AudioEntityTypeLimitations {
       this.canPlayAtBone = !!values["can_play_at_bone"];
       this.codeUncapped = !!values["code_uncapped"];
       this.containsUniqueEntitySwitches = !!values["contains_unique_entity_switches"];
+      this.allowsFocus = !!values["allows_focus"];
     }
     
   }

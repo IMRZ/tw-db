@@ -13,6 +13,7 @@ import { TexcExpansions } from "./TexcExpansions";
 import { CdirMilitaryGeneratorConfigs } from "./CdirMilitaryGeneratorConfigs";
 import { FactionFeatureForests } from "./FactionFeatureForests";
 import { AudioVoActorGroups } from "./AudioVoActorGroups";
+import { FactionSets } from "./FactionSets";
 
 export namespace Factions {
   export const KEY = new CollectionKey("factions");
@@ -86,6 +87,8 @@ export namespace Factions {
     readonly _cdirMilitaryGeneratorConfig: string;
     readonly _featureForest: string;
     readonly _defaultAudioActorVoGroup: string;
+    readonly _neutralReinforcementFactions: string;
+    readonly canAcceptGiftsWhenDead: boolean;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -155,6 +158,8 @@ export namespace Factions {
       this._cdirMilitaryGeneratorConfig = values["cdir_military_generator_config"];
       this._featureForest = values["feature_forest"];
       this._defaultAudioActorVoGroup = values["default_audio_actor_vo_group"];
+      this._neutralReinforcementFactions = values["neutral_reinforcement_factions"];
+      this.canAcceptGiftsWhenDead = !!values["can_accept_gifts_when_dead"];
     }
     
     get subculture(): CulturesSubcultures.Entry | undefined {
@@ -235,6 +240,11 @@ export namespace Factions {
     get defaultAudioActorVoGroup(): AudioVoActorGroups.Entry | undefined {
       const collection = <AudioVoActorGroups.Entry[]>this.collectionCache.getCollection(AudioVoActorGroups.KEY, AudioVoActorGroups.Entry);
       return collection.find(entry => entry.name === this._defaultAudioActorVoGroup);
+    }
+    
+    get neutralReinforcementFactions(): FactionSets.Entry | undefined {
+      const collection = <FactionSets.Entry[]>this.collectionCache.getCollection(FactionSets.KEY, FactionSets.Entry);
+      return collection.find(entry => entry.key === this._neutralReinforcementFactions);
     }
   }
 }

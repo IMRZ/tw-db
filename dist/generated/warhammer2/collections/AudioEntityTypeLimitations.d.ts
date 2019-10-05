@@ -14,6 +14,7 @@ export declare namespace AudioEntityTypeLimitations {
         readonly canPlayAtBone: boolean;
         readonly codeUncapped: boolean;
         readonly containsUniqueEntitySwitches: boolean;
+        readonly allowsFocus: boolean;
         constructor(collectionCache: CollectionCache, values: any);
     }
 }

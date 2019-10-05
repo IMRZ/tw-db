@@ -10,6 +10,7 @@ import { ProjectileHomingParams } from "./ProjectileHomingParams";
 import { ProjectileFirstPersonParams } from "./ProjectileFirstPersonParams";
 import { ProjectilePenetrationJunctions } from "./ProjectilePenetrationJunctions";
 import { TexcExpansions } from "./TexcExpansions";
+import { ProjectilesScalingDamages } from "./ProjectilesScalingDamages";
 
 export namespace Projectiles {
   export const KEY = new CollectionKey("projectiles");
@@ -70,6 +71,7 @@ export namespace Projectiles {
     readonly lockOnMultipleFirePos: boolean;
     readonly preferCentralTargets: boolean;
     readonly canDamageVehicles: boolean;
+    readonly _scalingDamage: string;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -126,6 +128,7 @@ export namespace Projectiles {
       this.lockOnMultipleFirePos = !!values["lock_on_multiple_fire_pos"];
       this.preferCentralTargets = !!values["prefer_central_targets"];
       this.canDamageVehicles = !!values["can_damage_vehicles"];
+      this._scalingDamage = values["scaling_damage"];
     }
     
     get shotType(): ProjectileShotTypeEnum.Entry | undefined {
@@ -181,6 +184,11 @@ export namespace Projectiles {
     get gameExpansionKey(): TexcExpansions.Entry | undefined {
       const collection = <TexcExpansions.Entry[]>this.collectionCache.getCollection(TexcExpansions.KEY, TexcExpansions.Entry);
       return collection.find(entry => entry.expansion === this._gameExpansionKey);
+    }
+    
+    get scalingDamage(): ProjectilesScalingDamages.Entry | undefined {
+      const collection = <ProjectilesScalingDamages.Entry[]>this.collectionCache.getCollection(ProjectilesScalingDamages.KEY, ProjectilesScalingDamages.Entry);
+      return collection.find(entry => entry.key === this._scalingDamage);
     }
   }
 }

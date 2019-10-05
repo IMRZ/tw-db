@@ -14,6 +14,7 @@ export namespace MercenaryUnitGroups {
     readonly maxReplenishPerTurn: number;
     readonly chanceToReplenish: number;
     readonly usePartialReplenishment: boolean;
+    readonly replenishmentReason: string;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -23,6 +24,7 @@ export namespace MercenaryUnitGroups {
       this.maxReplenishPerTurn = values["max_replenish_per_turn"];
       this.chanceToReplenish = values["chance_to_replenish"];
       this.usePartialReplenishment = !!values["use_partial_replenishment"];
+      this.replenishmentReason = values["replenishment_reason"];
     }
     
     get unitRecord(): MainUnits.Entry | undefined {

@@ -1,6 +1,6 @@
 
 import { CollectionCache, CollectionKey } from "../../../common";
-import { AgentSubtypes } from "./AgentSubtypes";
+import { CampaignGroups } from "./CampaignGroups";
 import { MilitaryForceTypes } from "./MilitaryForceTypes";
 
 export namespace AgentSubtypeMilitaryForceCreationOverrides {
@@ -9,18 +9,18 @@ export namespace AgentSubtypeMilitaryForceCreationOverrides {
   export class Entry {
     private readonly collectionCache: CollectionCache;
 
-    readonly _agentSubtype: string;
+    readonly _validGroup: string;
     readonly _militaryForceType: string;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
-      this._agentSubtype = values["agent_subtype"];
+      this._validGroup = values["valid_group"];
       this._militaryForceType = values["military_force_type"];
     }
     
-    get agentSubtype(): AgentSubtypes.Entry | undefined {
-      const collection = <AgentSubtypes.Entry[]>this.collectionCache.getCollection(AgentSubtypes.KEY, AgentSubtypes.Entry);
-      return collection.find(entry => entry.key === this._agentSubtype);
+    get validGroup(): CampaignGroups.Entry | undefined {
+      const collection = <CampaignGroups.Entry[]>this.collectionCache.getCollection(CampaignGroups.KEY, CampaignGroups.Entry);
+      return collection.find(entry => entry.id === this._validGroup);
     }
     
     get militaryForceType(): MilitaryForceTypes.Entry | undefined {

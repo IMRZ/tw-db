@@ -1,6 +1,7 @@
 import { CollectionCache, CollectionKey } from "../../../common";
 import { Videos } from "./Videos";
 import { Cultures } from "./Cultures";
+import { Pdlc } from "./Pdlc";
 export declare namespace CampaignVideos {
     const KEY: CollectionKey;
     class Entry {
@@ -11,9 +12,11 @@ export declare namespace CampaignVideos {
         readonly campaignLocked: boolean;
         readonly stillPath: string;
         readonly sort: number;
+        readonly _pdlc: string;
         constructor(collectionCache: CollectionCache, values: any);
         readonly videoName: Videos.Entry | undefined;
         readonly culture: Cultures.Entry | undefined;
+        readonly pdlc: Pdlc.Entry | undefined;
     }
 }
 export default CampaignVideos;

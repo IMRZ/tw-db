@@ -7,6 +7,7 @@ import { AudioEntityLoopingSounds } from "./AudioEntityLoopingSounds";
 import { AudioEntityActors } from "./AudioEntityActors";
 import { TexcExpansions } from "./TexcExpansions";
 import { AudioSphereOfInfluences } from "./AudioSphereOfInfluences";
+import { AudioEntityFocusPools } from "./AudioEntityFocusPools";
 export declare namespace AudioEntityTypes {
     const KEY: CollectionKey;
     class Entry {
@@ -46,10 +47,12 @@ export declare namespace AudioEntityTypes {
         readonly maxCameraDistanceForFocus: number;
         readonly minCameraDistanceForFocus: number;
         readonly focusRtpc: string;
-        readonly ignoreMoving: boolean;
-        readonly ignoreMovingOutsideCombat: boolean;
+        readonly considerMoving: boolean;
         readonly _groupIdleShoot: string;
         readonly _groupIdleCombatReady: string;
+        readonly recordId: number;
+        readonly _focusPool: string;
+        readonly minUnitFocusVelocity: number;
         constructor(collectionCache: CollectionCache, values: any);
         readonly idleRandomVocalisation: AudioEntityRandomVocalisations.Entry | undefined;
         readonly runningRandomVocalisation: AudioEntityRandomVocalisations.Entry | undefined;
@@ -75,6 +78,7 @@ export declare namespace AudioEntityTypes {
         readonly sphereOfInfluenceCombat: AudioSphereOfInfluences.Entry | undefined;
         readonly groupIdleShoot: AudioGroupSounds.Entry | undefined;
         readonly groupIdleCombatReady: AudioGroupSounds.Entry | undefined;
+        readonly focusPool: AudioEntityFocusPools.Entry | undefined;
     }
 }
 export default AudioEntityTypes;

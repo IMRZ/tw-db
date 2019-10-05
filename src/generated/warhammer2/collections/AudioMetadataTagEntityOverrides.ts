@@ -15,6 +15,7 @@ export namespace AudioMetadataTagEntityOverrides {
     readonly soundEventBattleStop: string;
     readonly soundEventCampaignStart: string;
     readonly soundEventCampaignStop: string;
+    readonly cullingDistanceOverride: number;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -24,6 +25,7 @@ export namespace AudioMetadataTagEntityOverrides {
       this.soundEventBattleStop = values["sound_event_battle_stop"];
       this.soundEventCampaignStart = values["sound_event_campaign_start"];
       this.soundEventCampaignStop = values["sound_event_campaign_stop"];
+      this.cullingDistanceOverride = values["culling_distance_override"];
     }
     
     get metadataTag(): AudioMetadataTags.Entry | undefined {
