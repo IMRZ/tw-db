@@ -10,7 +10,7 @@ export namespace RitualChains {
 
     readonly key: string;
     readonly displayName: string;
-    readonly desctiption: string;
+    readonly description: string;
     readonly _category: string;
     readonly ritualSitesRequired: number;
     readonly colourR: number;
@@ -21,7 +21,7 @@ export namespace RitualChains {
       this.collectionCache = collectionCache;
       this.key = values["key"];
       this.displayName = values["display_name"];
-      this.desctiption = values["desctiption"];
+      this.description = values["description"];
       this._category = values["category"];
       this.ritualSitesRequired = values["ritual_sites_required"];
       this.colourR = values["colour_r"];

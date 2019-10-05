@@ -13,6 +13,7 @@ export namespace EffectBundles {
     readonly localisedDescription: string;
     readonly uiIcon: string;
     readonly _bundleTarget: string;
+    readonly priority: number;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -21,6 +22,7 @@ export namespace EffectBundles {
       this.localisedDescription = values["localised_description"];
       this.uiIcon = values["ui_icon"];
       this._bundleTarget = values["bundle_target"];
+      this.priority = values["priority"];
     }
     
     get bundleTarget(): EffectBundleTargets.Entry | undefined {

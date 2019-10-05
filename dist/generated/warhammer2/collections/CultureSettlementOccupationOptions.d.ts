@@ -2,6 +2,7 @@ import { CollectionCache, CollectionKey } from "../../../common";
 import { CampaignGroups } from "./CampaignGroups";
 import { SettlementOccupationOptions } from "./SettlementOccupationOptions";
 import { EffectBundles } from "./EffectBundles";
+import { ResourceCosts } from "./ResourceCosts";
 export declare namespace CultureSettlementOccupationOptions {
     const KEY: CollectionKey;
     class Entry {
@@ -19,12 +20,14 @@ export declare namespace CultureSettlementOccupationOptions {
         readonly icon: string;
         readonly baseLoot: number;
         readonly buildingLootMod: number;
+        readonly _resourceTransaction: string;
         constructor(collectionCache: CollectionCache, values: any);
         readonly group: CampaignGroups.Entry | undefined;
         readonly option: SettlementOccupationOptions.Entry | undefined;
         readonly actingArmyFactionEffectBundle: EffectBundles.Entry | undefined;
         readonly targetSettlementFactionEffectBundle: EffectBundles.Entry | undefined;
         readonly actingArmyEffectBundle: EffectBundles.Entry | undefined;
+        readonly resourceTransaction: ResourceCosts.Entry | undefined;
     }
 }
 export default CultureSettlementOccupationOptions;

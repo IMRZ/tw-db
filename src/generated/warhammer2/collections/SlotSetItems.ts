@@ -4,7 +4,6 @@ import { SlotSets } from "./SlotSets";
 import { SlotTypes } from "./SlotTypes";
 import { SlotTemplates } from "./SlotTemplates";
 import { BuildingLevels } from "./BuildingLevels";
-import { CampaignCompositeScenes } from "./CampaignCompositeScenes";
 
 export namespace SlotSetItems {
   export const KEY = new CollectionKey("slot_set_items");
@@ -17,7 +16,6 @@ export namespace SlotSetItems {
     readonly _slotType: string;
     readonly _slotTemplate: string;
     readonly _buildingLevel: string;
-    readonly _compositeScene: string;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -26,7 +24,6 @@ export namespace SlotSetItems {
       this._slotType = values["slot_type"];
       this._slotTemplate = values["slot_template"];
       this._buildingLevel = values["building_level"];
-      this._compositeScene = values["composite_scene"];
     }
     
     get slotSet(): SlotSets.Entry | undefined {
@@ -47,11 +44,6 @@ export namespace SlotSetItems {
     get buildingLevel(): BuildingLevels.Entry | undefined {
       const collection = <BuildingLevels.Entry[]>this.collectionCache.getCollection(BuildingLevels.KEY, BuildingLevels.Entry);
       return collection.find(entry => entry.levelName === this._buildingLevel);
-    }
-    
-    get compositeScene(): CampaignCompositeScenes.Entry | undefined {
-      const collection = <CampaignCompositeScenes.Entry[]>this.collectionCache.getCollection(CampaignCompositeScenes.KEY, CampaignCompositeScenes.Entry);
-      return collection.find(entry => entry.id === this._compositeScene);
     }
   }
 }

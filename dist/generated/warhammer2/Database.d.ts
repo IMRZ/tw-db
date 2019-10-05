@@ -24,6 +24,7 @@ export declare class Database {
     readonly agentStringSubcultureOverrides: collections.AgentStringSubcultureOverrides.Entry[];
     readonly agentSubcultureGenderOverrides: collections.AgentSubcultureGenderOverrides.Entry[];
     readonly agentSubtypes: collections.AgentSubtypes.Entry[];
+    readonly agentSubtypesToMissionGroups: collections.AgentSubtypesToMissionGroups.Entry[];
     readonly agentSubtypeCivilWarFactionOverrides: collections.AgentSubtypeCivilWarFactionOverrides.Entry[];
     readonly agentSubtypeMilitaryForceCreationOverrides: collections.AgentSubtypeMilitaryForceCreationOverrides.Entry[];
     readonly agentSubtypeSubcultureOverrides: collections.AgentSubtypeSubcultureOverrides.Entry[];
@@ -96,6 +97,7 @@ export declare class Database {
     readonly audioCampaignStances: collections.AudioCampaignStances.Entry[];
     readonly audioCampaignTreeTypes: collections.AudioCampaignTreeTypes.Entry[];
     readonly audioEntityActors: collections.AudioEntityActors.Entry[];
+    readonly audioEntityFocusPools: collections.AudioEntityFocusPools.Entry[];
     readonly audioEntityLoopingSounds: collections.AudioEntityLoopingSounds.Entry[];
     readonly audioEntityRandomVocalisations: collections.AudioEntityRandomVocalisations.Entry[];
     readonly audioEntityTypes: collections.AudioEntityTypes.Entry[];
@@ -496,6 +498,7 @@ export declare class Database {
     readonly campaignGroupMemberCriteriaDiplomaticStances: collections.CampaignGroupMemberCriteriaDiplomaticStances.Entry[];
     readonly campaignGroupMemberCriteriaFactions: collections.CampaignGroupMemberCriteriaFactions.Entry[];
     readonly campaignGroupMemberCriteriaInvolvesSettlements: collections.CampaignGroupMemberCriteriaInvolvesSettlements.Entry[];
+    readonly campaignGroupMemberCriteriaIsDead: collections.CampaignGroupMemberCriteriaIsDead.Entry[];
     readonly campaignGroupMemberCriteriaMinisterialPositions: collections.CampaignGroupMemberCriteriaMinisterialPositions.Entry[];
     readonly campaignGroupMemberCriteriaNumericRanges: collections.CampaignGroupMemberCriteriaNumericRanges.Entry[];
     readonly campaignGroupMemberCriteriaOnSeas: collections.CampaignGroupMemberCriteriaOnSeas.Entry[];
@@ -521,6 +524,7 @@ export declare class Database {
     readonly campaignGroupRacialSuitabilityEffects: collections.CampaignGroupRacialSuitabilityEffects.Entry[];
     readonly campaignGroupRituals: collections.CampaignGroupRituals.Entry[];
     readonly campaignGroupRitualChains: collections.CampaignGroupRitualChains.Entry[];
+    readonly campaignGroupSettlementOccupationGiftFactions: collections.CampaignGroupSettlementOccupationGiftFactions.Entry[];
     readonly campaignGroupSettlementOccupationLootedPooledResources: collections.CampaignGroupSettlementOccupationLootedPooledResources.Entry[];
     readonly campaignGroupSettlementOccupationOptionForeignSlots: collections.CampaignGroupSettlementOccupationOptionForeignSlots.Entry[];
     readonly campaignGroupUniqueAgents: collections.CampaignGroupUniqueAgents.Entry[];
@@ -773,6 +777,8 @@ export declare class Database {
     readonly effectBundleAdvancementStages: collections.EffectBundleAdvancementStages.Entry[];
     readonly effectBundleTargets: collections.EffectBundleTargets.Entry[];
     readonly effectCategories: collections.EffectCategories.Entry[];
+    readonly electorCounts: collections.ElectorCounts.Entry[];
+    readonly electorCountRegionToCapitalRegionJunctions: collections.ElectorCountRegionToCapitalRegionJunctions.Entry[];
     readonly encyclopediaAgentManualBlockLinks: collections.EncyclopediaAgentManualBlockLinks.Entry[];
     readonly encyclopediaAgentManualPageLinks: collections.EncyclopediaAgentManualPageLinks.Entry[];
     readonly encyclopediaBlocks: collections.EncyclopediaBlocks.Entry[];
@@ -828,12 +834,15 @@ export declare class Database {
     readonly factionFactionwideRecruitmentUnitExclusionsSetJunctions: collections.FactionFactionwideRecruitmentUnitExclusionsSetJunctions.Entry[];
     readonly factionFeatures: collections.FactionFeatures.Entry[];
     readonly factionFeatureForests: collections.FactionFeatureForests.Entry[];
+    readonly factionFeatureSetMilitaryForceTypes: collections.FactionFeatureSetMilitaryForceTypes.Entry[];
     readonly factionFeatureTrees: collections.FactionFeatureTrees.Entry[];
     readonly factionFeatureTreeToTransitions: collections.FactionFeatureTreeToTransitions.Entry[];
     readonly factionGroups: collections.FactionGroups.Entry[];
     readonly factionPoliticalPartiesJunctions: collections.FactionPoliticalPartiesJunctions.Entry[];
     readonly factionRebellionUnitsJunctions: collections.FactionRebellionUnitsJunctions.Entry[];
     readonly factionResourceConsumptions: collections.FactionResourceConsumptions.Entry[];
+    readonly factionSets: collections.FactionSets.Entry[];
+    readonly factionSetItems: collections.FactionSetItems.Entry[];
     readonly factionToFactionGroupsJunctions: collections.FactionToFactionGroupsJunctions.Entry[];
     readonly factionToMercenarySetJunctions: collections.FactionToMercenarySetJunctions.Entry[];
     readonly factionUniformColours: collections.FactionUniformColours.Entry[];
@@ -921,11 +930,16 @@ export declare class Database {
     readonly militaryForceLegacyEmblems: collections.MilitaryForceLegacyEmblems.Entry[];
     readonly militaryForceLegacyNames: collections.MilitaryForceLegacyNames.Entry[];
     readonly militaryForceTypes: collections.MilitaryForceTypes.Entry[];
+    readonly militaryForceTypeConversions: collections.MilitaryForceTypeConversions.Entry[];
+    readonly militaryForceTypeFeatures: collections.MilitaryForceTypeFeatures.Entry[];
+    readonly militaryForceTypeFeatureJunctions: collections.MilitaryForceTypeFeatureJunctions.Entry[];
+    readonly militaryForceTypeHordeDetails: collections.MilitaryForceTypeHordeDetails.Entry[];
     readonly ministerialEffectivenessModifiers: collections.MinisterialEffectivenessModifiers.Entry[];
     readonly ministerialPositions: collections.MinisterialPositions.Entry[];
     readonly ministerialPositionsCultureDetails: collections.MinisterialPositionsCultureDetails.Entry[];
     readonly ministerialPositionsStrings: collections.MinisterialPositionsStrings.Entry[];
     readonly ministerialPositionsToGovernorships: collections.MinisterialPositionsToGovernorships.Entry[];
+    readonly ministerialPositionsToRegionRestrictions: collections.MinisterialPositionsToRegionRestrictions.Entry[];
     readonly ministerialPositionEffectBundles: collections.MinisterialPositionEffectBundles.Entry[];
     readonly ministerialPositionToRequiredBuildingJunctions: collections.MinisterialPositionToRequiredBuildingJunctions.Entry[];
     readonly ministerialPosititionToSubtypeRestrictions: collections.MinisterialPosititionToSubtypeRestrictions.Entry[];
@@ -935,6 +949,8 @@ export declare class Database {
     readonly missionCategoryAgeMultipliers: collections.MissionCategoryAgeMultipliers.Entry[];
     readonly missionCategoryThresholds: collections.MissionCategoryThresholds.Entry[];
     readonly missionCategoryThresholdValidSubcultures: collections.MissionCategoryThresholdValidSubcultures.Entry[];
+    readonly missionGroups: collections.MissionGroups.Entry[];
+    readonly missionGroupsToMissions: collections.MissionGroupsToMissions.Entry[];
     readonly missionIssuers: collections.MissionIssuers.Entry[];
     readonly missionText: collections.MissionText.Entry[];
     readonly missionTypes: collections.MissionTypes.Entry[];
@@ -962,6 +978,8 @@ export declare class Database {
     readonly mpForceGenCompositions: collections.MpForceGenCompositions.Entry[];
     readonly mpForceGenTemplates: collections.MpForceGenTemplates.Entry[];
     readonly mpForceGenTemplateJunctions: collections.MpForceGenTemplateJunctions.Entry[];
+    readonly nakaiTemples: collections.NakaiTemples.Entry[];
+    readonly nakaiTempleLevels: collections.NakaiTempleLevels.Entry[];
     readonly names: collections.Names.Entry[];
     readonly namesGroups: collections.NamesGroups.Entry[];
     readonly nameOrders: collections.NameOrders.Entry[];
@@ -990,6 +1008,7 @@ export declare class Database {
     readonly pooledResourceEffectTypes: collections.PooledResourceEffectTypes.Entry[];
     readonly pooledResourceFactors: collections.PooledResourceFactors.Entry[];
     readonly pooledResourceFactorJunctions: collections.PooledResourceFactorJunctions.Entry[];
+    readonly pooledResourceInfluenceOverrides: collections.PooledResourceInfluenceOverrides.Entry[];
     readonly populationClasses: collections.PopulationClasses.Entry[];
     readonly prefabTypes: collections.PrefabTypes.Entry[];
     readonly preBattleSpeeches: collections.PreBattleSpeeches.Entry[];
@@ -999,6 +1018,7 @@ export declare class Database {
     readonly projectilesDetonationTypesEnum: collections.ProjectilesDetonationTypesEnum.Entry[];
     readonly projectilesDetonatorTypesEnum: collections.ProjectilesDetonatorTypesEnum.Entry[];
     readonly projectilesExplosions: collections.ProjectilesExplosions.Entry[];
+    readonly projectilesScalingDamages: collections.ProjectilesScalingDamages.Entry[];
     readonly projectilesSpinTypeEnum: collections.ProjectilesSpinTypeEnum.Entry[];
     readonly projectileBombardments: collections.ProjectileBombardments.Entry[];
     readonly projectileBombardmentLaunchSources: collections.ProjectileBombardmentLaunchSources.Entry[];
@@ -1047,6 +1067,7 @@ export declare class Database {
     readonly resourceEffects: collections.ResourceEffects.Entry[];
     readonly resourceUiOverrides: collections.ResourceUiOverrides.Entry[];
     readonly rituals: collections.Rituals.Entry[];
+    readonly ritualsToNakaiTempleLevels: collections.RitualsToNakaiTempleLevels.Entry[];
     readonly ritualsToRitualChains: collections.RitualsToRitualChains.Entry[];
     readonly ritualAdditionalUiExplanationTexts: collections.RitualAdditionalUiExplanationTexts.Entry[];
     readonly ritualBeams: collections.RitualBeams.Entry[];
@@ -1264,6 +1285,7 @@ export declare class Database {
     readonly unitRegimentNamesLocalisationLookup: collections.UnitRegimentNamesLocalisationLookup.Entry[];
     readonly unitRequiredTechnologyJunctions: collections.UnitRequiredTechnologyJunctions.Entry[];
     readonly unitSets: collections.UnitSets.Entry[];
+    readonly unitSetToMpUnitCaps: collections.UnitSetToMpUnitCaps.Entry[];
     readonly unitSetToUnitJunctions: collections.UnitSetToUnitJunctions.Entry[];
     readonly unitSetUnitAbilityJunctions: collections.UnitSetUnitAbilityJunctions.Entry[];
     readonly unitSetUnitAttributeJunctions: collections.UnitSetUnitAttributeJunctions.Entry[];

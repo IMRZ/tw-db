@@ -5,14 +5,16 @@ export declare namespace IntrigueActionsIncidentsJunctions {
     const KEY: CollectionKey;
     class Entry {
         private readonly collectionCache;
-        readonly _culture: string;
+        readonly _targetCulture: string;
         readonly _incident: string;
         readonly isPositive: boolean;
         readonly weight: number;
         readonly key: number;
+        readonly _sourceCulture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
+        readonly targetCulture: Cultures.Entry | undefined;
         readonly incident: Incidents.Entry | undefined;
+        readonly sourceCulture: Cultures.Entry | undefined;
     }
 }
 export default IntrigueActionsIncidentsJunctions;

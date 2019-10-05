@@ -9,6 +9,7 @@ import { ProjectileHomingParams } from "./ProjectileHomingParams";
 import { ProjectileFirstPersonParams } from "./ProjectileFirstPersonParams";
 import { ProjectilePenetrationJunctions } from "./ProjectilePenetrationJunctions";
 import { TexcExpansions } from "./TexcExpansions";
+import { ProjectilesScalingDamages } from "./ProjectilesScalingDamages";
 export declare namespace Projectiles {
     const KEY: CollectionKey;
     class Entry {
@@ -66,6 +67,7 @@ export declare namespace Projectiles {
         readonly lockOnMultipleFirePos: boolean;
         readonly preferCentralTargets: boolean;
         readonly canDamageVehicles: boolean;
+        readonly _scalingDamage: string;
         constructor(collectionCache: CollectionCache, values: any);
         readonly shotType: ProjectileShotTypeEnum.Entry | undefined;
         readonly explosionType: ProjectilesExplosions.Entry | undefined;
@@ -78,6 +80,7 @@ export declare namespace Projectiles {
         readonly firstPersonParams: ProjectileFirstPersonParams.Entry | undefined;
         readonly projectilePenetration: ProjectilePenetrationJunctions.Entry | undefined;
         readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        readonly scalingDamage: ProjectilesScalingDamages.Entry | undefined;
     }
 }
 export default Projectiles;

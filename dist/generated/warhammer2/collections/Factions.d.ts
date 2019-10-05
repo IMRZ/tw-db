@@ -12,6 +12,7 @@ import { TexcExpansions } from "./TexcExpansions";
 import { CdirMilitaryGeneratorConfigs } from "./CdirMilitaryGeneratorConfigs";
 import { FactionFeatureForests } from "./FactionFeatureForests";
 import { AudioVoActorGroups } from "./AudioVoActorGroups";
+import { FactionSets } from "./FactionSets";
 export declare namespace Factions {
     const KEY: CollectionKey;
     class Entry {
@@ -82,6 +83,8 @@ export declare namespace Factions {
         readonly _cdirMilitaryGeneratorConfig: string;
         readonly _featureForest: string;
         readonly _defaultAudioActorVoGroup: string;
+        readonly _neutralReinforcementFactions: string;
+        readonly canAcceptGiftsWhenDead: boolean;
         constructor(collectionCache: CollectionCache, values: any);
         readonly subculture: CulturesSubcultures.Entry | undefined;
         readonly nameGroup: NamesGroups.Entry | undefined;
@@ -99,6 +102,7 @@ export declare namespace Factions {
         readonly cdirMilitaryGeneratorConfig: CdirMilitaryGeneratorConfigs.Entry | undefined;
         readonly featureForest: FactionFeatureForests.Entry | undefined;
         readonly defaultAudioActorVoGroup: AudioVoActorGroups.Entry | undefined;
+        readonly neutralReinforcementFactions: FactionSets.Entry | undefined;
     }
 }
 export default Factions;

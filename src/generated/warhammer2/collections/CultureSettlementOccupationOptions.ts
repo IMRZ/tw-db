@@ -3,6 +3,7 @@ import { CollectionCache, CollectionKey } from "../../../common";
 import { CampaignGroups } from "./CampaignGroups";
 import { SettlementOccupationOptions } from "./SettlementOccupationOptions";
 import { EffectBundles } from "./EffectBundles";
+import { ResourceCosts } from "./ResourceCosts";
 
 export namespace CultureSettlementOccupationOptions {
   export const KEY = new CollectionKey("culture_settlement_occupation_options");
@@ -23,6 +24,7 @@ export namespace CultureSettlementOccupationOptions {
     readonly icon: string;
     readonly baseLoot: number;
     readonly buildingLootMod: number;
+    readonly _resourceTransaction: string;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -39,6 +41,7 @@ export namespace CultureSettlementOccupationOptions {
       this.icon = values["icon"];
       this.baseLoot = values["base_loot"];
       this.buildingLootMod = values["building_loot_mod"];
+      this._resourceTransaction = values["resource_transaction"];
     }
     
     get group(): CampaignGroups.Entry | undefined {
@@ -64,6 +67,11 @@ export namespace CultureSettlementOccupationOptions {
     get actingArmyEffectBundle(): EffectBundles.Entry | undefined {
       const collection = <EffectBundles.Entry[]>this.collectionCache.getCollection(EffectBundles.KEY, EffectBundles.Entry);
       return collection.find(entry => entry.key === this._actingArmyEffectBundle);
+    }
+    
+    get resourceTransaction(): ResourceCosts.Entry | undefined {
+      const collection = <ResourceCosts.Entry[]>this.collectionCache.getCollection(ResourceCosts.KEY, ResourceCosts.Entry);
+      return collection.find(entry => entry.id === this._resourceTransaction);
     }
   }
 }

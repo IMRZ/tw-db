@@ -1,14 +1,14 @@
 import { CollectionCache, CollectionKey } from "../../../common";
-import { AgentSubtypes } from "./AgentSubtypes";
+import { CampaignGroups } from "./CampaignGroups";
 import { MilitaryForceTypes } from "./MilitaryForceTypes";
 export declare namespace AgentSubtypeMilitaryForceCreationOverrides {
     const KEY: CollectionKey;
     class Entry {
         private readonly collectionCache;
-        readonly _agentSubtype: string;
+        readonly _validGroup: string;
         readonly _militaryForceType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
+        readonly validGroup: CampaignGroups.Entry | undefined;
         readonly militaryForceType: MilitaryForceTypes.Entry | undefined;
     }
 }

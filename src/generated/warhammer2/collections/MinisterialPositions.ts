@@ -19,6 +19,7 @@ export namespace MinisterialPositions {
     readonly maximumTermLength: number;
     readonly maximumConcurrentMinisters: number;
     readonly requiredLoyalty: number;
+    readonly displayEndTurnNotificationsForPost: boolean;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -33,6 +34,7 @@ export namespace MinisterialPositions {
       this.maximumTermLength = values["maximum_term_length"];
       this.maximumConcurrentMinisters = values["maximum_concurrent_ministers"];
       this.requiredLoyalty = values["required_loyalty"];
+      this.displayEndTurnNotificationsForPost = !!values["display_end_turn_notifications_for_post"];
     }
     
   }

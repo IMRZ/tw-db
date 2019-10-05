@@ -2,6 +2,7 @@
 import { CollectionCache, CollectionKey } from "../../../common";
 import { Videos } from "./Videos";
 import { Cultures } from "./Cultures";
+import { Pdlc } from "./Pdlc";
 
 export namespace CampaignVideos {
   export const KEY = new CollectionKey("campaign_videos");
@@ -15,6 +16,7 @@ export namespace CampaignVideos {
     readonly campaignLocked: boolean;
     readonly stillPath: string;
     readonly sort: number;
+    readonly _pdlc: string;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -24,6 +26,7 @@ export namespace CampaignVideos {
       this.campaignLocked = !!values["campaign_locked"];
       this.stillPath = values["still_path"];
       this.sort = values["sort"];
+      this._pdlc = values["pdlc"];
     }
     
     get videoName(): Videos.Entry | undefined {
@@ -34,6 +37,11 @@ export namespace CampaignVideos {
     get culture(): Cultures.Entry | undefined {
       const collection = <Cultures.Entry[]>this.collectionCache.getCollection(Cultures.KEY, Cultures.Entry);
       return collection.find(entry => entry.key === this._culture);
+    }
+    
+    get pdlc(): Pdlc.Entry | undefined {
+      const collection = <Pdlc.Entry[]>this.collectionCache.getCollection(Pdlc.KEY, Pdlc.Entry);
+      return collection.find(entry => entry.id === this._pdlc);
     }
   }
 }

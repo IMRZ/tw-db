@@ -35,6 +35,7 @@ export declare namespace BattleVortexs {
         readonly affectsAllies: boolean;
         readonly launchSourceOffset: number;
         readonly _compositeSceneGroup: string;
+        readonly delayBetweenVortexes: number;
         constructor(collectionCache: CollectionCache, values: any);
         readonly contactEffect: SpecialAbilityPhases.Entry | undefined;
         readonly compositeScene: CompositeSceneFiles.Entry | undefined;

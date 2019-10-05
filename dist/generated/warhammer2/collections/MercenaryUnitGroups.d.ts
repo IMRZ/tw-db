@@ -10,6 +10,7 @@ export declare namespace MercenaryUnitGroups {
         readonly maxReplenishPerTurn: number;
         readonly chanceToReplenish: number;
         readonly usePartialReplenishment: boolean;
+        readonly replenishmentReason: string;
         constructor(collectionCache: CollectionCache, values: any);
         readonly unitRecord: MainUnits.Entry | undefined;
     }
