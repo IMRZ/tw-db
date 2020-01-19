@@ -8,6 +8,7 @@ This is used in various personal projects to extract faction or unit data.
 Currently supported games are:
 * Total War: Rome II
 * Total War: Warhammer II
+* Total War: Three Kingdoms
 
 ## Example
 ```js

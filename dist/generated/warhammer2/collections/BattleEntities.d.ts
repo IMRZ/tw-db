@@ -60,13 +60,13 @@ export declare namespace BattleEntities {
         readonly dismemberHeadAliveHpRatio: number;
         readonly jumpAttackChance: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: BattleEntitiesTypesEnum.Entry | undefined;
-        readonly size: BattleEntitiesSizeEnums.Entry | undefined;
-        readonly gradientStrategy: BattleEntitiesGradientStrategyEnums.Entry | undefined;
-        readonly audioEntityType: AudioEntityTypes.Entry | undefined;
-        readonly entityEffects: BattleEntityEffectsJunctions.Entry | undefined;
-        readonly portholeCamera: UnitPortholeCameraSettings.Entry | undefined;
-        readonly combatCameraShake: BattleCameraShakeParameters.Entry | undefined;
+        get type(): BattleEntitiesTypesEnum.Entry | undefined;
+        get size(): BattleEntitiesSizeEnums.Entry | undefined;
+        get gradientStrategy(): BattleEntitiesGradientStrategyEnums.Entry | undefined;
+        get audioEntityType(): AudioEntityTypes.Entry | undefined;
+        get entityEffects(): BattleEntityEffectsJunctions.Entry | undefined;
+        get portholeCamera(): UnitPortholeCameraSettings.Entry | undefined;
+        get combatCameraShake(): BattleCameraShakeParameters.Entry | undefined;
     }
 }
 export default BattleEntities;

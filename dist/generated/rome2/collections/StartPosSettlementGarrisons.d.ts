@@ -10,8 +10,8 @@ export declare namespace StartPosSettlementGarrisons {
         readonly _unit: string;
         readonly soldiers: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly settlement: StartPosSettlements.Entry | undefined;
-        readonly unit: MainUnits.Entry | undefined;
+        get settlement(): StartPosSettlements.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
     }
 }
 export default StartPosSettlementGarrisons;

@@ -25,10 +25,10 @@ export declare namespace UnitStatsNavalCrew {
         readonly discipline: number;
         readonly _missileType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleEntity: BattleEntities.Entry | undefined;
-        readonly soldierModel: WarscapeAnimated.Entry | undefined;
-        readonly manAnimationsTable: BattleAnimationsTable.Entry | undefined;
-        readonly missileType: Projectiles.Entry | undefined;
+        get battleEntity(): BattleEntities.Entry | undefined;
+        get soldierModel(): WarscapeAnimated.Entry | undefined;
+        get manAnimationsTable(): BattleAnimationsTable.Entry | undefined;
+        get missileType(): Projectiles.Entry | undefined;
     }
 }
 export default UnitStatsNavalCrew;

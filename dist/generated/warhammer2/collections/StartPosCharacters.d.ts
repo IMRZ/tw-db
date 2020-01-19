@@ -37,17 +37,17 @@ export declare namespace StartPosCharacters {
         readonly progenitor: boolean;
         readonly _subtype: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: StartPosFactions.Entry | undefined;
-        readonly name: Names.Entry | undefined;
-        readonly surname: Names.Entry | undefined;
-        readonly type: Agents.Entry | undefined;
-        readonly ministerialPosition: MinisterialPositions.Entry | undefined;
-        readonly portraitId: CampaignCharacterArtSets.Entry | undefined;
-        readonly overrideGeneralUnit: MainUnits.Entry | undefined;
-        readonly clanName: Names.Entry | undefined;
-        readonly otherName: Names.Entry | undefined;
-        readonly deathType: DeathTypes.Entry | undefined;
-        readonly subtype: AgentSubtypes.Entry | undefined;
+        get faction(): StartPosFactions.Entry | undefined;
+        get name(): Names.Entry | undefined;
+        get surname(): Names.Entry | undefined;
+        get type(): Agents.Entry | undefined;
+        get ministerialPosition(): MinisterialPositions.Entry | undefined;
+        get portraitId(): CampaignCharacterArtSets.Entry | undefined;
+        get overrideGeneralUnit(): MainUnits.Entry | undefined;
+        get clanName(): Names.Entry | undefined;
+        get otherName(): Names.Entry | undefined;
+        get deathType(): DeathTypes.Entry | undefined;
+        get subtype(): AgentSubtypes.Entry | undefined;
     }
 }
 export default StartPosCharacters;

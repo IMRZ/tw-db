@@ -20,7 +20,7 @@ export declare namespace Campaigns {
         readonly availableForMp: boolean;
         readonly mpSortOrder: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mapName: CampaignMaps.Entry | undefined;
+        get mapName(): CampaignMaps.Entry | undefined;
     }
 }
 export default Campaigns;

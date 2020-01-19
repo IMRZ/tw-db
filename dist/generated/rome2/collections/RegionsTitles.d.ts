@@ -11,9 +11,9 @@ export declare namespace RegionsTitles {
         readonly _gender: string;
         readonly title: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly government: GovernmentTypes.Entry | undefined;
-        readonly gender: Genders.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get government(): GovernmentTypes.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
     }
 }
 export default RegionsTitles;

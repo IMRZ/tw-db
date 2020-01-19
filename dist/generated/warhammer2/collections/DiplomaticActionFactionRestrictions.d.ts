@@ -9,7 +9,7 @@ export declare namespace DiplomaticActionFactionRestrictions {
         readonly canMakeClientStates: boolean;
         readonly canMakeConfederations: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default DiplomaticActionFactionRestrictions;

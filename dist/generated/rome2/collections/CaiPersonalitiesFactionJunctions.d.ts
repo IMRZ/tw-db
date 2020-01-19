@@ -14,11 +14,11 @@ export declare namespace CaiPersonalitiesFactionJunctions {
         readonly _personalityGroup: string;
         readonly _randomisationPolicyKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
-        readonly defaultPersonality: CaiPersonalities.Entry | undefined;
-        readonly personalityGroup: CaiPersonalitiesRandomGroups.Entry | undefined;
-        readonly randomisationPolicyKey: CaiPersonalitiesRandomisationPolicies.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
+        get defaultPersonality(): CaiPersonalities.Entry | undefined;
+        get personalityGroup(): CaiPersonalitiesRandomGroups.Entry | undefined;
+        get randomisationPolicyKey(): CaiPersonalitiesRandomisationPolicies.Entry | undefined;
     }
 }
 export default CaiPersonalitiesFactionJunctions;

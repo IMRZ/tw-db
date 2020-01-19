@@ -13,7 +13,7 @@ export declare namespace CulturesSubcultures {
         readonly audioStateOverride: string;
         readonly audioRtpcOverride: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CulturesSubcultures;

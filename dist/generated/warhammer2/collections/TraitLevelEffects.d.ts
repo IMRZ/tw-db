@@ -11,9 +11,9 @@ export declare namespace TraitLevelEffects {
         readonly value: number;
         readonly _effectScope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly traitLevel: CharacterTraitLevels.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
+        get traitLevel(): CharacterTraitLevels.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default TraitLevelEffects;

@@ -9,8 +9,8 @@ export declare namespace RitualsToNakaiTempleLevels {
         readonly _ritual: string;
         readonly sort: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: NakaiTempleLevels.Entry | undefined;
-        readonly ritual: Rituals.Entry | undefined;
+        get key(): NakaiTempleLevels.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
     }
 }
 export default RitualsToNakaiTempleLevels;

@@ -10,8 +10,8 @@ export declare namespace FrontendFactionGroupsToFactions {
         readonly sortOrder: number;
         readonly isMajorFaction: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly factionGroup: FrontendFactionGroups.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get factionGroup(): FrontendFactionGroups.Entry | undefined;
     }
 }
 export default FrontendFactionGroupsToFactions;

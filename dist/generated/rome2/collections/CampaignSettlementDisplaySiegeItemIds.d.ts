@@ -8,8 +8,8 @@ export declare namespace CampaignSettlementDisplaySiegeItemIds {
         readonly _battlefieldDeployableSiegeItem: string;
         readonly _sprawlPiece: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battlefieldDeployableSiegeItem: BattlefieldDeployableSiegeItems.Entry | undefined;
-        readonly sprawlPiece: CampaignSettlementDisplaySprawlPieces.Entry | undefined;
+        get battlefieldDeployableSiegeItem(): BattlefieldDeployableSiegeItems.Entry | undefined;
+        get sprawlPiece(): CampaignSettlementDisplaySprawlPieces.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplaySiegeItemIds;

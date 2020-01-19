@@ -14,7 +14,7 @@ export declare namespace AudioProjectiles {
         readonly requiresDistance: boolean;
         readonly inflightMinSpeed: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly audioProjectileType: AudioProjectilesEnums.Entry | undefined;
+        get audioProjectileType(): AudioProjectilesEnums.Entry | undefined;
     }
 }
 export default AudioProjectiles;

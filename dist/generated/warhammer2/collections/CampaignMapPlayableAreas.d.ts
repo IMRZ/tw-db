@@ -33,9 +33,9 @@ export declare namespace CampaignMapPlayableAreas {
         readonly campaignOverlayLookup: string;
         readonly campaignOverlayMap: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mapname: CampaignMaps.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
-        readonly video: Videos.Entry | undefined;
+        get mapname(): CampaignMaps.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
+        get video(): Videos.Entry | undefined;
     }
 }
 export default CampaignMapPlayableAreas;

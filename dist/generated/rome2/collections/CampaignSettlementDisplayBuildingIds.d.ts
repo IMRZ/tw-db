@@ -16,11 +16,11 @@ export declare namespace CampaignSettlementDisplayBuildingIds {
         readonly _subCulture: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingLevelKey: BuildingLevels.Entry | undefined;
-        readonly sprawlPieceType: CampaignSettlementDisplaySprawlPieces.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly subCulture: CulturesSubcultures.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get buildingLevelKey(): BuildingLevels.Entry | undefined;
+        get sprawlPieceType(): CampaignSettlementDisplaySprawlPieces.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get subCulture(): CulturesSubcultures.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayBuildingIds;

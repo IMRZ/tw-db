@@ -33,18 +33,18 @@ export declare namespace AgentActions {
         readonly succeedAlwaysOverride: boolean;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agent: Agents.Entry | undefined;
-        readonly ability: Abilities.Entry | undefined;
-        readonly attribute: AgentAttributes.Entry | undefined;
-        readonly criticalFailure: ActionResults.Entry | undefined;
-        readonly failure: ActionResults.Entry | undefined;
-        readonly opportuneFailure: ActionResults.Entry | undefined;
-        readonly success: ActionResults.Entry | undefined;
-        readonly criticalSuccess: ActionResults.Entry | undefined;
-        readonly cannotFail: ActionResults.Entry | undefined;
-        readonly targetAttribute: AgentAttributes.Entry | undefined;
-        readonly voiceover: AudioVoCampaignSpecialAbilityStates.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
+        get ability(): Abilities.Entry | undefined;
+        get attribute(): AgentAttributes.Entry | undefined;
+        get criticalFailure(): ActionResults.Entry | undefined;
+        get failure(): ActionResults.Entry | undefined;
+        get opportuneFailure(): ActionResults.Entry | undefined;
+        get success(): ActionResults.Entry | undefined;
+        get criticalSuccess(): ActionResults.Entry | undefined;
+        get cannotFail(): ActionResults.Entry | undefined;
+        get targetAttribute(): AgentAttributes.Entry | undefined;
+        get voiceover(): AudioVoCampaignSpecialAbilityStates.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default AgentActions;

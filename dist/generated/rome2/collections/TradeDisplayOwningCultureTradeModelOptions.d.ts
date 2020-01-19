@@ -11,8 +11,8 @@ export declare namespace TradeDisplayOwningCultureTradeModelOptions {
         readonly priority: number;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly owningCulture: Cultures.Entry | undefined;
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get owningCulture(): Cultures.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayOwningCultureTradeModelOptions;

@@ -9,7 +9,7 @@ export declare namespace DiplomaticActionSubcultureRestrictions {
         readonly canMakeClientStates: boolean;
         readonly canMakeConfederations: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default DiplomaticActionSubcultureRestrictions;

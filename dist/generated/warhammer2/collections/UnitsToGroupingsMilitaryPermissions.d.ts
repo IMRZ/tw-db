@@ -8,8 +8,8 @@ export declare namespace UnitsToGroupingsMilitaryPermissions {
         readonly _unit: string;
         readonly _militaryGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: MainUnits.Entry | undefined;
-        readonly militaryGroup: GroupingsMilitary.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get militaryGroup(): GroupingsMilitary.Entry | undefined;
     }
 }
 export default UnitsToGroupingsMilitaryPermissions;

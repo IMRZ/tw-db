@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueMilitaryForceAbilityJunctions {
         readonly _bonusValueId: string;
         readonly _forceAbility: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsMilitaryForceAbilitys.Entry | undefined;
-        readonly forceAbility: ArmySpecialAbilities.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsMilitaryForceAbilitys.Entry | undefined;
+        get forceAbility(): ArmySpecialAbilities.Entry | undefined;
     }
 }
 export default EffectBonusValueMilitaryForceAbilityJunctions;

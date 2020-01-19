@@ -8,8 +8,8 @@ export declare namespace DiplomacyCurrentTreatiesToDiplomaticOptions {
         readonly _diplomaticOptionKey: string;
         readonly canBeCancelled: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly currentTreatyKey: DiplomacyStrings.Entry | undefined;
-        readonly diplomaticOptionKey: DiplomacyStrings.Entry | undefined;
+        get currentTreatyKey(): DiplomacyStrings.Entry | undefined;
+        get diplomaticOptionKey(): DiplomacyStrings.Entry | undefined;
     }
 }
 export default DiplomacyCurrentTreatiesToDiplomaticOptions;

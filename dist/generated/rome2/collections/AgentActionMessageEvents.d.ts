@@ -11,11 +11,11 @@ export declare namespace AgentActionMessageEvents {
         readonly _success: string;
         readonly _criticalSuccess: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly criticalFailure: MessageEvents.Entry | undefined;
-        readonly failure: MessageEvents.Entry | undefined;
-        readonly opportuneFailure: MessageEvents.Entry | undefined;
-        readonly success: MessageEvents.Entry | undefined;
-        readonly criticalSuccess: MessageEvents.Entry | undefined;
+        get criticalFailure(): MessageEvents.Entry | undefined;
+        get failure(): MessageEvents.Entry | undefined;
+        get opportuneFailure(): MessageEvents.Entry | undefined;
+        get success(): MessageEvents.Entry | undefined;
+        get criticalSuccess(): MessageEvents.Entry | undefined;
     }
 }
 export default AgentActionMessageEvents;

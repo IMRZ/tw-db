@@ -8,8 +8,8 @@ export declare namespace AncillariesIncludedAgentSubtypes {
         readonly _ancillary: string;
         readonly _agentSubtype: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ancillary: Ancillaries.Entry | undefined;
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
+        get ancillary(): Ancillaries.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
     }
 }
 export default AncillariesIncludedAgentSubtypes;

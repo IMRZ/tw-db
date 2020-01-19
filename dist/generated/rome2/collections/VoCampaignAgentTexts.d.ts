@@ -11,8 +11,8 @@ export declare namespace VoCampaignAgentTexts {
         readonly _culture: string;
         readonly _subculture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default VoCampaignAgentTexts;

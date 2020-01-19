@@ -8,8 +8,8 @@ export declare namespace CampaignGroupCraftingInfos {
         readonly _campaignGroup: string;
         readonly _uniqueResource: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly uniqueResource: PooledResources.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get uniqueResource(): PooledResources.Entry | undefined;
     }
 }
 export default CampaignGroupCraftingInfos;

@@ -15,10 +15,10 @@ export declare namespace CampaignMapSlots {
         readonly _underlay: string;
         readonly onscreen: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly slotType: Slots.Entry | undefined;
-        readonly template: CampaignMapSlotsTemplates.Entry | undefined;
-        readonly underlay: WarscapeUnderlayTextures.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get slotType(): Slots.Entry | undefined;
+        get template(): CampaignMapSlotsTemplates.Entry | undefined;
+        get underlay(): WarscapeUnderlayTextures.Entry | undefined;
     }
 }
 export default CampaignMapSlots;

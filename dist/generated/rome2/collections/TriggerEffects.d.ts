@@ -11,8 +11,8 @@ export declare namespace TriggerEffects {
         readonly value: number;
         readonly chance: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trigger: TraitTriggers.Entry | undefined;
-        readonly trait: TraitInfo.Entry | undefined;
+        get trigger(): TraitTriggers.Entry | undefined;
+        get trait(): TraitInfo.Entry | undefined;
     }
 }
 export default TriggerEffects;

@@ -11,8 +11,8 @@ export declare namespace CampaignMapTransitionLinks {
         readonly turnsStartToEnd: number;
         readonly turnsEndToStart: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly startArea: CampaignMapTransitionAreas.Entry | undefined;
-        readonly endArea: CampaignMapTransitionAreas.Entry | undefined;
+        get startArea(): CampaignMapTransitionAreas.Entry | undefined;
+        get endArea(): CampaignMapTransitionAreas.Entry | undefined;
     }
 }
 export default CampaignMapTransitionLinks;

@@ -9,8 +9,8 @@ export declare namespace DilemmaToCampaignSubjectJunctions {
         readonly _campaignSubjectKey: string;
         readonly weighting: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly dilemmaKey: Dilemmas.Entry | undefined;
-        readonly campaignSubjectKey: CampaignSubjects.Entry | undefined;
+        get dilemmaKey(): Dilemmas.Entry | undefined;
+        get campaignSubjectKey(): CampaignSubjects.Entry | undefined;
     }
 }
 export default DilemmaToCampaignSubjectJunctions;

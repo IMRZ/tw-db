@@ -15,9 +15,9 @@ export declare namespace CampaignMounts {
         readonly vfxFilter: number;
         readonly bannerRelativeToMount: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly animationSet: CampaignAnimSetEnums.Entry | undefined;
-        readonly variant: Variants.Entry | undefined;
-        readonly actor: AudioVoiceoverCultures.Entry | undefined;
+        get animationSet(): CampaignAnimSetEnums.Entry | undefined;
+        get variant(): Variants.Entry | undefined;
+        get actor(): AudioVoiceoverCultures.Entry | undefined;
     }
 }
 export default CampaignMounts;

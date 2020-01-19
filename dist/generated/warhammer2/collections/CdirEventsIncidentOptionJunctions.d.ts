@@ -10,8 +10,8 @@ export declare namespace CdirEventsIncidentOptionJunctions {
         readonly _optionKey: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly incidentKey: Incidents.Entry | undefined;
-        readonly optionKey: CdirEventsOptions.Entry | undefined;
+        get incidentKey(): Incidents.Entry | undefined;
+        get optionKey(): CdirEventsOptions.Entry | undefined;
     }
 }
 export default CdirEventsIncidentOptionJunctions;

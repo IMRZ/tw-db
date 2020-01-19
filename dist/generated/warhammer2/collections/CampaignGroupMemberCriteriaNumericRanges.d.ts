@@ -8,7 +8,7 @@ export declare namespace CampaignGroupMemberCriteriaNumericRanges {
         readonly minRange: number;
         readonly maxRange: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaNumericRanges;

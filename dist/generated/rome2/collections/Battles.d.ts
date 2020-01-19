@@ -29,7 +29,7 @@ export declare namespace Battles {
         readonly isLargeSettlement: boolean;
         readonly has15MWalls: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: BattleTypes.Entry | undefined;
+        get type(): BattleTypes.Entry | undefined;
     }
 }
 export default Battles;

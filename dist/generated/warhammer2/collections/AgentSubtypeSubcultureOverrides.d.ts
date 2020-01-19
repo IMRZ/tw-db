@@ -15,10 +15,10 @@ export declare namespace AgentSubtypeSubcultureOverrides {
         readonly description: string;
         readonly smallIcon: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subtype: AgentSubtypes.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly associatedUnitOverride: MainUnits.Entry | undefined;
-        readonly agent: Agents.Entry | undefined;
+        get subtype(): AgentSubtypes.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get associatedUnitOverride(): MainUnits.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
     }
 }
 export default AgentSubtypeSubcultureOverrides;

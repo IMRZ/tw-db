@@ -8,8 +8,8 @@ export declare namespace BuildingLevelRequiredTechnologyJunctions {
         readonly _buildingLevelKey: string;
         readonly _technologyKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingLevelKey: BuildingLevels.Entry | undefined;
-        readonly technologyKey: Technologies.Entry | undefined;
+        get buildingLevelKey(): BuildingLevels.Entry | undefined;
+        get technologyKey(): Technologies.Entry | undefined;
     }
 }
 export default BuildingLevelRequiredTechnologyJunctions;

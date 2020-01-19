@@ -7,7 +7,7 @@ export declare namespace CampaignGroupMemberCriteriaInvolvesSettlements {
         readonly _member: string;
         readonly involvesSettlement: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaInvolvesSettlements;

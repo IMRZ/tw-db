@@ -14,12 +14,12 @@ export declare namespace AgentUniforms {
         readonly _audioShieldType: string;
         readonly campaignPoliticianFilename: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly filename: Variants.Entry | undefined;
-        readonly battleFilename: Variants.Entry | undefined;
-        readonly campaignPortholeFilename: Variants.Entry | undefined;
-        readonly audioArmourType: AudioMaterialsEnums.Entry | undefined;
-        readonly audioWeaponType: AudioMaterialsEnums.Entry | undefined;
-        readonly audioShieldType: AudioMaterialsEnums.Entry | undefined;
+        get filename(): Variants.Entry | undefined;
+        get battleFilename(): Variants.Entry | undefined;
+        get campaignPortholeFilename(): Variants.Entry | undefined;
+        get audioArmourType(): AudioMaterialsEnums.Entry | undefined;
+        get audioWeaponType(): AudioMaterialsEnums.Entry | undefined;
+        get audioShieldType(): AudioMaterialsEnums.Entry | undefined;
     }
 }
 export default AgentUniforms;

@@ -8,8 +8,8 @@ export declare namespace CaiAgentRecordToCaiAgentTypeJunctions {
         readonly _agentTypeKey: string;
         readonly _agentRecordKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentTypeKey: CaiAgentTypes.Entry | undefined;
-        readonly agentRecordKey: Agents.Entry | undefined;
+        get agentTypeKey(): CaiAgentTypes.Entry | undefined;
+        get agentRecordKey(): Agents.Entry | undefined;
     }
 }
 export default CaiAgentRecordToCaiAgentTypeJunctions;

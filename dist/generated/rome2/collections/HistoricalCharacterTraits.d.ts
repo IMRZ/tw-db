@@ -8,8 +8,8 @@ export declare namespace HistoricalCharacterTraits {
         readonly _character: string;
         readonly _trait: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly character: HistoricalCharacters.Entry | undefined;
-        readonly trait: CharacterTraitLevels.Entry | undefined;
+        get character(): HistoricalCharacters.Entry | undefined;
+        get trait(): CharacterTraitLevels.Entry | undefined;
     }
 }
 export default HistoricalCharacterTraits;

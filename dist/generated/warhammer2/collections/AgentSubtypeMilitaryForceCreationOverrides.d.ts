@@ -8,8 +8,8 @@ export declare namespace AgentSubtypeMilitaryForceCreationOverrides {
         readonly _validGroup: string;
         readonly _militaryForceType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly validGroup: CampaignGroups.Entry | undefined;
-        readonly militaryForceType: MilitaryForceTypes.Entry | undefined;
+        get validGroup(): CampaignGroups.Entry | undefined;
+        get militaryForceType(): MilitaryForceTypes.Entry | undefined;
     }
 }
 export default AgentSubtypeMilitaryForceCreationOverrides;

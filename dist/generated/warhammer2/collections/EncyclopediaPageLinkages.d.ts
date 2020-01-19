@@ -8,9 +8,9 @@ export declare namespace EncyclopediaPageLinkages {
         readonly _parentKey: string;
         readonly _nextKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly pageKey: EncyclopediaPages.Entry | undefined;
-        readonly parentKey: EncyclopediaPages.Entry | undefined;
-        readonly nextKey: EncyclopediaPages.Entry | undefined;
+        get pageKey(): EncyclopediaPages.Entry | undefined;
+        get parentKey(): EncyclopediaPages.Entry | undefined;
+        get nextKey(): EncyclopediaPages.Entry | undefined;
     }
 }
 export default EncyclopediaPageLinkages;

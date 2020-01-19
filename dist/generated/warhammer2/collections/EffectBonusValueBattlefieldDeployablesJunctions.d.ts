@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueBattlefieldDeployablesJunctions {
         readonly _bonusValueId: string;
         readonly _battlefieldDeployable: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsBattlefieldDeployables.Entry | undefined;
-        readonly battlefieldDeployable: Deployables.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsBattlefieldDeployables.Entry | undefined;
+        get battlefieldDeployable(): Deployables.Entry | undefined;
     }
 }
 export default EffectBonusValueBattlefieldDeployablesJunctions;

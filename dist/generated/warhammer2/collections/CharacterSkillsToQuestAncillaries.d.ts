@@ -9,8 +9,8 @@ export declare namespace CharacterSkillsToQuestAncillaries {
         readonly _ancillary: string;
         readonly useQuestForPrefix: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly skill: CharacterSkills.Entry | undefined;
-        readonly ancillary: Ancillaries.Entry | undefined;
+        get skill(): CharacterSkills.Entry | undefined;
+        get ancillary(): Ancillaries.Entry | undefined;
     }
 }
 export default CharacterSkillsToQuestAncillaries;

@@ -10,7 +10,7 @@ export declare namespace Pdlc {
         readonly releaseOrder: number;
         readonly _gameExpansionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default Pdlc;

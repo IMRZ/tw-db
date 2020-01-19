@@ -8,8 +8,8 @@ export declare namespace SubcultureTreasureHuntDilemmaCategories {
         readonly _subculture: string;
         readonly _category: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly category: CdirEventsCategories.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get category(): CdirEventsCategories.Entry | undefined;
     }
 }
 export default SubcultureTreasureHuntDilemmaCategories;

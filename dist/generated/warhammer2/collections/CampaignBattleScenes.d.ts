@@ -11,8 +11,8 @@ export declare namespace CampaignBattleScenes {
         readonly environment: string;
         readonly _agentSubtypeOverride: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
-        readonly agentSubtypeOverride: AgentSubtypes.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get agentSubtypeOverride(): AgentSubtypes.Entry | undefined;
     }
 }
 export default CampaignBattleScenes;

@@ -17,8 +17,8 @@ export declare namespace BuildingChains {
         readonly encyclopediaIncludeInIndex: boolean;
         readonly encyclopediaName: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingSuperchain: BuildingSuperchains.Entry | undefined;
-        readonly encyclopediaGroup: EncyclopediaBuildingChainGroups.Entry | undefined;
+        get buildingSuperchain(): BuildingSuperchains.Entry | undefined;
+        get encyclopediaGroup(): EncyclopediaBuildingChainGroups.Entry | undefined;
     }
 }
 export default BuildingChains;

@@ -10,8 +10,8 @@ export declare namespace MountableArtilleryUnitsCustomBattles {
         readonly probability: number;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mountableArtillery: MountableArtilleryUnits.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get mountableArtillery(): MountableArtilleryUnits.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default MountableArtilleryUnitsCustomBattles;

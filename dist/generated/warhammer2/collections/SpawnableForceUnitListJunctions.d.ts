@@ -13,8 +13,8 @@ export declare namespace SpawnableForceUnitListJunctions {
         readonly minAmount: number;
         readonly maxAmount: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly spawnableForce: SpawnableForces.Entry | undefined;
-        readonly unitList: UnitLists.Entry | undefined;
+        get spawnableForce(): SpawnableForces.Entry | undefined;
+        get unitList(): UnitLists.Entry | undefined;
     }
 }
 export default SpawnableForceUnitListJunctions;

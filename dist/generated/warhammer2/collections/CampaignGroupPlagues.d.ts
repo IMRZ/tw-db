@@ -8,8 +8,8 @@ export declare namespace CampaignGroupPlagues {
         readonly _campaignGroup: string;
         readonly _plague: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly plague: Plagues.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get plague(): Plagues.Entry | undefined;
     }
 }
 export default CampaignGroupPlagues;

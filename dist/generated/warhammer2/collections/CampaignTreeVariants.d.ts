@@ -11,9 +11,9 @@ export declare namespace CampaignTreeVariants {
         readonly treeRigid: string;
         readonly _treeAudio: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly treeId: CampaignTreeIds.Entry | undefined;
-        readonly treeType: CampaignTreeTypes.Entry | undefined;
-        readonly treeAudio: AudioCampaignTreeTypes.Entry | undefined;
+        get treeId(): CampaignTreeIds.Entry | undefined;
+        get treeType(): CampaignTreeTypes.Entry | undefined;
+        get treeAudio(): AudioCampaignTreeTypes.Entry | undefined;
     }
 }
 export default CampaignTreeVariants;

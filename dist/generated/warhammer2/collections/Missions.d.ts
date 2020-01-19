@@ -24,9 +24,9 @@ export declare namespace Missions {
         readonly questMissionFinal: boolean;
         readonly stickyByDefault: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missionType: MissionTypes.Entry | undefined;
-        readonly eventCategory: CdirEventsCategories.Entry | undefined;
-        readonly setPieceBattle: BattleSetPieces.Entry | undefined;
+        get missionType(): MissionTypes.Entry | undefined;
+        get eventCategory(): CdirEventsCategories.Entry | undefined;
+        get setPieceBattle(): BattleSetPieces.Entry | undefined;
     }
 }
 export default Missions;

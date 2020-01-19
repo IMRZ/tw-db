@@ -12,9 +12,9 @@ export declare namespace CampaignSubjects {
         readonly _flavourText: string;
         readonly male: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly optionalName: CampaignSubjectStrings.Entry | undefined;
-        readonly optionalNameSourceFaction: Factions.Entry | undefined;
-        readonly flavourText: CampaignSubjectStrings.Entry | undefined;
+        get optionalName(): CampaignSubjectStrings.Entry | undefined;
+        get optionalNameSourceFaction(): Factions.Entry | undefined;
+        get flavourText(): CampaignSubjectStrings.Entry | undefined;
     }
 }
 export default CampaignSubjects;

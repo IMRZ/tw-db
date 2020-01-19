@@ -14,9 +14,9 @@ export declare namespace Names {
         readonly nobility: boolean;
         readonly id: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly namesGroup: NamesGroups.Entry | undefined;
-        readonly type: NameTypes.Entry | undefined;
-        readonly gender: Genders.Entry | undefined;
+        get namesGroup(): NamesGroups.Entry | undefined;
+        get type(): NameTypes.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
     }
 }
 export default Names;

@@ -10,7 +10,7 @@ export declare namespace UnitArmourTypes {
         readonly weakVMissiles: boolean;
         readonly _audioMaterial: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly audioMaterial: AudioMaterialsEnums.Entry | undefined;
+        get audioMaterial(): AudioMaterialsEnums.Entry | undefined;
     }
 }
 export default UnitArmourTypes;

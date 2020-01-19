@@ -8,7 +8,7 @@ export declare namespace CampaignBuildingChainSlotUnlocks {
         readonly activeSlotCount: number;
         readonly level: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingChain: BuildingChains.Entry | undefined;
+        get buildingChain(): BuildingChains.Entry | undefined;
     }
 }
 export default CampaignBuildingChainSlotUnlocks;

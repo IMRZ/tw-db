@@ -9,7 +9,7 @@ export declare namespace LoyaltyEffects {
         readonly value: number;
         readonly appliesToAi: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factor: LoyaltyFactors.Entry | undefined;
+        get factor(): LoyaltyFactors.Entry | undefined;
     }
 }
 export default LoyaltyEffects;

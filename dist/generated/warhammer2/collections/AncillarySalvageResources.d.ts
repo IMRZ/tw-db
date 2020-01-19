@@ -9,8 +9,8 @@ export declare namespace AncillarySalvageResources {
         readonly minUniquenessScore: number;
         readonly _salvageResources: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: AncillariesCategories.Entry | undefined;
-        readonly salvageResources: ResourceCosts.Entry | undefined;
+        get category(): AncillariesCategories.Entry | undefined;
+        get salvageResources(): ResourceCosts.Entry | undefined;
     }
 }
 export default AncillarySalvageResources;

@@ -9,8 +9,8 @@ export declare namespace SpecialAbilityToSpecialAbilityPhaseJunctions {
         readonly _phase: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly specialAbility: UnitSpecialAbilities.Entry | undefined;
-        readonly phase: SpecialAbilityPhases.Entry | undefined;
+        get specialAbility(): UnitSpecialAbilities.Entry | undefined;
+        get phase(): SpecialAbilityPhases.Entry | undefined;
     }
 }
 export default SpecialAbilityToSpecialAbilityPhaseJunctions;

@@ -16,9 +16,9 @@ export declare namespace AudioMissileWeaponTypes {
         readonly _groupFireStart: string;
         readonly _groupFireStop: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly groupFire: AudioGroupSounds.Entry | undefined;
-        readonly groupFireStart: AudioGroupSounds.Entry | undefined;
-        readonly groupFireStop: AudioGroupSounds.Entry | undefined;
+        get groupFire(): AudioGroupSounds.Entry | undefined;
+        get groupFireStart(): AudioGroupSounds.Entry | undefined;
+        get groupFireStop(): AudioGroupSounds.Entry | undefined;
     }
 }
 export default AudioMissileWeaponTypes;

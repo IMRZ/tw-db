@@ -13,9 +13,9 @@ export declare namespace CharacterSkillLevelToEffectsJunctions {
         readonly isFactionwide: boolean;
         readonly _effectScope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterSkillKey: CharacterSkills.Entry | undefined;
-        readonly effectKey: Effects.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
+        get characterSkillKey(): CharacterSkills.Entry | undefined;
+        get effectKey(): Effects.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default CharacterSkillLevelToEffectsJunctions;

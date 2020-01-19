@@ -10,8 +10,8 @@ export declare namespace CharacterSkillLevelToIncidentsJunctions {
         readonly _incidentKey: string;
         readonly randomSelection: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterSkillKey: CharacterSkills.Entry | undefined;
-        readonly incidentKey: Incidents.Entry | undefined;
+        get characterSkillKey(): CharacterSkills.Entry | undefined;
+        get incidentKey(): Incidents.Entry | undefined;
     }
 }
 export default CharacterSkillLevelToIncidentsJunctions;

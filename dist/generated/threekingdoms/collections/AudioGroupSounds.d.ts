@@ -1,0 +1,51 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { AudioRtpcAssignments } from "./AudioRtpcAssignments";
+import { AudioGroupSoundGroupings } from "./AudioGroupSoundGroupings";
+export declare namespace AudioGroupSounds {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly name: string;
+        readonly eventStart: string;
+        readonly eventStop: string;
+        readonly distanceScaled: boolean;
+        readonly densityScaled: boolean;
+        readonly spotlight: boolean;
+        readonly useReverb: boolean;
+        readonly maxDistance: number;
+        readonly split: boolean;
+        readonly splitClose: number;
+        readonly splitFar: number;
+        readonly splitOffset: number;
+        readonly groupingSize: number;
+        readonly maxStartDelayNear: number;
+        readonly minRefireTime: number;
+        readonly sizeGameParameter: string;
+        readonly groupingSwitch: string;
+        readonly _linkedGroupSound: string;
+        readonly rtpc1Name: string;
+        readonly _rtpc1Assignment: string;
+        readonly rtpc2Name: string;
+        readonly _rtpc2Assignment: string;
+        readonly _grouping: string;
+        readonly rtpc1MaxGroupingDifference: number;
+        readonly rtpc2MaxGroupingDifference: number;
+        readonly maxStartDelayFar: number;
+        readonly stopDelay: number;
+        readonly sizeScaler: number;
+        readonly minDistance: number;
+        readonly _dualGroupSound: string;
+        readonly minSize: number;
+        readonly oneShotInfluenceDuration: number;
+        readonly scaledAzimuthRtpc: string;
+        readonly dopplerRtpcName: string;
+        readonly obstructionSize: number;
+        constructor(collectionCache: CollectionCache, values: any);
+        get linkedGroupSound(): AudioGroupSounds.Entry | undefined;
+        get rtpc1Assignment(): AudioRtpcAssignments.Entry | undefined;
+        get rtpc2Assignment(): AudioRtpcAssignments.Entry | undefined;
+        get grouping(): AudioGroupSoundGroupings.Entry | undefined;
+        get dualGroupSound(): AudioGroupSounds.Entry | undefined;
+    }
+}
+export default AudioGroupSounds;

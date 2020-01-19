@@ -8,8 +8,8 @@ export declare namespace MissileWeaponsToProjectiles {
         readonly _missileWeapon: string;
         readonly _projectile: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missileWeapon: MissileWeapons.Entry | undefined;
-        readonly projectile: Projectiles.Entry | undefined;
+        get missileWeapon(): MissileWeapons.Entry | undefined;
+        get projectile(): Projectiles.Entry | undefined;
     }
 }
 export default MissileWeaponsToProjectiles;

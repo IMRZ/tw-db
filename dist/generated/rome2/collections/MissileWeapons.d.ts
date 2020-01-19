@@ -9,7 +9,7 @@ export declare namespace MissileWeapons {
         readonly _defaultProjectile: string;
         readonly canFireAtBuildings: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly defaultProjectile: Projectiles.Entry | undefined;
+        get defaultProjectile(): Projectiles.Entry | undefined;
     }
 }
 export default MissileWeapons;

@@ -8,8 +8,8 @@ export declare namespace PlaguesPermittedCampaigns {
         readonly _plague: string;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly plague: Plagues.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get plague(): Plagues.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default PlaguesPermittedCampaigns;

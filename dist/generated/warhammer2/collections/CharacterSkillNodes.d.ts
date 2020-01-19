@@ -20,11 +20,11 @@ export declare namespace CharacterSkillNodes {
         readonly requiredNumParents: number;
         readonly visibleInUi: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterSkillNodeSetKey: CharacterSkillNodeSets.Entry | undefined;
-        readonly characterSkillKey: CharacterSkills.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get characterSkillNodeSetKey(): CharacterSkillNodeSets.Entry | undefined;
+        get characterSkillKey(): CharacterSkills.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default CharacterSkillNodes;

@@ -14,7 +14,7 @@ export declare namespace EncyclopediaHistoricalInfoBlocks {
         readonly imageClass: string;
         readonly video: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly pageKey: EncyclopediaHistoricalInfoPages.Entry | undefined;
+        get pageKey(): EncyclopediaHistoricalInfoPages.Entry | undefined;
     }
 }
 export default EncyclopediaHistoricalInfoBlocks;

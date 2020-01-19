@@ -27,7 +27,7 @@ export declare namespace CaiPersonalityStrategicDesiredAttitudes {
         readonly veryUnfriendlyNegativeFactor: number;
         readonly bitterEnemiesNegativeFactor: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly strategicComponent: CaiPersonalityStrategicComponents.Entry | undefined;
+        get strategicComponent(): CaiPersonalityStrategicComponents.Entry | undefined;
     }
 }
 export default CaiPersonalityStrategicDesiredAttitudes;

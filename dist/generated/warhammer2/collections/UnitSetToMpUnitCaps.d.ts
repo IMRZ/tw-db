@@ -8,7 +8,7 @@ export declare namespace UnitSetToMpUnitCaps {
         readonly localisedName: string;
         readonly cap: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitSet: UnitSets.Entry | undefined;
+        get unitSet(): UnitSets.Entry | undefined;
     }
 }
 export default UnitSetToMpUnitCaps;

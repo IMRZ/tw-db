@@ -9,7 +9,7 @@ export declare namespace CampaignMapSlotsTemplates {
         readonly levels: number;
         readonly artFile: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly slot: Slots.Entry | undefined;
+        get slot(): Slots.Entry | undefined;
     }
 }
 export default CampaignMapSlotsTemplates;

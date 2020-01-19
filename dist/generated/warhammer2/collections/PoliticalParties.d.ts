@@ -12,7 +12,7 @@ export declare namespace PoliticalParties {
         readonly initialPower: number;
         readonly campaignKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default PoliticalParties;

@@ -8,8 +8,8 @@ export declare namespace UnitAttributesToGroupsJunctions {
         readonly _attribute: string;
         readonly _attributeGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly attribute: UnitAttributes.Entry | undefined;
-        readonly attributeGroup: UnitAttributesGroups.Entry | undefined;
+        get attribute(): UnitAttributes.Entry | undefined;
+        get attributeGroup(): UnitAttributesGroups.Entry | undefined;
     }
 }
 export default UnitAttributesToGroupsJunctions;

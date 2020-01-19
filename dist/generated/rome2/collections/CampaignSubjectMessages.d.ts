@@ -8,7 +8,7 @@ export declare namespace CampaignSubjectMessages {
         readonly _messageType: string;
         readonly optionalText: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly messageType: MessageEvents.Entry | undefined;
+        get messageType(): MessageEvents.Entry | undefined;
     }
 }
 export default CampaignSubjectMessages;

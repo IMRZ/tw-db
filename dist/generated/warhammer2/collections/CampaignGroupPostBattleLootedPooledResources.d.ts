@@ -14,8 +14,8 @@ export declare namespace CampaignGroupPostBattleLootedPooledResources {
         readonly maximum: number;
         readonly baseAmount: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly resourceFactor: PooledResourceFactorJunctions.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get resourceFactor(): PooledResourceFactorJunctions.Entry | undefined;
     }
 }
 export default CampaignGroupPostBattleLootedPooledResources;

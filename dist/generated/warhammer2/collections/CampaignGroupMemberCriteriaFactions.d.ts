@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaFactions {
         readonly _member: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaFactions;

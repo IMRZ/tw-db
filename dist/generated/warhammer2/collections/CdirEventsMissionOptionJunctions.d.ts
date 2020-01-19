@@ -12,9 +12,9 @@ export declare namespace CdirEventsMissionOptionJunctions {
         readonly value: string;
         readonly _gameExpansionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missionKey: Missions.Entry | undefined;
-        readonly optionKey: CdirEventsOptions.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get missionKey(): Missions.Entry | undefined;
+        get optionKey(): CdirEventsOptions.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default CdirEventsMissionOptionJunctions;

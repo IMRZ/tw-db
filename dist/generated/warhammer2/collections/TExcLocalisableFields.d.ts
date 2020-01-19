@@ -13,7 +13,7 @@ export declare namespace TExcLocalisableFields {
         readonly fieldAsKey: string;
         readonly forVo: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly tableName: TExcImplementedTables.Entry | undefined;
+        get tableName(): TExcImplementedTables.Entry | undefined;
     }
 }
 export default TExcLocalisableFields;

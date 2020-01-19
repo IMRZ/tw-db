@@ -7,7 +7,7 @@ export declare namespace CdirEventsPayloads {
         readonly payloadKey: string;
         readonly _effectBundleKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundleKey: EffectBundles.Entry | undefined;
+        get effectBundleKey(): EffectBundles.Entry | undefined;
     }
 }
 export default CdirEventsPayloads;

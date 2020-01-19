@@ -13,7 +13,7 @@ export declare namespace CharacterSkillCategories {
         readonly colB: number;
         readonly _agentSubtypeOverride: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentSubtypeOverride: AgentSubtypes.Entry | undefined;
+        get agentSubtypeOverride(): AgentSubtypes.Entry | undefined;
     }
 }
 export default CharacterSkillCategories;

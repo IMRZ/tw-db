@@ -7,7 +7,7 @@ export declare namespace CampaignGroupMemberCriteriaIsDead {
         readonly _member: string;
         readonly value: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaIsDead;

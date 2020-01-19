@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueProjectileJunctions {
         readonly _projectile: string;
         readonly _bonusValue: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly projectile: Projectiles.Entry | undefined;
-        readonly bonusValue: CampaignBonusValueIdsProjectile.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get projectile(): Projectiles.Entry | undefined;
+        get bonusValue(): CampaignBonusValueIdsProjectile.Entry | undefined;
     }
 }
 export default EffectBonusValueProjectileJunctions;

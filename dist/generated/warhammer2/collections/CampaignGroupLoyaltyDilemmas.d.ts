@@ -8,8 +8,8 @@ export declare namespace CampaignGroupLoyaltyDilemmas {
         readonly _campaignGroup: string;
         readonly _dilemma: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly dilemma: Dilemmas.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get dilemma(): Dilemmas.Entry | undefined;
     }
 }
 export default CampaignGroupLoyaltyDilemmas;

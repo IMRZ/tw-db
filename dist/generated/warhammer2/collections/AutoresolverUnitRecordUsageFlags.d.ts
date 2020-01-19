@@ -7,7 +7,7 @@ export declare namespace AutoresolverUnitRecordUsageFlags {
         readonly _mainUnitRecord: string;
         readonly alwaysDestroyIfEngagedInMelee: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mainUnitRecord: MainUnits.Entry | undefined;
+        get mainUnitRecord(): MainUnits.Entry | undefined;
     }
 }
 export default AutoresolverUnitRecordUsageFlags;

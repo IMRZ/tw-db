@@ -11,7 +11,7 @@ export declare namespace EffectBundles {
         readonly _bundleTarget: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly bundleTarget: EffectBundleTargets.Entry | undefined;
+        get bundleTarget(): EffectBundleTargets.Entry | undefined;
     }
 }
 export default EffectBundles;

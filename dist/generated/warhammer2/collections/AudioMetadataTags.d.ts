@@ -58,13 +58,13 @@ export declare namespace AudioMetadataTags {
         readonly ignoreAlphaCheck: boolean;
         readonly overrideVo: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly meleeHitCategory: AudioMeleeHitCategories.Entry | undefined;
-        readonly meleeHitTypeOverride: AudioMeleeHitTypes.Entry | undefined;
-        readonly rtpc1Assignment: AudioRtpcAssignments.Entry | undefined;
-        readonly rtpc2Assignment: AudioRtpcAssignments.Entry | undefined;
-        readonly scaledSoundNext: AudioMetadataTags.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
-        readonly limitationTypeOverride: AudioEntityTypeLimitations.Entry | undefined;
+        get meleeHitCategory(): AudioMeleeHitCategories.Entry | undefined;
+        get meleeHitTypeOverride(): AudioMeleeHitTypes.Entry | undefined;
+        get rtpc1Assignment(): AudioRtpcAssignments.Entry | undefined;
+        get rtpc2Assignment(): AudioRtpcAssignments.Entry | undefined;
+        get scaledSoundNext(): AudioMetadataTags.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
+        get limitationTypeOverride(): AudioEntityTypeLimitations.Entry | undefined;
     }
 }
 export default AudioMetadataTags;

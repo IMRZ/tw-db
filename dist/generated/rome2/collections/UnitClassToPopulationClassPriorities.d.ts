@@ -9,7 +9,7 @@ export declare namespace UnitClassToPopulationClassPriorities {
         readonly middleClassPriority: number;
         readonly lowerClassPriority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitClass: UnitClass.Entry | undefined;
+        get unitClass(): UnitClass.Entry | undefined;
     }
 }
 export default UnitClassToPopulationClassPriorities;

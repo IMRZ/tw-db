@@ -16,7 +16,7 @@ export declare namespace CampaignSettlementDisplayBuildings {
         readonly portWalledBmd: string;
         readonly onSeaBmd: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly modelId: CampaignSettlementDisplayBuildingModelIds.Entry | undefined;
+        get modelId(): CampaignSettlementDisplayBuildingModelIds.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayBuildings;

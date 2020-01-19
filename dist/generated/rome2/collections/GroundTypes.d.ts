@@ -12,9 +12,9 @@ export declare namespace GroundTypes {
         readonly _selectionCursor: string;
         readonly _penaltyImmuneAttribute: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly standardCursor: Cursors.Entry | undefined;
-        readonly selectionCursor: Cursors.Entry | undefined;
-        readonly penaltyImmuneAttribute: UnitAttributes.Entry | undefined;
+        get standardCursor(): Cursors.Entry | undefined;
+        get selectionCursor(): Cursors.Entry | undefined;
+        get penaltyImmuneAttribute(): UnitAttributes.Entry | undefined;
     }
 }
 export default GroundTypes;

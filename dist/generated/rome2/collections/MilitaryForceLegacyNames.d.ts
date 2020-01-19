@@ -11,8 +11,8 @@ export declare namespace MilitaryForceLegacyNames {
         readonly forArmy: boolean;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default MilitaryForceLegacyNames;

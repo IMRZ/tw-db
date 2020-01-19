@@ -16,7 +16,7 @@ export declare namespace CaiPersonalityDiplomaticTreatyValues {
         readonly war: number;
         readonly militaryAccess: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly componentId: CaiPersonalityDiplomaticComponents.Entry | undefined;
+        get componentId(): CaiPersonalityDiplomaticComponents.Entry | undefined;
     }
 }
 export default CaiPersonalityDiplomaticTreatyValues;

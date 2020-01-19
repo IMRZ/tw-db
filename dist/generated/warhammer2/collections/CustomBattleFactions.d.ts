@@ -8,7 +8,7 @@ export declare namespace CustomBattleFactions {
         readonly sortOrder: number;
         readonly cultureSortOrder: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
     }
 }
 export default CustomBattleFactions;

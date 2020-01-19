@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueLoyaltyEventJunctions {
         readonly _bonusValueId: string;
         readonly _loyalltyEvent: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsLoyaltyEvents.Entry | undefined;
-        readonly loyalltyEvent: LoyaltyEventEffects.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsLoyaltyEvents.Entry | undefined;
+        get loyalltyEvent(): LoyaltyEventEffects.Entry | undefined;
     }
 }
 export default EffectBonusValueLoyaltyEventJunctions;

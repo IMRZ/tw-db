@@ -7,7 +7,7 @@ export declare namespace CampaignRogueArmySpawnGroups {
         readonly key: string;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default CampaignRogueArmySpawnGroups;

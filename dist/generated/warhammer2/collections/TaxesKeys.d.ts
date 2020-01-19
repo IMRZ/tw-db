@@ -9,8 +9,8 @@ export declare namespace TaxesKeys {
         readonly _taxLevel: string;
         readonly taxLookup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly taxClass: TaxesClasses.Entry | undefined;
-        readonly taxLevel: TaxesLevels.Entry | undefined;
+        get taxClass(): TaxesClasses.Entry | undefined;
+        get taxLevel(): TaxesLevels.Entry | undefined;
     }
 }
 export default TaxesKeys;

@@ -9,8 +9,8 @@ export declare namespace MinisterialPositionToRequiredBuildingJunctions {
         readonly _requiredBuilding: string;
         readonly localisedRequirementDescription: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ministerialPosition: MinisterialPositions.Entry | undefined;
-        readonly requiredBuilding: BuildingLevels.Entry | undefined;
+        get ministerialPosition(): MinisterialPositions.Entry | undefined;
+        get requiredBuilding(): BuildingLevels.Entry | undefined;
     }
 }
 export default MinisterialPositionToRequiredBuildingJunctions;

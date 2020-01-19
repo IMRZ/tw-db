@@ -8,7 +8,7 @@ export declare namespace Fonts {
         readonly size: number;
         readonly bold: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: FontNames.Entry | undefined;
+        get key(): FontNames.Entry | undefined;
     }
 }
 export default Fonts;

@@ -7,7 +7,7 @@ export declare namespace NavalEffects {
         readonly key: string;
         readonly _effectName: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectName: ParticleEffects.Entry | undefined;
+        get effectName(): ParticleEffects.Entry | undefined;
     }
 }
 export default NavalEffects;

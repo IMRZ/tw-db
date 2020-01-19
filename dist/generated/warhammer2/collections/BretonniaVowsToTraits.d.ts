@@ -9,8 +9,8 @@ export declare namespace BretonniaVowsToTraits {
         readonly _trait: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly vow: BretonniaVows.Entry | undefined;
-        readonly trait: CharacterTraits.Entry | undefined;
+        get vow(): BretonniaVows.Entry | undefined;
+        get trait(): CharacterTraits.Entry | undefined;
     }
 }
 export default BretonniaVowsToTraits;

@@ -9,8 +9,8 @@ export declare namespace NameOrderOverrides {
         readonly order: number;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: NameTypes.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get type(): NameTypes.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default NameOrderOverrides;

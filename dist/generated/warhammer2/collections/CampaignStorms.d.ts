@@ -14,10 +14,10 @@ export declare namespace CampaignStorms {
         readonly _tilingCompositeScene: string;
         readonly _type: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly attrition: CampaignMapAttritions.Entry | undefined;
-        readonly compositeScene: CampaignCompositeScenes.Entry | undefined;
-        readonly tilingCompositeScene: CampaignCompositeScenes.Entry | undefined;
-        readonly type: CampaignStormTypes.Entry | undefined;
+        get attrition(): CampaignMapAttritions.Entry | undefined;
+        get compositeScene(): CampaignCompositeScenes.Entry | undefined;
+        get tilingCompositeScene(): CampaignCompositeScenes.Entry | undefined;
+        get type(): CampaignStormTypes.Entry | undefined;
     }
 }
 export default CampaignStorms;

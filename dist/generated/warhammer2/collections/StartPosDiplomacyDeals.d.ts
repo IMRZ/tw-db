@@ -16,14 +16,14 @@ export declare namespace StartPosDiplomacyDeals {
         readonly _onRecipientCancelInstigatorWill: string;
         readonly _onRecipientCancelRecipientWill: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly instigator: StartPosFactions.Entry | undefined;
-        readonly recipient: StartPosFactions.Entry | undefined;
-        readonly onExpiryInstigatorWill: StartPosDiplomacyDealActions.Entry | undefined;
-        readonly onExpiryRecipientWill: StartPosDiplomacyDealActions.Entry | undefined;
-        readonly onInstigatorCancelInstigatorWill: StartPosDiplomacyDealActions.Entry | undefined;
-        readonly onInstigatorCancelRecipientWill: StartPosDiplomacyDealActions.Entry | undefined;
-        readonly onRecipientCancelInstigatorWill: StartPosDiplomacyDealActions.Entry | undefined;
-        readonly onRecipientCancelRecipientWill: StartPosDiplomacyDealActions.Entry | undefined;
+        get instigator(): StartPosFactions.Entry | undefined;
+        get recipient(): StartPosFactions.Entry | undefined;
+        get onExpiryInstigatorWill(): StartPosDiplomacyDealActions.Entry | undefined;
+        get onExpiryRecipientWill(): StartPosDiplomacyDealActions.Entry | undefined;
+        get onInstigatorCancelInstigatorWill(): StartPosDiplomacyDealActions.Entry | undefined;
+        get onInstigatorCancelRecipientWill(): StartPosDiplomacyDealActions.Entry | undefined;
+        get onRecipientCancelInstigatorWill(): StartPosDiplomacyDealActions.Entry | undefined;
+        get onRecipientCancelRecipientWill(): StartPosDiplomacyDealActions.Entry | undefined;
     }
 }
 export default StartPosDiplomacyDeals;

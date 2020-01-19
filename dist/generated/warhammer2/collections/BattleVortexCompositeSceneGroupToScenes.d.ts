@@ -12,8 +12,8 @@ export declare namespace BattleVortexCompositeSceneGroupToScenes {
         readonly freezePosition: boolean;
         readonly freezeRotation: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly groupId: BattleVortexCompositeSceneGroups.Entry | undefined;
-        readonly compositeScene: CompositeSceneFiles.Entry | undefined;
+        get groupId(): BattleVortexCompositeSceneGroups.Entry | undefined;
+        get compositeScene(): CompositeSceneFiles.Entry | undefined;
     }
 }
 export default BattleVortexCompositeSceneGroupToScenes;

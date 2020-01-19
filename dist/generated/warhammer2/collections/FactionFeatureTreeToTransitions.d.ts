@@ -8,8 +8,8 @@ export declare namespace FactionFeatureTreeToTransitions {
         readonly _featureTree: string;
         readonly _transition: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly featureTree: FactionFeatureTrees.Entry | undefined;
-        readonly transition: FeatureSetTransitions.Entry | undefined;
+        get featureTree(): FactionFeatureTrees.Entry | undefined;
+        get transition(): FeatureSetTransitions.Entry | undefined;
     }
 }
 export default FactionFeatureTreeToTransitions;

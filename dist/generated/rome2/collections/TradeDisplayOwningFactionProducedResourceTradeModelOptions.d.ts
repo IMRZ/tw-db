@@ -13,9 +13,9 @@ export declare namespace TradeDisplayOwningFactionProducedResourceTradeModelOpti
         readonly priority: number;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly owningFaction: Factions.Entry | undefined;
-        readonly producedResource: Resources.Entry | undefined;
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get owningFaction(): Factions.Entry | undefined;
+        get producedResource(): Resources.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayOwningFactionProducedResourceTradeModelOptions;

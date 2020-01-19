@@ -14,7 +14,7 @@ export declare namespace DeployablesAbilities {
         readonly clickGround: boolean;
         readonly interceptDistance: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly deployable: Deployables.Entry | undefined;
+        get deployable(): Deployables.Entry | undefined;
     }
 }
 export default DeployablesAbilities;

@@ -12,12 +12,12 @@ export declare namespace GeomanticWebLinks {
         readonly _beamShortCompositeScene: string;
         readonly _fadingBeamShortCompositeScene: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly beamNormalCompositeScene: CampaignCompositeScenes.Entry | undefined;
-        readonly circleCompositeScene: CampaignCompositeScenes.Entry | undefined;
-        readonly underpoweredCircleCompositeScene: CampaignCompositeScenes.Entry | undefined;
-        readonly fadingBeamNormalCompositeScene: CampaignCompositeScenes.Entry | undefined;
-        readonly beamShortCompositeScene: CampaignCompositeScenes.Entry | undefined;
-        readonly fadingBeamShortCompositeScene: CampaignCompositeScenes.Entry | undefined;
+        get beamNormalCompositeScene(): CampaignCompositeScenes.Entry | undefined;
+        get circleCompositeScene(): CampaignCompositeScenes.Entry | undefined;
+        get underpoweredCircleCompositeScene(): CampaignCompositeScenes.Entry | undefined;
+        get fadingBeamNormalCompositeScene(): CampaignCompositeScenes.Entry | undefined;
+        get beamShortCompositeScene(): CampaignCompositeScenes.Entry | undefined;
+        get fadingBeamShortCompositeScene(): CampaignCompositeScenes.Entry | undefined;
     }
 }
 export default GeomanticWebLinks;

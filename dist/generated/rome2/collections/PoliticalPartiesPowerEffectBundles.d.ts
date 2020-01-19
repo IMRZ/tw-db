@@ -9,8 +9,8 @@ export declare namespace PoliticalPartiesPowerEffectBundles {
         readonly _effectBundle: string;
         readonly powerLevel: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly politicalPartyKey: PoliticalParties.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get politicalPartyKey(): PoliticalParties.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default PoliticalPartiesPowerEffectBundles;

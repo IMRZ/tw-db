@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueUnitCasteStatModifiersJunctions {
         readonly _caste: string;
         readonly _statModifier: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly caste: UnitCastes.Entry | undefined;
-        readonly statModifier: UnitStatModifiers.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get caste(): UnitCastes.Entry | undefined;
+        get statModifier(): UnitStatModifiers.Entry | undefined;
     }
 }
 export default EffectBonusValueUnitCasteStatModifiersJunctions;

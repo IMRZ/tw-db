@@ -11,7 +11,7 @@ export declare namespace PublicOrderFactors {
         readonly negativeTooltip: string;
         readonly _optionalCampaignKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly optionalCampaignKey: Campaigns.Entry | undefined;
+        get optionalCampaignKey(): Campaigns.Entry | undefined;
     }
 }
 export default PublicOrderFactors;

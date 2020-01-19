@@ -8,8 +8,8 @@ export declare namespace ResourceCostAncillaryJunctions {
         readonly _resourceCost: string;
         readonly _ancillary: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly resourceCost: ResourceCosts.Entry | undefined;
-        readonly ancillary: Ancillaries.Entry | undefined;
+        get resourceCost(): ResourceCosts.Entry | undefined;
+        get ancillary(): Ancillaries.Entry | undefined;
     }
 }
 export default ResourceCostAncillaryJunctions;

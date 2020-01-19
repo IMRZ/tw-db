@@ -8,8 +8,8 @@ export declare namespace UiEffects {
         readonly _bannerFx: string;
         readonly _pingFx: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly bannerFx: ParticleEffects.Entry | undefined;
-        readonly pingFx: ParticleEffects.Entry | undefined;
+        get bannerFx(): ParticleEffects.Entry | undefined;
+        get pingFx(): ParticleEffects.Entry | undefined;
     }
 }
 export default UiEffects;

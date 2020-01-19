@@ -15,9 +15,9 @@ export declare namespace MpForceGenTemplateJunctions {
         readonly _configKey: string;
         readonly isDefender: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly templateKey: MpForceGenTemplates.Entry | undefined;
-        readonly budgetKey: MpBudgets.Entry | undefined;
-        readonly configKey: CdirMilitaryGeneratorConfigs.Entry | undefined;
+        get templateKey(): MpForceGenTemplates.Entry | undefined;
+        get budgetKey(): MpBudgets.Entry | undefined;
+        get configKey(): CdirMilitaryGeneratorConfigs.Entry | undefined;
     }
 }
 export default MpForceGenTemplateJunctions;

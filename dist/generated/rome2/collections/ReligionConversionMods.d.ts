@@ -8,7 +8,7 @@ export declare namespace ReligionConversionMods {
         readonly _relTo: any;
         readonly modifier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly relFrom: Religions.Entry | undefined;
+        get relFrom(): Religions.Entry | undefined;
     }
 }
 export default ReligionConversionMods;

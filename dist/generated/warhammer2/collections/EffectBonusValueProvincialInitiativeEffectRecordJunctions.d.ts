@@ -9,9 +9,9 @@ export declare namespace EffectBonusValueProvincialInitiativeEffectRecordJunctio
         readonly _bonusValueId: string;
         readonly _effectBonusWillModify: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsProvincialInitiativeEffectRecords.Entry | undefined;
-        readonly effectBonusWillModify: Effects.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsProvincialInitiativeEffectRecords.Entry | undefined;
+        get effectBonusWillModify(): Effects.Entry | undefined;
     }
 }
 export default EffectBonusValueProvincialInitiativeEffectRecordJunctions;

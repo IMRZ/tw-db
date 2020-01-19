@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueBuildingSetJunctions {
         readonly _bonusValueId: string;
         readonly _buildingSet: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsBuildingSets.Entry | undefined;
-        readonly buildingSet: BuildingSets.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsBuildingSets.Entry | undefined;
+        get buildingSet(): BuildingSets.Entry | undefined;
     }
 }
 export default EffectBonusValueBuildingSetJunctions;

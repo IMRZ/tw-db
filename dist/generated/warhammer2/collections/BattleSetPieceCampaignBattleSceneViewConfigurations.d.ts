@@ -10,7 +10,7 @@ export declare namespace BattleSetPieceCampaignBattleSceneViewConfigurations {
         readonly cameraHeight: number;
         readonly scale: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly setPieceBattleScene: BattleSetPieceCampaignBattleScenes.Entry | undefined;
+        get setPieceBattleScene(): BattleSetPieceCampaignBattleScenes.Entry | undefined;
     }
 }
 export default BattleSetPieceCampaignBattleSceneViewConfigurations;

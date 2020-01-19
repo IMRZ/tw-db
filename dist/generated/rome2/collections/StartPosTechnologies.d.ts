@@ -8,8 +8,8 @@ export declare namespace StartPosTechnologies {
         readonly _faction: number;
         readonly _technology: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: StartPosFactions.Entry | undefined;
-        readonly technology: Technologies.Entry | undefined;
+        get faction(): StartPosFactions.Entry | undefined;
+        get technology(): Technologies.Entry | undefined;
     }
 }
 export default StartPosTechnologies;

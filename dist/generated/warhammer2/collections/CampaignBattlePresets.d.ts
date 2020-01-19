@@ -18,9 +18,9 @@ export declare namespace CampaignBattlePresets {
         readonly screenshotPath: string;
         readonly _creepOverride: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleType: CampaignBattleTypeEnums.Entry | undefined;
-        readonly campaignMap: CampaignMapPlayableAreas.Entry | undefined;
-        readonly creepOverride: DestructionZoneMaskTypes.Entry | undefined;
+        get battleType(): CampaignBattleTypeEnums.Entry | undefined;
+        get campaignMap(): CampaignMapPlayableAreas.Entry | undefined;
+        get creepOverride(): DestructionZoneMaskTypes.Entry | undefined;
     }
 }
 export default CampaignBattlePresets;

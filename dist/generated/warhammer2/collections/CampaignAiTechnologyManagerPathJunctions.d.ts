@@ -9,8 +9,8 @@ export declare namespace CampaignAiTechnologyManagerPathJunctions {
         readonly _pathKey: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly managerKey: CampaignAiTechnologyManagers.Entry | undefined;
-        readonly pathKey: CampaignAiTechnologyPaths.Entry | undefined;
+        get managerKey(): CampaignAiTechnologyManagers.Entry | undefined;
+        get pathKey(): CampaignAiTechnologyPaths.Entry | undefined;
     }
 }
 export default CampaignAiTechnologyManagerPathJunctions;

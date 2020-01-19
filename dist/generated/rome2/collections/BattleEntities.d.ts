@@ -30,7 +30,7 @@ export declare namespace BattleEntities {
         readonly minTurningSpeed: number;
         readonly displayModelOffsetZ: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: BattleEntitiesTypesEnum.Entry | undefined;
+        get type(): BattleEntitiesTypesEnum.Entry | undefined;
     }
 }
 export default BattleEntities;

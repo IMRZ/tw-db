@@ -8,8 +8,8 @@ export declare namespace CdirEventsIncidentFollowupMissions {
         readonly _incidentKey: string;
         readonly _followupMissionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly incidentKey: Incidents.Entry | undefined;
-        readonly followupMissionKey: Missions.Entry | undefined;
+        get incidentKey(): Incidents.Entry | undefined;
+        get followupMissionKey(): Missions.Entry | undefined;
     }
 }
 export default CdirEventsIncidentFollowupMissions;

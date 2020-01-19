@@ -8,8 +8,8 @@ export declare namespace ArmySpecialAbilitiesForFactionJunctions {
         readonly _armySpecialAbility: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly armySpecialAbility: ArmySpecialAbilities.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get armySpecialAbility(): ArmySpecialAbilities.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default ArmySpecialAbilitiesForFactionJunctions;

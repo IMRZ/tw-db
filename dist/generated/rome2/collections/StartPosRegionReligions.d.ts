@@ -9,8 +9,8 @@ export declare namespace StartPosRegionReligions {
         readonly _religion: string;
         readonly percentage: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: StartPosRegions.Entry | undefined;
-        readonly religion: Religions.Entry | undefined;
+        get region(): StartPosRegions.Entry | undefined;
+        get religion(): Religions.Entry | undefined;
     }
 }
 export default StartPosRegionReligions;

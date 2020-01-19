@@ -9,8 +9,8 @@ export declare namespace PoliticalActionsDilemmaJunctions {
         readonly _dilemma: string;
         readonly weighting: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly politiicalAction: PoliticalActions.Entry | undefined;
-        readonly dilemma: Dilemmas.Entry | undefined;
+        get politiicalAction(): PoliticalActions.Entry | undefined;
+        get dilemma(): Dilemmas.Entry | undefined;
     }
 }
 export default PoliticalActionsDilemmaJunctions;

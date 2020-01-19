@@ -11,8 +11,8 @@ export declare namespace CaiPersonalitiesIncomeAllocationPolicyStrategicContextJ
         readonly zeroOrNegativeNetIncomeSurvivalRounds: number;
         readonly positiveNetIncomeSurvivalRounds: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly incomeAllocationPolicyKey: CaiPersonalitiesIncomeAllocationPolicies.Entry | undefined;
-        readonly strategicContextKey: CaiStrategicContextTypes.Entry | undefined;
+        get incomeAllocationPolicyKey(): CaiPersonalitiesIncomeAllocationPolicies.Entry | undefined;
+        get strategicContextKey(): CaiStrategicContextTypes.Entry | undefined;
     }
 }
 export default CaiPersonalitiesIncomeAllocationPolicyStrategicContextJunctions;

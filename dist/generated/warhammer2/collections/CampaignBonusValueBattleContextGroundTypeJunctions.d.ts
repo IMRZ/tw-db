@@ -8,8 +8,8 @@ export declare namespace CampaignBonusValueBattleContextGroundTypeJunctions {
         readonly _battleContextKey: string;
         readonly _groundTypeKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleContextKey: CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
-        readonly groundTypeKey: CampaignGroundTypes.Entry | undefined;
+        get battleContextKey(): CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
+        get groundTypeKey(): CampaignGroundTypes.Entry | undefined;
     }
 }
 export default CampaignBonusValueBattleContextGroundTypeJunctions;

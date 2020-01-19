@@ -8,8 +8,8 @@ export declare namespace FeatureSetToFactionFeatures {
         readonly _featureSet: string;
         readonly _feature: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly featureSet: FeatureSets.Entry | undefined;
-        readonly feature: FactionFeatures.Entry | undefined;
+        get featureSet(): FeatureSets.Entry | undefined;
+        get feature(): FactionFeatures.Entry | undefined;
     }
 }
 export default FeatureSetToFactionFeatures;

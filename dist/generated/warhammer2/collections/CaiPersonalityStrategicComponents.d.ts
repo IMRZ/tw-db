@@ -27,8 +27,8 @@ export declare namespace CaiPersonalityStrategicComponents {
         readonly minRefuseTunnelingInterceptRatio: number;
         readonly useClassicStanceGenerationMechanics: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly shortDescription: DiplomacyStrings.Entry | undefined;
-        readonly longDescription: DiplomacyStrings.Entry | undefined;
+        get shortDescription(): DiplomacyStrings.Entry | undefined;
+        get longDescription(): DiplomacyStrings.Entry | undefined;
     }
 }
 export default CaiPersonalityStrategicComponents;

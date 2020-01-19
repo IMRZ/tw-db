@@ -16,9 +16,9 @@ export declare namespace CharacterTraits {
         readonly _preBattleSpeechParameter: string;
         readonly uiPriority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: TraitInfo.Entry | undefined;
-        readonly icon: TraitCategories.Entry | undefined;
-        readonly preBattleSpeechParameter: PreBattleSpeechParametersEnum.Entry | undefined;
+        get key(): TraitInfo.Entry | undefined;
+        get icon(): TraitCategories.Entry | undefined;
+        get preBattleSpeechParameter(): PreBattleSpeechParametersEnum.Entry | undefined;
     }
 }
 export default CharacterTraits;

@@ -8,7 +8,7 @@ export declare namespace ScriptedObjectives {
         readonly localisedText: string;
         readonly _gameExpansionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default ScriptedObjectives;

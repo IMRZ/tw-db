@@ -13,10 +13,10 @@ export declare namespace StartPosRegionSlotTemplates {
         readonly _slotType: string;
         readonly _slotTemplate: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly region: Regions.Entry | undefined;
-        readonly slotType: SlotTypes.Entry | undefined;
-        readonly slotTemplate: SlotTemplates.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get slotType(): SlotTypes.Entry | undefined;
+        get slotTemplate(): SlotTemplates.Entry | undefined;
     }
 }
 export default StartPosRegionSlotTemplates;

@@ -9,8 +9,8 @@ export declare namespace AncillariesRequiredSkills {
         readonly _requiredSkill: string;
         readonly requiredSkillLevel: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ancillary: Ancillaries.Entry | undefined;
-        readonly requiredSkill: CharacterSkills.Entry | undefined;
+        get ancillary(): Ancillaries.Entry | undefined;
+        get requiredSkill(): CharacterSkills.Entry | undefined;
     }
 }
 export default AncillariesRequiredSkills;

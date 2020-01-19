@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaClimates {
         readonly _member: string;
         readonly _climate: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly climate: SettlementClimateTypes.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get climate(): SettlementClimateTypes.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaClimates;

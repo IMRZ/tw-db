@@ -24,8 +24,8 @@ export declare namespace AreaOfEffectDisplays {
         readonly vfxRingSegmentLength: number;
         readonly useModelTime: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly vfxRing: ParticleEffects.Entry | undefined;
-        readonly vfxCentral: ParticleEffects.Entry | undefined;
+        get vfxRing(): ParticleEffects.Entry | undefined;
+        get vfxCentral(): ParticleEffects.Entry | undefined;
     }
 }
 export default AreaOfEffectDisplays;

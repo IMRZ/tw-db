@@ -8,8 +8,8 @@ export declare namespace CdirEventsMissionIssuerJunctions {
         readonly _missionKey: string;
         readonly _issuerKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missionKey: Missions.Entry | undefined;
-        readonly issuerKey: MissionIssuers.Entry | undefined;
+        get missionKey(): Missions.Entry | undefined;
+        get issuerKey(): MissionIssuers.Entry | undefined;
     }
 }
 export default CdirEventsMissionIssuerJunctions;

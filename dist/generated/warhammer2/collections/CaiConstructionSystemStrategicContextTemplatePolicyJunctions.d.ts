@@ -10,9 +10,9 @@ export declare namespace CaiConstructionSystemStrategicContextTemplatePolicyJunc
         readonly _caiStrategicContext: string;
         readonly _caiConstructionSystemTemplate: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly caiConstructionSystemStrategicContextPolicy: CaiConstructionSystemStrategicContextTemplatePolicies.Entry | undefined;
-        readonly caiStrategicContext: CaiStrategicContextTypes.Entry | undefined;
-        readonly caiConstructionSystemTemplate: CaiConstructionSystemTemplates.Entry | undefined;
+        get caiConstructionSystemStrategicContextPolicy(): CaiConstructionSystemStrategicContextTemplatePolicies.Entry | undefined;
+        get caiStrategicContext(): CaiStrategicContextTypes.Entry | undefined;
+        get caiConstructionSystemTemplate(): CaiConstructionSystemTemplates.Entry | undefined;
     }
 }
 export default CaiConstructionSystemStrategicContextTemplatePolicyJunctions;

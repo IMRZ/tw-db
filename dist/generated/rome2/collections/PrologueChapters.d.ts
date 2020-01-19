@@ -14,8 +14,8 @@ export declare namespace PrologueChapters {
         readonly subtitle: string;
         readonly banner: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleKey: Battles.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
+        get battleKey(): Battles.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
     }
 }
 export default PrologueChapters;

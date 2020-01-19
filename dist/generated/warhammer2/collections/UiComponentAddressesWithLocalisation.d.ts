@@ -7,7 +7,7 @@ export declare namespace UiComponentAddressesWithLocalisation {
         readonly _componentLabel: string;
         readonly componentAddress: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly componentLabel: UiComponentLocalisation.Entry | undefined;
+        get componentLabel(): UiComponentLocalisation.Entry | undefined;
     }
 }
 export default UiComponentAddressesWithLocalisation;

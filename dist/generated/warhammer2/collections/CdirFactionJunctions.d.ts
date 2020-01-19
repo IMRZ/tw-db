@@ -7,7 +7,7 @@ export declare namespace CdirFactionJunctions {
         readonly key: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default CdirFactionJunctions;

@@ -9,8 +9,8 @@ export declare namespace RegionReligions {
         readonly _religion: string;
         readonly religionZeal: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly religion: Religions.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get religion(): Religions.Entry | undefined;
     }
 }
 export default RegionReligions;

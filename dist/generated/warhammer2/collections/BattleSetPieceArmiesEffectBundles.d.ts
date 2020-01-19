@@ -8,8 +8,8 @@ export declare namespace BattleSetPieceArmiesEffectBundles {
         readonly _battleSetPieceArmy: string;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleSetPieceArmy: BattleSetPieceArmies.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get battleSetPieceArmy(): BattleSetPieceArmies.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default BattleSetPieceArmiesEffectBundles;

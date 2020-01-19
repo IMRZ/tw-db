@@ -22,18 +22,18 @@ export declare namespace CaiConstructionSystemSynergies {
         readonly _potentialBuildingInstance: string;
         readonly _potentialBuildingSuperChain: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly synergyPolicyKey: CaiConstructionSystemSynergyPolicies.Entry | undefined;
-        readonly existingBuildingChainKey: BuildingChains.Entry | undefined;
-        readonly existingBuildingLevelInclusiveStart: BuildingLevels.Entry | undefined;
-        readonly existingBuildingLevelInclusiveEnd: BuildingLevels.Entry | undefined;
-        readonly potentialBuidingChainKey: BuildingChains.Entry | undefined;
-        readonly potentialBuildingLevelInclusiveStart: BuildingLevels.Entry | undefined;
-        readonly potentialBuildingLevelInclusiveEnd: BuildingLevels.Entry | undefined;
-        readonly synergyLevelKey: CaiConstructionSystemSynergyLevels.Entry | undefined;
-        readonly existingBuildingInstance: BuildingInstances.Entry | undefined;
-        readonly existingBuildingSuperChain: BuildingSuperchains.Entry | undefined;
-        readonly potentialBuildingInstance: BuildingInstances.Entry | undefined;
-        readonly potentialBuildingSuperChain: BuildingSuperchains.Entry | undefined;
+        get synergyPolicyKey(): CaiConstructionSystemSynergyPolicies.Entry | undefined;
+        get existingBuildingChainKey(): BuildingChains.Entry | undefined;
+        get existingBuildingLevelInclusiveStart(): BuildingLevels.Entry | undefined;
+        get existingBuildingLevelInclusiveEnd(): BuildingLevels.Entry | undefined;
+        get potentialBuidingChainKey(): BuildingChains.Entry | undefined;
+        get potentialBuildingLevelInclusiveStart(): BuildingLevels.Entry | undefined;
+        get potentialBuildingLevelInclusiveEnd(): BuildingLevels.Entry | undefined;
+        get synergyLevelKey(): CaiConstructionSystemSynergyLevels.Entry | undefined;
+        get existingBuildingInstance(): BuildingInstances.Entry | undefined;
+        get existingBuildingSuperChain(): BuildingSuperchains.Entry | undefined;
+        get potentialBuildingInstance(): BuildingInstances.Entry | undefined;
+        get potentialBuildingSuperChain(): BuildingSuperchains.Entry | undefined;
     }
 }
 export default CaiConstructionSystemSynergies;

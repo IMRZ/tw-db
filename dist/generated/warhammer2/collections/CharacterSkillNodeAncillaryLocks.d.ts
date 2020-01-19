@@ -8,8 +8,8 @@ export declare namespace CharacterSkillNodeAncillaryLocks {
         readonly _characterSkillNode: string;
         readonly _ancillaryLock: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterSkillNode: CharacterSkillNodes.Entry | undefined;
-        readonly ancillaryLock: Ancillaries.Entry | undefined;
+        get characterSkillNode(): CharacterSkillNodes.Entry | undefined;
+        get ancillaryLock(): Ancillaries.Entry | undefined;
     }
 }
 export default CharacterSkillNodeAncillaryLocks;

@@ -10,7 +10,7 @@ export declare namespace EncyclopediaTutorialVideos {
         readonly file: string;
         readonly description: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly section: EncyclopediaTutorialSections.Entry | undefined;
+        get section(): EncyclopediaTutorialSections.Entry | undefined;
     }
 }
 export default EncyclopediaTutorialVideos;

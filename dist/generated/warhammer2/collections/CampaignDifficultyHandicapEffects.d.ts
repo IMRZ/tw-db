@@ -13,9 +13,9 @@ export declare namespace CampaignDifficultyHandicapEffects {
         readonly _optionalCampaignKey: string;
         readonly _effectScope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly optionalCampaignKey: Campaigns.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get optionalCampaignKey(): Campaigns.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default CampaignDifficultyHandicapEffects;

@@ -22,7 +22,7 @@ export declare namespace CampaignMapPlayableAreas {
         readonly minimapLookupFile: string;
         readonly isAvailableInCustomBattle: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mapname: CampaignMaps.Entry | undefined;
+        get mapname(): CampaignMaps.Entry | undefined;
     }
 }
 export default CampaignMapPlayableAreas;

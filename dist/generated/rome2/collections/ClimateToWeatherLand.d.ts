@@ -24,8 +24,8 @@ export declare namespace ClimateToWeatherLand {
         readonly hazeIndex: number;
         readonly fogIndex: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly climateType: Climates.Entry | undefined;
-        readonly season: Seasons.Entry | undefined;
+        get climateType(): Climates.Entry | undefined;
+        get season(): Seasons.Entry | undefined;
     }
 }
 export default ClimateToWeatherLand;

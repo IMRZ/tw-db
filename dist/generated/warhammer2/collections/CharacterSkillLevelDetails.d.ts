@@ -17,10 +17,10 @@ export declare namespace CharacterSkillLevelDetails {
         readonly imagePath: string;
         readonly unlockedAtRank: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly skillKey: CharacterSkills.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
-        readonly subcultureKey: CulturesSubcultures.Entry | undefined;
+        get skillKey(): CharacterSkills.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
+        get subcultureKey(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default CharacterSkillLevelDetails;

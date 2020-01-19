@@ -12,7 +12,7 @@ export declare namespace CaiPersonalityOccupationDecisionPriorities {
         readonly tensionPriority: number;
         readonly peacePriority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly componentId: CaiPersonalityOccupationDecisionComponents.Entry | undefined;
+        get componentId(): CaiPersonalityOccupationDecisionComponents.Entry | undefined;
     }
 }
 export default CaiPersonalityOccupationDecisionPriorities;

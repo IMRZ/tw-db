@@ -12,8 +12,8 @@ export declare namespace StartPosCalendars {
         readonly startWeekOfYear: number;
         readonly unique: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly startSeason: Seasons.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get startSeason(): Seasons.Entry | undefined;
     }
 }
 export default StartPosCalendars;

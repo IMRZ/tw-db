@@ -10,8 +10,8 @@ export declare namespace RitualBeams {
         readonly bmd: string;
         readonly id: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
-        readonly beamType: RitualBeamTypes.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get beamType(): RitualBeamTypes.Entry | undefined;
     }
 }
 export default RitualBeams;

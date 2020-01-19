@@ -4,6 +4,7 @@ import { UnitMeleeWeaponsEnum } from "./UnitMeleeWeaponsEnum";
 import { AudioMeleeWeaponTypes } from "./AudioMeleeWeaponTypes";
 import { BattleEntitiesSizeEnums } from "./BattleEntitiesSizeEnums";
 import { SpecialAbilityPhases } from "./SpecialAbilityPhases";
+import { ProjectilesScalingDamages } from "./ProjectilesScalingDamages";
 
 export namespace MeleeWeapons {
   export const KEY = new CollectionKey("melee_weapons");
@@ -31,6 +32,7 @@ export namespace MeleeWeapons {
     readonly collisionAttackMaxTargets: number;
     readonly collisionAttackMaxTargetsCooldown: number;
     readonly meleeAttackInterval: number;
+    readonly _scalingDamage: string;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -54,6 +56,7 @@ export namespace MeleeWeapons {
       this.collisionAttackMaxTargets = values["collision_attack_max_targets"];
       this.collisionAttackMaxTargetsCooldown = values["collision_attack_max_targets_cooldown"];
       this.meleeAttackInterval = values["melee_attack_interval"];
+      this._scalingDamage = values["scaling_damage"];
     }
     
     get meleeWeaponType(): UnitMeleeWeaponsEnum.Entry | undefined {
@@ -74,6 +77,11 @@ export namespace MeleeWeapons {
     get contactPhase(): SpecialAbilityPhases.Entry | undefined {
       const collection = <SpecialAbilityPhases.Entry[]>this.collectionCache.getCollection(SpecialAbilityPhases.KEY, SpecialAbilityPhases.Entry);
       return collection.find(entry => entry.id === this._contactPhase);
+    }
+    
+    get scalingDamage(): ProjectilesScalingDamages.Entry | undefined {
+      const collection = <ProjectilesScalingDamages.Entry[]>this.collectionCache.getCollection(ProjectilesScalingDamages.KEY, ProjectilesScalingDamages.Entry);
+      return collection.find(entry => entry.key === this._scalingDamage);
     }
   }
 }

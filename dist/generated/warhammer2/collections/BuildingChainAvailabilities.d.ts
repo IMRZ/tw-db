@@ -15,11 +15,11 @@ export declare namespace BuildingChainAvailabilities {
         readonly _faction: string;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly setId: BuildingChainAvailabilitySetIds.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly subCulture: CulturesSubcultures.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get setId(): BuildingChainAvailabilitySetIds.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get subCulture(): CulturesSubcultures.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default BuildingChainAvailabilities;

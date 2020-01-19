@@ -10,9 +10,9 @@ export declare namespace ProvinceToMercenarySetJunctions {
         readonly _mercenarySet: string;
         readonly _optionalCampaignKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly province: Provinces.Entry | undefined;
-        readonly mercenarySet: MercenaryPools.Entry | undefined;
-        readonly optionalCampaignKey: Campaigns.Entry | undefined;
+        get province(): Provinces.Entry | undefined;
+        get mercenarySet(): MercenaryPools.Entry | undefined;
+        get optionalCampaignKey(): Campaigns.Entry | undefined;
     }
 }
 export default ProvinceToMercenarySetJunctions;

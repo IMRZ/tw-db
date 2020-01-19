@@ -10,7 +10,7 @@ export declare namespace SlotsGdpValues {
         readonly buildingGdpModifier: number;
         readonly onscreenName: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly slot: Slots.Entry | undefined;
+        get slot(): Slots.Entry | undefined;
     }
 }
 export default SlotsGdpValues;

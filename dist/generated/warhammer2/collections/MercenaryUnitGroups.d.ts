@@ -12,7 +12,7 @@ export declare namespace MercenaryUnitGroups {
         readonly usePartialReplenishment: boolean;
         readonly replenishmentReason: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitRecord: MainUnits.Entry | undefined;
+        get unitRecord(): MainUnits.Entry | undefined;
     }
 }
 export default MercenaryUnitGroups;

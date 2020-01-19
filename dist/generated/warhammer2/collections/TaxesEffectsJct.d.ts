@@ -16,10 +16,10 @@ export declare namespace TaxesEffectsJct {
         readonly _effectScope: string;
         readonly _specificFeatureSet: any;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly taxName: TaxesKeys.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
-        readonly optionalCampaignKey: Campaigns.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
+        get taxName(): TaxesKeys.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get optionalCampaignKey(): Campaigns.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default TaxesEffectsJct;

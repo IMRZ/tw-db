@@ -10,7 +10,7 @@ export declare namespace MessageEvents {
         readonly instantOpen: boolean;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly layout: MessageEventLayoutTypes.Entry | undefined;
+        get layout(): MessageEventLayoutTypes.Entry | undefined;
     }
 }
 export default MessageEvents;

@@ -12,8 +12,8 @@ export declare namespace TechnologyNodeLinks {
         readonly encyclopediaParentLinkPosition: number;
         readonly encyclopediaChildLinkPosition: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly parentKey: TechnologyNodes.Entry | undefined;
-        readonly childKey: TechnologyNodes.Entry | undefined;
+        get parentKey(): TechnologyNodes.Entry | undefined;
+        get childKey(): TechnologyNodes.Entry | undefined;
     }
 }
 export default TechnologyNodeLinks;

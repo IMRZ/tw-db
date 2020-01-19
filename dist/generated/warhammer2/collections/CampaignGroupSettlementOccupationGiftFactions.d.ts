@@ -8,8 +8,8 @@ export declare namespace CampaignGroupSettlementOccupationGiftFactions {
         readonly _campaignGroup: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default CampaignGroupSettlementOccupationGiftFactions;

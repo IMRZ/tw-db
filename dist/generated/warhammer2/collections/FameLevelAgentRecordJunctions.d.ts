@@ -9,8 +9,8 @@ export declare namespace FameLevelAgentRecordJunctions {
         readonly _agent: string;
         readonly cap: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly fameLevel: FameLevels.Entry | undefined;
-        readonly agent: Agents.Entry | undefined;
+        get fameLevel(): FameLevels.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
     }
 }
 export default FameLevelAgentRecordJunctions;

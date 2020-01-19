@@ -12,8 +12,8 @@ export declare namespace ProvincialInitiativeRecords {
         readonly iconPath: string;
         readonly _campaignVfxId: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly campaignVfxId: CampaignVfxCampaignVfxEventIds.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get campaignVfxId(): CampaignVfxCampaignVfxEventIds.Entry | undefined;
     }
 }
 export default ProvincialInitiativeRecords;

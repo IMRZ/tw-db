@@ -10,8 +10,8 @@ export declare namespace UnitRegimentNames {
         readonly _unitName: any;
         readonly nameOrder: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly nameGroup: NamesGroups.Entry | undefined;
-        readonly unitCaste: UnitCastes.Entry | undefined;
+        get nameGroup(): NamesGroups.Entry | undefined;
+        get unitCaste(): UnitCastes.Entry | undefined;
     }
 }
 export default UnitRegimentNames;

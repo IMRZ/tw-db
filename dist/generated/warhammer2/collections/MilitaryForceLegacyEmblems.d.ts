@@ -14,9 +14,9 @@ export declare namespace MilitaryForceLegacyEmblems {
         readonly icon: string;
         readonly bannerDecorator: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly culureKey: Cultures.Entry | undefined;
-        readonly subcultureKey: CulturesSubcultures.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get culureKey(): Cultures.Entry | undefined;
+        get subcultureKey(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default MilitaryForceLegacyEmblems;

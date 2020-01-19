@@ -8,7 +8,7 @@ export declare namespace FeatureSets {
         readonly priority: number;
         readonly _militaryForceTypes: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly militaryForceTypes: FactionFeatureSetMilitaryForceTypes.Entry | undefined;
+        get militaryForceTypes(): FactionFeatureSetMilitaryForceTypes.Entry | undefined;
     }
 }
 export default FeatureSets;

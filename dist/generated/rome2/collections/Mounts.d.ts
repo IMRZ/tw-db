@@ -14,10 +14,10 @@ export declare namespace Mounts {
         readonly _variant: string;
         readonly _audioArmourType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly animation: BattleAnimationsTable.Entry | undefined;
-        readonly entity: BattleEntities.Entry | undefined;
-        readonly variant: Variants.Entry | undefined;
-        readonly audioArmourType: AudioMaterialsEnums.Entry | undefined;
+        get animation(): BattleAnimationsTable.Entry | undefined;
+        get entity(): BattleEntities.Entry | undefined;
+        get variant(): Variants.Entry | undefined;
+        get audioArmourType(): AudioMaterialsEnums.Entry | undefined;
     }
 }
 export default Mounts;

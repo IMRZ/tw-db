@@ -11,9 +11,9 @@ export declare namespace StartPosPastEvents {
         readonly turnsAgo: number;
         readonly unique: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly source: StartPosFactions.Entry | undefined;
-        readonly target: StartPosFactions.Entry | undefined;
-        readonly event: CaiPersonalityDiplomaticEvents.Entry | undefined;
+        get source(): StartPosFactions.Entry | undefined;
+        get target(): StartPosFactions.Entry | undefined;
+        get event(): CaiPersonalityDiplomaticEvents.Entry | undefined;
     }
 }
 export default StartPosPastEvents;

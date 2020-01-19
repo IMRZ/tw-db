@@ -8,8 +8,8 @@ export declare namespace BattleSetPieceArmiesSkillsJunctions {
         readonly _armyName: string;
         readonly _armySkill: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly armyName: BattleSetPieceArmies.Entry | undefined;
-        readonly armySkill: Ancillaries.Entry | undefined;
+        get armyName(): BattleSetPieceArmies.Entry | undefined;
+        get armySkill(): Ancillaries.Entry | undefined;
     }
 }
 export default BattleSetPieceArmiesSkillsJunctions;

@@ -11,7 +11,7 @@ export declare namespace EncyclopediaTutorialVideoSubtitles {
         readonly text: string;
         readonly line: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: EncyclopediaTutorialVideos.Entry | undefined;
+        get key(): EncyclopediaTutorialVideos.Entry | undefined;
     }
 }
 export default EncyclopediaTutorialVideoSubtitles;

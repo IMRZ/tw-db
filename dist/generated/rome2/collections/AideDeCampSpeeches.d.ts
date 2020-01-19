@@ -12,7 +12,7 @@ export declare namespace AideDeCampSpeeches {
         readonly circumventCooldown: boolean;
         readonly _cinematicEvent: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly cinematicEvent: BattleCinematicEvents.Entry | undefined;
+        get cinematicEvent(): BattleCinematicEvents.Entry | undefined;
     }
 }
 export default AideDeCampSpeeches;

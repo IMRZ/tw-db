@@ -9,8 +9,8 @@ export declare namespace TExcTableExportGroups {
         readonly _category: string;
         readonly _table: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: TExcTableExportCategories.Entry | undefined;
-        readonly table: TExcImplementedTables.Entry | undefined;
+        get category(): TExcTableExportCategories.Entry | undefined;
+        get table(): TExcImplementedTables.Entry | undefined;
     }
 }
 export default TExcTableExportGroups;

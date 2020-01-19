@@ -18,8 +18,8 @@ export declare namespace CharacterTraitLevels {
         readonly removalText: string;
         readonly _enabledByTech: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trait: CharacterTraits.Entry | undefined;
-        readonly enabledByTech: Technologies.Entry | undefined;
+        get trait(): CharacterTraits.Entry | undefined;
+        get enabledByTech(): Technologies.Entry | undefined;
     }
 }
 export default CharacterTraitLevels;

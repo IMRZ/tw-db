@@ -9,8 +9,8 @@ export declare namespace DaveUserTablePermissions {
         readonly _tableName: string;
         readonly _permission: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly tableName: TExcImplementedTables.Entry | undefined;
-        readonly permission: DavePermissions.Entry | undefined;
+        get tableName(): TExcImplementedTables.Entry | undefined;
+        get permission(): DavePermissions.Entry | undefined;
     }
 }
 export default DaveUserTablePermissions;

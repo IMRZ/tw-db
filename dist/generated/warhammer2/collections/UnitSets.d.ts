@@ -10,7 +10,7 @@ export declare namespace UnitSets {
         readonly maxUnitExpLevelInclusive: number;
         readonly _specialCategory: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly specialCategory: SpecialUnitCategories.Entry | undefined;
+        get specialCategory(): SpecialUnitCategories.Entry | undefined;
     }
 }
 export default UnitSets;

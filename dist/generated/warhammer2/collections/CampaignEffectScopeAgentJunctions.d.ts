@@ -8,8 +8,8 @@ export declare namespace CampaignEffectScopeAgentJunctions {
         readonly _campaignEffectScopeKey: string;
         readonly _agentKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignEffectScopeKey: CampaignEffectScopes.Entry | undefined;
-        readonly agentKey: Agents.Entry | undefined;
+        get campaignEffectScopeKey(): CampaignEffectScopes.Entry | undefined;
+        get agentKey(): Agents.Entry | undefined;
     }
 }
 export default CampaignEffectScopeAgentJunctions;

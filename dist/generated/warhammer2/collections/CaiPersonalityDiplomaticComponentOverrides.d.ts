@@ -7,8 +7,8 @@ export declare namespace CaiPersonalityDiplomaticComponentOverrides {
         readonly _component: string;
         readonly _parent: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly component: CaiPersonalityDiplomaticComponents.Entry | undefined;
-        readonly parent: CaiPersonalityDiplomaticComponents.Entry | undefined;
+        get component(): CaiPersonalityDiplomaticComponents.Entry | undefined;
+        get parent(): CaiPersonalityDiplomaticComponents.Entry | undefined;
     }
 }
 export default CaiPersonalityDiplomaticComponentOverrides;

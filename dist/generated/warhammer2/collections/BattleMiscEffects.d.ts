@@ -7,7 +7,7 @@ export declare namespace BattleMiscEffects {
         readonly name: string;
         readonly _effect: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: ParticleEffects.Entry | undefined;
+        get effect(): ParticleEffects.Entry | undefined;
     }
 }
 export default BattleMiscEffects;

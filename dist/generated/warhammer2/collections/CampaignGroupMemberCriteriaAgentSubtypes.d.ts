@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaAgentSubtypes {
         readonly _member: string;
         readonly _agentSubtype: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaAgentSubtypes;

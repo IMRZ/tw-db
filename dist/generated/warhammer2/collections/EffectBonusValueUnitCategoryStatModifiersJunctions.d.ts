@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueUnitCategoryStatModifiersJunctions {
         readonly _category: string;
         readonly _statModifier: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly category: UnitCategory.Entry | undefined;
-        readonly statModifier: UnitStatModifiers.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get category(): UnitCategory.Entry | undefined;
+        get statModifier(): UnitStatModifiers.Entry | undefined;
     }
 }
 export default EffectBonusValueUnitCategoryStatModifiersJunctions;

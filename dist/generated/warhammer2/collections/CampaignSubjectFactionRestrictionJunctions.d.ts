@@ -8,8 +8,8 @@ export declare namespace CampaignSubjectFactionRestrictionJunctions {
         readonly _campaignSubjectKey: string;
         readonly _factionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignSubjectKey: CampaignSubjects.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
+        get campaignSubjectKey(): CampaignSubjects.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
     }
 }
 export default CampaignSubjectFactionRestrictionJunctions;

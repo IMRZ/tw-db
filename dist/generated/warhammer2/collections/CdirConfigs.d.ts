@@ -11,9 +11,9 @@ export declare namespace CdirConfigs {
         readonly _cdirConfigKey: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignKey: CdirCampaignJunctions.Entry | undefined;
-        readonly factionKey: CdirFactionJunctions.Entry | undefined;
-        readonly cdirConfigKey: CdirConfigValues.Entry | undefined;
+        get campaignKey(): CdirCampaignJunctions.Entry | undefined;
+        get factionKey(): CdirFactionJunctions.Entry | undefined;
+        get cdirConfigKey(): CdirConfigValues.Entry | undefined;
     }
 }
 export default CdirConfigs;

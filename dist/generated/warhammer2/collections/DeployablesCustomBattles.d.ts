@@ -8,7 +8,7 @@ export declare namespace DeployablesCustomBattles {
         readonly cap: number;
         readonly probability: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly deployable: Deployables.Entry | undefined;
+        get deployable(): Deployables.Entry | undefined;
     }
 }
 export default DeployablesCustomBattles;

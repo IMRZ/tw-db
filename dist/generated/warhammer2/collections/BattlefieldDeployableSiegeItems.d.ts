@@ -10,7 +10,7 @@ export declare namespace BattlefieldDeployableSiegeItems {
         readonly type: string;
         readonly siegeEffortCost: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battlefieldSiegeVehicle: BattlefieldSiegeVehicles.Entry | undefined;
+        get battlefieldSiegeVehicle(): BattlefieldSiegeVehicles.Entry | undefined;
     }
 }
 export default BattlefieldDeployableSiegeItems;

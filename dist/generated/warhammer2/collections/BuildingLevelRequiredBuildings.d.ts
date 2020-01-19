@@ -7,8 +7,8 @@ export declare namespace BuildingLevelRequiredBuildings {
         readonly _buildingLevel: string;
         readonly _required: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingLevel: BuildingLevels.Entry | undefined;
-        readonly required: BuildingLevels.Entry | undefined;
+        get buildingLevel(): BuildingLevels.Entry | undefined;
+        get required(): BuildingLevels.Entry | undefined;
     }
 }
 export default BuildingLevelRequiredBuildings;

@@ -37,9 +37,9 @@ export declare namespace Battles {
         readonly battleEnvironment: string;
         readonly _battleEnvironmentAudio: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: BattleTypes.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
-        readonly battleEnvironmentAudio: AudioBattleEnvironments.Entry | undefined;
+        get type(): BattleTypes.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
+        get battleEnvironmentAudio(): AudioBattleEnvironments.Entry | undefined;
     }
 }
 export default Battles;

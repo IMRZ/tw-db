@@ -22,21 +22,21 @@ export declare namespace ProjectileImpacts {
         readonly _blood: string;
         readonly _metal: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly water: ParticleEffects.Entry | undefined;
-        readonly sails: ParticleEffects.Entry | undefined;
-        readonly mud: ParticleEffects.Entry | undefined;
-        readonly grass: ParticleEffects.Entry | undefined;
-        readonly road: ParticleEffects.Entry | undefined;
-        readonly rock: ParticleEffects.Entry | undefined;
-        readonly sand: ParticleEffects.Entry | undefined;
-        readonly cloth: ParticleEffects.Entry | undefined;
-        readonly snow: ParticleEffects.Entry | undefined;
-        readonly leather: ParticleEffects.Entry | undefined;
-        readonly wood: ParticleEffects.Entry | undefined;
-        readonly foliage: ParticleEffects.Entry | undefined;
-        readonly glass: ParticleEffects.Entry | undefined;
-        readonly blood: ParticleEffects.Entry | undefined;
-        readonly metal: ParticleEffects.Entry | undefined;
+        get water(): ParticleEffects.Entry | undefined;
+        get sails(): ParticleEffects.Entry | undefined;
+        get mud(): ParticleEffects.Entry | undefined;
+        get grass(): ParticleEffects.Entry | undefined;
+        get road(): ParticleEffects.Entry | undefined;
+        get rock(): ParticleEffects.Entry | undefined;
+        get sand(): ParticleEffects.Entry | undefined;
+        get cloth(): ParticleEffects.Entry | undefined;
+        get snow(): ParticleEffects.Entry | undefined;
+        get leather(): ParticleEffects.Entry | undefined;
+        get wood(): ParticleEffects.Entry | undefined;
+        get foliage(): ParticleEffects.Entry | undefined;
+        get glass(): ParticleEffects.Entry | undefined;
+        get blood(): ParticleEffects.Entry | undefined;
+        get metal(): ParticleEffects.Entry | undefined;
     }
 }
 export default ProjectileImpacts;

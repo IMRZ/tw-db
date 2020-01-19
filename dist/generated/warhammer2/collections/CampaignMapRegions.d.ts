@@ -8,8 +8,8 @@ export declare namespace CampaignMapRegions {
         readonly _campaignMap: string;
         readonly _region: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignMap: CampaignMaps.Entry | undefined;
-        readonly region: Regions.Entry | undefined;
+        get campaignMap(): CampaignMaps.Entry | undefined;
+        get region(): Regions.Entry | undefined;
     }
 }
 export default CampaignMapRegions;

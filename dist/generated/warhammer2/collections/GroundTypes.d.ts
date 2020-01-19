@@ -19,10 +19,10 @@ export declare namespace GroundTypes {
         readonly colourBlue: number;
         readonly minimumThreshold: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly standardCursor: Cursors.Entry | undefined;
-        readonly selectionCursor: Cursors.Entry | undefined;
-        readonly penaltyImmuneAttribute: UnitAttributes.Entry | undefined;
-        readonly audioType: AudioBattleGroundTypes.Entry | undefined;
+        get standardCursor(): Cursors.Entry | undefined;
+        get selectionCursor(): Cursors.Entry | undefined;
+        get penaltyImmuneAttribute(): UnitAttributes.Entry | undefined;
+        get audioType(): AudioBattleGroundTypes.Entry | undefined;
     }
 }
 export default GroundTypes;

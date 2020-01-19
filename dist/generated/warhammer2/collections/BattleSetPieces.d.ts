@@ -30,14 +30,14 @@ export declare namespace BattleSetPieces {
         readonly _battleEnvironmentAudio: string;
         readonly _campaignPreBattleIntroMovie: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleType: BattleTypes.Entry | undefined;
-        readonly bmdLayerType: BmdExportTypes.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
-        readonly introMovie: Videos.Entry | undefined;
-        readonly outroMovieWin: Videos.Entry | undefined;
-        readonly outroMovieLose: Videos.Entry | undefined;
-        readonly battleEnvironmentAudio: AudioBattleEnvironments.Entry | undefined;
-        readonly campaignPreBattleIntroMovie: Videos.Entry | undefined;
+        get battleType(): BattleTypes.Entry | undefined;
+        get bmdLayerType(): BmdExportTypes.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
+        get introMovie(): Videos.Entry | undefined;
+        get outroMovieWin(): Videos.Entry | undefined;
+        get outroMovieLose(): Videos.Entry | undefined;
+        get battleEnvironmentAudio(): AudioBattleEnvironments.Entry | undefined;
+        get campaignPreBattleIntroMovie(): Videos.Entry | undefined;
     }
 }
 export default BattleSetPieces;

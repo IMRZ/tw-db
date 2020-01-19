@@ -12,9 +12,9 @@ export declare namespace IntrigueActionsIncidentsJunctions {
         readonly key: number;
         readonly _sourceCulture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly targetCulture: Cultures.Entry | undefined;
-        readonly incident: Incidents.Entry | undefined;
-        readonly sourceCulture: Cultures.Entry | undefined;
+        get targetCulture(): Cultures.Entry | undefined;
+        get incident(): Incidents.Entry | undefined;
+        get sourceCulture(): Cultures.Entry | undefined;
     }
 }
 export default IntrigueActionsIncidentsJunctions;

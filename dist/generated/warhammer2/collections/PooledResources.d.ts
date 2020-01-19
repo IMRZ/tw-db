@@ -16,7 +16,7 @@ export declare namespace PooledResources {
         readonly _defaultFactor: string;
         readonly optionalIconPath: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly defaultFactor: PooledResourceFactors.Entry | undefined;
+        get defaultFactor(): PooledResourceFactors.Entry | undefined;
     }
 }
 export default PooledResources;

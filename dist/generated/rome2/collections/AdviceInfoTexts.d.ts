@@ -13,7 +13,7 @@ export declare namespace AdviceInfoTexts {
         readonly isHeader: boolean;
         readonly navigationOrder: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly adviceLevelLookup: AdviceLevels.Entry | undefined;
+        get adviceLevelLookup(): AdviceLevels.Entry | undefined;
     }
 }
 export default AdviceInfoTexts;

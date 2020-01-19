@@ -11,9 +11,9 @@ export declare namespace CaiPersonalitiesConstructionSystemPolicies {
         readonly _provinceSpecialisationTemplateAssignmentPolicy: string;
         readonly _buildingSynergiesPolicy: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly strategicContextTemplateAssignmentPolicy: CaiConstructionSystemStrategicContextTemplatePolicies.Entry | undefined;
-        readonly provinceSpecialisationTemplateAssignmentPolicy: CaiConstructionSystemProvinceTemplateAssignmentPolicies.Entry | undefined;
-        readonly buildingSynergiesPolicy: CaiConstructionSystemSynergyPolicies.Entry | undefined;
+        get strategicContextTemplateAssignmentPolicy(): CaiConstructionSystemStrategicContextTemplatePolicies.Entry | undefined;
+        get provinceSpecialisationTemplateAssignmentPolicy(): CaiConstructionSystemProvinceTemplateAssignmentPolicies.Entry | undefined;
+        get buildingSynergiesPolicy(): CaiConstructionSystemSynergyPolicies.Entry | undefined;
     }
 }
 export default CaiPersonalitiesConstructionSystemPolicies;

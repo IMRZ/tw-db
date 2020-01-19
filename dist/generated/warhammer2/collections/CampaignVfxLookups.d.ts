@@ -15,11 +15,11 @@ export declare namespace CampaignVfxLookups {
         readonly _cultureFilter: string;
         readonly _agentFilter: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly vfxEvent: CampaignVfxCampaignVfxEventIds.Entry | undefined;
-        readonly vfxDescription: CampaignVfxDescriptions.Entry | undefined;
-        readonly factionFilter: Factions.Entry | undefined;
-        readonly cultureFilter: CulturesSubcultures.Entry | undefined;
-        readonly agentFilter: Agents.Entry | undefined;
+        get vfxEvent(): CampaignVfxCampaignVfxEventIds.Entry | undefined;
+        get vfxDescription(): CampaignVfxDescriptions.Entry | undefined;
+        get factionFilter(): Factions.Entry | undefined;
+        get cultureFilter(): CulturesSubcultures.Entry | undefined;
+        get agentFilter(): Agents.Entry | undefined;
     }
 }
 export default CampaignVfxLookups;

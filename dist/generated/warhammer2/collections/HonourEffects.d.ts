@@ -9,7 +9,7 @@ export declare namespace HonourEffects {
         readonly value: number;
         readonly appliesToAi: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factor: HonourFactors.Entry | undefined;
+        get factor(): HonourFactors.Entry | undefined;
     }
 }
 export default HonourEffects;

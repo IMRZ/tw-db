@@ -10,8 +10,8 @@ export declare namespace CampaignStatisticsStrings {
         readonly _campaignStatisticCategory: string;
         readonly statisticOrder: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignStatistic: CampaignStatisticsEnums.Entry | undefined;
-        readonly campaignStatisticCategory: CampaignStatisticsCategories.Entry | undefined;
+        get campaignStatistic(): CampaignStatisticsEnums.Entry | undefined;
+        get campaignStatisticCategory(): CampaignStatisticsCategories.Entry | undefined;
     }
 }
 export default CampaignStatisticsStrings;

@@ -10,9 +10,9 @@ export declare namespace CampaignAutoresolverModifiers {
         readonly _vsClass: string;
         readonly _statVariableId: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly class: UnitClass.Entry | undefined;
-        readonly vsClass: UnitClass.Entry | undefined;
-        readonly statVariableId: CampaignAutoresolverStatVariables.Entry | undefined;
+        get class(): UnitClass.Entry | undefined;
+        get vsClass(): UnitClass.Entry | undefined;
+        get statVariableId(): CampaignAutoresolverStatVariables.Entry | undefined;
     }
 }
 export default CampaignAutoresolverModifiers;

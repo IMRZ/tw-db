@@ -21,11 +21,11 @@ export declare namespace UnitAbilities {
         readonly isHiddenInUi: boolean;
         readonly _sourceType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly overpowerOption: UnitAbilities.Entry | undefined;
-        readonly type: UnitAbilityTypes.Entry | undefined;
-        readonly video: Videos.Entry | undefined;
-        readonly uniqueness: AncillaryUniquenessGroupings.Entry | undefined;
-        readonly sourceType: UnitAbilitySourceTypes.Entry | undefined;
+        get overpowerOption(): UnitAbilities.Entry | undefined;
+        get type(): UnitAbilityTypes.Entry | undefined;
+        get video(): Videos.Entry | undefined;
+        get uniqueness(): AncillaryUniquenessGroupings.Entry | undefined;
+        get sourceType(): UnitAbilitySourceTypes.Entry | undefined;
     }
 }
 export default UnitAbilities;

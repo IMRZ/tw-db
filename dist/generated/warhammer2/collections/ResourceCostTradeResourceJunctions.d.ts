@@ -8,8 +8,8 @@ export declare namespace ResourceCostTradeResourceJunctions {
         readonly _resourceCost: string;
         readonly _tradeResource: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly resourceCost: ResourceCosts.Entry | undefined;
-        readonly tradeResource: Resources.Entry | undefined;
+        get resourceCost(): ResourceCosts.Entry | undefined;
+        get tradeResource(): Resources.Entry | undefined;
     }
 }
 export default ResourceCostTradeResourceJunctions;

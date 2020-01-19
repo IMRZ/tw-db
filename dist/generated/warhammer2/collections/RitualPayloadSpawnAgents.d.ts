@@ -11,9 +11,9 @@ export declare namespace RitualPayloadSpawnAgents {
         readonly _agentSubtype: string;
         readonly spawnToPool: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly payload: RitualPayloads.Entry | undefined;
-        readonly agentType: Agents.Entry | undefined;
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
+        get payload(): RitualPayloads.Entry | undefined;
+        get agentType(): Agents.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
     }
 }
 export default RitualPayloadSpawnAgents;

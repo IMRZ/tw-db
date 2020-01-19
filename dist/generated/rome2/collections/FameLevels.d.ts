@@ -19,9 +19,9 @@ export declare namespace FameLevels {
         readonly _descriptionLookup: string;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly descriptionLookup: CampaignLocalisedStrings.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get descriptionLookup(): CampaignLocalisedStrings.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default FameLevels;

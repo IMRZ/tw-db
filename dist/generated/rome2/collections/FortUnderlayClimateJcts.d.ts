@@ -11,9 +11,9 @@ export declare namespace FortUnderlayClimateJcts {
         readonly snowUnderlay: boolean;
         readonly _underlay: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly fortName: BattlefieldBuildings.Entry | undefined;
-        readonly climate: Climates.Entry | undefined;
-        readonly underlay: BattleTerrainFarms.Entry | undefined;
+        get fortName(): BattlefieldBuildings.Entry | undefined;
+        get climate(): Climates.Entry | undefined;
+        get underlay(): BattleTerrainFarms.Entry | undefined;
     }
 }
 export default FortUnderlayClimateJcts;

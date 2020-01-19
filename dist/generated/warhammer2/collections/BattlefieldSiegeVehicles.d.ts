@@ -30,10 +30,10 @@ export declare namespace BattlefieldSiegeVehicles {
         readonly _audioType: string;
         readonly autoresolverEffectiveness: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly model: ModelsSieges.Entry | undefined;
-        readonly battleEntity: BattleEntities.Entry | undefined;
-        readonly engine: BattlefieldEnginesAutonomous.Entry | undefined;
-        readonly audioType: AudioEntityTypes.Entry | undefined;
+        get model(): ModelsSieges.Entry | undefined;
+        get battleEntity(): BattleEntities.Entry | undefined;
+        get engine(): BattlefieldEnginesAutonomous.Entry | undefined;
+        get audioType(): AudioEntityTypes.Entry | undefined;
     }
 }
 export default BattlefieldSiegeVehicles;

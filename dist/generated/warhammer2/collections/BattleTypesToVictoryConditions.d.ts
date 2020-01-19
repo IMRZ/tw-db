@@ -9,9 +9,9 @@ export declare namespace BattleTypesToVictoryConditions {
         readonly _attackerVictoryCondition: string;
         readonly _defenderVictoryCondition: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleType: BattleTypes.Entry | undefined;
-        readonly attackerVictoryCondition: VictoryConditions.Entry | undefined;
-        readonly defenderVictoryCondition: VictoryConditions.Entry | undefined;
+        get battleType(): BattleTypes.Entry | undefined;
+        get attackerVictoryCondition(): VictoryConditions.Entry | undefined;
+        get defenderVictoryCondition(): VictoryConditions.Entry | undefined;
     }
 }
 export default BattleTypesToVictoryConditions;

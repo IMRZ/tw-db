@@ -9,8 +9,8 @@ export declare namespace AncillaryTriggersToAncillaryRemovals {
         readonly _trigger: string;
         readonly _ancillary: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trigger: AncillaryTriggers.Entry | undefined;
-        readonly ancillary: AncillaryInfo.Entry | undefined;
+        get trigger(): AncillaryTriggers.Entry | undefined;
+        get ancillary(): AncillaryInfo.Entry | undefined;
     }
 }
 export default AncillaryTriggersToAncillaryRemovals;

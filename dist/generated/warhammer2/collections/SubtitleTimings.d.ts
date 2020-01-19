@@ -16,9 +16,9 @@ export declare namespace SubtitleTimings {
         readonly textId: string;
         readonly alwaysShow: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subtitleField: TExcLocalisableFields.Entry | undefined;
-        readonly language: Languages.Entry | undefined;
-        readonly scriptId: VoScripts.Entry | undefined;
+        get subtitleField(): TExcLocalisableFields.Entry | undefined;
+        get language(): Languages.Entry | undefined;
+        get scriptId(): VoScripts.Entry | undefined;
     }
 }
 export default SubtitleTimings;

@@ -8,8 +8,8 @@ export declare namespace BattleCitySubcultureJct {
         readonly _subculture: string;
         readonly _city: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly city: BattleCities.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get city(): BattleCities.Entry | undefined;
     }
 }
 export default BattleCitySubcultureJct;

@@ -43,17 +43,17 @@ export declare namespace CaiConstructionSystemBuildingValues {
         readonly perFactionBuildingMaximumDiscountWhenExceedingLimitEnd: number;
         readonly perFactionPerBuildingDiscountIncrementWhenExceedingLimitEnd: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly subCulture: CulturesSubcultures.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly buildingOrBuildingRangeStartInclusive: BuildingLevels.Entry | undefined;
-        readonly buildingRangeEndInclusive: BuildingLevels.Entry | undefined;
-        readonly buildingInstance: BuildingInstances.Entry | undefined;
-        readonly buildingChain: BuildingChains.Entry | undefined;
-        readonly buildingSuperChain: BuildingSuperchains.Entry | undefined;
-        readonly caiConstructionSystemCategory: CaiConstructionSystemCategories.Entry | undefined;
-        readonly caiConstructionSystemCategoryGroup: CaiConstructionSystemCategoryGroups.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get subCulture(): CulturesSubcultures.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get buildingOrBuildingRangeStartInclusive(): BuildingLevels.Entry | undefined;
+        get buildingRangeEndInclusive(): BuildingLevels.Entry | undefined;
+        get buildingInstance(): BuildingInstances.Entry | undefined;
+        get buildingChain(): BuildingChains.Entry | undefined;
+        get buildingSuperChain(): BuildingSuperchains.Entry | undefined;
+        get caiConstructionSystemCategory(): CaiConstructionSystemCategories.Entry | undefined;
+        get caiConstructionSystemCategoryGroup(): CaiConstructionSystemCategoryGroups.Entry | undefined;
     }
 }
 export default CaiConstructionSystemBuildingValues;

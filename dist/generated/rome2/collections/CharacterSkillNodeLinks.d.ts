@@ -10,8 +10,8 @@ export declare namespace CharacterSkillNodeLinks {
         readonly parentLinkPosition: number;
         readonly childLinkPosition: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly parentKey: CharacterSkillNodes.Entry | undefined;
-        readonly childKey: CharacterSkillNodes.Entry | undefined;
+        get parentKey(): CharacterSkillNodes.Entry | undefined;
+        get childKey(): CharacterSkillNodes.Entry | undefined;
     }
 }
 export default CharacterSkillNodeLinks;

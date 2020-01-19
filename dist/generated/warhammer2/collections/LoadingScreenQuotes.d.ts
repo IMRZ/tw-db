@@ -16,8 +16,8 @@ export declare namespace LoadingScreenQuotes {
         readonly weighting: number;
         readonly firstShownWeighting: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: LoadingScreenQuotesCategories.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get category(): LoadingScreenQuotesCategories.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default LoadingScreenQuotes;

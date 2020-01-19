@@ -14,10 +14,10 @@ export declare namespace CampaignEffectScopes {
         readonly _ownership: string;
         readonly _location: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly source: CampaignEffectScopeObjects.Entry | undefined;
-        readonly target: CampaignEffectScopeObjects.Entry | undefined;
-        readonly ownership: CampaignEffectScopeOwnerships.Entry | undefined;
-        readonly location: CampaignEffectScopeLocations.Entry | undefined;
+        get source(): CampaignEffectScopeObjects.Entry | undefined;
+        get target(): CampaignEffectScopeObjects.Entry | undefined;
+        get ownership(): CampaignEffectScopeOwnerships.Entry | undefined;
+        get location(): CampaignEffectScopeLocations.Entry | undefined;
     }
 }
 export default CampaignEffectScopes;

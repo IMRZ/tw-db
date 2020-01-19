@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueMissileWeaponJunctions {
         readonly _bonusValueId: string;
         readonly _missileWeaponJunction: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdUnitMissileWeapons.Entry | undefined;
-        readonly missileWeaponJunction: UnitMissileWeaponJunctions.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdUnitMissileWeapons.Entry | undefined;
+        get missileWeaponJunction(): UnitMissileWeaponJunctions.Entry | undefined;
     }
 }
 export default EffectBonusValueMissileWeaponJunctions;

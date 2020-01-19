@@ -13,10 +13,10 @@ export declare namespace SlotSetItems {
         readonly _slotTemplate: string;
         readonly _buildingLevel: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly slotSet: SlotSets.Entry | undefined;
-        readonly slotType: SlotTypes.Entry | undefined;
-        readonly slotTemplate: SlotTemplates.Entry | undefined;
-        readonly buildingLevel: BuildingLevels.Entry | undefined;
+        get slotSet(): SlotSets.Entry | undefined;
+        get slotType(): SlotTypes.Entry | undefined;
+        get slotTemplate(): SlotTemplates.Entry | undefined;
+        get buildingLevel(): BuildingLevels.Entry | undefined;
     }
 }
 export default SlotSetItems;

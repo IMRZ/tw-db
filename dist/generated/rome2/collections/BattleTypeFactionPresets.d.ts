@@ -9,8 +9,8 @@ export declare namespace BattleTypeFactionPresets {
         readonly _weightingType: number;
         readonly id: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly weightingType: BattleTypeSetupLimits.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get weightingType(): BattleTypeSetupLimits.Entry | undefined;
     }
 }
 export default BattleTypeFactionPresets;

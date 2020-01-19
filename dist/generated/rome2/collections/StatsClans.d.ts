@@ -9,7 +9,7 @@ export declare namespace StatsClans {
         readonly _label: string;
         readonly ladder: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly label: RandomLocalisationStrings.Entry | undefined;
+        get label(): RandomLocalisationStrings.Entry | undefined;
     }
 }
 export default StatsClans;

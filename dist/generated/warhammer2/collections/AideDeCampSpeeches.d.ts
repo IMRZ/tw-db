@@ -15,7 +15,7 @@ export declare namespace AideDeCampSpeeches {
         readonly uiDurationMs: number;
         readonly hasWorldspaceUiPing: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly cinematicEvent: BattleCinematicEvents.Entry | undefined;
+        get cinematicEvent(): BattleCinematicEvents.Entry | undefined;
     }
 }
 export default AideDeCampSpeeches;

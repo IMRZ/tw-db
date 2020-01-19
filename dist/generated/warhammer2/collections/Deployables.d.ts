@@ -33,12 +33,12 @@ export declare namespace Deployables {
         readonly _audioMaterial: string;
         readonly customBattleEnabled: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly model: ModelsDeployables.Entry | undefined;
-        readonly model2: ModelsDeployables.Entry | undefined;
-        readonly category: DeployablesCategories.Entry | undefined;
-        readonly explosion: ProjectilesExplosions.Entry | undefined;
-        readonly underConstructionEffect: ParticleEffects.Entry | undefined;
-        readonly audioMaterial: AudioMaterials.Entry | undefined;
+        get model(): ModelsDeployables.Entry | undefined;
+        get model2(): ModelsDeployables.Entry | undefined;
+        get category(): DeployablesCategories.Entry | undefined;
+        get explosion(): ProjectilesExplosions.Entry | undefined;
+        get underConstructionEffect(): ParticleEffects.Entry | undefined;
+        get audioMaterial(): AudioMaterials.Entry | undefined;
     }
 }
 export default Deployables;

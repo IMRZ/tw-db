@@ -12,9 +12,9 @@ export declare namespace RitualPayloadSpawnStorms {
         readonly maxTurnsDuration: number;
         readonly _type: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly payload: RitualPayloads.Entry | undefined;
-        readonly region: Regions.Entry | undefined;
-        readonly type: CampaignStormTypes.Entry | undefined;
+        get payload(): RitualPayloads.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get type(): CampaignStormTypes.Entry | undefined;
     }
 }
 export default RitualPayloadSpawnStorms;

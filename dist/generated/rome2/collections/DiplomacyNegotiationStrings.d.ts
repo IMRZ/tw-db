@@ -10,9 +10,9 @@ export declare namespace DiplomacyNegotiationStrings {
         readonly _culture: string;
         readonly _governmentType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: DiplomacyKeys.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly governmentType: GovernmentTypes.Entry | undefined;
+        get key(): DiplomacyKeys.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get governmentType(): GovernmentTypes.Entry | undefined;
     }
 }
 export default DiplomacyNegotiationStrings;

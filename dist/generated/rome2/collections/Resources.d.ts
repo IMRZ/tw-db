@@ -16,8 +16,8 @@ export declare namespace Resources {
         readonly longDescription: string;
         readonly inEncyclopedia: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: CommodityUnitNames.Entry | undefined;
-        readonly slotBed: Slots.Entry | undefined;
+        get unit(): CommodityUnitNames.Entry | undefined;
+        get slotBed(): Slots.Entry | undefined;
     }
 }
 export default Resources;

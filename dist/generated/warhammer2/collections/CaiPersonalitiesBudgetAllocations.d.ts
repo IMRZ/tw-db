@@ -32,8 +32,8 @@ export declare namespace CaiPersonalitiesBudgetAllocations {
         readonly technologyFundingCap: number;
         readonly technologyPercentageOfPoolToSaveOnFail: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly minimumSettableTaxLevel: TaxesLevels.Entry | undefined;
-        readonly maximumSettableTaxLevel: TaxesLevels.Entry | undefined;
+        get minimumSettableTaxLevel(): TaxesLevels.Entry | undefined;
+        get maximumSettableTaxLevel(): TaxesLevels.Entry | undefined;
     }
 }
 export default CaiPersonalitiesBudgetAllocations;

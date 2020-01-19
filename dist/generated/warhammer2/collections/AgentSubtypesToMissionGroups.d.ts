@@ -14,10 +14,10 @@ export declare namespace AgentSubtypesToMissionGroups {
         readonly imagePath: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agent: AgentSubtypes.Entry | undefined;
-        readonly missionGroup: MissionGroups.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly battleEffect: EffectBundles.Entry | undefined;
+        get agent(): AgentSubtypes.Entry | undefined;
+        get missionGroup(): MissionGroups.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get battleEffect(): EffectBundles.Entry | undefined;
     }
 }
 export default AgentSubtypesToMissionGroups;

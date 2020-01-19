@@ -38,11 +38,11 @@ export declare namespace Ancillaries {
         readonly maxExpiryAge: number;
         readonly _spouseType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: AncillaryInfo.Entry | undefined;
-        readonly type: AncillaryTypes.Entry | undefined;
-        readonly spouseSubculture: CulturesSubcultures.Entry | undefined;
-        readonly category: AncillariesCategories.Entry | undefined;
-        readonly spouseType: MarriageTypes.Entry | undefined;
+        get key(): AncillaryInfo.Entry | undefined;
+        get type(): AncillaryTypes.Entry | undefined;
+        get spouseSubculture(): CulturesSubcultures.Entry | undefined;
+        get category(): AncillariesCategories.Entry | undefined;
+        get spouseType(): MarriageTypes.Entry | undefined;
     }
 }
 export default Ancillaries;

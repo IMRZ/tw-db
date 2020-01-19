@@ -9,8 +9,8 @@ export declare namespace BattleContextArmySpecialAbilityJunctions {
         readonly _battleContext: string;
         readonly _armySpecialAbility: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleContext: CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
-        readonly armySpecialAbility: ArmySpecialAbilities.Entry | undefined;
+        get battleContext(): CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
+        get armySpecialAbility(): ArmySpecialAbilities.Entry | undefined;
     }
 }
 export default BattleContextArmySpecialAbilityJunctions;

@@ -10,8 +10,8 @@ export declare namespace TradeDisplayTradeModels {
         readonly isNaval: boolean;
         readonly optionalFollowingModelDistance: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly model: WarscapeAnimated.Entry | undefined;
-        readonly optionalFollowingModel: WarscapeAnimated.Entry | undefined;
+        get model(): WarscapeAnimated.Entry | undefined;
+        get optionalFollowingModel(): WarscapeAnimated.Entry | undefined;
     }
 }
 export default TradeDisplayTradeModels;

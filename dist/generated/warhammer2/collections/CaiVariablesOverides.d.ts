@@ -11,8 +11,8 @@ export declare namespace CaiVariablesOverides {
         readonly optionalDifficultyLevel: string;
         readonly optionalCampaignType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly caiVariableKey: CaiVariables.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
+        get caiVariableKey(): CaiVariables.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
     }
 }
 export default CaiVariablesOverides;

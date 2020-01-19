@@ -55,6 +55,7 @@ export class Column {
       case "double":
       case "longinteger":
       case "single":
+      case "card64":
         return "number";
       case "text":
         return "string";

@@ -8,8 +8,8 @@ export declare namespace CampaignBonusValueBattleContextFactionJunctions {
         readonly _battleContextKey: string;
         readonly _factionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleContextKey: CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
+        get battleContextKey(): CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
     }
 }
 export default CampaignBonusValueBattleContextFactionJunctions;

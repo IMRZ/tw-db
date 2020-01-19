@@ -8,8 +8,8 @@ export declare namespace FactionToFactionGroupsJunctions {
         readonly _factionKey: string;
         readonly _factionGroupKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly factionGroupKey: FactionGroups.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get factionGroupKey(): FactionGroups.Entry | undefined;
     }
 }
 export default FactionToFactionGroupsJunctions;

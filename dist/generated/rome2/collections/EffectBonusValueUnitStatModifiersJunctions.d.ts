@@ -8,8 +8,8 @@ export declare namespace EffectBonusValueUnitStatModifiersJunctions {
         readonly _effect: string;
         readonly _statModifier: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly statModifier: UnitStatModifiers.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get statModifier(): UnitStatModifiers.Entry | undefined;
     }
 }
 export default EffectBonusValueUnitStatModifiersJunctions;

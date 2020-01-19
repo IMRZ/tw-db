@@ -9,8 +9,8 @@ export declare namespace MissionGroupsToMissions {
         readonly _group: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mission: Missions.Entry | undefined;
-        readonly group: MissionGroups.Entry | undefined;
+        get mission(): Missions.Entry | undefined;
+        get group(): MissionGroups.Entry | undefined;
     }
 }
 export default MissionGroupsToMissions;

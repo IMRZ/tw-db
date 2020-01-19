@@ -10,8 +10,8 @@ export declare namespace ResourceCosts {
         readonly _expenditureType: string;
         readonly _incomeType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly expenditureType: InstantExpenditureTypes.Entry | undefined;
-        readonly incomeType: InstantIncomeTypes.Entry | undefined;
+        get expenditureType(): InstantExpenditureTypes.Entry | undefined;
+        get incomeType(): InstantIncomeTypes.Entry | undefined;
     }
 }
 export default ResourceCosts;

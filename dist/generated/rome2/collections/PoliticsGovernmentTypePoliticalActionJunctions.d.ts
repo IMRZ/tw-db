@@ -12,8 +12,8 @@ export declare namespace PoliticsGovernmentTypePoliticalActionJunctions {
         readonly isAvailableForRulingPartyMembers: boolean;
         readonly isAvailableForNonRulingPartyMembers: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly governmentType: PoliticsGovernmentTypes.Entry | undefined;
-        readonly politicalAction: PoliticalActions.Entry | undefined;
+        get governmentType(): PoliticsGovernmentTypes.Entry | undefined;
+        get politicalAction(): PoliticalActions.Entry | undefined;
     }
 }
 export default PoliticsGovernmentTypePoliticalActionJunctions;

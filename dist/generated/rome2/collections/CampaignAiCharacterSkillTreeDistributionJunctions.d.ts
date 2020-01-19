@@ -9,8 +9,8 @@ export declare namespace CampaignAiCharacterSkillTreeDistributionJunctions {
         readonly _distributionKey: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentManagerKey: CampaignAiCharacterSkillTreeAgentManagers.Entry | undefined;
-        readonly distributionKey: CampaignAiCharacterSkillTreeDistributions.Entry | undefined;
+        get agentManagerKey(): CampaignAiCharacterSkillTreeAgentManagers.Entry | undefined;
+        get distributionKey(): CampaignAiCharacterSkillTreeDistributions.Entry | undefined;
     }
 }
 export default CampaignAiCharacterSkillTreeDistributionJunctions;
