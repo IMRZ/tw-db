@@ -8,7 +8,7 @@ export declare namespace PrefabTypes {
         readonly _culture: string;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default PrefabTypes;

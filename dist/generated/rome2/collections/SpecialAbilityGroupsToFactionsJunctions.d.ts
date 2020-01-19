@@ -8,8 +8,8 @@ export declare namespace SpecialAbilityGroupsToFactionsJunctions {
         readonly _abilityGroup: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly abilityGroup: SpecialAbilityGroups.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get abilityGroup(): SpecialAbilityGroups.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default SpecialAbilityGroupsToFactionsJunctions;

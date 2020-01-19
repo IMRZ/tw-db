@@ -9,8 +9,8 @@ export declare namespace ProvincialInitiativeStrengthLevels {
         readonly strength: number;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly initiativeRecord: ProvincialInitiativeRecords.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get initiativeRecord(): ProvincialInitiativeRecords.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default ProvincialInitiativeStrengthLevels;

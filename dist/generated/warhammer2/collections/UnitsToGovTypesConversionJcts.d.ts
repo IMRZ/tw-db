@@ -8,8 +8,8 @@ export declare namespace UnitsToGovTypesConversionJcts {
         readonly _key: number;
         readonly _unit: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: UnitsToGovTypePermissions.Entry | undefined;
-        readonly unit: MainUnits.Entry | undefined;
+        get key(): UnitsToGovTypePermissions.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
     }
 }
 export default UnitsToGovTypesConversionJcts;

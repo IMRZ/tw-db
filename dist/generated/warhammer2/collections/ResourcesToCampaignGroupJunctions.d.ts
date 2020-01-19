@@ -8,8 +8,8 @@ export declare namespace ResourcesToCampaignGroupJunctions {
         readonly _resource: string;
         readonly _campaignGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly resource: Resources.Entry | undefined;
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
+        get resource(): Resources.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
     }
 }
 export default ResourcesToCampaignGroupJunctions;

@@ -16,11 +16,11 @@ export declare namespace NakaiTempleLevels {
         readonly key: string;
         readonly _secondaryBuilding: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly nakaiTemple: NakaiTemples.Entry | undefined;
-        readonly factionSpawned: Factions.Entry | undefined;
-        readonly building: BuildingLevels.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly secondaryBuilding: BuildingLevels.Entry | undefined;
+        get nakaiTemple(): NakaiTemples.Entry | undefined;
+        get factionSpawned(): Factions.Entry | undefined;
+        get building(): BuildingLevels.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get secondaryBuilding(): BuildingLevels.Entry | undefined;
     }
 }
 export default NakaiTempleLevels;

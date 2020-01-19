@@ -18,11 +18,11 @@ export declare namespace MessageEventStrings {
         readonly _optionalCampaignKey: string;
         readonly _optionalSubculture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly event: MessageEvents.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly text: MessageEventText.Entry | undefined;
-        readonly optionalCampaignKey: Campaigns.Entry | undefined;
-        readonly optionalSubculture: CulturesSubcultures.Entry | undefined;
+        get event(): MessageEvents.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get text(): MessageEventText.Entry | undefined;
+        get optionalCampaignKey(): Campaigns.Entry | undefined;
+        get optionalSubculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default MessageEventStrings;

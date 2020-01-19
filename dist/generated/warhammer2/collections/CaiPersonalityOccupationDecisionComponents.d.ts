@@ -10,10 +10,10 @@ export declare namespace CaiPersonalityOccupationDecisionComponents {
         readonly _policyUninhabitable: string;
         readonly _policyUncapturable: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly policySuitable: CaiPersonalityOccupationDecisionPolicies.Entry | undefined;
-        readonly policyUnsuitable: CaiPersonalityOccupationDecisionPolicies.Entry | undefined;
-        readonly policyUninhabitable: CaiPersonalityOccupationDecisionPolicies.Entry | undefined;
-        readonly policyUncapturable: CaiPersonalityOccupationDecisionPolicies.Entry | undefined;
+        get policySuitable(): CaiPersonalityOccupationDecisionPolicies.Entry | undefined;
+        get policyUnsuitable(): CaiPersonalityOccupationDecisionPolicies.Entry | undefined;
+        get policyUninhabitable(): CaiPersonalityOccupationDecisionPolicies.Entry | undefined;
+        get policyUncapturable(): CaiPersonalityOccupationDecisionPolicies.Entry | undefined;
     }
 }
 export default CaiPersonalityOccupationDecisionComponents;

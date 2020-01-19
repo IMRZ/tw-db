@@ -8,8 +8,8 @@ export declare namespace CampaignMpCoopGroupsToFactions {
         readonly _factionKey: string;
         readonly _mpCoopGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly mpCoopGroup: CampaignMpCoopGroups.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get mpCoopGroup(): CampaignMpCoopGroups.Entry | undefined;
     }
 }
 export default CampaignMpCoopGroupsToFactions;

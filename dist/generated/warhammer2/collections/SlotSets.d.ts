@@ -8,7 +8,7 @@ export declare namespace SlotSets {
         readonly useDiscoverabilityFeature: boolean;
         readonly _compositeScene: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly compositeScene: CampaignCompositeScenes.Entry | undefined;
+        get compositeScene(): CampaignCompositeScenes.Entry | undefined;
     }
 }
 export default SlotSets;

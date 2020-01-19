@@ -10,9 +10,9 @@ export declare namespace StartPosDiplomacyDealComponents {
         readonly _component: string;
         readonly _details: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly deal: StartPosDiplomacyDeals.Entry | undefined;
-        readonly component: DiplomacyComponents.Entry | undefined;
-        readonly details: StartPosDiplomacyDetails.Entry | undefined;
+        get deal(): StartPosDiplomacyDeals.Entry | undefined;
+        get component(): DiplomacyComponents.Entry | undefined;
+        get details(): StartPosDiplomacyDetails.Entry | undefined;
     }
 }
 export default StartPosDiplomacyDealComponents;

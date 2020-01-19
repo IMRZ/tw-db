@@ -11,8 +11,8 @@ export declare namespace AnimationSetPrebattleGroupViewConfigurations {
         readonly cameraHeight: number;
         readonly scale: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly attacker: AnimationSetPrebattleGroups.Entry | undefined;
-        readonly defender: AnimationSetPrebattleGroups.Entry | undefined;
+        get attacker(): AnimationSetPrebattleGroups.Entry | undefined;
+        get defender(): AnimationSetPrebattleGroups.Entry | undefined;
     }
 }
 export default AnimationSetPrebattleGroupViewConfigurations;

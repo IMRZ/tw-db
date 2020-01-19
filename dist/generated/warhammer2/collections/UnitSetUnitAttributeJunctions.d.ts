@@ -9,8 +9,8 @@ export declare namespace UnitSetUnitAttributeJunctions {
         readonly _unitSet: string;
         readonly _unitAttribute: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitSet: UnitSets.Entry | undefined;
-        readonly unitAttribute: UnitAttributes.Entry | undefined;
+        get unitSet(): UnitSets.Entry | undefined;
+        get unitAttribute(): UnitAttributes.Entry | undefined;
     }
 }
 export default UnitSetUnitAttributeJunctions;

@@ -10,8 +10,8 @@ export declare namespace AncillaryTriggerEffects {
         readonly _ancillary: string;
         readonly chance: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trigger: AncillaryTriggers.Entry | undefined;
-        readonly ancillary: AncillaryInfo.Entry | undefined;
+        get trigger(): AncillaryTriggers.Entry | undefined;
+        get ancillary(): AncillaryInfo.Entry | undefined;
     }
 }
 export default AncillaryTriggerEffects;

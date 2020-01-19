@@ -12,8 +12,8 @@ export declare namespace ProphecyOfSotekStages {
         readonly order: number;
         readonly _tooltipType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly tooltipType: SotekTooltipTypes.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get tooltipType(): SotekTooltipTypes.Entry | undefined;
     }
 }
 export default ProphecyOfSotekStages;

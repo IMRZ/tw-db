@@ -13,8 +13,8 @@ export declare namespace CharacterExperienceSkillTiers {
         readonly forArmy: boolean;
         readonly forNavy: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentKey: Agents.Entry | undefined;
-        readonly optionalCampaignKey: Campaigns.Entry | undefined;
+        get agentKey(): Agents.Entry | undefined;
+        get optionalCampaignKey(): Campaigns.Entry | undefined;
     }
 }
 export default CharacterExperienceSkillTiers;

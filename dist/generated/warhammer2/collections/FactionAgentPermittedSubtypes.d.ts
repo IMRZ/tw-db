@@ -10,9 +10,9 @@ export declare namespace FactionAgentPermittedSubtypes {
         readonly _agent: string;
         readonly _subtype: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly agent: Agents.Entry | undefined;
-        readonly subtype: AgentSubtypes.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
+        get subtype(): AgentSubtypes.Entry | undefined;
     }
 }
 export default FactionAgentPermittedSubtypes;

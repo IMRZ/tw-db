@@ -21,12 +21,12 @@ export declare namespace CultureSubculturePoliticsGovernmentTypes {
         readonly onScreenNameGovernmentActions: string;
         readonly onScreenDescrGovernmentActions: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
-        readonly governmentType: PoliticsGovernmentTypes.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly factionLeaderTrait: TraitInfo.Entry | undefined;
-        readonly factionLeaderTraitFemale: TraitInfo.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get governmentType(): PoliticsGovernmentTypes.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get factionLeaderTrait(): TraitInfo.Entry | undefined;
+        get factionLeaderTraitFemale(): TraitInfo.Entry | undefined;
     }
 }
 export default CultureSubculturePoliticsGovernmentTypes;

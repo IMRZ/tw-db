@@ -11,9 +11,9 @@ export declare namespace SendDiplomatIncidents {
         readonly _incident: string;
         readonly weight: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly outcome: SendDiplomatOutcomes.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly incident: Incidents.Entry | undefined;
+        get outcome(): SendDiplomatOutcomes.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get incident(): Incidents.Entry | undefined;
     }
 }
 export default SendDiplomatIncidents;

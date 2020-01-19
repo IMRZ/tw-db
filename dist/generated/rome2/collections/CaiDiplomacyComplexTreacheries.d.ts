@@ -9,8 +9,8 @@ export declare namespace CaiDiplomacyComplexTreacheries {
         readonly maxTurnDifference: number;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly firstEvent: CaiPersonalityDiplomaticEvents.Entry | undefined;
-        readonly secondEvent: CaiPersonalityDiplomaticEvents.Entry | undefined;
+        get firstEvent(): CaiPersonalityDiplomaticEvents.Entry | undefined;
+        get secondEvent(): CaiPersonalityDiplomaticEvents.Entry | undefined;
     }
 }
 export default CaiDiplomacyComplexTreacheries;

@@ -13,9 +13,9 @@ export declare namespace MinisterialPositionsToCharacterEffects {
         readonly uiId: number;
         readonly _effectScope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly position: MinisterialPositions.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
+        get position(): MinisterialPositions.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default MinisterialPositionsToCharacterEffects;

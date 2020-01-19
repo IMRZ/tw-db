@@ -14,9 +14,9 @@ export declare namespace CampaignGroupRitualChains {
         readonly initiallyUnlocked: boolean;
         readonly unlockText: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly ritualChain: RitualChains.Entry | undefined;
-        readonly unlockMission: Missions.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get ritualChain(): RitualChains.Entry | undefined;
+        get unlockMission(): Missions.Entry | undefined;
     }
 }
 export default CampaignGroupRitualChains;

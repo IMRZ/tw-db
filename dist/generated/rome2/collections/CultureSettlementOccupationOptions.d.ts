@@ -7,7 +7,7 @@ export declare namespace CultureSettlementOccupationOptions {
         readonly _culture: string;
         readonly option: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CultureSettlementOccupationOptions;

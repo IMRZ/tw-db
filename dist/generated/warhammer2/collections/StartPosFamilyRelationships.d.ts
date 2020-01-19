@@ -12,9 +12,9 @@ export declare namespace StartPosFamilyRelationships {
         readonly bastard: boolean;
         readonly adopted: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly character: StartPosCharacters.Entry | undefined;
-        readonly relatedTo: StartPosCharacters.Entry | undefined;
-        readonly relationship: FamilyRelationshipTypes.Entry | undefined;
+        get character(): StartPosCharacters.Entry | undefined;
+        get relatedTo(): StartPosCharacters.Entry | undefined;
+        get relationship(): FamilyRelationshipTypes.Entry | undefined;
     }
 }
 export default StartPosFamilyRelationships;

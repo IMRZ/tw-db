@@ -9,8 +9,8 @@ export declare namespace MinisterialPositionDefaultNames {
         readonly _govType: string;
         readonly defaultName: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ministerialPosition: MinisterialPositions.Entry | undefined;
-        readonly govType: GovernmentTypes.Entry | undefined;
+        get ministerialPosition(): MinisterialPositions.Entry | undefined;
+        get govType(): GovernmentTypes.Entry | undefined;
     }
 }
 export default MinisterialPositionDefaultNames;

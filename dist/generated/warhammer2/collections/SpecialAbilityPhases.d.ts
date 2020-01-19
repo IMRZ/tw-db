@@ -39,12 +39,12 @@ export declare namespace SpecialAbilityPhases {
         readonly replenishAmmo: number;
         readonly _compositeSceneGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectType: SpecialAbilityPhaseEffectTypes.Entry | undefined;
-        readonly requestedStance: SpecialAbilityStanceEnums.Entry | undefined;
-        readonly imbueContact: SpecialAbilityPhases.Entry | undefined;
-        readonly phaseDisplay: SpecialAbilityPhaseDisplays.Entry | undefined;
-        readonly phaseAudio: AudioAbilityPhases.Entry | undefined;
-        readonly compositeSceneGroup: BattleVortexCompositeSceneGroups.Entry | undefined;
+        get effectType(): SpecialAbilityPhaseEffectTypes.Entry | undefined;
+        get requestedStance(): SpecialAbilityStanceEnums.Entry | undefined;
+        get imbueContact(): SpecialAbilityPhases.Entry | undefined;
+        get phaseDisplay(): SpecialAbilityPhaseDisplays.Entry | undefined;
+        get phaseAudio(): AudioAbilityPhases.Entry | undefined;
+        get compositeSceneGroup(): BattleVortexCompositeSceneGroups.Entry | undefined;
     }
 }
 export default SpecialAbilityPhases;

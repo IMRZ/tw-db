@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueBuildingChainJunctions {
         readonly _bonusValueId: string;
         readonly _buildingChain: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsBuildingChain.Entry | undefined;
-        readonly buildingChain: BuildingChains.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsBuildingChain.Entry | undefined;
+        get buildingChain(): BuildingChains.Entry | undefined;
     }
 }
 export default EffectBonusValueBuildingChainJunctions;

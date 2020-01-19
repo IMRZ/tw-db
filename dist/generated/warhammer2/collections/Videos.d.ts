@@ -12,9 +12,9 @@ export declare namespace Videos {
         readonly _scriptRef: number;
         readonly _gameExpansionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly videoType: VideoTypes.Entry | undefined;
-        readonly scriptRef: VoScripts.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get videoType(): VideoTypes.Entry | undefined;
+        get scriptRef(): VoScripts.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default Videos;

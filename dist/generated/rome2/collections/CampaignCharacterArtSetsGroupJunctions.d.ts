@@ -8,8 +8,8 @@ export declare namespace CampaignCharacterArtSetsGroupJunctions {
         readonly _group: string;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: CampaignCharacterArtSetsCampaignGroups.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get group(): CampaignCharacterArtSetsCampaignGroups.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default CampaignCharacterArtSetsGroupJunctions;

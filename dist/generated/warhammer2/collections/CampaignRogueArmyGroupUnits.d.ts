@@ -10,8 +10,8 @@ export declare namespace CampaignRogueArmyGroupUnits {
         readonly _unit: string;
         readonly xp: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: CampaignRogueArmyGroups.Entry | undefined;
-        readonly unit: MainUnits.Entry | undefined;
+        get group(): CampaignRogueArmyGroups.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
     }
 }
 export default CampaignRogueArmyGroupUnits;

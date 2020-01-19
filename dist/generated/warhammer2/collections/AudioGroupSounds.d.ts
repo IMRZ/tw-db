@@ -43,11 +43,11 @@ export declare namespace AudioGroupSounds {
         readonly triggerChargeTimeToTarget: number;
         readonly disableGroupMerging: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly linkedGroupSound: AudioGroupSounds.Entry | undefined;
-        readonly rtpc1Assignment: AudioRtpcAssignments.Entry | undefined;
-        readonly rtpc2Assignment: AudioRtpcAssignments.Entry | undefined;
-        readonly grouping: AudioGroupSoundGroupings.Entry | undefined;
-        readonly dualGroupSound: AudioGroupSounds.Entry | undefined;
+        get linkedGroupSound(): AudioGroupSounds.Entry | undefined;
+        get rtpc1Assignment(): AudioRtpcAssignments.Entry | undefined;
+        get rtpc2Assignment(): AudioRtpcAssignments.Entry | undefined;
+        get grouping(): AudioGroupSoundGroupings.Entry | undefined;
+        get dualGroupSound(): AudioGroupSounds.Entry | undefined;
     }
 }
 export default AudioGroupSounds;

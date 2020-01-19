@@ -38,12 +38,12 @@ export declare namespace Ancillaries {
         readonly _subcategory: string;
         readonly randomlyDropped: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: AncillaryInfo.Entry | undefined;
-        readonly type: AncillaryTypes.Entry | undefined;
-        readonly category: AncillariesCategories.Entry | undefined;
-        readonly providedBodyguardUnit: MainUnits.Entry | undefined;
-        readonly providedBanner: Banners.Entry | undefined;
-        readonly subcategory: AncillariesSubcategories.Entry | undefined;
+        get key(): AncillaryInfo.Entry | undefined;
+        get type(): AncillaryTypes.Entry | undefined;
+        get category(): AncillariesCategories.Entry | undefined;
+        get providedBodyguardUnit(): MainUnits.Entry | undefined;
+        get providedBanner(): Banners.Entry | undefined;
+        get subcategory(): AncillariesSubcategories.Entry | undefined;
     }
 }
 export default Ancillaries;

@@ -15,10 +15,10 @@ export declare namespace TradeDisplayCampaignOriginatingCultureProducedResourceT
         readonly priority: number;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly originatingCulture: Cultures.Entry | undefined;
-        readonly producedResource: Resources.Entry | undefined;
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get originatingCulture(): Cultures.Entry | undefined;
+        get producedResource(): Resources.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayCampaignOriginatingCultureProducedResourceTradeModelOptions;

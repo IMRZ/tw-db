@@ -25,11 +25,11 @@ export declare namespace BattlefieldBuildings {
         readonly auxiliary: boolean;
         readonly burnRate: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: BattlefieldBuildingCategories.Entry | undefined;
-        readonly model: ModelsBuilding.Entry | undefined;
-        readonly audioMaterial: AudioMaterialsEnums.Entry | undefined;
-        readonly gunType: MissileWeapons.Entry | undefined;
-        readonly onscreenName: BattlefieldBuildingsNames.Entry | undefined;
+        get category(): BattlefieldBuildingCategories.Entry | undefined;
+        get model(): ModelsBuilding.Entry | undefined;
+        get audioMaterial(): AudioMaterialsEnums.Entry | undefined;
+        get gunType(): MissileWeapons.Entry | undefined;
+        get onscreenName(): BattlefieldBuildingsNames.Entry | undefined;
     }
 }
 export default BattlefieldBuildings;

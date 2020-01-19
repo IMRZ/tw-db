@@ -6,7 +6,7 @@ export declare namespace MountableArtilleryUnits {
         private readonly collectionCache;
         readonly _unitKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitKey: MainUnits.Entry | undefined;
+        get unitKey(): MainUnits.Entry | undefined;
     }
 }
 export default MountableArtilleryUnits;

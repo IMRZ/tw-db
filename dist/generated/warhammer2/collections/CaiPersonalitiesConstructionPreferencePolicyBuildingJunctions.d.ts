@@ -11,8 +11,8 @@ export declare namespace CaiPersonalitiesConstructionPreferencePolicyBuildingJun
         readonly absoluteAdjustment: number;
         readonly buildingDiscountLimitAdjustment: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly policyKey: CaiPersonalitiesConstructionPreferencePolicies.Entry | undefined;
-        readonly buildingKey: BuildingLevels.Entry | undefined;
+        get policyKey(): CaiPersonalitiesConstructionPreferencePolicies.Entry | undefined;
+        get buildingKey(): BuildingLevels.Entry | undefined;
     }
 }
 export default CaiPersonalitiesConstructionPreferencePolicyBuildingJunctions;

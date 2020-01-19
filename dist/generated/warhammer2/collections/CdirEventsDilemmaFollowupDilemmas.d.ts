@@ -9,9 +9,9 @@ export declare namespace CdirEventsDilemmaFollowupDilemmas {
         readonly _choiceKey: string;
         readonly _followupDilemmaKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly dilemmaKey: Dilemmas.Entry | undefined;
-        readonly choiceKey: CdirEventsDilemmaChoices.Entry | undefined;
-        readonly followupDilemmaKey: Dilemmas.Entry | undefined;
+        get dilemmaKey(): Dilemmas.Entry | undefined;
+        get choiceKey(): CdirEventsDilemmaChoices.Entry | undefined;
+        get followupDilemmaKey(): Dilemmas.Entry | undefined;
     }
 }
 export default CdirEventsDilemmaFollowupDilemmas;

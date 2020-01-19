@@ -15,11 +15,11 @@ export declare namespace DiplomacyNegotiationFactionOverrideStrings {
         readonly _string: string;
         readonly option: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: DiplomacyKeys.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly governmentType: GovernmentTypes.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly string: DiplomacyStrings.Entry | undefined;
+        get key(): DiplomacyKeys.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get governmentType(): GovernmentTypes.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get string(): DiplomacyStrings.Entry | undefined;
     }
 }
 export default DiplomacyNegotiationFactionOverrideStrings;

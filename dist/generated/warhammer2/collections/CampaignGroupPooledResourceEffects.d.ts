@@ -10,9 +10,9 @@ export declare namespace CampaignGroupPooledResourceEffects {
         readonly _effectType: string;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly effectType: PooledResourceEffectTypes.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get effectType(): PooledResourceEffectTypes.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default CampaignGroupPooledResourceEffects;

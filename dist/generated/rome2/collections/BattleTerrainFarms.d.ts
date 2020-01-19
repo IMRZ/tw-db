@@ -20,7 +20,7 @@ export declare namespace BattleTerrainFarms {
         readonly _wallEnd: string;
         readonly wallCrossSection: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly wallEnd: WarscapeRigid.Entry | undefined;
+        get wallEnd(): WarscapeRigid.Entry | undefined;
     }
 }
 export default BattleTerrainFarms;

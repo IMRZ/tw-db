@@ -8,7 +8,7 @@ export declare namespace WarscapeAnimated {
         readonly textureFilenameBase: string;
         readonly _category: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: WarscapeCategories.Entry | undefined;
+        get category(): WarscapeCategories.Entry | undefined;
     }
 }
 export default WarscapeAnimated;

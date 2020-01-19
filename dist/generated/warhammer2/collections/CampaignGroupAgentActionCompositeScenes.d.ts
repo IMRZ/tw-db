@@ -9,9 +9,9 @@ export declare namespace CampaignGroupAgentActionCompositeScenes {
         readonly _garrisonScene: string;
         readonly _characterScene: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly garrisonScene: CampaignCompositeScenes.Entry | undefined;
-        readonly characterScene: CampaignCompositeScenes.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get garrisonScene(): CampaignCompositeScenes.Entry | undefined;
+        get characterScene(): CampaignCompositeScenes.Entry | undefined;
     }
 }
 export default CampaignGroupAgentActionCompositeScenes;

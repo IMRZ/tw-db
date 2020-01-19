@@ -15,10 +15,10 @@ export declare namespace BuildingFactionVariants {
         readonly icon: string;
         readonly _shortDescription: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly building: BuildingLevels.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly description: BuildingDescriptionTexts.Entry | undefined;
-        readonly shortDescription: BuildingShortDescriptionTexts.Entry | undefined;
+        get building(): BuildingLevels.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get description(): BuildingDescriptionTexts.Entry | undefined;
+        get shortDescription(): BuildingShortDescriptionTexts.Entry | undefined;
     }
 }
 export default BuildingFactionVariants;

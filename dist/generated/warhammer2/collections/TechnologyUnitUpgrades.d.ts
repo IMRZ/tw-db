@@ -10,9 +10,9 @@ export declare namespace TechnologyUnitUpgrades {
         readonly _targetUnit: string;
         readonly cost: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly technology: Technologies.Entry | undefined;
-        readonly unit: MainUnits.Entry | undefined;
-        readonly targetUnit: MainUnits.Entry | undefined;
+        get technology(): Technologies.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get targetUnit(): MainUnits.Entry | undefined;
     }
 }
 export default TechnologyUnitUpgrades;

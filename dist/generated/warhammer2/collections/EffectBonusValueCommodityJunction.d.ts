@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueCommodityJunction {
         readonly _bonusValueId: string;
         readonly _commodity: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsCommodity.Entry | undefined;
-        readonly commodity: Commodities.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsCommodity.Entry | undefined;
+        get commodity(): Commodities.Entry | undefined;
     }
 }
 export default EffectBonusValueCommodityJunction;

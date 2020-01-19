@@ -9,8 +9,8 @@ export declare namespace CdirMilitaryGeneratorTemplateRatios {
         readonly _unitGroupKey: string;
         readonly ratio: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly templateKey: CdirMilitaryGeneratorTemplates.Entry | undefined;
-        readonly unitGroupKey: CdirMilitaryGeneratorUnitGroups.Entry | undefined;
+        get templateKey(): CdirMilitaryGeneratorTemplates.Entry | undefined;
+        get unitGroupKey(): CdirMilitaryGeneratorUnitGroups.Entry | undefined;
     }
 }
 export default CdirMilitaryGeneratorTemplateRatios;

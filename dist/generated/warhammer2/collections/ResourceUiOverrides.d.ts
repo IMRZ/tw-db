@@ -11,10 +11,10 @@ export declare namespace ResourceUiOverrides {
         readonly _overrideFaction: string;
         readonly _overrideSubculture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly sourceResource: Resources.Entry | undefined;
-        readonly targetResource: Resources.Entry | undefined;
-        readonly overrideFaction: Factions.Entry | undefined;
-        readonly overrideSubculture: CulturesSubcultures.Entry | undefined;
+        get sourceResource(): Resources.Entry | undefined;
+        get targetResource(): Resources.Entry | undefined;
+        get overrideFaction(): Factions.Entry | undefined;
+        get overrideSubculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default ResourceUiOverrides;

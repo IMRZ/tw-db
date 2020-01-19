@@ -24,11 +24,11 @@ export declare namespace ProjectilesExplosions {
         readonly explosionParticleEffectOnGround: string;
         readonly _audioExplosionType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly detonatorType: ProjectilesDetonatorTypesEnum.Entry | undefined;
-        readonly detonationType: ProjectilesDetonationTypesEnum.Entry | undefined;
-        readonly projectileName: Projectiles.Entry | undefined;
-        readonly explosionParticleEffect: ParticleEffects.Entry | undefined;
-        readonly audioExplosionType: AudioExplosionsEnums.Entry | undefined;
+        get detonatorType(): ProjectilesDetonatorTypesEnum.Entry | undefined;
+        get detonationType(): ProjectilesDetonationTypesEnum.Entry | undefined;
+        get projectileName(): Projectiles.Entry | undefined;
+        get explosionParticleEffect(): ParticleEffects.Entry | undefined;
+        get audioExplosionType(): AudioExplosionsEnums.Entry | undefined;
     }
 }
 export default ProjectilesExplosions;

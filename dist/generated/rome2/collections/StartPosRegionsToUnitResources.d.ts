@@ -8,8 +8,8 @@ export declare namespace StartPosRegionsToUnitResources {
         readonly _key: number;
         readonly _resource: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: StartPosRegions.Entry | undefined;
-        readonly resource: RegionUnitResources.Entry | undefined;
+        get key(): StartPosRegions.Entry | undefined;
+        get resource(): RegionUnitResources.Entry | undefined;
     }
 }
 export default StartPosRegionsToUnitResources;

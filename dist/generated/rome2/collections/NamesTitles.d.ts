@@ -10,8 +10,8 @@ export declare namespace NamesTitles {
         readonly _gender: string;
         readonly rank: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly nameGroup: NamesGroups.Entry | undefined;
-        readonly gender: Genders.Entry | undefined;
+        get nameGroup(): NamesGroups.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
     }
 }
 export default NamesTitles;

@@ -9,8 +9,8 @@ export declare namespace CampaignMercenaryUnitCharacterLevelRestrictions {
         readonly characterLevel: number;
         readonly _factionOverride: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: MainUnits.Entry | undefined;
-        readonly factionOverride: Factions.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get factionOverride(): Factions.Entry | undefined;
     }
 }
 export default CampaignMercenaryUnitCharacterLevelRestrictions;

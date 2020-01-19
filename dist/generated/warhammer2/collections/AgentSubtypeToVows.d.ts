@@ -8,8 +8,8 @@ export declare namespace AgentSubtypeToVows {
         readonly _agentSubtype: string;
         readonly _vow: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
-        readonly vow: BretonniaVows.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
+        get vow(): BretonniaVows.Entry | undefined;
     }
 }
 export default AgentSubtypeToVows;

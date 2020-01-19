@@ -13,7 +13,7 @@ export declare namespace AudioAbilityPhases {
         readonly switch: string;
         readonly loopingGroupSound: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly groupSound: AudioGroupSounds.Entry | undefined;
+        get groupSound(): AudioGroupSounds.Entry | undefined;
     }
 }
 export default AudioAbilityPhases;

@@ -9,7 +9,7 @@ export declare namespace CampaignAutoresolverBattleSituations {
         readonly nightBattle: string;
         readonly stance: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleType: CampaignBattleTypeEnums.Entry | undefined;
+        get battleType(): CampaignBattleTypeEnums.Entry | undefined;
     }
 }
 export default CampaignAutoresolverBattleSituations;

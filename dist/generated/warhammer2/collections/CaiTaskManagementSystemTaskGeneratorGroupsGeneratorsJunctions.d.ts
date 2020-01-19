@@ -9,8 +9,8 @@ export declare namespace CaiTaskManagementSystemTaskGeneratorGroupsGeneratorsJun
         readonly _taskGeneratorKey: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly taskGeneratorGroupKey: CaiTaskManagementSystemTaskGeneratorGroups.Entry | undefined;
-        readonly taskGeneratorKey: CaiTaskManagementSystemTaskGenerators.Entry | undefined;
+        get taskGeneratorGroupKey(): CaiTaskManagementSystemTaskGeneratorGroups.Entry | undefined;
+        get taskGeneratorKey(): CaiTaskManagementSystemTaskGenerators.Entry | undefined;
     }
 }
 export default CaiTaskManagementSystemTaskGeneratorGroupsGeneratorsJunctions;

@@ -7,7 +7,7 @@ export declare namespace RitualAdditionalUiExplanationTexts {
         readonly _ritualKey: string;
         readonly onscreenText: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ritualKey: Rituals.Entry | undefined;
+        get ritualKey(): Rituals.Entry | undefined;
     }
 }
 export default RitualAdditionalUiExplanationTexts;

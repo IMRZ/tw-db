@@ -9,7 +9,7 @@ export declare namespace TradeDisplayGenericTradeModelOptions {
         readonly priority: number;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayGenericTradeModelOptions;

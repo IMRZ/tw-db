@@ -12,8 +12,8 @@ export declare namespace CampaignClanLevelInfos {
         readonly technologyUnlockLevel: number;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly optionalFactionKey: Factions.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get optionalFactionKey(): Factions.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default CampaignClanLevelInfos;

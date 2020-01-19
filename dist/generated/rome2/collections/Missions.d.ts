@@ -13,7 +13,7 @@ export declare namespace Missions {
         readonly generate: boolean;
         readonly prioritised: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missionType: MissionTypes.Entry | undefined;
+        get missionType(): MissionTypes.Entry | undefined;
     }
 }
 export default Missions;

@@ -7,7 +7,7 @@ export declare namespace CaiPersonalitiesBudgetPolicies {
         readonly key: string;
         readonly _defaultBudgetAllocationKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly defaultBudgetAllocationKey: CaiPersonalitiesBudgetAllocations.Entry | undefined;
+        get defaultBudgetAllocationKey(): CaiPersonalitiesBudgetAllocations.Entry | undefined;
     }
 }
 export default CaiPersonalitiesBudgetPolicies;

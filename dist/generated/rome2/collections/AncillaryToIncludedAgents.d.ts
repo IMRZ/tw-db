@@ -8,8 +8,8 @@ export declare namespace AncillaryToIncludedAgents {
         readonly _ancillary: string;
         readonly _agent: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ancillary: AncillaryInfo.Entry | undefined;
-        readonly agent: Agents.Entry | undefined;
+        get ancillary(): AncillaryInfo.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
     }
 }
 export default AncillaryToIncludedAgents;

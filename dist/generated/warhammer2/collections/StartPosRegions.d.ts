@@ -30,12 +30,12 @@ export declare namespace StartPosRegions {
         readonly baseFertility: number;
         readonly slotCap: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly owningFaction: StartPosFactions.Entry | undefined;
-        readonly culturalOriginator: CulturesSubcultures.Entry | undefined;
-        readonly rebelFaction: Factions.Entry | undefined;
-        readonly alternativeRebelFaction: Factions.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get owningFaction(): StartPosFactions.Entry | undefined;
+        get culturalOriginator(): CulturesSubcultures.Entry | undefined;
+        get rebelFaction(): Factions.Entry | undefined;
+        get alternativeRebelFaction(): Factions.Entry | undefined;
     }
 }
 export default StartPosRegions;

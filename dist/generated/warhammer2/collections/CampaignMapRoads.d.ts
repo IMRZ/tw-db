@@ -11,7 +11,7 @@ export declare namespace CampaignMapRoads {
         readonly turnsRequiredToDowngradeFrom: number;
         readonly movementCost: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default CampaignMapRoads;

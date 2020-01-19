@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueTechnologyCategoryJunctions {
         readonly _bonusValueId: string;
         readonly _technologyCategory: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsTechnologyCategories.Entry | undefined;
-        readonly technologyCategory: TechnologyCategories.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsTechnologyCategories.Entry | undefined;
+        get technologyCategory(): TechnologyCategories.Entry | undefined;
     }
 }
 export default EffectBonusValueTechnologyCategoryJunctions;

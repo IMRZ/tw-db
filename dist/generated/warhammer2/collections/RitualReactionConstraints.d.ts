@@ -11,9 +11,9 @@ export declare namespace RitualReactionConstraints {
         readonly oncePerTarget: boolean;
         readonly sameSubcultureValid: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ritual: Rituals.Entry | undefined;
-        readonly targetRitual: Rituals.Entry | undefined;
-        readonly targetCategory: RitualCategories.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
+        get targetRitual(): Rituals.Entry | undefined;
+        get targetCategory(): RitualCategories.Entry | undefined;
     }
 }
 export default RitualReactionConstraints;

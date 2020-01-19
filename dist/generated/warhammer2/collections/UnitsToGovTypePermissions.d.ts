@@ -11,9 +11,9 @@ export declare namespace UnitsToGovTypePermissions {
         readonly _govType: string;
         readonly _outcome: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: MainUnits.Entry | undefined;
-        readonly govType: GovernmentTypes.Entry | undefined;
-        readonly outcome: UnitsToGovTypeOutcomesEnum.Entry | undefined;
+        get key(): MainUnits.Entry | undefined;
+        get govType(): GovernmentTypes.Entry | undefined;
+        get outcome(): UnitsToGovTypeOutcomesEnum.Entry | undefined;
     }
 }
 export default UnitsToGovTypePermissions;

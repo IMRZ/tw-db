@@ -8,9 +8,9 @@ export declare namespace EncyclopediaGlossaryPageLinkages {
         readonly _parentKey: string;
         readonly _nextKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly pageKey: EncyclopediaGlossaryPages.Entry | undefined;
-        readonly parentKey: EncyclopediaGlossaryPages.Entry | undefined;
-        readonly nextKey: EncyclopediaGlossaryPages.Entry | undefined;
+        get pageKey(): EncyclopediaGlossaryPages.Entry | undefined;
+        get parentKey(): EncyclopediaGlossaryPages.Entry | undefined;
+        get nextKey(): EncyclopediaGlossaryPages.Entry | undefined;
     }
 }
 export default EncyclopediaGlossaryPageLinkages;

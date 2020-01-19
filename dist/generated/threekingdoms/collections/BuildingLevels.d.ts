@@ -1,0 +1,54 @@
+import { CollectionCache, CollectionKey } from "../../../common";
+import { BuildingChains } from "./BuildingChains";
+import { Commodities } from "./Commodities";
+import { Religions } from "./Religions";
+import { EffectBundles } from "./EffectBundles";
+import { Resources } from "./Resources";
+import { BuildingInstances } from "./BuildingInstances";
+import { AudioCampaignBuildings } from "./AudioCampaignBuildings";
+import { BuildingLevelsSettlementUiDisplays } from "./BuildingLevelsSettlementUiDisplays";
+export declare namespace BuildingLevels {
+    const KEY: CollectionKey;
+    class Entry {
+        private readonly collectionCache;
+        readonly levelName: string;
+        readonly _chain: string;
+        readonly level: number;
+        readonly onlyInCapital: boolean;
+        readonly createTime: number;
+        readonly createCost: number;
+        readonly upkeepCost: number;
+        readonly _commodity: string;
+        readonly commodityVol: number;
+        readonly militaryPrestige: number;
+        readonly navalPrestige: number;
+        readonly economicPrestige: number;
+        readonly enlightenmentPrestige: number;
+        readonly factionUnique: boolean;
+        readonly _religionRequirement: string;
+        readonly _firstInWorldBundle: string;
+        readonly _resourceRequirement: string;
+        readonly canConvert: boolean;
+        readonly _buildingInstanceKey: string;
+        readonly _audioBuildingType: string;
+        readonly shouldShowBuildingLevelInUiForTechnology: boolean;
+        readonly healthOverride: number;
+        readonly developmentPointCost: number;
+        readonly canBeDamaged: boolean;
+        readonly primarySlotBuildingBuildingLevelRequirement: number;
+        readonly visibleInUi: boolean;
+        readonly costToConstructInstantly: number;
+        readonly settlementSecondarySlotUnlockPoints: number;
+        readonly _settlementUiDisplay: string;
+        constructor(collectionCache: CollectionCache, values: any);
+        get chain(): BuildingChains.Entry | undefined;
+        get commodity(): Commodities.Entry | undefined;
+        get religionRequirement(): Religions.Entry | undefined;
+        get firstInWorldBundle(): EffectBundles.Entry | undefined;
+        get resourceRequirement(): Resources.Entry | undefined;
+        get buildingInstanceKey(): BuildingInstances.Entry | undefined;
+        get audioBuildingType(): AudioCampaignBuildings.Entry | undefined;
+        get settlementUiDisplay(): BuildingLevelsSettlementUiDisplays.Entry | undefined;
+    }
+}
+export default BuildingLevels;

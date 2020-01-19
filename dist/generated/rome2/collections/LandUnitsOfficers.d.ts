@@ -14,13 +14,13 @@ export declare namespace LandUnitsOfficers {
         readonly _musician2: string;
         readonly _personalityLocation: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly officer1: BattlePersonalities.Entry | undefined;
-        readonly officer2: BattlePersonalities.Entry | undefined;
-        readonly standardBearer1: BattlePersonalities.Entry | undefined;
-        readonly standardBearer2: BattlePersonalities.Entry | undefined;
-        readonly musician1: BattlePersonalities.Entry | undefined;
-        readonly musician2: BattlePersonalities.Entry | undefined;
-        readonly personalityLocation: PersonalityLocationEnums.Entry | undefined;
+        get officer1(): BattlePersonalities.Entry | undefined;
+        get officer2(): BattlePersonalities.Entry | undefined;
+        get standardBearer1(): BattlePersonalities.Entry | undefined;
+        get standardBearer2(): BattlePersonalities.Entry | undefined;
+        get musician1(): BattlePersonalities.Entry | undefined;
+        get musician2(): BattlePersonalities.Entry | undefined;
+        get personalityLocation(): PersonalityLocationEnums.Entry | undefined;
     }
 }
 export default LandUnitsOfficers;

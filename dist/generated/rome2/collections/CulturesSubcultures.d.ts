@@ -13,8 +13,8 @@ export declare namespace CulturesSubcultures {
         readonly confederationScreenName: string;
         readonly confederationSummaryName: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
-        readonly farm: BattleTerrainFarms.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get farm(): BattleTerrainFarms.Entry | undefined;
     }
 }
 export default CulturesSubcultures;

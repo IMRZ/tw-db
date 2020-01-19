@@ -18,11 +18,11 @@ export declare namespace CharacterSkillNodeSets {
         readonly forNavy: boolean;
         readonly _agentSubtypeKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
-        readonly agentKey: Agents.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly agentSubtypeKey: AgentSubtypes.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
+        get agentKey(): Agents.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get agentSubtypeKey(): AgentSubtypes.Entry | undefined;
     }
 }
 export default CharacterSkillNodeSets;

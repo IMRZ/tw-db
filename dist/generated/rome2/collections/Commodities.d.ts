@@ -8,7 +8,7 @@ export declare namespace Commodities {
         readonly baselinePricePerUnit: number;
         readonly priceElasticityOfDemand: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: Resources.Entry | undefined;
+        get key(): Resources.Entry | undefined;
     }
 }
 export default Commodities;

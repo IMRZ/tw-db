@@ -10,7 +10,7 @@ export declare namespace UiUnitGroupings {
         readonly tooltip: string;
         readonly _parentGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly parentGroup: UiUnitGroupParents.Entry | undefined;
+        get parentGroup(): UiUnitGroupParents.Entry | undefined;
     }
 }
 export default UiUnitGroupings;

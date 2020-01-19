@@ -8,8 +8,8 @@ export declare namespace EffectBonusValueBasicJunction {
         readonly _effect: string;
         readonly _bonusValueId: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsBasic.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsBasic.Entry | undefined;
     }
 }
 export default EffectBonusValueBasicJunction;

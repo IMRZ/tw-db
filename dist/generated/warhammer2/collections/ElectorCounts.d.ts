@@ -14,10 +14,10 @@ export declare namespace ElectorCounts {
         readonly mapPosX: number;
         readonly mapPosY: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ministerialKey: MinisterialPositions.Entry | undefined;
-        readonly capitalRegion: Regions.Entry | undefined;
-        readonly ancillaryReward: Ancillaries.Entry | undefined;
-        readonly unitReward: MainUnits.Entry | undefined;
+        get ministerialKey(): MinisterialPositions.Entry | undefined;
+        get capitalRegion(): Regions.Entry | undefined;
+        get ancillaryReward(): Ancillaries.Entry | undefined;
+        get unitReward(): MainUnits.Entry | undefined;
     }
 }
 export default ElectorCounts;

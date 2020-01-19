@@ -13,7 +13,7 @@ export declare namespace BattleSkyTypes {
         readonly supportsAmbientFog: boolean;
         readonly supportsVolumetricFog: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly climate: Climates.Entry | undefined;
+        get climate(): Climates.Entry | undefined;
     }
 }
 export default BattleSkyTypes;

@@ -8,8 +8,8 @@ export declare namespace SpecialAbilityPhaseAttributeEffects {
         readonly _phase: string;
         readonly _attribute: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly phase: SpecialAbilityPhases.Entry | undefined;
-        readonly attribute: UnitAttributes.Entry | undefined;
+        get phase(): SpecialAbilityPhases.Entry | undefined;
+        get attribute(): UnitAttributes.Entry | undefined;
     }
 }
 export default SpecialAbilityPhaseAttributeEffects;

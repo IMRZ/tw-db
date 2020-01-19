@@ -8,8 +8,8 @@ export declare namespace BattleUnitPermissionJunctions {
         readonly _unit: string;
         readonly _battleType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: MainUnits.Entry | undefined;
-        readonly battleType: BattleTypes.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get battleType(): BattleTypes.Entry | undefined;
     }
 }
 export default BattleUnitPermissionJunctions;

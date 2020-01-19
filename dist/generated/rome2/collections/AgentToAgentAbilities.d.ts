@@ -10,8 +10,8 @@ export declare namespace AgentToAgentAbilities {
         readonly localisedAbilityName: string;
         readonly localisedAbilityDescription: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agent: Agents.Entry | undefined;
-        readonly ability: Abilities.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
+        get ability(): Abilities.Entry | undefined;
     }
 }
 export default AgentToAgentAbilities;

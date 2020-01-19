@@ -9,8 +9,8 @@ export declare namespace BattleAutoresolverBalances {
         readonly meleePotentialMultiplier: number;
         readonly missilePotentialMultiplier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly sourceUnitClass: UnitClass.Entry | undefined;
-        readonly targetUnitClass: UnitClass.Entry | undefined;
+        get sourceUnitClass(): UnitClass.Entry | undefined;
+        get targetUnitClass(): UnitClass.Entry | undefined;
     }
 }
 export default BattleAutoresolverBalances;

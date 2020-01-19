@@ -13,9 +13,9 @@ export declare namespace TriggerEffects {
         readonly chance: number;
         readonly _gameExpansionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trigger: TraitTriggers.Entry | undefined;
-        readonly trait: TraitInfo.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get trigger(): TraitTriggers.Entry | undefined;
+        get trait(): TraitInfo.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default TriggerEffects;

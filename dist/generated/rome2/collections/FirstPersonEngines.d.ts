@@ -18,7 +18,7 @@ export declare namespace FirstPersonEngines {
         readonly turnDelay: number;
         readonly halfVerticalFireArcDeclination: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: GunTypesEnum.Entry | undefined;
+        get key(): GunTypesEnum.Entry | undefined;
     }
 }
 export default FirstPersonEngines;

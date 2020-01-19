@@ -13,8 +13,8 @@ export declare namespace VoTexts {
         readonly _tableField: number;
         readonly foreignKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly scriptId: VoScripts.Entry | undefined;
-        readonly tableField: TExcLocalisableFields.Entry | undefined;
+        get scriptId(): VoScripts.Entry | undefined;
+        get tableField(): TExcLocalisableFields.Entry | undefined;
     }
 }
 export default VoTexts;

@@ -8,8 +8,8 @@ export declare namespace EncyclopediaUnitPatchTexts {
         readonly _unit: string;
         readonly _patchText: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: MainUnits.Entry | undefined;
-        readonly patchText: EncyclopediaPatchTexts.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get patchText(): EncyclopediaPatchTexts.Entry | undefined;
     }
 }
 export default EncyclopediaUnitPatchTexts;

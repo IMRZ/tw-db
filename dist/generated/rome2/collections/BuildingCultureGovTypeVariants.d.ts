@@ -20,13 +20,13 @@ export declare namespace BuildingCultureGovTypeVariants {
         readonly icon: string;
         readonly _shortDescription: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly building: BuildingLevels.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly governmentType: GovernmentTypes.Entry | undefined;
-        readonly artpiece: WarscapeRigid.Entry | undefined;
-        readonly artpieceAnimated: WarscapeAnimated.Entry | undefined;
-        readonly description: BuildingDescriptionTexts.Entry | undefined;
-        readonly shortDescription: BuildingShortDescriptionTexts.Entry | undefined;
+        get building(): BuildingLevels.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get governmentType(): GovernmentTypes.Entry | undefined;
+        get artpiece(): WarscapeRigid.Entry | undefined;
+        get artpieceAnimated(): WarscapeAnimated.Entry | undefined;
+        get description(): BuildingDescriptionTexts.Entry | undefined;
+        get shortDescription(): BuildingShortDescriptionTexts.Entry | undefined;
     }
 }
 export default BuildingCultureGovTypeVariants;

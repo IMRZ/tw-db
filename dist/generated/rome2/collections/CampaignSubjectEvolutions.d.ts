@@ -17,11 +17,11 @@ export declare namespace CampaignSubjectEvolutions {
         readonly _departureMessage: string;
         readonly _flavourText: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignSubjectKey: CampaignSubjects.Entry | undefined;
-        readonly effectBundleKey: EffectBundles.Entry | undefined;
-        readonly arrivalMessage: CampaignSubjectMessages.Entry | undefined;
-        readonly departureMessage: CampaignSubjectMessages.Entry | undefined;
-        readonly flavourText: CampaignSubjectStrings.Entry | undefined;
+        get campaignSubjectKey(): CampaignSubjects.Entry | undefined;
+        get effectBundleKey(): EffectBundles.Entry | undefined;
+        get arrivalMessage(): CampaignSubjectMessages.Entry | undefined;
+        get departureMessage(): CampaignSubjectMessages.Entry | undefined;
+        get flavourText(): CampaignSubjectStrings.Entry | undefined;
     }
 }
 export default CampaignSubjectEvolutions;

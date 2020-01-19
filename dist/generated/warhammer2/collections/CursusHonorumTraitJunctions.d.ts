@@ -10,9 +10,9 @@ export declare namespace CursusHonorumTraitJunctions {
         readonly _traitInfoKey: string;
         readonly _factionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subcultureKey: CulturesSubcultures.Entry | undefined;
-        readonly traitInfoKey: TraitInfo.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
+        get subcultureKey(): CulturesSubcultures.Entry | undefined;
+        get traitInfoKey(): TraitInfo.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
     }
 }
 export default CursusHonorumTraitJunctions;

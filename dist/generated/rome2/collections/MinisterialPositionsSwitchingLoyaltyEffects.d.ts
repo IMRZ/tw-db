@@ -8,8 +8,8 @@ export declare namespace MinisterialPositionsSwitchingLoyaltyEffects {
         readonly _positionTo: string;
         readonly loyaltyGained: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly positionFrom: MinisterialPositions.Entry | undefined;
-        readonly positionTo: MinisterialPositions.Entry | undefined;
+        get positionFrom(): MinisterialPositions.Entry | undefined;
+        get positionTo(): MinisterialPositions.Entry | undefined;
     }
 }
 export default MinisterialPositionsSwitchingLoyaltyEffects;

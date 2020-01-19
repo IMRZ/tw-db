@@ -16,7 +16,7 @@ export declare namespace CharacterSkills {
         readonly backgroundWeighting: number;
         readonly influenceCost: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly preBattleSpeechParameter: PreBattleSpeechParametersEnum.Entry | undefined;
+        get preBattleSpeechParameter(): PreBattleSpeechParametersEnum.Entry | undefined;
     }
 }
 export default CharacterSkills;

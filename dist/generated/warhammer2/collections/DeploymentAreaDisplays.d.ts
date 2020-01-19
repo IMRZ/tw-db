@@ -10,7 +10,7 @@ export declare namespace DeploymentAreaDisplays {
         readonly splineHeight: number;
         readonly material: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly vfx: ParticleEffects.Entry | undefined;
+        get vfx(): ParticleEffects.Entry | undefined;
     }
 }
 export default DeploymentAreaDisplays;

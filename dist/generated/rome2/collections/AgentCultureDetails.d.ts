@@ -20,11 +20,11 @@ export declare namespace AgentCultureDetails {
         readonly _agentRecruitedMovie: string;
         readonly _gender: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agent: Agents.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly associatedUnit: MainUnits.Entry | undefined;
-        readonly agentRecruitedMovie: MovieEventStrings.Entry | undefined;
-        readonly gender: Genders.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get associatedUnit(): MainUnits.Entry | undefined;
+        get agentRecruitedMovie(): MovieEventStrings.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
     }
 }
 export default AgentCultureDetails;

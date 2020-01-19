@@ -15,10 +15,10 @@ export declare namespace TechnologyNodes {
         readonly tier: number;
         readonly indent: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly technologyNodeSet: TechnologyNodeSets.Entry | undefined;
-        readonly technologyKey: Technologies.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
+        get technologyNodeSet(): TechnologyNodeSets.Entry | undefined;
+        get technologyKey(): Technologies.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
     }
 }
 export default TechnologyNodes;

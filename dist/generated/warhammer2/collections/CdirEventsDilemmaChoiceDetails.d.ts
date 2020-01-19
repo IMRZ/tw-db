@@ -10,8 +10,8 @@ export declare namespace CdirEventsDilemmaChoiceDetails {
         readonly localisedChoiceLabel: string;
         readonly localisedChoiceTitle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly dilemmaKey: Dilemmas.Entry | undefined;
-        readonly choiceKey: CdirEventsDilemmaChoices.Entry | undefined;
+        get dilemmaKey(): Dilemmas.Entry | undefined;
+        get choiceKey(): CdirEventsDilemmaChoices.Entry | undefined;
     }
 }
 export default CdirEventsDilemmaChoiceDetails;

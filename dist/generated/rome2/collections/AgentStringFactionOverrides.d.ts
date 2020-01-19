@@ -13,9 +13,9 @@ export declare namespace AgentStringFactionOverrides {
         readonly descriptionOverride: string;
         readonly iconPath: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agent: Agents.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly gender: Genders.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
     }
 }
 export default AgentStringFactionOverrides;

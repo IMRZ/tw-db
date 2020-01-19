@@ -21,9 +21,9 @@ export declare namespace BuildingChains {
         readonly optionalSortOrder: number;
         readonly _optionalRequiredHordeCommander: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingSuperchain: BuildingSuperchains.Entry | undefined;
-        readonly encyclopediaGroup: EncyclopediaBuildingChainGroups.Entry | undefined;
-        readonly optionalRequiredHordeCommander: AgentSubtypes.Entry | undefined;
+        get buildingSuperchain(): BuildingSuperchains.Entry | undefined;
+        get encyclopediaGroup(): EncyclopediaBuildingChainGroups.Entry | undefined;
+        get optionalRequiredHordeCommander(): AgentSubtypes.Entry | undefined;
     }
 }
 export default BuildingChains;

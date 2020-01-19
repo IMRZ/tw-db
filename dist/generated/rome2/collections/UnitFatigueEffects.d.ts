@@ -9,8 +9,8 @@ export declare namespace UnitFatigueEffects {
         readonly _stat: string;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly fatigueLevel: KvFatigue.Entry | undefined;
-        readonly stat: UiUnitStats.Entry | undefined;
+        get fatigueLevel(): KvFatigue.Entry | undefined;
+        get stat(): UiUnitStats.Entry | undefined;
     }
 }
 export default UnitFatigueEffects;

@@ -16,7 +16,7 @@ export declare namespace FactionBanners {
         readonly tertiaryGreen: number;
         readonly tertiaryBlue: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: Factions.Entry | undefined;
+        get key(): Factions.Entry | undefined;
     }
 }
 export default FactionBanners;

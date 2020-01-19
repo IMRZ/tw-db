@@ -10,7 +10,7 @@ export declare namespace UnitShieldTypes {
         readonly _audioMaterial: string;
         readonly missileBlockChance: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly audioMaterial: AudioMaterialsEnums.Entry | undefined;
+        get audioMaterial(): AudioMaterialsEnums.Entry | undefined;
     }
 }
 export default UnitShieldTypes;

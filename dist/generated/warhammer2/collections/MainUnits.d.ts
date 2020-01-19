@@ -67,21 +67,21 @@ export declare namespace MainUnits {
         readonly voIsDinosaur: boolean;
         readonly optionalUiElement: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly landUnit: LandUnits.Entry | undefined;
-        readonly navalUnit: NavalUnits.Entry | undefined;
-        readonly weight: UnitWeights.Entry | undefined;
-        readonly caste: UnitCastes.Entry | undefined;
-        readonly additionalBuildingRequirement: BuildingLevels.Entry | undefined;
-        readonly religionRequirement: Religions.Entry | undefined;
-        readonly resourceRequirement: Resources.Entry | undefined;
-        readonly regionUnitResourceRequirement: RegionUnitResources.Entry | undefined;
-        readonly audioVoiceoverCulture: AudioVoiceoverCultures.Entry | undefined;
-        readonly uiUnitGroupLand: UiUnitGroupings.Entry | undefined;
-        readonly uiUnitGroupNaval: UiUnitGroupings.Entry | undefined;
-        readonly portholeCamera: UnitPortholeCameraSettings.Entry | undefined;
-        readonly mount: CampaignMounts.Entry | undefined;
-        readonly audioVoiceoverCultureOverride: AudioVoiceoverCultures.Entry | undefined;
-        readonly audioVoiceoverActorGroup: AudioVoActorGroups.Entry | undefined;
+        get landUnit(): LandUnits.Entry | undefined;
+        get navalUnit(): NavalUnits.Entry | undefined;
+        get weight(): UnitWeights.Entry | undefined;
+        get caste(): UnitCastes.Entry | undefined;
+        get additionalBuildingRequirement(): BuildingLevels.Entry | undefined;
+        get religionRequirement(): Religions.Entry | undefined;
+        get resourceRequirement(): Resources.Entry | undefined;
+        get regionUnitResourceRequirement(): RegionUnitResources.Entry | undefined;
+        get audioVoiceoverCulture(): AudioVoiceoverCultures.Entry | undefined;
+        get uiUnitGroupLand(): UiUnitGroupings.Entry | undefined;
+        get uiUnitGroupNaval(): UiUnitGroupings.Entry | undefined;
+        get portholeCamera(): UnitPortholeCameraSettings.Entry | undefined;
+        get mount(): CampaignMounts.Entry | undefined;
+        get audioVoiceoverCultureOverride(): AudioVoiceoverCultures.Entry | undefined;
+        get audioVoiceoverActorGroup(): AudioVoActorGroups.Entry | undefined;
     }
 }
 export default MainUnits;

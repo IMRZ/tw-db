@@ -9,8 +9,8 @@ export declare namespace UnitStatModifiers {
         readonly _stat: string;
         readonly _how: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly stat: UiUnitStats.Entry | undefined;
-        readonly how: UnitStatModifiersHowEnums.Entry | undefined;
+        get stat(): UiUnitStats.Entry | undefined;
+        get how(): UnitStatModifiersHowEnums.Entry | undefined;
     }
 }
 export default UnitStatModifiers;

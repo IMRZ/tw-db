@@ -8,8 +8,8 @@ export declare namespace CampaignTreeTypeCultures {
         readonly _treeType: string;
         readonly _culture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly treeType: CampaignTreeTypes.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
+        get treeType(): CampaignTreeTypes.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CampaignTreeTypeCultures;

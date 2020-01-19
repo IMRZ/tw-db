@@ -9,8 +9,8 @@ export declare namespace AdviceTriggerToAdviceThread {
         readonly _thread: string;
         readonly amount: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trigger: AdviceTriggers.Entry | undefined;
-        readonly thread: AdviceThreads.Entry | undefined;
+        get trigger(): AdviceTriggers.Entry | undefined;
+        get thread(): AdviceThreads.Entry | undefined;
     }
 }
 export default AdviceTriggerToAdviceThread;

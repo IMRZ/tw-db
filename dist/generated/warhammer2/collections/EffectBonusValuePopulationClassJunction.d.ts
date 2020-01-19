@@ -10,9 +10,9 @@ export declare namespace EffectBonusValuePopulationClassJunction {
         readonly _bonusValueId: string;
         readonly _populationClass: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsPopulationClass.Entry | undefined;
-        readonly populationClass: PopulationClasses.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsPopulationClass.Entry | undefined;
+        get populationClass(): PopulationClasses.Entry | undefined;
     }
 }
 export default EffectBonusValuePopulationClassJunction;

@@ -12,9 +12,9 @@ export declare namespace SeasonProvinceEffectBundles {
         readonly weighting: number;
         readonly default: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly season: Seasons.Entry | undefined;
-        readonly province: Provinces.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get season(): Seasons.Entry | undefined;
+        get province(): Provinces.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default SeasonProvinceEffectBundles;

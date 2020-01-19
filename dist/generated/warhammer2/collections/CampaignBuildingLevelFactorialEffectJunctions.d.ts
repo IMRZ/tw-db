@@ -12,9 +12,9 @@ export declare namespace CampaignBuildingLevelFactorialEffectJunctions {
         readonly value: number;
         readonly _scope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingLevel: BuildingLevels.Entry | undefined;
-        readonly factorialEffect: FactorialEffects.Entry | undefined;
-        readonly scope: CampaignFactorialScopes.Entry | undefined;
+        get buildingLevel(): BuildingLevels.Entry | undefined;
+        get factorialEffect(): FactorialEffects.Entry | undefined;
+        get scope(): CampaignFactorialScopes.Entry | undefined;
     }
 }
 export default CampaignBuildingLevelFactorialEffectJunctions;

@@ -7,8 +7,8 @@ export declare namespace ProvincialInitiativeStrengthProvinceToProvinceJunctions
         readonly _province1: string;
         readonly _province2: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly province1: Provinces.Entry | undefined;
-        readonly province2: Provinces.Entry | undefined;
+        get province1(): Provinces.Entry | undefined;
+        get province2(): Provinces.Entry | undefined;
     }
 }
 export default ProvincialInitiativeStrengthProvinceToProvinceJunctions;

@@ -12,8 +12,8 @@ export declare namespace FemaleCharacterFactionDetails {
         readonly chanceToSpawn: number;
         readonly _trait: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly trait: TraitInfo.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get trait(): TraitInfo.Entry | undefined;
     }
 }
 export default FemaleCharacterFactionDetails;

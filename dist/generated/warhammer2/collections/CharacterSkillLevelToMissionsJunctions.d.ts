@@ -10,8 +10,8 @@ export declare namespace CharacterSkillLevelToMissionsJunctions {
         readonly _missionKey: string;
         readonly randomSelection: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterSkillKey: CharacterSkills.Entry | undefined;
-        readonly missionKey: Missions.Entry | undefined;
+        get characterSkillKey(): CharacterSkills.Entry | undefined;
+        get missionKey(): Missions.Entry | undefined;
     }
 }
 export default CharacterSkillLevelToMissionsJunctions;

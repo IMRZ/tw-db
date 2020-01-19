@@ -8,8 +8,8 @@ export declare namespace UnitToUnitListJunctions {
         readonly _unitList: string;
         readonly _unit: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitList: UnitLists.Entry | undefined;
-        readonly unit: MainUnits.Entry | undefined;
+        get unitList(): UnitLists.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
     }
 }
 export default UnitToUnitListJunctions;

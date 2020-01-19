@@ -14,7 +14,7 @@ export declare namespace Dilemmas {
         readonly soundPopupOverride: string;
         readonly soundClickOverride: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly eventCategory: CdirEventsCategories.Entry | undefined;
+        get eventCategory(): CdirEventsCategories.Entry | undefined;
     }
 }
 export default Dilemmas;

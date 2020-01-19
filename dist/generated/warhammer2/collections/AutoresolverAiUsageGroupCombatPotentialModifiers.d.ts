@@ -8,7 +8,7 @@ export declare namespace AutoresolverAiUsageGroupCombatPotentialModifiers {
         readonly additiveMod: number;
         readonly multiplier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly usageGroup: AiUsageGroups.Entry | undefined;
+        get usageGroup(): AiUsageGroups.Entry | undefined;
     }
 }
 export default AutoresolverAiUsageGroupCombatPotentialModifiers;

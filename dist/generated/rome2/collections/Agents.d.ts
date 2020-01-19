@@ -15,7 +15,7 @@ export declare namespace Agents {
         readonly cost: number;
         readonly inEncyclopedia: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly religion: Religions.Entry | undefined;
+        get religion(): Religions.Entry | undefined;
     }
 }
 export default Agents;

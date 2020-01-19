@@ -8,8 +8,8 @@ export declare namespace EncyclopediaTutorialVideosDefaultSubtitles {
         readonly _video: string;
         readonly _language: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly video: EncyclopediaTutorialVideos.Entry | undefined;
-        readonly language: Languages.Entry | undefined;
+        get video(): EncyclopediaTutorialVideos.Entry | undefined;
+        get language(): Languages.Entry | undefined;
     }
 }
 export default EncyclopediaTutorialVideosDefaultSubtitles;

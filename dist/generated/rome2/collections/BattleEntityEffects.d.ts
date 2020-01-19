@@ -17,17 +17,17 @@ export declare namespace BattleEntityEffects {
         readonly _woodenFloor: string;
         readonly _snow: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly forest: ParticleEffects.Entry | undefined;
-        readonly grass: ParticleEffects.Entry | undefined;
-        readonly mud: ParticleEffects.Entry | undefined;
-        readonly sand: ParticleEffects.Entry | undefined;
-        readonly scrub: ParticleEffects.Entry | undefined;
-        readonly rock: ParticleEffects.Entry | undefined;
-        readonly deepWater: ParticleEffects.Entry | undefined;
-        readonly shallowWater: ParticleEffects.Entry | undefined;
-        readonly road: ParticleEffects.Entry | undefined;
-        readonly woodenFloor: ParticleEffects.Entry | undefined;
-        readonly snow: ParticleEffects.Entry | undefined;
+        get forest(): ParticleEffects.Entry | undefined;
+        get grass(): ParticleEffects.Entry | undefined;
+        get mud(): ParticleEffects.Entry | undefined;
+        get sand(): ParticleEffects.Entry | undefined;
+        get scrub(): ParticleEffects.Entry | undefined;
+        get rock(): ParticleEffects.Entry | undefined;
+        get deepWater(): ParticleEffects.Entry | undefined;
+        get shallowWater(): ParticleEffects.Entry | undefined;
+        get road(): ParticleEffects.Entry | undefined;
+        get woodenFloor(): ParticleEffects.Entry | undefined;
+        get snow(): ParticleEffects.Entry | undefined;
     }
 }
 export default BattleEntityEffects;

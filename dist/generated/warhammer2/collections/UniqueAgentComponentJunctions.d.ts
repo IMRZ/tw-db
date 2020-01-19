@@ -9,8 +9,8 @@ export declare namespace UniqueAgentComponentJunctions {
         readonly _component: string;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly uniqueAgent: UniqueAgents.Entry | undefined;
-        readonly component: UniqueAgentComponents.Entry | undefined;
+        get uniqueAgent(): UniqueAgents.Entry | undefined;
+        get component(): UniqueAgentComponents.Entry | undefined;
     }
 }
 export default UniqueAgentComponentJunctions;

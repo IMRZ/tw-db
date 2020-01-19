@@ -28,14 +28,14 @@ export declare namespace BattlefieldEngines {
         readonly destructAnim: string;
         readonly destructMeta: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly engineType: GunTypesEnum.Entry | undefined;
-        readonly model: WarscapeAnimated.Entry | undefined;
-        readonly gunAnimationTable: BattleAnimationsTable.Entry | undefined;
-        readonly missileWeapon: MissileWeapons.Entry | undefined;
-        readonly destructionAnimation: WarscapeAnimated.Entry | undefined;
-        readonly battleEntity: BattleEntities.Entry | undefined;
-        readonly variant: Variants.Entry | undefined;
-        readonly firstPerson: FirstPersonEngines.Entry | undefined;
+        get engineType(): GunTypesEnum.Entry | undefined;
+        get model(): WarscapeAnimated.Entry | undefined;
+        get gunAnimationTable(): BattleAnimationsTable.Entry | undefined;
+        get missileWeapon(): MissileWeapons.Entry | undefined;
+        get destructionAnimation(): WarscapeAnimated.Entry | undefined;
+        get battleEntity(): BattleEntities.Entry | undefined;
+        get variant(): Variants.Entry | undefined;
+        get firstPerson(): FirstPersonEngines.Entry | undefined;
     }
 }
 export default BattlefieldEngines;

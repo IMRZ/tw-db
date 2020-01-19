@@ -9,8 +9,8 @@ export declare namespace BattleContextUnitAttributeJunctions {
         readonly _battleContext: string;
         readonly _unitAttribute: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleContext: CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
-        readonly unitAttribute: UnitAttributes.Entry | undefined;
+        get battleContext(): CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
+        get unitAttribute(): UnitAttributes.Entry | undefined;
     }
 }
 export default BattleContextUnitAttributeJunctions;

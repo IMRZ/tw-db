@@ -11,7 +11,7 @@ export declare namespace UiUnitStats {
         readonly _localisation: string;
         readonly icon: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly localisation: UnitStatLocalisations.Entry | undefined;
+        get localisation(): UnitStatLocalisations.Entry | undefined;
     }
 }
 export default UiUnitStats;

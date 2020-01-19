@@ -9,9 +9,9 @@ export declare namespace CdirEventsMissionFollowupMissions {
         readonly _statusKey: string;
         readonly _followupMissionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missionKey: Missions.Entry | undefined;
-        readonly statusKey: CdirEventsMissionStatuses.Entry | undefined;
-        readonly followupMissionKey: Missions.Entry | undefined;
+        get missionKey(): Missions.Entry | undefined;
+        get statusKey(): CdirEventsMissionStatuses.Entry | undefined;
+        get followupMissionKey(): Missions.Entry | undefined;
     }
 }
 export default CdirEventsMissionFollowupMissions;

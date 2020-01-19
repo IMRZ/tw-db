@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueSiegeItemJunctions {
         readonly _bonusValueId: string;
         readonly _siegeItem: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsSiegeItems.Entry | undefined;
-        readonly siegeItem: BattlefieldDeployableSiegeItems.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsSiegeItems.Entry | undefined;
+        get siegeItem(): BattlefieldDeployableSiegeItems.Entry | undefined;
     }
 }
 export default EffectBonusValueSiegeItemJunctions;

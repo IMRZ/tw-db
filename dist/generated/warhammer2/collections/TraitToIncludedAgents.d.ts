@@ -8,8 +8,8 @@ export declare namespace TraitToIncludedAgents {
         readonly _trait: string;
         readonly _agent: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trait: TraitInfo.Entry | undefined;
-        readonly agent: Agents.Entry | undefined;
+        get trait(): TraitInfo.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
     }
 }
 export default TraitToIncludedAgents;

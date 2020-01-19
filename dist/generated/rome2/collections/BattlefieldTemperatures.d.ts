@@ -9,8 +9,8 @@ export declare namespace BattlefieldTemperatures {
         readonly _season: string;
         readonly temperature: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly climate: Climates.Entry | undefined;
-        readonly season: Seasons.Entry | undefined;
+        get climate(): Climates.Entry | undefined;
+        get season(): Seasons.Entry | undefined;
     }
 }
 export default BattlefieldTemperatures;

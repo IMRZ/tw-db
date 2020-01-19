@@ -8,8 +8,8 @@ export declare namespace CampaignGroupAbandonedCulturesOverrides {
         readonly _campaignGroup: string;
         readonly _culture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CampaignGroupAbandonedCulturesOverrides;

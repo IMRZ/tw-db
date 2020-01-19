@@ -32,15 +32,15 @@ export declare namespace NavalUnits {
         readonly isComposite: boolean;
         readonly ignitionThreshold: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: UnitCategory.Entry | undefined;
-        readonly class: UnitClass.Entry | undefined;
-        readonly shortDescriptionText: UnitDescriptionShortTexts.Entry | undefined;
-        readonly historicalDescriptionText: UnitDescriptionHistoricalTexts.Entry | undefined;
-        readonly strengthsWeaknessesText: UnitDescriptionStrengthsWeaknessesTexts.Entry | undefined;
-        readonly ship: ShipDbs.Entry | undefined;
-        readonly primaryNavalWeapon: NavalWeapons.Entry | undefined;
-        readonly secondaryNavalWeapon: NavalWeapons.Entry | undefined;
-        readonly attributeGroups: UnitAttributesGroups.Entry | undefined;
+        get category(): UnitCategory.Entry | undefined;
+        get class(): UnitClass.Entry | undefined;
+        get shortDescriptionText(): UnitDescriptionShortTexts.Entry | undefined;
+        get historicalDescriptionText(): UnitDescriptionHistoricalTexts.Entry | undefined;
+        get strengthsWeaknessesText(): UnitDescriptionStrengthsWeaknessesTexts.Entry | undefined;
+        get ship(): ShipDbs.Entry | undefined;
+        get primaryNavalWeapon(): NavalWeapons.Entry | undefined;
+        get secondaryNavalWeapon(): NavalWeapons.Entry | undefined;
+        get attributeGroups(): UnitAttributesGroups.Entry | undefined;
     }
 }
 export default NavalUnits;

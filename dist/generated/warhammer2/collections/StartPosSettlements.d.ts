@@ -22,16 +22,16 @@ export declare namespace StartPosSettlements {
         readonly unique: boolean;
         readonly _primaryDisplayBuilding: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly settlementId: CampaignMapSettlements.Entry | undefined;
-        readonly region: StartPosRegions.Entry | undefined;
-        readonly building1: BuildingLevels.Entry | undefined;
-        readonly building2: BuildingLevels.Entry | undefined;
-        readonly building3: BuildingLevels.Entry | undefined;
-        readonly building4: BuildingLevels.Entry | undefined;
-        readonly building5: BuildingLevels.Entry | undefined;
-        readonly primaryBuilding: BuildingLevels.Entry | undefined;
-        readonly portBuilding: BuildingLevels.Entry | undefined;
-        readonly primaryDisplayBuilding: BuildingLevels.Entry | undefined;
+        get settlementId(): CampaignMapSettlements.Entry | undefined;
+        get region(): StartPosRegions.Entry | undefined;
+        get building1(): BuildingLevels.Entry | undefined;
+        get building2(): BuildingLevels.Entry | undefined;
+        get building3(): BuildingLevels.Entry | undefined;
+        get building4(): BuildingLevels.Entry | undefined;
+        get building5(): BuildingLevels.Entry | undefined;
+        get primaryBuilding(): BuildingLevels.Entry | undefined;
+        get portBuilding(): BuildingLevels.Entry | undefined;
+        get primaryDisplayBuilding(): BuildingLevels.Entry | undefined;
     }
 }
 export default StartPosSettlements;

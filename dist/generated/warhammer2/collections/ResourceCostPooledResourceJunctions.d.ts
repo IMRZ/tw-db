@@ -9,8 +9,8 @@ export declare namespace ResourceCostPooledResourceJunctions {
         readonly _pooledResourceFactor: string;
         readonly amount: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly resourceCost: ResourceCosts.Entry | undefined;
-        readonly pooledResourceFactor: PooledResourceFactorJunctions.Entry | undefined;
+        get resourceCost(): ResourceCosts.Entry | undefined;
+        get pooledResourceFactor(): PooledResourceFactorJunctions.Entry | undefined;
     }
 }
 export default ResourceCostPooledResourceJunctions;

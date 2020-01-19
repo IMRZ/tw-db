@@ -11,8 +11,8 @@ export declare namespace CursusHonorumLevelRequirements {
         readonly age: number;
         readonly _factionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subcultureKey: CulturesSubcultures.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
+        get subcultureKey(): CulturesSubcultures.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
     }
 }
 export default CursusHonorumLevelRequirements;

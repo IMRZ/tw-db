@@ -7,8 +7,8 @@ export declare namespace TechnologyRequiredTechnologyJunctions {
         readonly _technology: string;
         readonly _requiredTechnology: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly technology: Technologies.Entry | undefined;
-        readonly requiredTechnology: Technologies.Entry | undefined;
+        get technology(): Technologies.Entry | undefined;
+        get requiredTechnology(): Technologies.Entry | undefined;
     }
 }
 export default TechnologyRequiredTechnologyJunctions;

@@ -8,9 +8,9 @@ export declare namespace EncyclopediaMultiplayerPageLinkages {
         readonly _parentKey: string;
         readonly _nextKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly pageKey: EncyclopediaMultiplayerPages.Entry | undefined;
-        readonly parentKey: EncyclopediaMultiplayerPages.Entry | undefined;
-        readonly nextKey: EncyclopediaMultiplayerPages.Entry | undefined;
+        get pageKey(): EncyclopediaMultiplayerPages.Entry | undefined;
+        get parentKey(): EncyclopediaMultiplayerPages.Entry | undefined;
+        get nextKey(): EncyclopediaMultiplayerPages.Entry | undefined;
     }
 }
 export default EncyclopediaMultiplayerPageLinkages;

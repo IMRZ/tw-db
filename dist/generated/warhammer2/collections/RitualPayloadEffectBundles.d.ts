@@ -9,8 +9,8 @@ export declare namespace RitualPayloadEffectBundles {
         readonly _effectBundle: string;
         readonly duration: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly payload: RitualPayloads.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get payload(): RitualPayloads.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default RitualPayloadEffectBundles;

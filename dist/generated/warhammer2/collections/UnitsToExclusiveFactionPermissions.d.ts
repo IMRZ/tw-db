@@ -9,8 +9,8 @@ export declare namespace UnitsToExclusiveFactionPermissions {
         readonly _faction: string;
         readonly allowed: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: MainUnits.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get key(): MainUnits.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default UnitsToExclusiveFactionPermissions;

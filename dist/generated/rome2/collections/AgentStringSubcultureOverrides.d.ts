@@ -13,9 +13,9 @@ export declare namespace AgentStringSubcultureOverrides {
         readonly descriptionOverride: string;
         readonly iconPath: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agent: Agents.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly gender: Genders.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
     }
 }
 export default AgentStringSubcultureOverrides;

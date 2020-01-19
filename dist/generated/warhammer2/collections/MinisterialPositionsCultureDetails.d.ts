@@ -18,12 +18,12 @@ export declare namespace MinisterialPositionsCultureDetails {
         readonly yCoordinate: number;
         readonly _localisedDescriptionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ministerialPositionKey: MinisterialPositions.Entry | undefined;
-        readonly localisedStringKey: MinisterialPositionsStrings.Entry | undefined;
-        readonly cultureKey: Cultures.Entry | undefined;
-        readonly subcultureKey: CulturesSubcultures.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
-        readonly localisedDescriptionKey: MinisterialPositionsStrings.Entry | undefined;
+        get ministerialPositionKey(): MinisterialPositions.Entry | undefined;
+        get localisedStringKey(): MinisterialPositionsStrings.Entry | undefined;
+        get cultureKey(): Cultures.Entry | undefined;
+        get subcultureKey(): CulturesSubcultures.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get localisedDescriptionKey(): MinisterialPositionsStrings.Entry | undefined;
     }
 }
 export default MinisterialPositionsCultureDetails;

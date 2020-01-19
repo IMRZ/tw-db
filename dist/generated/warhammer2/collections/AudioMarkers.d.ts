@@ -23,7 +23,7 @@ export declare namespace AudioMarkers {
         readonly flattenRtpcTo2D: boolean;
         readonly dopplerRtpcName: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: AudioMarkerTypes.Entry | undefined;
+        get type(): AudioMarkerTypes.Entry | undefined;
     }
 }
 export default AudioMarkers;

@@ -14,7 +14,7 @@ export declare namespace EncyclopediaMultiplayerBlocks {
         readonly imageClass: string;
         readonly video: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly pageKey: EncyclopediaMultiplayerPages.Entry | undefined;
+        get pageKey(): EncyclopediaMultiplayerPages.Entry | undefined;
     }
 }
 export default EncyclopediaMultiplayerBlocks;

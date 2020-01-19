@@ -26,20 +26,20 @@ export declare namespace AgentActions {
         readonly _theirMessageEventsFemale: string;
         readonly _enabledByEffect: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agent: Agents.Entry | undefined;
-        readonly ability: Abilities.Entry | undefined;
-        readonly attribute: AgentAttributes.Entry | undefined;
-        readonly criticalFailure: ActionResults.Entry | undefined;
-        readonly failure: ActionResults.Entry | undefined;
-        readonly opportuneFailure: ActionResults.Entry | undefined;
-        readonly success: ActionResults.Entry | undefined;
-        readonly criticalSuccess: ActionResults.Entry | undefined;
-        readonly cannotFail: ActionResults.Entry | undefined;
-        readonly yourMessageEventsMale: AgentActionMessageEvents.Entry | undefined;
-        readonly yourMessageEventsFemale: AgentActionMessageEvents.Entry | undefined;
-        readonly theirMessageEventsMale: AgentActionMessageEvents.Entry | undefined;
-        readonly theirMessageEventsFemale: AgentActionMessageEvents.Entry | undefined;
-        readonly enabledByEffect: Effects.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
+        get ability(): Abilities.Entry | undefined;
+        get attribute(): AgentAttributes.Entry | undefined;
+        get criticalFailure(): ActionResults.Entry | undefined;
+        get failure(): ActionResults.Entry | undefined;
+        get opportuneFailure(): ActionResults.Entry | undefined;
+        get success(): ActionResults.Entry | undefined;
+        get criticalSuccess(): ActionResults.Entry | undefined;
+        get cannotFail(): ActionResults.Entry | undefined;
+        get yourMessageEventsMale(): AgentActionMessageEvents.Entry | undefined;
+        get yourMessageEventsFemale(): AgentActionMessageEvents.Entry | undefined;
+        get theirMessageEventsMale(): AgentActionMessageEvents.Entry | undefined;
+        get theirMessageEventsFemale(): AgentActionMessageEvents.Entry | undefined;
+        get enabledByEffect(): Effects.Entry | undefined;
     }
 }
 export default AgentActions;

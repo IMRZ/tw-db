@@ -9,8 +9,8 @@ export declare namespace StartPosFactionEffectBundles {
         readonly _effectBundle: string;
         readonly duration: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly startPosFaction: StartPosFactions.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get startPosFaction(): StartPosFactions.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default StartPosFactionEffectBundles;

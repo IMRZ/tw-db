@@ -13,11 +13,11 @@ export declare namespace LandUnitArticulatedVehicles {
         readonly _ammoCaissonDestroyedModel: string;
         readonly _ammoCaissonDestruction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly articulatedEntity: BattleEntities.Entry | undefined;
-        readonly ammoCaissonEntity: BattleEntities.Entry | undefined;
-        readonly ammoCaissonModel: WarscapeAnimated.Entry | undefined;
-        readonly ammoCaissonDestroyedModel: WarscapeRigid.Entry | undefined;
-        readonly ammoCaissonDestruction: WarscapeAnimated.Entry | undefined;
+        get articulatedEntity(): BattleEntities.Entry | undefined;
+        get ammoCaissonEntity(): BattleEntities.Entry | undefined;
+        get ammoCaissonModel(): WarscapeAnimated.Entry | undefined;
+        get ammoCaissonDestroyedModel(): WarscapeRigid.Entry | undefined;
+        get ammoCaissonDestruction(): WarscapeAnimated.Entry | undefined;
     }
 }
 export default LandUnitArticulatedVehicles;

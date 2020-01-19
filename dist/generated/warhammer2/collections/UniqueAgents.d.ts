@@ -16,13 +16,13 @@ export declare namespace UniqueAgents {
         readonly _spawnBehaviour: string;
         readonly spawnViaUi: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
-        readonly forename: Names.Entry | undefined;
-        readonly surname: Names.Entry | undefined;
-        readonly otherName: Names.Entry | undefined;
-        readonly clanName: Names.Entry | undefined;
-        readonly agentType: Agents.Entry | undefined;
-        readonly spawnBehaviour: UniqueAgentSpawnBehaviours.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
+        get forename(): Names.Entry | undefined;
+        get surname(): Names.Entry | undefined;
+        get otherName(): Names.Entry | undefined;
+        get clanName(): Names.Entry | undefined;
+        get agentType(): Agents.Entry | undefined;
+        get spawnBehaviour(): UniqueAgentSpawnBehaviours.Entry | undefined;
     }
 }
 export default UniqueAgents;

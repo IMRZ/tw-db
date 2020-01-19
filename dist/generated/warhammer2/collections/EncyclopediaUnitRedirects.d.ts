@@ -7,8 +7,8 @@ export declare namespace EncyclopediaUnitRedirects {
         readonly _unit: string;
         readonly _redirectUnit: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: MainUnits.Entry | undefined;
-        readonly redirectUnit: MainUnits.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get redirectUnit(): MainUnits.Entry | undefined;
     }
 }
 export default EncyclopediaUnitRedirects;

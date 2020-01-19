@@ -19,8 +19,8 @@ export declare namespace MeleeWeapons {
         readonly _meleeWeaponType: string;
         readonly _audioMaterial: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly meleeWeaponType: UnitMeleeWeaponsEnum.Entry | undefined;
-        readonly audioMaterial: AudioMaterialsEnums.Entry | undefined;
+        get meleeWeaponType(): UnitMeleeWeaponsEnum.Entry | undefined;
+        get audioMaterial(): AudioMaterialsEnums.Entry | undefined;
     }
 }
 export default MeleeWeapons;

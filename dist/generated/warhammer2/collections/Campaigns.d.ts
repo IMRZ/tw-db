@@ -23,10 +23,10 @@ export declare namespace Campaigns {
         readonly _battlePath: string;
         readonly terrainLocation: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mapName: CampaignMaps.Entry | undefined;
-        readonly mask: CampaignMapMasks.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
-        readonly battlePath: CampaignBattlePaths.Entry | undefined;
+        get mapName(): CampaignMaps.Entry | undefined;
+        get mask(): CampaignMapMasks.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
+        get battlePath(): CampaignBattlePaths.Entry | undefined;
     }
 }
 export default Campaigns;

@@ -8,8 +8,8 @@ export declare namespace BuildingToUnitAbilitiesJunctions {
         readonly _buildingName: string;
         readonly _ability: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingName: BattlefieldBuildings.Entry | undefined;
-        readonly ability: UnitAbilities.Entry | undefined;
+        get buildingName(): BattlefieldBuildings.Entry | undefined;
+        get ability(): UnitAbilities.Entry | undefined;
     }
 }
 export default BuildingToUnitAbilitiesJunctions;

@@ -10,9 +10,9 @@ export declare namespace GunTypeToProjectiles {
         readonly _shotType: string;
         readonly _muzzleFlash: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly gunType: GunTypes.Entry | undefined;
-        readonly shotType: Projectiles.Entry | undefined;
-        readonly muzzleFlash: GunTypeMuzzleFlashEnum.Entry | undefined;
+        get gunType(): GunTypes.Entry | undefined;
+        get shotType(): Projectiles.Entry | undefined;
+        get muzzleFlash(): GunTypeMuzzleFlashEnum.Entry | undefined;
     }
 }
 export default GunTypeToProjectiles;

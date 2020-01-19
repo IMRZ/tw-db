@@ -8,8 +8,8 @@ export declare namespace MilitaryForceTypeConversions {
         readonly _to: string;
         readonly automatic: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly from: MilitaryForceTypes.Entry | undefined;
-        readonly to: MilitaryForceTypes.Entry | undefined;
+        get from(): MilitaryForceTypes.Entry | undefined;
+        get to(): MilitaryForceTypes.Entry | undefined;
     }
 }
 export default MilitaryForceTypeConversions;

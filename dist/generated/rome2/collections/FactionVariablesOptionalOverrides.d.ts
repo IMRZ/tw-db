@@ -13,9 +13,9 @@ export declare namespace FactionVariablesOptionalOverrides {
         readonly campaignType: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionVariableKey: FactionVariables.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
+        get factionVariableKey(): FactionVariables.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
     }
 }
 export default FactionVariablesOptionalOverrides;

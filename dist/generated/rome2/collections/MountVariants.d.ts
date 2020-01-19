@@ -9,7 +9,7 @@ export declare namespace MountVariants {
         readonly displayKey: string;
         readonly weight: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mountKey: Mounts.Entry | undefined;
+        get mountKey(): Mounts.Entry | undefined;
     }
 }
 export default MountVariants;

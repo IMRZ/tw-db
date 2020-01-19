@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueIdActionResultsAdditionalOutcomesJuncti
         readonly _bonusValueId: string;
         readonly _actionResultsAdditionalOutcomeRecord: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsActionResultsAdditionalOutcomes.Entry | undefined;
-        readonly actionResultsAdditionalOutcomeRecord: ActionResultsAdditionalOutcomes.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsActionResultsAdditionalOutcomes.Entry | undefined;
+        get actionResultsAdditionalOutcomeRecord(): ActionResultsAdditionalOutcomes.Entry | undefined;
     }
 }
 export default EffectBonusValueIdActionResultsAdditionalOutcomesJunctions;

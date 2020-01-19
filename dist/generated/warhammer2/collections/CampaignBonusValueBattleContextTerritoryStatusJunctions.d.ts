@@ -8,8 +8,8 @@ export declare namespace CampaignBonusValueBattleContextTerritoryStatusJunctions
         readonly _battleContextKey: string;
         readonly _territoryStatusKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleContextKey: CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
-        readonly territoryStatusKey: CampaignBonusValueBattleContextTerritoryStatus.Entry | undefined;
+        get battleContextKey(): CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
+        get territoryStatusKey(): CampaignBonusValueBattleContextTerritoryStatus.Entry | undefined;
     }
 }
 export default CampaignBonusValueBattleContextTerritoryStatusJunctions;

@@ -12,10 +12,10 @@ export declare namespace StartPosRegionForeignSlots {
         readonly _region: string;
         readonly _slotSet: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly region: Regions.Entry | undefined;
-        readonly slotSet: SlotSets.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get slotSet(): SlotSets.Entry | undefined;
     }
 }
 export default StartPosRegionForeignSlots;

@@ -8,8 +8,8 @@ export declare namespace CampaignMapAttritionUnitImmunities {
         readonly _attrition: string;
         readonly _unit: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly attrition: CampaignMapAttritions.Entry | undefined;
-        readonly unit: MainUnits.Entry | undefined;
+        get attrition(): CampaignMapAttritions.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
     }
 }
 export default CampaignMapAttritionUnitImmunities;

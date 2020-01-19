@@ -9,7 +9,7 @@ export declare namespace BattleCatchmentOverrideGroupBattles {
         readonly catchmentName: string;
         readonly tileUpgrades: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: BattleCatchmentOverrideGroups.Entry | undefined;
+        get group(): BattleCatchmentOverrideGroups.Entry | undefined;
     }
 }
 export default BattleCatchmentOverrideGroupBattles;

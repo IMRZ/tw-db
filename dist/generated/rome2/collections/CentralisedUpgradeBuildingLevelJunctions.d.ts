@@ -8,8 +8,8 @@ export declare namespace CentralisedUpgradeBuildingLevelJunctions {
         readonly _centralBuildingLevel: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly upgradedBuildingLevel: BuildingLevels.Entry | undefined;
-        readonly centralBuildingLevel: BuildingLevels.Entry | undefined;
+        get upgradedBuildingLevel(): BuildingLevels.Entry | undefined;
+        get centralBuildingLevel(): BuildingLevels.Entry | undefined;
     }
 }
 export default CentralisedUpgradeBuildingLevelJunctions;

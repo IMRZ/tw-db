@@ -9,8 +9,8 @@ export declare namespace CampaignAiPersonalityJunctions {
         readonly _property: string;
         readonly propertyValue: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly personality: CampaignAiPersonalities.Entry | undefined;
-        readonly property: CampaignAiPersonalityProperties.Entry | undefined;
+        get personality(): CampaignAiPersonalities.Entry | undefined;
+        get property(): CampaignAiPersonalityProperties.Entry | undefined;
     }
 }
 export default CampaignAiPersonalityJunctions;

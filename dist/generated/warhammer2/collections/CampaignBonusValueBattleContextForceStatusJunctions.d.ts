@@ -9,8 +9,8 @@ export declare namespace CampaignBonusValueBattleContextForceStatusJunctions {
         readonly _forceStatusKey: string;
         readonly isYours: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleContextKey: CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
-        readonly forceStatusKey: CampaignBonusValueBattleContextForceStatus.Entry | undefined;
+        get battleContextKey(): CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
+        get forceStatusKey(): CampaignBonusValueBattleContextForceStatus.Entry | undefined;
     }
 }
 export default CampaignBonusValueBattleContextForceStatusJunctions;

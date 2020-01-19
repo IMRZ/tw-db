@@ -7,7 +7,7 @@ export declare namespace FactionsParents {
         readonly _faction: string;
         readonly _parentFaction: any;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default FactionsParents;

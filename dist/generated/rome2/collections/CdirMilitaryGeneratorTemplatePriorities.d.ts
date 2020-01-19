@@ -9,8 +9,8 @@ export declare namespace CdirMilitaryGeneratorTemplatePriorities {
         readonly _templateKey: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly configKey: CdirMilitaryGeneratorConfigs.Entry | undefined;
-        readonly templateKey: CdirMilitaryGeneratorTemplates.Entry | undefined;
+        get configKey(): CdirMilitaryGeneratorConfigs.Entry | undefined;
+        get templateKey(): CdirMilitaryGeneratorTemplates.Entry | undefined;
     }
 }
 export default CdirMilitaryGeneratorTemplatePriorities;

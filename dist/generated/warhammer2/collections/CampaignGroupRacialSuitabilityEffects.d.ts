@@ -8,8 +8,8 @@ export declare namespace CampaignGroupRacialSuitabilityEffects {
         readonly _campaignGroup: string;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default CampaignGroupRacialSuitabilityEffects;

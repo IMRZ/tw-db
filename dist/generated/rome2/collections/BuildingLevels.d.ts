@@ -49,14 +49,14 @@ export declare namespace BuildingLevels {
         readonly shouldShowBuildingLevelInUiForTechnology: boolean;
         readonly isNew: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly chain: BuildingChains.Entry | undefined;
-        readonly commodity: Commodities.Entry | undefined;
-        readonly religionRequirement: Religions.Entry | undefined;
-        readonly firstInWorldBundle: EffectBundles.Entry | undefined;
-        readonly resourceRequirement: Resources.Entry | undefined;
-        readonly workingModel: WarscapeRigid.Entry | undefined;
-        readonly buildingInstanceKey: BuildingInstances.Entry | undefined;
-        readonly audioBuildingType: AudioCampaignBuildingEnums.Entry | undefined;
+        get chain(): BuildingChains.Entry | undefined;
+        get commodity(): Commodities.Entry | undefined;
+        get religionRequirement(): Religions.Entry | undefined;
+        get firstInWorldBundle(): EffectBundles.Entry | undefined;
+        get resourceRequirement(): Resources.Entry | undefined;
+        get workingModel(): WarscapeRigid.Entry | undefined;
+        get buildingInstanceKey(): BuildingInstances.Entry | undefined;
+        get audioBuildingType(): AudioCampaignBuildingEnums.Entry | undefined;
     }
 }
 export default BuildingLevels;

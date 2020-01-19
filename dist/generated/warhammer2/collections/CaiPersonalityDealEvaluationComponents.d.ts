@@ -24,8 +24,8 @@ export declare namespace CaiPersonalityDealEvaluationComponents {
         readonly warBreakTreatyBonusTowardsVictoryRegionOwners: number;
         readonly peaceSignTreatyPenaltyTowardsVictoryRegionOwners: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly shortDescription: DiplomacyStrings.Entry | undefined;
-        readonly longDescription: DiplomacyStrings.Entry | undefined;
+        get shortDescription(): DiplomacyStrings.Entry | undefined;
+        get longDescription(): DiplomacyStrings.Entry | undefined;
     }
 }
 export default CaiPersonalityDealEvaluationComponents;

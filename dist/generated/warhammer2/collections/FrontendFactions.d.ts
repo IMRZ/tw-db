@@ -12,8 +12,8 @@ export declare namespace FrontendFactions {
         readonly localisedInfo: string;
         readonly sortOrder: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly video: Videos.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get video(): Videos.Entry | undefined;
     }
 }
 export default FrontendFactions;

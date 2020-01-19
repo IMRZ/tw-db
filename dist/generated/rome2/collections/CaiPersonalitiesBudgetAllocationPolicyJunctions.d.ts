@@ -11,9 +11,9 @@ export declare namespace CaiPersonalitiesBudgetAllocationPolicyJunctions {
         readonly _budgetAllocationKey: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly budgetPolicyKey: CaiPersonalitiesBudgetPolicies.Entry | undefined;
-        readonly budgetContextKey: CaiStrategicContextTypes.Entry | undefined;
-        readonly budgetAllocationKey: CaiPersonalitiesBudgetAllocations.Entry | undefined;
+        get budgetPolicyKey(): CaiPersonalitiesBudgetPolicies.Entry | undefined;
+        get budgetContextKey(): CaiStrategicContextTypes.Entry | undefined;
+        get budgetAllocationKey(): CaiPersonalitiesBudgetAllocations.Entry | undefined;
     }
 }
 export default CaiPersonalitiesBudgetAllocationPolicyJunctions;

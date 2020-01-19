@@ -27,11 +27,11 @@ export declare namespace FrontendFactionLeaders {
         readonly difficulty: string;
         readonly startposMap: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly preludeBattle: Battles.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
-        readonly video: Videos.Entry | undefined;
-        readonly loadingScreenIntroVideo: Videos.Entry | undefined;
-        readonly voiceover: AudioVoActors.Entry | undefined;
+        get preludeBattle(): Battles.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
+        get video(): Videos.Entry | undefined;
+        get loadingScreenIntroVideo(): Videos.Entry | undefined;
+        get voiceover(): AudioVoActors.Entry | undefined;
     }
 }
 export default FrontendFactionLeaders;

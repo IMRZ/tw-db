@@ -13,11 +13,11 @@ export declare namespace CaiConstructionSystemProvinceTemplateAssignmentPolicies
         readonly nonPortProvinceMilitaryIdealPercentage: number;
         readonly portProvinceMilitaryIdealPercentage: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly capitalProvinceTemplate: CaiConstructionSystemTemplates.Entry | undefined;
-        readonly militaryProvinceTemplate: CaiConstructionSystemTemplates.Entry | undefined;
-        readonly economicProvinceTemplate: CaiConstructionSystemTemplates.Entry | undefined;
-        readonly militaryPortProvinceTemplate: CaiConstructionSystemTemplates.Entry | undefined;
-        readonly economicPortProvinceTemplate: CaiConstructionSystemTemplates.Entry | undefined;
+        get capitalProvinceTemplate(): CaiConstructionSystemTemplates.Entry | undefined;
+        get militaryProvinceTemplate(): CaiConstructionSystemTemplates.Entry | undefined;
+        get economicProvinceTemplate(): CaiConstructionSystemTemplates.Entry | undefined;
+        get militaryPortProvinceTemplate(): CaiConstructionSystemTemplates.Entry | undefined;
+        get economicPortProvinceTemplate(): CaiConstructionSystemTemplates.Entry | undefined;
     }
 }
 export default CaiConstructionSystemProvinceTemplateAssignmentPolicies;

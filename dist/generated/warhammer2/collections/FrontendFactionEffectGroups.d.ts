@@ -10,8 +10,8 @@ export declare namespace FrontendFactionEffectGroups {
         readonly _campaign: string;
         readonly uiSection: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionLeader: FrontendFactionLeaders.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get factionLeader(): FrontendFactionLeaders.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default FrontendFactionEffectGroups;

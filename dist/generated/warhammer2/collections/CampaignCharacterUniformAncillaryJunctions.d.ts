@@ -10,9 +10,9 @@ export declare namespace CampaignCharacterUniformAncillaryJunctions {
         readonly _ancillary: string;
         readonly _uniform: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly artSet: CampaignCharacterArtSets.Entry | undefined;
-        readonly ancillary: Ancillaries.Entry | undefined;
-        readonly uniform: AgentUniforms.Entry | undefined;
+        get artSet(): CampaignCharacterArtSets.Entry | undefined;
+        get ancillary(): Ancillaries.Entry | undefined;
+        get uniform(): AgentUniforms.Entry | undefined;
     }
 }
 export default CampaignCharacterUniformAncillaryJunctions;

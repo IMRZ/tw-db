@@ -12,9 +12,9 @@ export declare namespace CdirEventsDilemmaPayloads {
         readonly _payloadKey: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly dilemmaKey: Dilemmas.Entry | undefined;
-        readonly choiceKey: CdirEventsDilemmaChoices.Entry | undefined;
-        readonly payloadKey: CdirEventsPayloads.Entry | undefined;
+        get dilemmaKey(): Dilemmas.Entry | undefined;
+        get choiceKey(): CdirEventsDilemmaChoices.Entry | undefined;
+        get payloadKey(): CdirEventsPayloads.Entry | undefined;
     }
 }
 export default CdirEventsDilemmaPayloads;

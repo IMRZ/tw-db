@@ -9,7 +9,7 @@ export declare namespace WarscapeRigidLod {
         readonly range: string;
         readonly _rigid: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly rigid: WarscapeRigid.Entry | undefined;
+        get rigid(): WarscapeRigid.Entry | undefined;
     }
 }
 export default WarscapeRigidLod;

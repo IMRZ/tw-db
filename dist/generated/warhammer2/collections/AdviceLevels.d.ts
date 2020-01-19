@@ -30,8 +30,8 @@ export declare namespace AdviceLevels {
         readonly forLoadingScreen: boolean;
         readonly movieLink: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly adviceThread: AdviceThreads.Entry | undefined;
-        readonly advisorName: Advisors.Entry | undefined;
+        get adviceThread(): AdviceThreads.Entry | undefined;
+        get advisorName(): Advisors.Entry | undefined;
     }
 }
 export default AdviceLevels;

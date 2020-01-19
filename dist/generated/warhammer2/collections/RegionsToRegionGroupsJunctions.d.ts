@@ -8,8 +8,8 @@ export declare namespace RegionsToRegionGroupsJunctions {
         readonly _regionGroup: string;
         readonly _region: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly regionGroup: RegionGroups.Entry | undefined;
-        readonly region: Regions.Entry | undefined;
+        get regionGroup(): RegionGroups.Entry | undefined;
+        get region(): Regions.Entry | undefined;
     }
 }
 export default RegionsToRegionGroupsJunctions;

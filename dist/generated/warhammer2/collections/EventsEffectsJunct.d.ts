@@ -9,8 +9,8 @@ export declare namespace EventsEffectsJunct {
         readonly _effect: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly event: Events.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
+        get event(): Events.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
     }
 }
 export default EventsEffectsJunct;

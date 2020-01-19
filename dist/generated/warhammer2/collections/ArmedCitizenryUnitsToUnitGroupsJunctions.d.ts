@@ -10,8 +10,8 @@ export declare namespace ArmedCitizenryUnitsToUnitGroupsJunctions {
         readonly _unit: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitGroup: ArmedCitizenryUnitGroups.Entry | undefined;
-        readonly unit: MainUnits.Entry | undefined;
+        get unitGroup(): ArmedCitizenryUnitGroups.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
     }
 }
 export default ArmedCitizenryUnitsToUnitGroupsJunctions;

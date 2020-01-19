@@ -14,7 +14,7 @@ export declare namespace EncyclopediaBlocks {
         readonly imageClass: string;
         readonly video: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly pageKey: EncyclopediaPages.Entry | undefined;
+        get pageKey(): EncyclopediaPages.Entry | undefined;
     }
 }
 export default EncyclopediaBlocks;

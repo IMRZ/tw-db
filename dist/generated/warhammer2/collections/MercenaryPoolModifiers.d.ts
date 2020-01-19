@@ -11,7 +11,7 @@ export declare namespace MercenaryPoolModifiers {
         readonly costModifier: number;
         readonly key: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly poolType: MercenaryPoolTypeEnums.Entry | undefined;
+        get poolType(): MercenaryPoolTypeEnums.Entry | undefined;
     }
 }
 export default MercenaryPoolModifiers;

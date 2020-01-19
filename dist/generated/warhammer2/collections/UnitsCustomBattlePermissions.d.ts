@@ -15,11 +15,12 @@ export declare namespace UnitsCustomBattlePermissions {
         readonly generalPortrait: string;
         readonly _generalUniform: string;
         readonly _setPieceCharacter: string;
+        readonly campaignExclusive: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: MainUnits.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly generalUniform: AgentUniforms.Entry | undefined;
-        readonly setPieceCharacter: BattleSetPieceArmiesCharacters.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get generalUniform(): AgentUniforms.Entry | undefined;
+        get setPieceCharacter(): BattleSetPieceArmiesCharacters.Entry | undefined;
     }
 }
 export default UnitsCustomBattlePermissions;

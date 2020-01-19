@@ -8,7 +8,7 @@ export declare namespace CaiConstructionSystemSuperchainHints {
         readonly militarySpecialisationRecommended: boolean;
         readonly economicSpecialisationRecommended: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly superChainKey: BuildingSuperchains.Entry | undefined;
+        get superChainKey(): BuildingSuperchains.Entry | undefined;
     }
 }
 export default CaiConstructionSystemSuperchainHints;

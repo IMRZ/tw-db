@@ -30,10 +30,10 @@ export declare namespace Deployables {
         readonly maxRows: number;
         readonly ignitionThreshold: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly model: ModelsDeployables.Entry | undefined;
-        readonly model2: ModelsDeployables.Entry | undefined;
-        readonly statMod: UiUnitStats.Entry | undefined;
-        readonly how: UnitStatModifiersHowEnums.Entry | undefined;
+        get model(): ModelsDeployables.Entry | undefined;
+        get model2(): ModelsDeployables.Entry | undefined;
+        get statMod(): UiUnitStats.Entry | undefined;
+        get how(): UnitStatModifiersHowEnums.Entry | undefined;
     }
 }
 export default Deployables;

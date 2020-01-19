@@ -15,11 +15,11 @@ export declare namespace UnitSetToUnitJunctions {
         readonly _unitClass: string;
         readonly exclude: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitSet: UnitSets.Entry | undefined;
-        readonly unitRecord: MainUnits.Entry | undefined;
-        readonly unitCaste: UnitCastes.Entry | undefined;
-        readonly unitCategory: UnitCategory.Entry | undefined;
-        readonly unitClass: UnitClass.Entry | undefined;
+        get unitSet(): UnitSets.Entry | undefined;
+        get unitRecord(): MainUnits.Entry | undefined;
+        get unitCaste(): UnitCastes.Entry | undefined;
+        get unitCategory(): UnitCategory.Entry | undefined;
+        get unitClass(): UnitClass.Entry | undefined;
     }
 }
 export default UnitSetToUnitJunctions;

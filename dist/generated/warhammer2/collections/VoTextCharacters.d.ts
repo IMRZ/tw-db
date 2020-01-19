@@ -8,8 +8,8 @@ export declare namespace VoTextCharacters {
         readonly _voText: number;
         readonly _voCharacter: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly voText: VoTexts.Entry | undefined;
-        readonly voCharacter: VoCharacters.Entry | undefined;
+        get voText(): VoTexts.Entry | undefined;
+        get voCharacter(): VoCharacters.Entry | undefined;
     }
 }
 export default VoTextCharacters;

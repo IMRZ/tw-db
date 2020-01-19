@@ -10,9 +10,9 @@ export declare namespace StartPosVictoryConditions {
         readonly _region: string;
         readonly _victoryType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly startPosFaction: StartPosFactions.Entry | undefined;
-        readonly region: Regions.Entry | undefined;
-        readonly victoryType: VictoryTypes.Entry | undefined;
+        get startPosFaction(): StartPosFactions.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get victoryType(): VictoryTypes.Entry | undefined;
     }
 }
 export default StartPosVictoryConditions;

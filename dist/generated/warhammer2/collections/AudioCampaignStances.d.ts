@@ -14,10 +14,10 @@ export declare namespace AudioCampaignStances {
         readonly _factionRecord: string;
         readonly _overridingVoStance: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly stance: CampaignStances.Entry | undefined;
-        readonly subcultureRecord: CulturesSubcultures.Entry | undefined;
-        readonly factionRecord: Factions.Entry | undefined;
-        readonly overridingVoStance: CampaignStances.Entry | undefined;
+        get stance(): CampaignStances.Entry | undefined;
+        get subcultureRecord(): CulturesSubcultures.Entry | undefined;
+        get factionRecord(): Factions.Entry | undefined;
+        get overridingVoStance(): CampaignStances.Entry | undefined;
     }
 }
 export default AudioCampaignStances;

@@ -16,10 +16,10 @@ export declare namespace CharacterSkillNodeSets {
         readonly forArmy: boolean;
         readonly forNavy: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
-        readonly agentKey: Agents.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
+        get agentKey(): Agents.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default CharacterSkillNodeSets;

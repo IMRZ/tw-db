@@ -12,9 +12,9 @@ export declare namespace CampaignMapTownsAndPorts {
         readonly onscreenName: string;
         readonly _template: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly slotType: Slots.Entry | undefined;
-        readonly template: CampaignMapSlotsTemplates.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get slotType(): Slots.Entry | undefined;
+        get template(): CampaignMapSlotsTemplates.Entry | undefined;
     }
 }
 export default CampaignMapTownsAndPorts;

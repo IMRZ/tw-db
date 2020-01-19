@@ -8,7 +8,7 @@ export declare namespace CampaignSettlementDisplayBuildingsOverlays {
         readonly prefabType: string;
         readonly overlayBmd: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly modelId: CampaignSettlementDisplayBuildingModelIds.Entry | undefined;
+        get modelId(): CampaignSettlementDisplayBuildingModelIds.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayBuildingsOverlays;

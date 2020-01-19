@@ -11,8 +11,8 @@ export declare namespace CampaignSettlementDisplayBuildingConstructions {
         readonly phase: number;
         readonly buildingPath: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly displayBuildingKey: CampaignSettlementDisplayBuildingIds.Entry | undefined;
-        readonly constructionType: CampaignSettlementDisplayBuildingConstructionEnums.Entry | undefined;
+        get displayBuildingKey(): CampaignSettlementDisplayBuildingIds.Entry | undefined;
+        get constructionType(): CampaignSettlementDisplayBuildingConstructionEnums.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayBuildingConstructions;

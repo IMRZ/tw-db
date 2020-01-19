@@ -8,8 +8,8 @@ export declare namespace CampaignBonusValueBattleContextCultureJunctions {
         readonly _battleContextKey: string;
         readonly _cultureKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleContextKey: CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
-        readonly cultureKey: Cultures.Entry | undefined;
+        get battleContextKey(): CampaignBonusValueBattleContextSpecifiers.Entry | undefined;
+        get cultureKey(): Cultures.Entry | undefined;
     }
 }
 export default CampaignBonusValueBattleContextCultureJunctions;

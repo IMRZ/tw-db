@@ -11,8 +11,8 @@ export declare namespace StartPosGovernorships {
         readonly lowerClassTaxRate: number;
         readonly upperClassTaxRate: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly governorship: Governorships.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get governorship(): Governorships.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default StartPosGovernorships;

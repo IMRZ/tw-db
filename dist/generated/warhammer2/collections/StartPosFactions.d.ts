@@ -34,14 +34,14 @@ export declare namespace StartPosFactions {
         readonly unique: boolean;
         readonly _caiPersonalityGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly campaign: StartPosCalendars.Entry | undefined;
-        readonly governmentType: GovernmentTypes.Entry | undefined;
-        readonly stateReligion: Religions.Entry | undefined;
-        readonly aiManager: CampaignAiManagers.Entry | undefined;
-        readonly caiStartingPersonality: CaiPersonalities.Entry | undefined;
-        readonly cdirMilitaryGeneratorConfig: CdirMilitaryGeneratorConfigs.Entry | undefined;
-        readonly caiPersonalityGroup: CaiPersonalityGroups.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get campaign(): StartPosCalendars.Entry | undefined;
+        get governmentType(): GovernmentTypes.Entry | undefined;
+        get stateReligion(): Religions.Entry | undefined;
+        get aiManager(): CampaignAiManagers.Entry | undefined;
+        get caiStartingPersonality(): CaiPersonalities.Entry | undefined;
+        get cdirMilitaryGeneratorConfig(): CdirMilitaryGeneratorConfigs.Entry | undefined;
+        get caiPersonalityGroup(): CaiPersonalityGroups.Entry | undefined;
     }
 }
 export default StartPosFactions;

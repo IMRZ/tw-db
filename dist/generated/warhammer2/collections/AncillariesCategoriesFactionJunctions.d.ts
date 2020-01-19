@@ -9,8 +9,8 @@ export declare namespace AncillariesCategoriesFactionJunctions {
         readonly _faction: string;
         readonly allowedPerCharacter: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ancillaryCategory: AncillariesCategories.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get ancillaryCategory(): AncillariesCategories.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default AncillariesCategoriesFactionJunctions;

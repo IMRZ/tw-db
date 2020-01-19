@@ -8,8 +8,8 @@ export declare namespace MilitaryForceTypeFeatureJunctions {
         readonly _forceType: string;
         readonly _feature: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly forceType: MilitaryForceTypes.Entry | undefined;
-        readonly feature: MilitaryForceTypeFeatures.Entry | undefined;
+        get forceType(): MilitaryForceTypes.Entry | undefined;
+        get feature(): MilitaryForceTypeFeatures.Entry | undefined;
     }
 }
 export default MilitaryForceTypeFeatureJunctions;

@@ -8,8 +8,8 @@ export declare namespace CampaignEffectScopeCharacterForceRelationshipJunctions 
         readonly _campaignEffectScopeKey: string;
         readonly _forceRelationshipKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignEffectScopeKey: CampaignEffectScopes.Entry | undefined;
-        readonly forceRelationshipKey: CampaignEffectScopeCharacterForceRelationships.Entry | undefined;
+        get campaignEffectScopeKey(): CampaignEffectScopes.Entry | undefined;
+        get forceRelationshipKey(): CampaignEffectScopeCharacterForceRelationships.Entry | undefined;
     }
 }
 export default CampaignEffectScopeCharacterForceRelationshipJunctions;

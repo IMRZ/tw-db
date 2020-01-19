@@ -10,8 +10,8 @@ export declare namespace CaiPersonalityDiplomaticEventValues {
         readonly value: number;
         readonly falloff: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly componentId: CaiPersonalityDiplomaticComponents.Entry | undefined;
-        readonly eventId: CaiPersonalityDiplomaticEvents.Entry | undefined;
+        get componentId(): CaiPersonalityDiplomaticComponents.Entry | undefined;
+        get eventId(): CaiPersonalityDiplomaticEvents.Entry | undefined;
     }
 }
 export default CaiPersonalityDiplomaticEventValues;

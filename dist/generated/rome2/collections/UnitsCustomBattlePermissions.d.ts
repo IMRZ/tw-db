@@ -11,8 +11,8 @@ export declare namespace UnitsCustomBattlePermissions {
         readonly siegeUnitAttacker: boolean;
         readonly siegeUnitDefender: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: MainUnits.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default UnitsCustomBattlePermissions;

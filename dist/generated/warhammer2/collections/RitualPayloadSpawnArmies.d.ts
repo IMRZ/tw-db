@@ -12,9 +12,9 @@ export declare namespace RitualPayloadSpawnArmies {
         readonly spawnAtRitualSite: boolean;
         readonly _factionOverride: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly payload: RitualPayloads.Entry | undefined;
-        readonly spawnableForce: SpawnableForces.Entry | undefined;
-        readonly factionOverride: Factions.Entry | undefined;
+        get payload(): RitualPayloads.Entry | undefined;
+        get spawnableForce(): SpawnableForces.Entry | undefined;
+        get factionOverride(): Factions.Entry | undefined;
     }
 }
 export default RitualPayloadSpawnArmies;

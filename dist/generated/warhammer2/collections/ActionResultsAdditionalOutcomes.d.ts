@@ -18,11 +18,11 @@ export declare namespace ActionResultsAdditionalOutcomes {
         readonly affectsTarget: boolean;
         readonly _advancementStage: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly actionResultKey: ActionResults.Entry | undefined;
-        readonly outcome: ActionResultsAdditionalOutcomesEnums.Entry | undefined;
-        readonly effectRecord: Effects.Entry | undefined;
-        readonly effectScopeRecord: CampaignEffectScopes.Entry | undefined;
-        readonly advancementStage: EffectBundleAdvancementStages.Entry | undefined;
+        get actionResultKey(): ActionResults.Entry | undefined;
+        get outcome(): ActionResultsAdditionalOutcomesEnums.Entry | undefined;
+        get effectRecord(): Effects.Entry | undefined;
+        get effectScopeRecord(): CampaignEffectScopes.Entry | undefined;
+        get advancementStage(): EffectBundleAdvancementStages.Entry | undefined;
     }
 }
 export default ActionResultsAdditionalOutcomes;

@@ -10,9 +10,9 @@ export declare namespace BattlefieldBuildingsWithProjectilesNames {
         readonly _projectile: string;
         readonly _name: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingCategory: BattlefieldBuildingCategories.Entry | undefined;
-        readonly projectile: Projectiles.Entry | undefined;
-        readonly name: BattlefieldBuildingsNames.Entry | undefined;
+        get buildingCategory(): BattlefieldBuildingCategories.Entry | undefined;
+        get projectile(): Projectiles.Entry | undefined;
+        get name(): BattlefieldBuildingsNames.Entry | undefined;
     }
 }
 export default BattlefieldBuildingsWithProjectilesNames;

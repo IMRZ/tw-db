@@ -9,8 +9,8 @@ export declare namespace GraphicsSettingsToGraphicsOptionsJunctions {
         readonly _option: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly setting: GraphicsSettings.Entry | undefined;
-        readonly option: GraphicsSettingsOptions.Entry | undefined;
+        get setting(): GraphicsSettings.Entry | undefined;
+        get option(): GraphicsSettingsOptions.Entry | undefined;
     }
 }
 export default GraphicsSettingsToGraphicsOptionsJunctions;

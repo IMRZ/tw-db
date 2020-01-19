@@ -8,8 +8,8 @@ export declare namespace EncyclopediaAgentManualBlockLinks {
         readonly _agentKey: string;
         readonly _blockKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentKey: Agents.Entry | undefined;
-        readonly blockKey: EncyclopediaBlocks.Entry | undefined;
+        get agentKey(): Agents.Entry | undefined;
+        get blockKey(): EncyclopediaBlocks.Entry | undefined;
     }
 }
 export default EncyclopediaAgentManualBlockLinks;

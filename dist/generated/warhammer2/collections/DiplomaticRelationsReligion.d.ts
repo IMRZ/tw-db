@@ -9,7 +9,7 @@ export declare namespace DiplomaticRelationsReligion {
         readonly relationsModifier: number;
         readonly religiousUnhappinessModifier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly religionA: Religions.Entry | undefined;
+        get religionA(): Religions.Entry | undefined;
     }
 }
 export default DiplomaticRelationsReligion;

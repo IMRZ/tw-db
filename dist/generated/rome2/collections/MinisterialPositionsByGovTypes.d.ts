@@ -15,10 +15,10 @@ export declare namespace MinisterialPositionsByGovTypes {
         readonly loyaltyGained: number;
         readonly loyaltyOnLoss: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly ministerKey: MinisterialPositions.Entry | undefined;
-        readonly governmentType: GovernmentTypes.Entry | undefined;
-        readonly gender: Genders.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get ministerKey(): MinisterialPositions.Entry | undefined;
+        get governmentType(): GovernmentTypes.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
     }
 }
 export default MinisterialPositionsByGovTypes;

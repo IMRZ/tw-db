@@ -8,8 +8,8 @@ export declare namespace CampaignGroupPendingBattlePurchasableEffects {
         readonly _campaignGroup: string;
         readonly _purchasableEffect: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly purchasableEffect: PurchasableEffects.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get purchasableEffect(): PurchasableEffects.Entry | undefined;
     }
 }
 export default CampaignGroupPendingBattlePurchasableEffects;

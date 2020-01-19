@@ -8,8 +8,8 @@ export declare namespace BuildingChainAvailabilitySets {
         readonly _id: string;
         readonly _buildingChain: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly id: BuildingChainAvailabilitySetIds.Entry | undefined;
-        readonly buildingChain: BuildingChains.Entry | undefined;
+        get id(): BuildingChainAvailabilitySetIds.Entry | undefined;
+        get buildingChain(): BuildingChains.Entry | undefined;
     }
 }
 export default BuildingChainAvailabilitySets;

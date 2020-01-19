@@ -13,7 +13,7 @@ export declare namespace CharacterTraitLevels {
         readonly explanationText: string;
         readonly removalText: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trait: CharacterTraits.Entry | undefined;
+        get trait(): CharacterTraits.Entry | undefined;
     }
 }
 export default CharacterTraitLevels;

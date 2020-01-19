@@ -11,9 +11,9 @@ export declare namespace FrontendFactionEffectJunctions {
         readonly value: number;
         readonly _scope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: FrontendFactionEffectGroups.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
-        readonly scope: CampaignEffectScopes.Entry | undefined;
+        get group(): FrontendFactionEffectGroups.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get scope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default FrontendFactionEffectJunctions;

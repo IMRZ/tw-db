@@ -11,8 +11,8 @@ export declare namespace CampaignsCampaignVariablesJunctions {
         readonly optionalDifficultyLevel: string;
         readonly optionalCampaignType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly variableKey: CampaignVariables.Entry | undefined;
-        readonly campaignName: Campaigns.Entry | undefined;
+        get variableKey(): CampaignVariables.Entry | undefined;
+        get campaignName(): Campaigns.Entry | undefined;
     }
 }
 export default CampaignsCampaignVariablesJunctions;

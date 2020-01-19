@@ -15,7 +15,7 @@ export declare namespace FactionUniformColours {
         readonly tertiaryColourG: number;
         readonly tertiaryColourB: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionName: Factions.Entry | undefined;
+        get factionName(): Factions.Entry | undefined;
     }
 }
 export default FactionUniformColours;

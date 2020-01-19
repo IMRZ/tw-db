@@ -20,8 +20,8 @@ export declare namespace AgentSubtypes {
         readonly loyaltyIsApplicable: boolean;
         readonly contributesToAgentCap: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly associatedUnitOverride: MainUnits.Entry | undefined;
-        readonly audioVoiceoverActorGroup: AudioVoActorGroups.Entry | undefined;
+        get associatedUnitOverride(): MainUnits.Entry | undefined;
+        get audioVoiceoverActorGroup(): AudioVoActorGroups.Entry | undefined;
     }
 }
 export default AgentSubtypes;

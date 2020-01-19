@@ -9,8 +9,8 @@ export declare namespace CampaignGroupFoodEffects {
         readonly _group: string;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: CampaignGroups.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get group(): CampaignGroups.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default CampaignGroupFoodEffects;

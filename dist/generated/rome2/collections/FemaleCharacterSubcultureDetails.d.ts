@@ -12,8 +12,8 @@ export declare namespace FemaleCharacterSubcultureDetails {
         readonly chanceToSpawn: number;
         readonly _trait: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly trait: TraitInfo.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get trait(): TraitInfo.Entry | undefined;
     }
 }
 export default FemaleCharacterSubcultureDetails;

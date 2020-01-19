@@ -12,9 +12,9 @@ export declare namespace CaiPersonalityCulturalMultipliers {
         readonly negativeAttitudeMultiplier: number;
         readonly attitudeBase: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly componentId: CaiPersonalityCulturalComponents.Entry | undefined;
-        readonly source: Religions.Entry | undefined;
-        readonly target: Religions.Entry | undefined;
+        get componentId(): CaiPersonalityCulturalComponents.Entry | undefined;
+        get source(): Religions.Entry | undefined;
+        get target(): Religions.Entry | undefined;
     }
 }
 export default CaiPersonalityCulturalMultipliers;

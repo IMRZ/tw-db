@@ -7,7 +7,7 @@ export declare namespace CaiRitualWeights {
         readonly _ritual: string;
         readonly weight: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ritual: Rituals.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
     }
 }
 export default CaiRitualWeights;

@@ -15,8 +15,8 @@ export declare namespace CampaignBattlePresets {
         readonly isUniqueSettlement: boolean;
         readonly _campaignMap: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleType: CampaignBattleTypeEnums.Entry | undefined;
-        readonly campaignMap: CampaignMapPlayableAreas.Entry | undefined;
+        get battleType(): CampaignBattleTypeEnums.Entry | undefined;
+        get campaignMap(): CampaignMapPlayableAreas.Entry | undefined;
     }
 }
 export default CampaignBattlePresets;

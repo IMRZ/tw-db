@@ -18,10 +18,10 @@ export declare namespace ActionResultsAdditionalOutcomes {
         readonly subterfugeValueCoefficient: number;
         readonly zealValueCoefficient: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly actionResultKey: ActionResults.Entry | undefined;
-        readonly outcome: ActionResultsAdditionalOutcomesEnums.Entry | undefined;
-        readonly effectRecord: Effects.Entry | undefined;
-        readonly effectScopeRecord: CampaignEffectScopes.Entry | undefined;
+        get actionResultKey(): ActionResults.Entry | undefined;
+        get outcome(): ActionResultsAdditionalOutcomesEnums.Entry | undefined;
+        get effectRecord(): Effects.Entry | undefined;
+        get effectScopeRecord(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default ActionResultsAdditionalOutcomes;

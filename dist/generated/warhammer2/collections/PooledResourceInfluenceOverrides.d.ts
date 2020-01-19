@@ -11,9 +11,9 @@ export declare namespace PooledResourceInfluenceOverrides {
         readonly _pooledResourceFactor: string;
         readonly influenceToPooledResourceConversionFactor: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly pooledResource: PooledResources.Entry | undefined;
-        readonly pooledResourceFactor: PooledResourceFactors.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get pooledResource(): PooledResources.Entry | undefined;
+        get pooledResourceFactor(): PooledResourceFactors.Entry | undefined;
     }
 }
 export default PooledResourceInfluenceOverrides;

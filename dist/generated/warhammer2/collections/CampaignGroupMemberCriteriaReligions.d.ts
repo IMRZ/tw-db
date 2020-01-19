@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaReligions {
         readonly _member: string;
         readonly _religion: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly religion: Religions.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get religion(): Religions.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaReligions;

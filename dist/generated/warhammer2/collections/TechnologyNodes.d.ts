@@ -22,12 +22,12 @@ export declare namespace TechnologyNodes {
         readonly foodCost: number;
         readonly _resourceCost: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly technologyNodeSet: TechnologyNodeSets.Entry | undefined;
-        readonly technologyKey: Technologies.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
-        readonly optionalUiGroup: TechnologyUiGroups.Entry | undefined;
-        readonly resourceCost: ResourceCosts.Entry | undefined;
+        get technologyNodeSet(): TechnologyNodeSets.Entry | undefined;
+        get technologyKey(): Technologies.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
+        get optionalUiGroup(): TechnologyUiGroups.Entry | undefined;
+        get resourceCost(): ResourceCosts.Entry | undefined;
     }
 }
 export default TechnologyNodes;

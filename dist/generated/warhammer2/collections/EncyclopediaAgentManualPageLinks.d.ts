@@ -8,8 +8,8 @@ export declare namespace EncyclopediaAgentManualPageLinks {
         readonly _agentKey: string;
         readonly _pageKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentKey: Agents.Entry | undefined;
-        readonly pageKey: EncyclopediaPages.Entry | undefined;
+        get agentKey(): Agents.Entry | undefined;
+        get pageKey(): EncyclopediaPages.Entry | undefined;
     }
 }
 export default EncyclopediaAgentManualPageLinks;

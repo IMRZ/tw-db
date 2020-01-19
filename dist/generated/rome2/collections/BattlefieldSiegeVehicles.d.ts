@@ -26,9 +26,9 @@ export declare namespace BattlefieldSiegeVehicles {
         readonly attackDamage: number;
         readonly selectionPriority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly model: ModelsSieges.Entry | undefined;
-        readonly battleEntity: BattleEntities.Entry | undefined;
-        readonly engine: BattlefieldEnginesAutonomous.Entry | undefined;
+        get model(): ModelsSieges.Entry | undefined;
+        get battleEntity(): BattleEntities.Entry | undefined;
+        get engine(): BattlefieldEnginesAutonomous.Entry | undefined;
     }
 }
 export default BattlefieldSiegeVehicles;

@@ -10,8 +10,8 @@ export declare namespace CdirEventsMissionOptionJunctions {
         readonly _optionKey: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missionKey: Missions.Entry | undefined;
-        readonly optionKey: CdirEventsMissionOptions.Entry | undefined;
+        get missionKey(): Missions.Entry | undefined;
+        get optionKey(): CdirEventsMissionOptions.Entry | undefined;
     }
 }
 export default CdirEventsMissionOptionJunctions;

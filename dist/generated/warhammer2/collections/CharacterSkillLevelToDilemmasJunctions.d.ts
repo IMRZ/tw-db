@@ -10,8 +10,8 @@ export declare namespace CharacterSkillLevelToDilemmasJunctions {
         readonly _dilemmaKey: string;
         readonly randomSelection: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterSkillKey: CharacterSkills.Entry | undefined;
-        readonly dilemmaKey: Dilemmas.Entry | undefined;
+        get characterSkillKey(): CharacterSkills.Entry | undefined;
+        get dilemmaKey(): Dilemmas.Entry | undefined;
     }
 }
 export default CharacterSkillLevelToDilemmasJunctions;

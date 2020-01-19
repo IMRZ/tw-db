@@ -8,7 +8,7 @@ export declare namespace PoliticalActionsEffectBundles {
         readonly _effectBundle: string;
         readonly duration: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default PoliticalActionsEffectBundles;

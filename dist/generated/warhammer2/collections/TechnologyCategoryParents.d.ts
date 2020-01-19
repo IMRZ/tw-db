@@ -7,8 +7,8 @@ export declare namespace TechnologyCategoryParents {
         readonly _parentCategory: string;
         readonly _childCategory: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly parentCategory: TechnologyCategories.Entry | undefined;
-        readonly childCategory: TechnologyCategories.Entry | undefined;
+        get parentCategory(): TechnologyCategories.Entry | undefined;
+        get childCategory(): TechnologyCategories.Entry | undefined;
     }
 }
 export default TechnologyCategoryParents;

@@ -8,8 +8,8 @@ export declare namespace RegionToProvinceJunctions {
         readonly _region: string;
         readonly _province: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly province: Provinces.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get province(): Provinces.Entry | undefined;
     }
 }
 export default RegionToProvinceJunctions;

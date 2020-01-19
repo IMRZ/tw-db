@@ -11,7 +11,7 @@ export declare namespace TExcImplementedTables {
         readonly modified: boolean;
         readonly _destinationPack: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly destinationPack: TExcPackCategories.Entry | undefined;
+        get destinationPack(): TExcPackCategories.Entry | undefined;
     }
 }
 export default TExcImplementedTables;

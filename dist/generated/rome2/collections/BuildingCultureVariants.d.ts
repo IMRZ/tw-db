@@ -28,16 +28,16 @@ export declare namespace BuildingCultureVariants {
         readonly _flavour: string;
         readonly displayTooltip: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly building: BuildingLevels.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly battlefieldBuilding: BattlefieldBuildings.Entry | undefined;
-        readonly artpiece: WarscapeRigid.Entry | undefined;
-        readonly artpieceAnimated: WarscapeAnimated.Entry | undefined;
-        readonly description: BuildingDescriptionTexts.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly shortDescription: BuildingShortDescriptionTexts.Entry | undefined;
-        readonly flavour: BuildingFlavourTexts.Entry | undefined;
+        get building(): BuildingLevels.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get battlefieldBuilding(): BattlefieldBuildings.Entry | undefined;
+        get artpiece(): WarscapeRigid.Entry | undefined;
+        get artpieceAnimated(): WarscapeAnimated.Entry | undefined;
+        get description(): BuildingDescriptionTexts.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get shortDescription(): BuildingShortDescriptionTexts.Entry | undefined;
+        get flavour(): BuildingFlavourTexts.Entry | undefined;
     }
 }
 export default BuildingCultureVariants;

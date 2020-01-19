@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueUnitAbilityJunctions {
         readonly _bonusValueId: string;
         readonly _unitAbility: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsUnitAbility.Entry | undefined;
-        readonly unitAbility: UnitAbilities.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsUnitAbility.Entry | undefined;
+        get unitAbility(): UnitAbilities.Entry | undefined;
     }
 }
 export default EffectBonusValueUnitAbilityJunctions;

@@ -11,9 +11,9 @@ export declare namespace SpecialAbilityPhaseStatEffects {
         readonly _stat: string;
         readonly _how: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly phase: SpecialAbilityPhases.Entry | undefined;
-        readonly stat: UiUnitStats.Entry | undefined;
-        readonly how: UnitStatModifiersHowEnums.Entry | undefined;
+        get phase(): SpecialAbilityPhases.Entry | undefined;
+        get stat(): UiUnitStats.Entry | undefined;
+        get how(): UnitStatModifiersHowEnums.Entry | undefined;
     }
 }
 export default SpecialAbilityPhaseStatEffects;

@@ -10,8 +10,8 @@ export declare namespace ShipNames {
         readonly shipName: string;
         readonly _exclusiveToFaction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly nameGroup: NamesGroups.Entry | undefined;
-        readonly exclusiveToFaction: Factions.Entry | undefined;
+        get nameGroup(): NamesGroups.Entry | undefined;
+        get exclusiveToFaction(): Factions.Entry | undefined;
     }
 }
 export default ShipNames;

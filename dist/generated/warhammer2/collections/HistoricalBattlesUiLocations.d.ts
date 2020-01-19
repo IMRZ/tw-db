@@ -9,7 +9,7 @@ export declare namespace HistoricalBattlesUiLocations {
         readonly y: number;
         readonly heightPercent: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: Battles.Entry | undefined;
+        get key(): Battles.Entry | undefined;
     }
 }
 export default HistoricalBattlesUiLocations;

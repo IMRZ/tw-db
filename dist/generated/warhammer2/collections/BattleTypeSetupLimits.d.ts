@@ -16,7 +16,7 @@ export declare namespace BattleTypeSetupLimits {
         readonly maxLineOfBattle: number;
         readonly id: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleType: BattleTypes.Entry | undefined;
+        get battleType(): BattleTypes.Entry | undefined;
     }
 }
 export default BattleTypeSetupLimits;

@@ -9,8 +9,8 @@ export declare namespace BattleWeatherEffects {
         readonly _stat: string;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly weatherType: BattleWeatherTypes.Entry | undefined;
-        readonly stat: UiUnitStats.Entry | undefined;
+        get weatherType(): BattleWeatherTypes.Entry | undefined;
+        get stat(): UiUnitStats.Entry | undefined;
     }
 }
 export default BattleWeatherEffects;

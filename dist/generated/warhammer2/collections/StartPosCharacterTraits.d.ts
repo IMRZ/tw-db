@@ -10,8 +10,8 @@ export declare namespace StartPosCharacterTraits {
         readonly _traitLevel: string;
         readonly unique: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterId: StartPosCharacters.Entry | undefined;
-        readonly traitLevel: CharacterTraitLevels.Entry | undefined;
+        get characterId(): StartPosCharacters.Entry | undefined;
+        get traitLevel(): CharacterTraitLevels.Entry | undefined;
     }
 }
 export default StartPosCharacterTraits;

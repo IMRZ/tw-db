@@ -9,7 +9,7 @@ export declare namespace UnitExperienceBonuses {
         readonly growthRate: number;
         readonly growthScalar: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly stat: UiUnitStats.Entry | undefined;
+        get stat(): UiUnitStats.Entry | undefined;
     }
 }
 export default UnitExperienceBonuses;

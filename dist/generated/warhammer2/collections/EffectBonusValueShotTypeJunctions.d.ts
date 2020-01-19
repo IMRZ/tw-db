@@ -10,9 +10,9 @@ export declare namespace EffectBonusValueShotTypeJunctions {
         readonly _bonusValueId: string;
         readonly _shotType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsProjectileShotTypeEnum.Entry | undefined;
-        readonly shotType: ProjectileShotTypeEnum.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsProjectileShotTypeEnum.Entry | undefined;
+        get shotType(): ProjectileShotTypeEnum.Entry | undefined;
     }
 }
 export default EffectBonusValueShotTypeJunctions;

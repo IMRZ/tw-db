@@ -7,7 +7,7 @@ export declare namespace NamesTitlesByAgent {
         readonly _agentType: string;
         readonly highestTitle: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentType: Agents.Entry | undefined;
+        get agentType(): Agents.Entry | undefined;
     }
 }
 export default NamesTitlesByAgent;

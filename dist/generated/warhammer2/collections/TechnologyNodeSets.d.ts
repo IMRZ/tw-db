@@ -23,12 +23,12 @@ export declare namespace TechnologyNodeSets {
         readonly colourB: number;
         readonly _gameExpansionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
-        readonly technologyCategory: TechnologyCategories.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
+        get technologyCategory(): TechnologyCategories.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default TechnologyNodeSets;

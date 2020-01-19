@@ -11,9 +11,9 @@ export declare namespace PurchasableEffectLevels {
         readonly _resourceCost: string;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: PurchasableEffects.Entry | undefined;
-        readonly resourceCost: ResourceCosts.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get effect(): PurchasableEffects.Entry | undefined;
+        get resourceCost(): ResourceCosts.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default PurchasableEffectLevels;

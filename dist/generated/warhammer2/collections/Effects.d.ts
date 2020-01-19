@@ -12,7 +12,7 @@ export declare namespace Effects {
         readonly _category: string;
         readonly isPositiveValueGood: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: EffectCategories.Entry | undefined;
+        get category(): EffectCategories.Entry | undefined;
     }
 }
 export default Effects;

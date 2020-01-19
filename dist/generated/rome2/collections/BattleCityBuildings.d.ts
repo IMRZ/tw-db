@@ -10,8 +10,8 @@ export declare namespace BattleCityBuildings {
         readonly amountInTown: number;
         readonly amountInCity: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly building: WarscapeRigid.Entry | undefined;
-        readonly city: BattleCities.Entry | undefined;
+        get building(): WarscapeRigid.Entry | undefined;
+        get city(): BattleCities.Entry | undefined;
     }
 }
 export default BattleCityBuildings;

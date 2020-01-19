@@ -27,7 +27,7 @@ export declare namespace Technologies {
         readonly isEngineering: boolean;
         readonly isMilitary: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingLevel: BuildingLevels.Entry | undefined;
+        get buildingLevel(): BuildingLevels.Entry | undefined;
     }
 }
 export default Technologies;

@@ -7,7 +7,7 @@ export declare namespace UnitExperienceThresholdModifiers {
         readonly _key: string;
         readonly modifier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: MainUnits.Entry | undefined;
+        get key(): MainUnits.Entry | undefined;
     }
 }
 export default UnitExperienceThresholdModifiers;

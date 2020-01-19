@@ -9,7 +9,7 @@ export declare namespace ArmySpecialAbilities {
         readonly uniqueId: number;
         readonly enablesSiegeAssault: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitSpecialAbility: UnitSpecialAbilities.Entry | undefined;
+        get unitSpecialAbility(): UnitSpecialAbilities.Entry | undefined;
     }
 }
 export default ArmySpecialAbilities;

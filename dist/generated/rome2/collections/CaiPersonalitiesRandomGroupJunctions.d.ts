@@ -8,8 +8,8 @@ export declare namespace CaiPersonalitiesRandomGroupJunctions {
         readonly _randomPersonalityGroupKey: string;
         readonly _personalityKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly randomPersonalityGroupKey: CaiPersonalitiesRandomGroups.Entry | undefined;
-        readonly personalityKey: CaiPersonalities.Entry | undefined;
+        get randomPersonalityGroupKey(): CaiPersonalitiesRandomGroups.Entry | undefined;
+        get personalityKey(): CaiPersonalities.Entry | undefined;
     }
 }
 export default CaiPersonalitiesRandomGroupJunctions;

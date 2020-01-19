@@ -12,10 +12,10 @@ export declare namespace CommanderUnitPermissions {
         readonly _cultureKey: string;
         readonly _subcultureKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitKey: MainUnits.Entry | undefined;
-        readonly factionKey: Factions.Entry | undefined;
-        readonly cultureKey: Cultures.Entry | undefined;
-        readonly subcultureKey: CulturesSubcultures.Entry | undefined;
+        get unitKey(): MainUnits.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get cultureKey(): Cultures.Entry | undefined;
+        get subcultureKey(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default CommanderUnitPermissions;

@@ -12,7 +12,7 @@ export declare namespace TreasureHuntExtraInformations {
         readonly overlayImage: string;
         readonly colorBlindModeOverlay: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly treasureHuntDilemmaKey: Dilemmas.Entry | undefined;
+        get treasureHuntDilemmaKey(): Dilemmas.Entry | undefined;
     }
 }
 export default TreasureHuntExtraInformations;

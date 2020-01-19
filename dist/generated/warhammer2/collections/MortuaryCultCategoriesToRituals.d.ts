@@ -8,8 +8,8 @@ export declare namespace MortuaryCultCategoriesToRituals {
         readonly _mortuaryCategory: string;
         readonly _ritual: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mortuaryCategory: MortuaryCultCategories.Entry | undefined;
-        readonly ritual: Rituals.Entry | undefined;
+        get mortuaryCategory(): MortuaryCultCategories.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
     }
 }
 export default MortuaryCultCategoriesToRituals;

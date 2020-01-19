@@ -10,9 +10,9 @@ export declare namespace StartPosPastEvents {
         readonly _event: string;
         readonly turnsAgo: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly source: Factions.Entry | undefined;
-        readonly target: Factions.Entry | undefined;
-        readonly event: CaiPersonalityDiplomaticEvents.Entry | undefined;
+        get source(): Factions.Entry | undefined;
+        get target(): Factions.Entry | undefined;
+        get event(): CaiPersonalityDiplomaticEvents.Entry | undefined;
     }
 }
 export default StartPosPastEvents;

@@ -15,7 +15,7 @@ export declare namespace Regions {
         readonly isSea: boolean;
         readonly _ownerBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ownerBundle: EffectBundles.Entry | undefined;
+        get ownerBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default Regions;

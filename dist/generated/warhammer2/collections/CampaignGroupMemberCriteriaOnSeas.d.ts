@@ -7,7 +7,7 @@ export declare namespace CampaignGroupMemberCriteriaOnSeas {
         readonly _member: string;
         readonly onSea: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaOnSeas;

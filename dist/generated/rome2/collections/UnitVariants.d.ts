@@ -14,9 +14,9 @@ export declare namespace UnitVariants {
         readonly heightScale: number;
         readonly unitCard: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly unit: LandUnits.Entry | undefined;
-        readonly variant: Variants.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get unit(): LandUnits.Entry | undefined;
+        get variant(): Variants.Entry | undefined;
     }
 }
 export default UnitVariants;

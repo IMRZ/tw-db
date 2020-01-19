@@ -8,7 +8,7 @@ export declare namespace CaiSiegeStrengthModifiers {
         readonly defenceStrengthModifier: number;
         readonly assaultStrengthModifier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default CaiSiegeStrengthModifiers;

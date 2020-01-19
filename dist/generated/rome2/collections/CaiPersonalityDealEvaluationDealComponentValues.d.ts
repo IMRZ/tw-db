@@ -21,8 +21,8 @@ export declare namespace CaiPersonalityDealEvaluationDealComponentValues {
         readonly peaceBalanceFactor: number;
         readonly treacheryValue: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly personalityComponent: CaiPersonalityDealEvaluationComponents.Entry | undefined;
-        readonly dealComponent: CaiPersonalityDealEvaluationDealComponentNames.Entry | undefined;
+        get personalityComponent(): CaiPersonalityDealEvaluationComponents.Entry | undefined;
+        get dealComponent(): CaiPersonalityDealEvaluationDealComponentNames.Entry | undefined;
     }
 }
 export default CaiPersonalityDealEvaluationDealComponentValues;

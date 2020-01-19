@@ -11,8 +11,8 @@ export declare namespace TradeDisplayOwningFactionTradeModelOptions {
         readonly priority: number;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly owningFaction: Factions.Entry | undefined;
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get owningFaction(): Factions.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayOwningFactionTradeModelOptions;

@@ -7,7 +7,7 @@ export declare namespace AncillaryToExcludedAncillaries {
         readonly _ancillary: string;
         readonly _excludedAncillary: any;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ancillary: AncillaryInfo.Entry | undefined;
+        get ancillary(): AncillaryInfo.Entry | undefined;
     }
 }
 export default AncillaryToExcludedAncillaries;

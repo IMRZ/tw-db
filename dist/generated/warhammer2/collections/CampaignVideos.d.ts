@@ -14,9 +14,9 @@ export declare namespace CampaignVideos {
         readonly sort: number;
         readonly _pdlc: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly videoName: Videos.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly pdlc: Pdlc.Entry | undefined;
+        get videoName(): Videos.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get pdlc(): Pdlc.Entry | undefined;
     }
 }
 export default CampaignVideos;

@@ -11,7 +11,7 @@ export declare namespace CampaignSettlementDisplayAqueducts {
         readonly positionZHeight: number;
         readonly rotationCwRadians: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly regionKey: Regions.Entry | undefined;
+        get regionKey(): Regions.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayAqueducts;

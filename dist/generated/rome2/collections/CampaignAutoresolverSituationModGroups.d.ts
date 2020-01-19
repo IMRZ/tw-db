@@ -11,9 +11,9 @@ export declare namespace CampaignAutoresolverSituationModGroups {
         readonly _groupTargetId: string;
         readonly _groupId: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly situationId: CampaignAutoresolverBattleSituations.Entry | undefined;
-        readonly groupTargetId: CampaignAutoresolverModGroupTargets.Entry | undefined;
-        readonly groupId: CampaignAutoresolverModGroups.Entry | undefined;
+        get situationId(): CampaignAutoresolverBattleSituations.Entry | undefined;
+        get groupTargetId(): CampaignAutoresolverModGroupTargets.Entry | undefined;
+        get groupId(): CampaignAutoresolverModGroups.Entry | undefined;
     }
 }
 export default CampaignAutoresolverSituationModGroups;

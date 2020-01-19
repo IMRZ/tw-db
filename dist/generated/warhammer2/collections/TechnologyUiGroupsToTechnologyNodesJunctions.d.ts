@@ -11,11 +11,11 @@ export declare namespace TechnologyUiGroupsToTechnologyNodesJunctions {
         readonly _optionalTopRightNode: string;
         readonly _optionalBottomLeftNode: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly techUiGroup: TechnologyUiGroups.Entry | undefined;
-        readonly topLeftNode: TechnologyNodes.Entry | undefined;
-        readonly bottomRightNode: TechnologyNodes.Entry | undefined;
-        readonly optionalTopRightNode: TechnologyNodes.Entry | undefined;
-        readonly optionalBottomLeftNode: TechnologyNodes.Entry | undefined;
+        get techUiGroup(): TechnologyUiGroups.Entry | undefined;
+        get topLeftNode(): TechnologyNodes.Entry | undefined;
+        get bottomRightNode(): TechnologyNodes.Entry | undefined;
+        get optionalTopRightNode(): TechnologyNodes.Entry | undefined;
+        get optionalBottomLeftNode(): TechnologyNodes.Entry | undefined;
     }
 }
 export default TechnologyUiGroupsToTechnologyNodesJunctions;

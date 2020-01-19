@@ -3,6 +3,7 @@ import { UnitMeleeWeaponsEnum } from "./UnitMeleeWeaponsEnum";
 import { AudioMeleeWeaponTypes } from "./AudioMeleeWeaponTypes";
 import { BattleEntitiesSizeEnums } from "./BattleEntitiesSizeEnums";
 import { SpecialAbilityPhases } from "./SpecialAbilityPhases";
+import { ProjectilesScalingDamages } from "./ProjectilesScalingDamages";
 export declare namespace MeleeWeapons {
     const KEY: CollectionKey;
     class Entry {
@@ -27,11 +28,13 @@ export declare namespace MeleeWeapons {
         readonly collisionAttackMaxTargets: number;
         readonly collisionAttackMaxTargetsCooldown: number;
         readonly meleeAttackInterval: number;
+        readonly _scalingDamage: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly meleeWeaponType: UnitMeleeWeaponsEnum.Entry | undefined;
-        readonly audioType: AudioMeleeWeaponTypes.Entry | undefined;
-        readonly splashAttackTargetSize: BattleEntitiesSizeEnums.Entry | undefined;
-        readonly contactPhase: SpecialAbilityPhases.Entry | undefined;
+        get meleeWeaponType(): UnitMeleeWeaponsEnum.Entry | undefined;
+        get audioType(): AudioMeleeWeaponTypes.Entry | undefined;
+        get splashAttackTargetSize(): BattleEntitiesSizeEnums.Entry | undefined;
+        get contactPhase(): SpecialAbilityPhases.Entry | undefined;
+        get scalingDamage(): ProjectilesScalingDamages.Entry | undefined;
     }
 }
 export default MeleeWeapons;

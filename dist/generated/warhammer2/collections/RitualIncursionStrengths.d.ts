@@ -8,7 +8,7 @@ export declare namespace RitualIncursionStrengths {
         readonly difficulty: number;
         readonly strength: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ritual: Rituals.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
     }
 }
 export default RitualIncursionStrengths;

@@ -11,9 +11,9 @@ export declare namespace CaiConstructionSystemTemplatesJunctions {
         readonly _caiConstructionSystemCategoryGroup: string;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly caiConstructionSystemTemplate: CaiConstructionSystemTemplates.Entry | undefined;
-        readonly caiConstructionSystemCategory: CaiConstructionSystemCategories.Entry | undefined;
-        readonly caiConstructionSystemCategoryGroup: CaiConstructionSystemCategoryGroups.Entry | undefined;
+        get caiConstructionSystemTemplate(): CaiConstructionSystemTemplates.Entry | undefined;
+        get caiConstructionSystemCategory(): CaiConstructionSystemCategories.Entry | undefined;
+        get caiConstructionSystemCategoryGroup(): CaiConstructionSystemCategoryGroups.Entry | undefined;
     }
 }
 export default CaiConstructionSystemTemplatesJunctions;

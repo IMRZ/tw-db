@@ -13,8 +13,8 @@ export declare namespace StartPosDiplomacy {
         readonly relationsModifier: number;
         readonly nonAggressionPact: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction1: StartPosFactions.Entry | undefined;
-        readonly faction2: StartPosFactions.Entry | undefined;
+        get faction1(): StartPosFactions.Entry | undefined;
+        get faction2(): StartPosFactions.Entry | undefined;
     }
 }
 export default StartPosDiplomacy;
