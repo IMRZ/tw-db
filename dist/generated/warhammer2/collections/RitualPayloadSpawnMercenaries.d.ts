@@ -9,8 +9,8 @@ export declare namespace RitualPayloadSpawnMercenaries {
         readonly _payload: string;
         readonly _spawnableUnit: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly payload: RitualPayloads.Entry | undefined;
-        readonly spawnableUnit: MainUnits.Entry | undefined;
+        get payload(): RitualPayloads.Entry | undefined;
+        get spawnableUnit(): MainUnits.Entry | undefined;
     }
 }
 export default RitualPayloadSpawnMercenaries;

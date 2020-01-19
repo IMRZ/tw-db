@@ -11,9 +11,9 @@ export declare namespace CaiPersonalitiesTmsTaskGeneratorProfilesStrategicContex
         readonly forUseWhenTheFactionHasRegions: boolean;
         readonly _generatorGroupKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly taskGeneratorProfileKey: CaiPersonalitiesTaskManagementSystemTaskGeneratorProfiles.Entry | undefined;
-        readonly strategicContextKey: CaiStrategicContextTypes.Entry | undefined;
-        readonly generatorGroupKey: CaiTaskManagementSystemTaskGeneratorGroups.Entry | undefined;
+        get taskGeneratorProfileKey(): CaiPersonalitiesTaskManagementSystemTaskGeneratorProfiles.Entry | undefined;
+        get strategicContextKey(): CaiStrategicContextTypes.Entry | undefined;
+        get generatorGroupKey(): CaiTaskManagementSystemTaskGeneratorGroups.Entry | undefined;
     }
 }
 export default CaiPersonalitiesTmsTaskGeneratorProfilesStrategicContextsJunctions;

@@ -8,8 +8,8 @@ export declare namespace SpecialAbilityToInvalidUsageFlags {
         readonly _specialAbility: string;
         readonly _invalidUsageFlag: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly specialAbility: UnitSpecialAbilities.Entry | undefined;
-        readonly invalidUsageFlag: SpecialAbilityInvalidUsageFlags.Entry | undefined;
+        get specialAbility(): UnitSpecialAbilities.Entry | undefined;
+        get invalidUsageFlag(): SpecialAbilityInvalidUsageFlags.Entry | undefined;
     }
 }
 export default SpecialAbilityToInvalidUsageFlags;

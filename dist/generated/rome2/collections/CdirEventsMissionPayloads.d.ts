@@ -12,9 +12,9 @@ export declare namespace CdirEventsMissionPayloads {
         readonly _payloadKey: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missionKey: Missions.Entry | undefined;
-        readonly statusKey: CdirEventsMissionStatuses.Entry | undefined;
-        readonly payloadKey: CdirEventsPayloads.Entry | undefined;
+        get missionKey(): Missions.Entry | undefined;
+        get statusKey(): CdirEventsMissionStatuses.Entry | undefined;
+        get payloadKey(): CdirEventsPayloads.Entry | undefined;
     }
 }
 export default CdirEventsMissionPayloads;

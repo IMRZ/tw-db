@@ -31,11 +31,11 @@ export declare namespace StartPosRegions {
         readonly longDescription: string;
         readonly developmentPoints: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly owningFaction: StartPosFactions.Entry | undefined;
-        readonly governorship: Governorships.Entry | undefined;
-        readonly culturalOriginator: CulturesSubcultures.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get owningFaction(): StartPosFactions.Entry | undefined;
+        get governorship(): Governorships.Entry | undefined;
+        get culturalOriginator(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default StartPosRegions;

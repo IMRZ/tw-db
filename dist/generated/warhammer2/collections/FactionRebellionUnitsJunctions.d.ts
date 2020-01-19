@@ -8,8 +8,8 @@ export declare namespace FactionRebellionUnitsJunctions {
         readonly _factionKey: string;
         readonly _unitKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly unitKey: MainUnits.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get unitKey(): MainUnits.Entry | undefined;
     }
 }
 export default FactionRebellionUnitsJunctions;

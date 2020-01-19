@@ -9,8 +9,8 @@ export declare namespace NavalRammingEvents {
         readonly _rammedShip: string;
         readonly baseDamage: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly rammingShip: UnitCategory.Entry | undefined;
-        readonly rammedShip: UnitCategory.Entry | undefined;
+        get rammingShip(): UnitCategory.Entry | undefined;
+        get rammedShip(): UnitCategory.Entry | undefined;
     }
 }
 export default NavalRammingEvents;

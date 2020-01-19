@@ -9,8 +9,8 @@ export declare namespace RitualPayloadAncillaries {
         readonly _payload: string;
         readonly _ancillary: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly payload: RitualPayloads.Entry | undefined;
-        readonly ancillary: Ancillaries.Entry | undefined;
+        get payload(): RitualPayloads.Entry | undefined;
+        get ancillary(): Ancillaries.Entry | undefined;
     }
 }
 export default RitualPayloadAncillaries;

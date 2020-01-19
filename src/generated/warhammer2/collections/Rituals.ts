@@ -3,6 +3,7 @@ import { CollectionCache, CollectionKey } from "../../../common";
 import { RitualPayloads } from "./RitualPayloads";
 import { RitualCategories } from "./RitualCategories";
 import { ResourceCosts } from "./ResourceCosts";
+import { RitualTargets } from "./RitualTargets";
 
 export namespace Rituals {
   export const KEY = new CollectionKey("rituals");
@@ -26,6 +27,8 @@ export namespace Rituals {
     readonly hostile: boolean;
     readonly _expendedResources: string;
     readonly _requiredResources: string;
+    readonly _target: string;
+    readonly delayPayloadApplication: boolean;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -45,6 +48,8 @@ export namespace Rituals {
       this.hostile = !!values["hostile"];
       this._expendedResources = values["expended_resources"];
       this._requiredResources = values["required_resources"];
+      this._target = values["target"];
+      this.delayPayloadApplication = !!values["delay_payload_application"];
     }
     
     get completionPayload(): RitualPayloads.Entry | undefined {
@@ -70,6 +75,11 @@ export namespace Rituals {
     get requiredResources(): ResourceCosts.Entry | undefined {
       const collection = <ResourceCosts.Entry[]>this.collectionCache.getCollection(ResourceCosts.KEY, ResourceCosts.Entry);
       return collection.find(entry => entry.id === this._requiredResources);
+    }
+    
+    get target(): RitualTargets.Entry | undefined {
+      const collection = <RitualTargets.Entry[]>this.collectionCache.getCollection(RitualTargets.KEY, RitualTargets.Entry);
+      return collection.find(entry => entry.key === this._target);
     }
   }
 }

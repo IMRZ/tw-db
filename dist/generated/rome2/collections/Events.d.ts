@@ -15,7 +15,7 @@ export declare namespace Events {
         readonly picture: string;
         readonly turnInYear: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly season: Seasons.Entry | undefined;
+        get season(): Seasons.Entry | undefined;
     }
 }
 export default Events;

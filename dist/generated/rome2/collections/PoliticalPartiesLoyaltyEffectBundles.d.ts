@@ -7,7 +7,7 @@ export declare namespace PoliticalPartiesLoyaltyEffectBundles {
         readonly loyalty: number;
         readonly _bundleKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly bundleKey: EffectBundles.Entry | undefined;
+        get bundleKey(): EffectBundles.Entry | undefined;
     }
 }
 export default PoliticalPartiesLoyaltyEffectBundles;

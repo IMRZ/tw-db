@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaOriginatingCultures {
         readonly _member: string;
         readonly _culture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaOriginatingCultures;

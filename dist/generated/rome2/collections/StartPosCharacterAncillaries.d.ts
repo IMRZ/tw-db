@@ -9,8 +9,8 @@ export declare namespace StartPosCharacterAncillaries {
         readonly _characterId: number;
         readonly _ancillary: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterId: StartPosCharacters.Entry | undefined;
-        readonly ancillary: AncillaryInfo.Entry | undefined;
+        get characterId(): StartPosCharacters.Entry | undefined;
+        get ancillary(): AncillaryInfo.Entry | undefined;
     }
 }
 export default StartPosCharacterAncillaries;

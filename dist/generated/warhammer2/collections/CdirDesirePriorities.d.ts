@@ -9,8 +9,8 @@ export declare namespace CdirDesirePriorities {
         readonly _desireKey: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignKey: CdirCampaignJunctions.Entry | undefined;
-        readonly desireKey: CdirDesires.Entry | undefined;
+        get campaignKey(): CdirCampaignJunctions.Entry | undefined;
+        get desireKey(): CdirDesires.Entry | undefined;
     }
 }
 export default CdirDesirePriorities;

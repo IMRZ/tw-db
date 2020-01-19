@@ -9,8 +9,8 @@ export declare namespace UnitMissileWeaponJunctions {
         readonly _missileWeapon: string;
         readonly id: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: MainUnits.Entry | undefined;
-        readonly missileWeapon: MissileWeapons.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get missileWeapon(): MissileWeapons.Entry | undefined;
     }
 }
 export default UnitMissileWeaponJunctions;

@@ -10,7 +10,7 @@ export declare namespace CampaignVfxDescriptions {
         readonly yOffset: number;
         readonly zOffset: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly vfx: ParticleEffects.Entry | undefined;
+        get vfx(): ParticleEffects.Entry | undefined;
     }
 }
 export default CampaignVfxDescriptions;

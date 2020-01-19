@@ -9,8 +9,8 @@ export declare namespace ProphecyOfSotekStagesToMissions {
         readonly _mission: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly stage: ProphecyOfSotekStages.Entry | undefined;
-        readonly mission: Missions.Entry | undefined;
+        get stage(): ProphecyOfSotekStages.Entry | undefined;
+        get mission(): Missions.Entry | undefined;
     }
 }
 export default ProphecyOfSotekStagesToMissions;

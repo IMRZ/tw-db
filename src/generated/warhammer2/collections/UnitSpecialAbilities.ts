@@ -70,6 +70,10 @@ export namespace UnitSpecialAbilities {
     readonly targetSelf: boolean;
     readonly _compositeSceneGroupOnWindUp: string;
     readonly _compositeSceneGroupOnActive: string;
+    readonly spawnIsTransformation: boolean;
+    readonly _windDownStance: string;
+    readonly useLoopStance: boolean;
+    readonly spawnIsDecoy: boolean;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -120,6 +124,10 @@ export namespace UnitSpecialAbilities {
       this.targetSelf = !!values["target_self"];
       this._compositeSceneGroupOnWindUp = values["composite_scene_group_on_wind_up"];
       this._compositeSceneGroupOnActive = values["composite_scene_group_on_active"];
+      this.spawnIsTransformation = !!values["spawn_is_transformation"];
+      this._windDownStance = values["wind_down_stance"];
+      this.useLoopStance = !!values["use_loop_stance"];
+      this.spawnIsDecoy = !!values["spawn_is_decoy"];
     }
     
     get key(): UnitAbilities.Entry | undefined {
@@ -225,6 +233,11 @@ export namespace UnitSpecialAbilities {
     get compositeSceneGroupOnActive(): BattleVortexCompositeSceneGroups.Entry | undefined {
       const collection = <BattleVortexCompositeSceneGroups.Entry[]>this.collectionCache.getCollection(BattleVortexCompositeSceneGroups.KEY, BattleVortexCompositeSceneGroups.Entry);
       return collection.find(entry => entry.groupId === this._compositeSceneGroupOnActive);
+    }
+    
+    get windDownStance(): SpecialAbilityStanceEnums.Entry | undefined {
+      const collection = <SpecialAbilityStanceEnums.Entry[]>this.collectionCache.getCollection(SpecialAbilityStanceEnums.KEY, SpecialAbilityStanceEnums.Entry);
+      return collection.find(entry => entry.key === this._windDownStance);
     }
   }
 }

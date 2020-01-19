@@ -8,8 +8,8 @@ export declare namespace LandUnitsToUnitAbilitesJunctions {
         readonly _landUnit: string;
         readonly _ability: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly landUnit: LandUnits.Entry | undefined;
-        readonly ability: UnitAbilities.Entry | undefined;
+        get landUnit(): LandUnits.Entry | undefined;
+        get ability(): UnitAbilities.Entry | undefined;
     }
 }
 export default LandUnitsToUnitAbilitesJunctions;

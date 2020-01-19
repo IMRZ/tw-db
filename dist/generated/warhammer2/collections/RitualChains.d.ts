@@ -13,7 +13,7 @@ export declare namespace RitualChains {
         readonly colourG: number;
         readonly colourB: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: RitualCategories.Entry | undefined;
+        get category(): RitualCategories.Entry | undefined;
     }
 }
 export default RitualChains;

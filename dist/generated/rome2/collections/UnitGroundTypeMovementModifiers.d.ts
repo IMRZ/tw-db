@@ -9,8 +9,8 @@ export declare namespace UnitGroundTypeMovementModifiers {
         readonly _category: string;
         readonly speedModifier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly groundType: GroundTypes.Entry | undefined;
-        readonly category: UnitCategory.Entry | undefined;
+        get groundType(): GroundTypes.Entry | undefined;
+        get category(): UnitCategory.Entry | undefined;
     }
 }
 export default UnitGroundTypeMovementModifiers;

@@ -7,7 +7,7 @@ export declare namespace BattleSequences {
         readonly _battle: string;
         readonly unlockOrder: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battle: Battles.Entry | undefined;
+        get battle(): Battles.Entry | undefined;
     }
 }
 export default BattleSequences;

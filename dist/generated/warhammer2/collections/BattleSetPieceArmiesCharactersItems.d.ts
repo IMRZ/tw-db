@@ -8,8 +8,8 @@ export declare namespace BattleSetPieceArmiesCharactersItems {
         readonly _characterName: string;
         readonly _characterItem: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly characterName: BattleSetPieceArmiesCharacters.Entry | undefined;
-        readonly characterItem: Ancillaries.Entry | undefined;
+        get characterName(): BattleSetPieceArmiesCharacters.Entry | undefined;
+        get characterItem(): Ancillaries.Entry | undefined;
     }
 }
 export default BattleSetPieceArmiesCharactersItems;

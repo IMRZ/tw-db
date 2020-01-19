@@ -13,9 +13,9 @@ export declare namespace TradeDisplayCampaignOriginatingSubcultureTradeModelOpti
         readonly priority: number;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly originatingSubculture: CulturesSubcultures.Entry | undefined;
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get originatingSubculture(): CulturesSubcultures.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayCampaignOriginatingSubcultureTradeModelOptions;

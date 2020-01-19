@@ -9,7 +9,7 @@ export declare namespace CampaignInteractableMarkerInfos {
         readonly tooltip: string;
         readonly _markerType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly markerType: CampaignMarkerTypes.Entry | undefined;
+        get markerType(): CampaignMarkerTypes.Entry | undefined;
     }
 }
 export default CampaignInteractableMarkerInfos;

@@ -21,8 +21,8 @@ export declare namespace CaiPersonalityDealGenerationGeneratorPriorities {
         readonly maxPaymentCap: number;
         readonly maxPaymentPct: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly componentKey: CaiPersonalityDealGenerationComponents.Entry | undefined;
-        readonly generatorKey: CaiPersonalityDealGenerationGenerators.Entry | undefined;
+        get componentKey(): CaiPersonalityDealGenerationComponents.Entry | undefined;
+        get generatorKey(): CaiPersonalityDealGenerationGenerators.Entry | undefined;
     }
 }
 export default CaiPersonalityDealGenerationGeneratorPriorities;

@@ -16,12 +16,12 @@ export declare namespace BattlefieldChariots {
         readonly _destroyedModel: string;
         readonly _battleEntity: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly chariotType: ChariotTypesEnums.Entry | undefined;
-        readonly model: WarscapeAnimated.Entry | undefined;
-        readonly chariotAnimationTable: BattleAnimationsTable.Entry | undefined;
-        readonly destructionAnimation: WarscapeAnimated.Entry | undefined;
-        readonly destroyedModel: WarscapeRigid.Entry | undefined;
-        readonly battleEntity: BattleEntities.Entry | undefined;
+        get chariotType(): ChariotTypesEnums.Entry | undefined;
+        get model(): WarscapeAnimated.Entry | undefined;
+        get chariotAnimationTable(): BattleAnimationsTable.Entry | undefined;
+        get destructionAnimation(): WarscapeAnimated.Entry | undefined;
+        get destroyedModel(): WarscapeRigid.Entry | undefined;
+        get battleEntity(): BattleEntities.Entry | undefined;
     }
 }
 export default BattlefieldChariots;

@@ -9,8 +9,8 @@ export declare namespace CaiConstructionSystemCategories {
         readonly _caiConstructionSystemCategoryGroup: string;
         readonly _cdirMilitaryGeneratorUnitGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly caiConstructionSystemCategoryGroup: CaiConstructionSystemCategoryGroups.Entry | undefined;
-        readonly cdirMilitaryGeneratorUnitGroup: CdirMilitaryGeneratorUnitGroups.Entry | undefined;
+        get caiConstructionSystemCategoryGroup(): CaiConstructionSystemCategoryGroups.Entry | undefined;
+        get cdirMilitaryGeneratorUnitGroup(): CdirMilitaryGeneratorUnitGroups.Entry | undefined;
     }
 }
 export default CaiConstructionSystemCategories;

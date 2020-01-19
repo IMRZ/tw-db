@@ -7,7 +7,7 @@ export declare namespace CampaignAmbushGroundTypes {
         readonly _key: string;
         readonly ambushChanceOfSuccess: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: CampaignGroundTypes.Entry | undefined;
+        get key(): CampaignGroundTypes.Entry | undefined;
     }
 }
 export default CampaignAmbushGroundTypes;

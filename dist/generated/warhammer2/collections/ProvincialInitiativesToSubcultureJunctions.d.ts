@@ -8,8 +8,8 @@ export declare namespace ProvincialInitiativesToSubcultureJunctions {
         readonly _provincialInitiativeKey: string;
         readonly _subculture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly provincialInitiativeKey: ProvincialInitiativeRecords.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get provincialInitiativeKey(): ProvincialInitiativeRecords.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default ProvincialInitiativesToSubcultureJunctions;

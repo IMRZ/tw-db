@@ -11,9 +11,9 @@ export declare namespace SeasonAttritions {
         readonly enable: boolean;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly season: Seasons.Entry | undefined;
-        readonly attritionType: CampaignMapAttritions.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get season(): Seasons.Entry | undefined;
+        get attritionType(): CampaignMapAttritions.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default SeasonAttritions;

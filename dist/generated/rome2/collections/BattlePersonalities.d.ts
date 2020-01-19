@@ -14,10 +14,10 @@ export declare namespace BattlePersonalities {
         readonly _missileType: string;
         readonly _variant: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly soldierModel: WarscapeAnimated.Entry | undefined;
-        readonly manAnimationsTable: BattleAnimationsTable.Entry | undefined;
-        readonly missileType: Projectiles.Entry | undefined;
-        readonly variant: Variants.Entry | undefined;
+        get soldierModel(): WarscapeAnimated.Entry | undefined;
+        get manAnimationsTable(): BattleAnimationsTable.Entry | undefined;
+        get missileType(): Projectiles.Entry | undefined;
+        get variant(): Variants.Entry | undefined;
     }
 }
 export default BattlePersonalities;

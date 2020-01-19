@@ -10,9 +10,9 @@ export declare namespace CampaignGroupPlagueMilitaryForceEffects {
         readonly _plague: string;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly plague: Plagues.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get plague(): Plagues.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default CampaignGroupPlagueMilitaryForceEffects;

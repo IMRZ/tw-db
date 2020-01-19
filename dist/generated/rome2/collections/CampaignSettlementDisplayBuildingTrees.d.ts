@@ -9,7 +9,7 @@ export declare namespace CampaignSettlementDisplayBuildingTrees {
         readonly _climateType: string;
         readonly buildingPath: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly climateType: Climates.Entry | undefined;
+        get climateType(): Climates.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayBuildingTrees;

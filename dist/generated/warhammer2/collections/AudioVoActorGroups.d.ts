@@ -22,21 +22,21 @@ export declare namespace AudioVoActorGroups {
         readonly _voActor15: string;
         readonly cooldownOverlap: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly voActor1: AudioVoActors.Entry | undefined;
-        readonly voActor2: AudioVoActors.Entry | undefined;
-        readonly voActor3: AudioVoActors.Entry | undefined;
-        readonly voActor4: AudioVoActors.Entry | undefined;
-        readonly voActor5: AudioVoActors.Entry | undefined;
-        readonly voActor6: AudioVoActors.Entry | undefined;
-        readonly voActor7: AudioVoActors.Entry | undefined;
-        readonly voActor8: AudioVoActors.Entry | undefined;
-        readonly voActor9: AudioVoActors.Entry | undefined;
-        readonly voActor10: AudioVoActors.Entry | undefined;
-        readonly voActor11: AudioVoActors.Entry | undefined;
-        readonly voActor12: AudioVoActors.Entry | undefined;
-        readonly voActor13: AudioVoActors.Entry | undefined;
-        readonly voActor14: AudioVoActors.Entry | undefined;
-        readonly voActor15: AudioVoActors.Entry | undefined;
+        get voActor1(): AudioVoActors.Entry | undefined;
+        get voActor2(): AudioVoActors.Entry | undefined;
+        get voActor3(): AudioVoActors.Entry | undefined;
+        get voActor4(): AudioVoActors.Entry | undefined;
+        get voActor5(): AudioVoActors.Entry | undefined;
+        get voActor6(): AudioVoActors.Entry | undefined;
+        get voActor7(): AudioVoActors.Entry | undefined;
+        get voActor8(): AudioVoActors.Entry | undefined;
+        get voActor9(): AudioVoActors.Entry | undefined;
+        get voActor10(): AudioVoActors.Entry | undefined;
+        get voActor11(): AudioVoActors.Entry | undefined;
+        get voActor12(): AudioVoActors.Entry | undefined;
+        get voActor13(): AudioVoActors.Entry | undefined;
+        get voActor14(): AudioVoActors.Entry | undefined;
+        get voActor15(): AudioVoActors.Entry | undefined;
     }
 }
 export default AudioVoActorGroups;

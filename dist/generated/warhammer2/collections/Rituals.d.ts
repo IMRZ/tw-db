@@ -2,6 +2,7 @@ import { CollectionCache, CollectionKey } from "../../../common";
 import { RitualPayloads } from "./RitualPayloads";
 import { RitualCategories } from "./RitualCategories";
 import { ResourceCosts } from "./ResourceCosts";
+import { RitualTargets } from "./RitualTargets";
 export declare namespace Rituals {
     const KEY: CollectionKey;
     class Entry {
@@ -22,12 +23,15 @@ export declare namespace Rituals {
         readonly hostile: boolean;
         readonly _expendedResources: string;
         readonly _requiredResources: string;
+        readonly _target: string;
+        readonly delayPayloadApplication: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly completionPayload: RitualPayloads.Entry | undefined;
-        readonly category: RitualCategories.Entry | undefined;
-        readonly startPayload: RitualPayloads.Entry | undefined;
-        readonly expendedResources: ResourceCosts.Entry | undefined;
-        readonly requiredResources: ResourceCosts.Entry | undefined;
+        get completionPayload(): RitualPayloads.Entry | undefined;
+        get category(): RitualCategories.Entry | undefined;
+        get startPayload(): RitualPayloads.Entry | undefined;
+        get expendedResources(): ResourceCosts.Entry | undefined;
+        get requiredResources(): ResourceCosts.Entry | undefined;
+        get target(): RitualTargets.Entry | undefined;
     }
 }
 export default Rituals;

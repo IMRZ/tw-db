@@ -55,16 +55,16 @@ export declare namespace StartPosFactions {
         readonly canEverConvertReligion: boolean;
         readonly _cdirMilitaryGeneratorConfig: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly campaign: StartPosCalendars.Entry | undefined;
-        readonly governmentType: GovernmentTypes.Entry | undefined;
-        readonly stateReligion: Religions.Entry | undefined;
-        readonly aiManager: CampaignAiManagers.Entry | undefined;
-        readonly aiPersonality: CampaignAiPersonalities.Entry | undefined;
-        readonly aiCharacterSkillTreeManager: CampaignAiCharacterSkillTreeManagers.Entry | undefined;
-        readonly caiAgentDistributionProfile: CaiAgentDistributionProfiles.Entry | undefined;
-        readonly caiAgentRecruitmentProfile: CaiAgentRecruitmentProfiles.Entry | undefined;
-        readonly cdirMilitaryGeneratorConfig: CdirMilitaryGeneratorConfigs.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get campaign(): StartPosCalendars.Entry | undefined;
+        get governmentType(): GovernmentTypes.Entry | undefined;
+        get stateReligion(): Religions.Entry | undefined;
+        get aiManager(): CampaignAiManagers.Entry | undefined;
+        get aiPersonality(): CampaignAiPersonalities.Entry | undefined;
+        get aiCharacterSkillTreeManager(): CampaignAiCharacterSkillTreeManagers.Entry | undefined;
+        get caiAgentDistributionProfile(): CaiAgentDistributionProfiles.Entry | undefined;
+        get caiAgentRecruitmentProfile(): CaiAgentRecruitmentProfiles.Entry | undefined;
+        get cdirMilitaryGeneratorConfig(): CdirMilitaryGeneratorConfigs.Entry | undefined;
     }
 }
 export default StartPosFactions;

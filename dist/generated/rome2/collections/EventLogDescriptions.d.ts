@@ -14,7 +14,7 @@ export declare namespace EventLogDescriptions {
         readonly _optionalCampaignKey: string;
         readonly movieId: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly optionalCampaignKey: Campaigns.Entry | undefined;
+        get optionalCampaignKey(): Campaigns.Entry | undefined;
     }
 }
 export default EventLogDescriptions;

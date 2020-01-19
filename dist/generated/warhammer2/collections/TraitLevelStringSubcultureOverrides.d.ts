@@ -10,8 +10,8 @@ export declare namespace TraitLevelStringSubcultureOverrides {
         readonly onscreenNameOverride: string;
         readonly colourTextOverride: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly traitLevel: CharacterTraitLevels.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get traitLevel(): CharacterTraitLevels.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default TraitLevelStringSubcultureOverrides;

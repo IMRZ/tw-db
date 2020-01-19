@@ -10,7 +10,7 @@ export declare namespace MpBudgets {
         readonly siegeDefender: boolean;
         readonly budget: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly budgetSizeKey: MpBudgetSizes.Entry | undefined;
+        get budgetSizeKey(): MpBudgetSizes.Entry | undefined;
     }
 }
 export default MpBudgets;

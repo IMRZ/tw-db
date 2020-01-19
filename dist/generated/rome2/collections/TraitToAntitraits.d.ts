@@ -7,8 +7,8 @@ export declare namespace TraitToAntitraits {
         readonly _trait: string;
         readonly _antitrait: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly trait: TraitInfo.Entry | undefined;
-        readonly antitrait: TraitInfo.Entry | undefined;
+        get trait(): TraitInfo.Entry | undefined;
+        get antitrait(): TraitInfo.Entry | undefined;
     }
 }
 export default TraitToAntitraits;

@@ -8,8 +8,8 @@ export declare namespace CampaignEffectScopeCharacterUnitRelationshipJunctions {
         readonly _campaignEffectScopeKey: string;
         readonly _unitRelationshipKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignEffectScopeKey: CampaignEffectScopes.Entry | undefined;
-        readonly unitRelationshipKey: CampaignEffectScopeCharacterUnitRelationships.Entry | undefined;
+        get campaignEffectScopeKey(): CampaignEffectScopes.Entry | undefined;
+        get unitRelationshipKey(): CampaignEffectScopeCharacterUnitRelationships.Entry | undefined;
     }
 }
 export default CampaignEffectScopeCharacterUnitRelationshipJunctions;

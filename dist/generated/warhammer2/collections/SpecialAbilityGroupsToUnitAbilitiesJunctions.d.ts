@@ -8,8 +8,8 @@ export declare namespace SpecialAbilityGroupsToUnitAbilitiesJunctions {
         readonly _specialAbilityGroups: string;
         readonly _unitSpecialAbilities: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly specialAbilityGroups: SpecialAbilityGroups.Entry | undefined;
-        readonly unitSpecialAbilities: UnitSpecialAbilities.Entry | undefined;
+        get specialAbilityGroups(): SpecialAbilityGroups.Entry | undefined;
+        get unitSpecialAbilities(): UnitSpecialAbilities.Entry | undefined;
     }
 }
 export default SpecialAbilityGroupsToUnitAbilitiesJunctions;

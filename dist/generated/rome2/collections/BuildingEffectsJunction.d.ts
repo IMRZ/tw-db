@@ -13,9 +13,9 @@ export declare namespace BuildingEffectsJunction {
         readonly valueDamaged: number;
         readonly valueRuined: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly building: BuildingLevels.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
+        get building(): BuildingLevels.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default BuildingEffectsJunction;

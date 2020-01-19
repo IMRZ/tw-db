@@ -12,9 +12,9 @@ export declare namespace BattlefieldEnginesAutonomous {
         readonly _engineCrewAnims: string;
         readonly numAmmo: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly autonomousEngineType: BattlefieldEngines.Entry | undefined;
-        readonly engineCrewEntity: BattleEntities.Entry | undefined;
-        readonly engineCrewAnims: BattleAnimationsTable.Entry | undefined;
+        get autonomousEngineType(): BattlefieldEngines.Entry | undefined;
+        get engineCrewEntity(): BattleEntities.Entry | undefined;
+        get engineCrewAnims(): BattleAnimationsTable.Entry | undefined;
     }
 }
 export default BattlefieldEnginesAutonomous;

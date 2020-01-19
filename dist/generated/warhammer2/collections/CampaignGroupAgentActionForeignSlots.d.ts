@@ -8,8 +8,8 @@ export declare namespace CampaignGroupAgentActionForeignSlots {
         readonly _campaignGroup: string;
         readonly _slotSet: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly slotSet: SlotSets.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get slotSet(): SlotSets.Entry | undefined;
     }
 }
 export default CampaignGroupAgentActionForeignSlots;

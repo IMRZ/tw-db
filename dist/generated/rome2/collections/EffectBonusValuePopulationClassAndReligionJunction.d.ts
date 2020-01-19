@@ -12,10 +12,10 @@ export declare namespace EffectBonusValuePopulationClassAndReligionJunction {
         readonly _populationClass: string;
         readonly _religion: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effect: Effects.Entry | undefined;
-        readonly bonusValueId: CampaignBonusValueIdsPopulationClassAndReligion.Entry | undefined;
-        readonly populationClass: PopulationClasses.Entry | undefined;
-        readonly religion: Religions.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get bonusValueId(): CampaignBonusValueIdsPopulationClassAndReligion.Entry | undefined;
+        get populationClass(): PopulationClasses.Entry | undefined;
+        get religion(): Religions.Entry | undefined;
     }
 }
 export default EffectBonusValuePopulationClassAndReligionJunction;

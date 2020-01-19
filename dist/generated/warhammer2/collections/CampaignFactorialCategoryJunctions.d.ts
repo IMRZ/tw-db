@@ -9,8 +9,8 @@ export declare namespace CampaignFactorialCategoryJunctions {
         readonly _codeCategory: string;
         readonly _designControlledCategory: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly codeCategory: CampaignFactorialCategories.Entry | undefined;
-        readonly designControlledCategory: CampaignDesignControlledFactorialCategories.Entry | undefined;
+        get codeCategory(): CampaignFactorialCategories.Entry | undefined;
+        get designControlledCategory(): CampaignDesignControlledFactorialCategories.Entry | undefined;
     }
 }
 export default CampaignFactorialCategoryJunctions;

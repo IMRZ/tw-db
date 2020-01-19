@@ -9,8 +9,8 @@ export declare namespace EncyclopediaFactionGroupings {
         readonly _group: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly group: EncyclopediaFactionGroups.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get group(): EncyclopediaFactionGroups.Entry | undefined;
     }
 }
 export default EncyclopediaFactionGroupings;

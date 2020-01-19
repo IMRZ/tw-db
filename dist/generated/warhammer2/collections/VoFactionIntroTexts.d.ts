@@ -10,8 +10,8 @@ export declare namespace VoFactionIntroTexts {
         readonly _faction: string;
         readonly text: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default VoFactionIntroTexts;

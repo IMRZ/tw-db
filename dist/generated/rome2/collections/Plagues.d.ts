@@ -12,8 +12,8 @@ export declare namespace Plagues {
         readonly _regionEffectBundle: string;
         readonly _militaryForceEffectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly regionEffectBundle: EffectBundles.Entry | undefined;
-        readonly militaryForceEffectBundle: EffectBundles.Entry | undefined;
+        get regionEffectBundle(): EffectBundles.Entry | undefined;
+        get militaryForceEffectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default Plagues;

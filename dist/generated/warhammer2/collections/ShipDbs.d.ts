@@ -11,9 +11,9 @@ export declare namespace ShipDbs {
         readonly _entity: string;
         readonly _model: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly spacing: UnitSpacings.Entry | undefined;
-        readonly entity: BattleEntities.Entry | undefined;
-        readonly model: ModelsNaval.Entry | undefined;
+        get spacing(): UnitSpacings.Entry | undefined;
+        get entity(): BattleEntities.Entry | undefined;
+        get model(): ModelsNaval.Entry | undefined;
     }
 }
 export default ShipDbs;

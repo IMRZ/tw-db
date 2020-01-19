@@ -19,9 +19,9 @@ export declare namespace UnitVariantsColours {
         readonly tertiaryColourB: number;
         readonly _soldierType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitVariant: UnitVariants.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly soldierType: UniformTypeEnums.Entry | undefined;
+        get unitVariant(): UnitVariants.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get soldierType(): UniformTypeEnums.Entry | undefined;
     }
 }
 export default UnitVariantsColours;

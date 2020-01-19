@@ -7,8 +7,8 @@ export declare namespace CaiPersonalityDealEvaluationComponentOverrides {
         readonly _component: string;
         readonly _parent: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly component: CaiPersonalityDealEvaluationComponents.Entry | undefined;
-        readonly parent: CaiPersonalityDealEvaluationComponents.Entry | undefined;
+        get component(): CaiPersonalityDealEvaluationComponents.Entry | undefined;
+        get parent(): CaiPersonalityDealEvaluationComponents.Entry | undefined;
     }
 }
 export default CaiPersonalityDealEvaluationComponentOverrides;

@@ -17,10 +17,10 @@ export declare namespace GunTypes {
         readonly _engineType: any;
         readonly _gunMountEntity: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly model: WarscapeAnimated.Entry | undefined;
-        readonly gunAnimationsTable: BattleAnimationsTable.Entry | undefined;
-        readonly destroyedModel: WarscapeRigid.Entry | undefined;
-        readonly gunMountEntity: BattleEntities.Entry | undefined;
+        get model(): WarscapeAnimated.Entry | undefined;
+        get gunAnimationsTable(): BattleAnimationsTable.Entry | undefined;
+        get destroyedModel(): WarscapeRigid.Entry | undefined;
+        get gunMountEntity(): BattleEntities.Entry | undefined;
     }
 }
 export default GunTypes;

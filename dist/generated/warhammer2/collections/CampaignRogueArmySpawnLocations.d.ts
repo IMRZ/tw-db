@@ -10,7 +10,7 @@ export declare namespace CampaignRogueArmySpawnLocations {
         readonly positionY: number;
         readonly radius: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: CampaignRogueArmySpawnGroups.Entry | undefined;
+        get group(): CampaignRogueArmySpawnGroups.Entry | undefined;
     }
 }
 export default CampaignRogueArmySpawnLocations;

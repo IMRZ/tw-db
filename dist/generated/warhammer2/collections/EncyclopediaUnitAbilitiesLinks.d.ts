@@ -10,9 +10,9 @@ export declare namespace EncyclopediaUnitAbilitiesLinks {
         readonly _manualPage: string;
         readonly _manualBlock: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitAbility: UnitAbilities.Entry | undefined;
-        readonly manualPage: EncyclopediaPages.Entry | undefined;
-        readonly manualBlock: EncyclopediaBlocks.Entry | undefined;
+        get unitAbility(): UnitAbilities.Entry | undefined;
+        get manualPage(): EncyclopediaPages.Entry | undefined;
+        get manualBlock(): EncyclopediaBlocks.Entry | undefined;
     }
 }
 export default EncyclopediaUnitAbilitiesLinks;

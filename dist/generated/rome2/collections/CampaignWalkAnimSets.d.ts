@@ -20,7 +20,7 @@ export declare namespace CampaignWalkAnimSets {
         readonly postWalkToStand: string;
         readonly postMidWalkToStand: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly referencePose: AnimReferencePoses.Entry | undefined;
+        get referencePose(): AnimReferencePoses.Entry | undefined;
     }
 }
 export default CampaignWalkAnimSets;

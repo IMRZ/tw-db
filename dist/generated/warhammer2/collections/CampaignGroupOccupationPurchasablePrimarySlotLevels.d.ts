@@ -9,8 +9,8 @@ export declare namespace CampaignGroupOccupationPurchasablePrimarySlotLevels {
         readonly level: number;
         readonly _resourceCost: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly resourceCost: ResourceCosts.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get resourceCost(): ResourceCosts.Entry | undefined;
     }
 }
 export default CampaignGroupOccupationPurchasablePrimarySlotLevels;

@@ -9,8 +9,8 @@ export declare namespace UiedComponentAddressesToTexts {
         readonly componentAddress: string;
         readonly _componentLayout: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly componentLabel: UiedComponentTexts.Entry | undefined;
-        readonly componentLayout: UiedTextLayouts.Entry | undefined;
+        get componentLabel(): UiedComponentTexts.Entry | undefined;
+        get componentLayout(): UiedTextLayouts.Entry | undefined;
     }
 }
 export default UiedComponentAddressesToTexts;

@@ -9,7 +9,7 @@ export declare namespace BattleDifficultyModifiers {
         readonly stat: string;
         readonly _value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly value: UiUnitStats.Entry | undefined;
+        get value(): UiUnitStats.Entry | undefined;
     }
 }
 export default BattleDifficultyModifiers;

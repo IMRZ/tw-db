@@ -23,16 +23,16 @@ export declare namespace ProjectileDisplays {
         readonly _impactBounceBlood: string;
         readonly _impactPenetrateBlood: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly launchFx: ParticleEffects.Entry | undefined;
-        readonly trailFx: ParticleEffects.Entry | undefined;
-        readonly stationaryFx: ParticleEffects.Entry | undefined;
-        readonly impact: ProjectileImpacts.Entry | undefined;
-        readonly launchCameraShake: BattleCameraShakeParameters.Entry | undefined;
-        readonly impactBounce: ProjectileImpacts.Entry | undefined;
-        readonly impactPenetrate: ProjectileImpacts.Entry | undefined;
-        readonly impactBlood: ProjectileImpacts.Entry | undefined;
-        readonly impactBounceBlood: ProjectileImpacts.Entry | undefined;
-        readonly impactPenetrateBlood: ProjectileImpacts.Entry | undefined;
+        get launchFx(): ParticleEffects.Entry | undefined;
+        get trailFx(): ParticleEffects.Entry | undefined;
+        get stationaryFx(): ParticleEffects.Entry | undefined;
+        get impact(): ProjectileImpacts.Entry | undefined;
+        get launchCameraShake(): BattleCameraShakeParameters.Entry | undefined;
+        get impactBounce(): ProjectileImpacts.Entry | undefined;
+        get impactPenetrate(): ProjectileImpacts.Entry | undefined;
+        get impactBlood(): ProjectileImpacts.Entry | undefined;
+        get impactBounceBlood(): ProjectileImpacts.Entry | undefined;
+        get impactPenetrateBlood(): ProjectileImpacts.Entry | undefined;
     }
 }
 export default ProjectileDisplays;

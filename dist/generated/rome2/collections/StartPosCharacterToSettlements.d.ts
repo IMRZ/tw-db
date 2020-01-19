@@ -8,8 +8,8 @@ export declare namespace StartPosCharacterToSettlements {
         readonly _character: number;
         readonly _settlement: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly character: StartPosCharacters.Entry | undefined;
-        readonly settlement: StartPosSettlements.Entry | undefined;
+        get character(): StartPosCharacters.Entry | undefined;
+        get settlement(): StartPosSettlements.Entry | undefined;
     }
 }
 export default StartPosCharacterToSettlements;

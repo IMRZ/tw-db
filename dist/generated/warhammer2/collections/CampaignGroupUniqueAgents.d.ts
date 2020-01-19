@@ -9,8 +9,8 @@ export declare namespace CampaignGroupUniqueAgents {
         readonly _uniqueAgent: string;
         readonly baseCharges: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly uniqueAgent: UniqueAgents.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get uniqueAgent(): UniqueAgents.Entry | undefined;
     }
 }
 export default CampaignGroupUniqueAgents;

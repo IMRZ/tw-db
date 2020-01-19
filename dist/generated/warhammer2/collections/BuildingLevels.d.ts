@@ -39,13 +39,13 @@ export declare namespace BuildingLevels {
         readonly foodCost: number;
         readonly slaveCapContribution: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly chain: BuildingChains.Entry | undefined;
-        readonly commodity: Commodities.Entry | undefined;
-        readonly religionRequirement: Religions.Entry | undefined;
-        readonly firstInWorldBundle: EffectBundles.Entry | undefined;
-        readonly resourceRequirement: Resources.Entry | undefined;
-        readonly buildingInstanceKey: BuildingInstances.Entry | undefined;
-        readonly audioBuildingType: AudioCampaignBuildings.Entry | undefined;
+        get chain(): BuildingChains.Entry | undefined;
+        get commodity(): Commodities.Entry | undefined;
+        get religionRequirement(): Religions.Entry | undefined;
+        get firstInWorldBundle(): EffectBundles.Entry | undefined;
+        get resourceRequirement(): Resources.Entry | undefined;
+        get buildingInstanceKey(): BuildingInstances.Entry | undefined;
+        get audioBuildingType(): AudioCampaignBuildings.Entry | undefined;
     }
 }
 export default BuildingLevels;

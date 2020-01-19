@@ -17,11 +17,11 @@ export declare namespace CampaignCharacterArtSets {
         readonly isMale: boolean;
         readonly _group: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentType: Agents.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly group: CampaignCharacterArtSetsCampaignGroups.Entry | undefined;
+        get agentType(): Agents.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get group(): CampaignCharacterArtSetsCampaignGroups.Entry | undefined;
     }
 }
 export default CampaignCharacterArtSets;

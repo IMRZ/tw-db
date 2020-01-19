@@ -7,7 +7,7 @@ export declare namespace CampaignFactorialCategoryBaseThresholds {
         readonly _category: string;
         readonly baseThreshold: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: CampaignFactorialCategoryJunctions.Entry | undefined;
+        get category(): CampaignFactorialCategoryJunctions.Entry | undefined;
     }
 }
 export default CampaignFactorialCategoryBaseThresholds;

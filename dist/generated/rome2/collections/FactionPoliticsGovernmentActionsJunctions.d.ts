@@ -15,8 +15,8 @@ export declare namespace FactionPoliticsGovernmentActionsJunctions {
         readonly costPerRegion: number;
         readonly cooldown: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly type: PoliticsGovernmentActions.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get type(): PoliticsGovernmentActions.Entry | undefined;
     }
 }
 export default FactionPoliticsGovernmentActionsJunctions;

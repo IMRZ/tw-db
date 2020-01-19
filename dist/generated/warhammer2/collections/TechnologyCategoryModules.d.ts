@@ -10,8 +10,8 @@ export declare namespace TechnologyCategoryModules {
         readonly _effectBundle: string;
         readonly minTier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly technologyNodeSet: TechnologyNodeSets.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get technologyNodeSet(): TechnologyNodeSets.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default TechnologyCategoryModules;

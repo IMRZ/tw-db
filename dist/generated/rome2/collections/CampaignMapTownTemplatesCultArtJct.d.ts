@@ -7,7 +7,7 @@ export declare namespace CampaignMapTownTemplatesCultArtJct {
         readonly _culture: string;
         readonly artpiece: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CampaignMapTownTemplatesCultArtJct;

@@ -7,7 +7,7 @@ export declare namespace AnimationSlotCategories {
         readonly slot: string;
         readonly _category: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: AnimationCategories.Entry | undefined;
+        get category(): AnimationCategories.Entry | undefined;
     }
 }
 export default AnimationSlotCategories;

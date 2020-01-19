@@ -10,7 +10,7 @@ export declare namespace Abilities {
         readonly _category: string;
         readonly onScreenTarget: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: AgentAbilityCategories.Entry | undefined;
+        get category(): AgentAbilityCategories.Entry | undefined;
     }
 }
 export default Abilities;

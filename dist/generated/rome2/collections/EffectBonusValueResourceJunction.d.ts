@@ -8,7 +8,7 @@ export declare namespace EffectBonusValueResourceJunction {
         readonly _bonusValueId: any;
         readonly _resource: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly resource: Resources.Entry | undefined;
+        get resource(): Resources.Entry | undefined;
     }
 }
 export default EffectBonusValueResourceJunction;

@@ -11,7 +11,7 @@ export declare namespace Plagues {
         readonly lifetime: number;
         readonly _plagueType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly plagueType: PlagueTypes.Entry | undefined;
+        get plagueType(): PlagueTypes.Entry | undefined;
     }
 }
 export default Plagues;

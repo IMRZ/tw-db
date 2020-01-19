@@ -7,7 +7,7 @@ export declare namespace CaiDiplomacySimpleTreacheries {
         readonly _event: string;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly event: CaiPersonalityDiplomaticEvents.Entry | undefined;
+        get event(): CaiPersonalityDiplomaticEvents.Entry | undefined;
     }
 }
 export default CaiDiplomacySimpleTreacheries;

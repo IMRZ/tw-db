@@ -14,9 +14,9 @@ export declare namespace BuildingUnitsAllowed {
         readonly _faction: string;
         readonly enabled: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly building: BuildingLevels.Entry | undefined;
-        readonly unit: MainUnits.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get building(): BuildingLevels.Entry | undefined;
+        get unit(): MainUnits.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default BuildingUnitsAllowed;

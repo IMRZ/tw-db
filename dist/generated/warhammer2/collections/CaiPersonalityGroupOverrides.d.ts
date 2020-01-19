@@ -16,12 +16,12 @@ export declare namespace CaiPersonalityGroupOverrides {
         readonly _playerSubculture: string;
         readonly _playerCulture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly campaignKey: Campaigns.Entry | undefined;
-        readonly personalityGroup: CaiPersonalityGroups.Entry | undefined;
-        readonly playerFaction: Factions.Entry | undefined;
-        readonly playerSubculture: CulturesSubcultures.Entry | undefined;
-        readonly playerCulture: Cultures.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get campaignKey(): Campaigns.Entry | undefined;
+        get personalityGroup(): CaiPersonalityGroups.Entry | undefined;
+        get playerFaction(): Factions.Entry | undefined;
+        get playerSubculture(): CulturesSubcultures.Entry | undefined;
+        get playerCulture(): Cultures.Entry | undefined;
     }
 }
 export default CaiPersonalityGroupOverrides;

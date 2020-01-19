@@ -15,9 +15,9 @@ export declare namespace BattleClimateWeatherDescriptions {
         readonly coldFatigue: number;
         readonly spottingScalar: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly climateType: Climates.Entry | undefined;
-        readonly season: Seasons.Entry | undefined;
-        readonly weatherType: BattleWeatherTypes.Entry | undefined;
+        get climateType(): Climates.Entry | undefined;
+        get season(): Seasons.Entry | undefined;
+        get weatherType(): BattleWeatherTypes.Entry | undefined;
     }
 }
 export default BattleClimateWeatherDescriptions;

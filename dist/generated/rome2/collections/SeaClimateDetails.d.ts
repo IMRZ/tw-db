@@ -10,7 +10,7 @@ export declare namespace SeaClimateDetails {
         readonly sunColour: string;
         readonly skyColour: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: Climates.Entry | undefined;
+        get key(): Climates.Entry | undefined;
     }
 }
 export default SeaClimateDetails;

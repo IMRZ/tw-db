@@ -13,10 +13,10 @@ export declare namespace EffectBundlesToEffectsJunctions {
         readonly _effectScope: string;
         readonly _advancementStage: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundleKey: EffectBundles.Entry | undefined;
-        readonly effectKey: Effects.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
-        readonly advancementStage: EffectBundleAdvancementStages.Entry | undefined;
+        get effectBundleKey(): EffectBundles.Entry | undefined;
+        get effectKey(): Effects.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
+        get advancementStage(): EffectBundleAdvancementStages.Entry | undefined;
     }
 }
 export default EffectBundlesToEffectsJunctions;

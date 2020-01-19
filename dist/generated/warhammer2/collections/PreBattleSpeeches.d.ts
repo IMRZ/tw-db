@@ -10,8 +10,8 @@ export declare namespace PreBattleSpeeches {
         readonly _type: number;
         readonly _parameter: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: PreBattleSpeechTypesEnum.Entry | undefined;
-        readonly parameter: PreBattleSpeechParametersEnum.Entry | undefined;
+        get type(): PreBattleSpeechTypesEnum.Entry | undefined;
+        get parameter(): PreBattleSpeechParametersEnum.Entry | undefined;
     }
 }
 export default PreBattleSpeeches;

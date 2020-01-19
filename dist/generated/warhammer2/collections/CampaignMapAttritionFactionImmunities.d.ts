@@ -8,8 +8,8 @@ export declare namespace CampaignMapAttritionFactionImmunities {
         readonly _attrition: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly attrition: CampaignMapAttritions.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get attrition(): CampaignMapAttritions.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default CampaignMapAttritionFactionImmunities;

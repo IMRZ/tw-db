@@ -17,8 +17,8 @@ export declare namespace CampaignSettlementDisplayBuildings {
         readonly constructionAdditionalModel: string;
         readonly constructionOverrideModel: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly displayBuildingKey: CampaignSettlementDisplayBuildingIds.Entry | undefined;
-        readonly state: CampaignSettlementDisplayBuildingsEnums.Entry | undefined;
+        get displayBuildingKey(): CampaignSettlementDisplayBuildingIds.Entry | undefined;
+        get state(): CampaignSettlementDisplayBuildingsEnums.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayBuildings;

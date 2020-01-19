@@ -13,8 +13,8 @@ export declare namespace BanditryEvents {
         readonly weight: number;
         readonly duration: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly messageEvent: MessageEvents.Entry | undefined;
-        readonly provinceEffectBundle: EffectBundles.Entry | undefined;
+        get messageEvent(): MessageEvents.Entry | undefined;
+        get provinceEffectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default BanditryEvents;

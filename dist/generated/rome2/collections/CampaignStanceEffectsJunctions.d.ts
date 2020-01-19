@@ -14,11 +14,11 @@ export declare namespace CampaignStanceEffectsJunctions {
         readonly _subculture: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly stance: CampaignStances.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get stance(): CampaignStances.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default CampaignStanceEffectsJunctions;

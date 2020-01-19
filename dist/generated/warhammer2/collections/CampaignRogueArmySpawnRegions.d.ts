@@ -9,8 +9,8 @@ export declare namespace CampaignRogueArmySpawnRegions {
         readonly _group: string;
         readonly _region: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: CampaignRogueArmySpawnGroups.Entry | undefined;
-        readonly region: Regions.Entry | undefined;
+        get group(): CampaignRogueArmySpawnGroups.Entry | undefined;
+        get region(): Regions.Entry | undefined;
     }
 }
 export default CampaignRogueArmySpawnRegions;

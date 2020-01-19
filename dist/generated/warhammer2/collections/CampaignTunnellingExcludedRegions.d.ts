@@ -6,7 +6,7 @@ export declare namespace CampaignTunnellingExcludedRegions {
         private readonly collectionCache;
         readonly _campaignGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
     }
 }
 export default CampaignTunnellingExcludedRegions;

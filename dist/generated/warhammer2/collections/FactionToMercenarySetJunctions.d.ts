@@ -8,8 +8,8 @@ export declare namespace FactionToMercenarySetJunctions {
         readonly _faction: string;
         readonly _mercenarySet: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly mercenarySet: MercenaryPools.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get mercenarySet(): MercenaryPools.Entry | undefined;
     }
 }
 export default FactionToMercenarySetJunctions;

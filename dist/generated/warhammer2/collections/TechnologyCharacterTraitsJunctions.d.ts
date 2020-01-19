@@ -8,8 +8,8 @@ export declare namespace TechnologyCharacterTraitsJunctions {
         readonly _technologyNode: string;
         readonly _characterTrait: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly technologyNode: TechnologyNodes.Entry | undefined;
-        readonly characterTrait: CharacterTraitLevels.Entry | undefined;
+        get technologyNode(): TechnologyNodes.Entry | undefined;
+        get characterTrait(): CharacterTraitLevels.Entry | undefined;
     }
 }
 export default TechnologyCharacterTraitsJunctions;

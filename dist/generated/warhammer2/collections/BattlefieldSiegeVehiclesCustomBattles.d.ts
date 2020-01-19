@@ -8,7 +8,7 @@ export declare namespace BattlefieldSiegeVehiclesCustomBattles {
         readonly cap: number;
         readonly probability: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly vehicle: BattlefieldSiegeVehicles.Entry | undefined;
+        get vehicle(): BattlefieldSiegeVehicles.Entry | undefined;
     }
 }
 export default BattlefieldSiegeVehiclesCustomBattles;

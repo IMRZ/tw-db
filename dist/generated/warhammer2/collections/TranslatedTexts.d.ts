@@ -11,7 +11,7 @@ export declare namespace TranslatedTexts {
         readonly requiresTranslation: boolean;
         readonly requiresRecording: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly language: Languages.Entry | undefined;
+        get language(): Languages.Entry | undefined;
     }
 }
 export default TranslatedTexts;

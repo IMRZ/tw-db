@@ -14,9 +14,9 @@ export declare namespace FactionCivilWarSetups {
         readonly factionLeaderTitleOverrideVictory: string;
         readonly _secessionistFaction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly primaryFaction: Factions.Entry | undefined;
-        readonly secondaryFaction: Factions.Entry | undefined;
-        readonly secessionistFaction: Factions.Entry | undefined;
+        get primaryFaction(): Factions.Entry | undefined;
+        get secondaryFaction(): Factions.Entry | undefined;
+        get secessionistFaction(): Factions.Entry | undefined;
     }
 }
 export default FactionCivilWarSetups;

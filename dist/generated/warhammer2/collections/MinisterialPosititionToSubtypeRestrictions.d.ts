@@ -9,8 +9,8 @@ export declare namespace MinisterialPosititionToSubtypeRestrictions {
         readonly _agentSubtype: string;
         readonly localisedRestrictionReason: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ministerialPosition: MinisterialPositions.Entry | undefined;
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
+        get ministerialPosition(): MinisterialPositions.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
     }
 }
 export default MinisterialPosititionToSubtypeRestrictions;

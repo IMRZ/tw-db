@@ -8,7 +8,7 @@ export declare namespace SacrificesToSotekRituals {
         readonly tier: number;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ritual: Rituals.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
     }
 }
 export default SacrificesToSotekRituals;

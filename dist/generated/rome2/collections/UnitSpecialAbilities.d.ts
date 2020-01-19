@@ -28,9 +28,9 @@ export declare namespace UnitSpecialAbilities {
         readonly clearCurrentOrder: boolean;
         readonly uniqueId: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: UnitAbilities.Entry | undefined;
-        readonly activatedProjectile: Projectiles.Entry | undefined;
-        readonly assumeSpecificBehaviour: SpecialAbilitiesSpecificBehaviourTypes.Entry | undefined;
+        get key(): UnitAbilities.Entry | undefined;
+        get activatedProjectile(): Projectiles.Entry | undefined;
+        get assumeSpecificBehaviour(): SpecialAbilitiesSpecificBehaviourTypes.Entry | undefined;
     }
 }
 export default UnitSpecialAbilities;

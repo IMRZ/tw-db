@@ -37,13 +37,13 @@ export declare namespace BattleVortexs {
         readonly _compositeSceneGroup: string;
         readonly delayBetweenVortexes: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly contactEffect: SpecialAbilityPhases.Entry | undefined;
-        readonly compositeScene: CompositeSceneFiles.Entry | undefined;
-        readonly launchSource: BattleVortexLaunchSources.Entry | undefined;
-        readonly buildingCollision: BattleVortexCollisionResponses.Entry | undefined;
-        readonly launchVfx: ParticleEffects.Entry | undefined;
-        readonly compositeSceneBlood: CompositeSceneFiles.Entry | undefined;
-        readonly compositeSceneGroup: BattleVortexCompositeSceneGroups.Entry | undefined;
+        get contactEffect(): SpecialAbilityPhases.Entry | undefined;
+        get compositeScene(): CompositeSceneFiles.Entry | undefined;
+        get launchSource(): BattleVortexLaunchSources.Entry | undefined;
+        get buildingCollision(): BattleVortexCollisionResponses.Entry | undefined;
+        get launchVfx(): ParticleEffects.Entry | undefined;
+        get compositeSceneBlood(): CompositeSceneFiles.Entry | undefined;
+        get compositeSceneGroup(): BattleVortexCompositeSceneGroups.Entry | undefined;
     }
 }
 export default BattleVortexs;

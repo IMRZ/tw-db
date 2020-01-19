@@ -7,8 +7,8 @@ export declare namespace BuildingUpgradesJunction {
         readonly _from: string;
         readonly _to: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly from: BuildingLevels.Entry | undefined;
-        readonly to: BuildingLevels.Entry | undefined;
+        get from(): BuildingLevels.Entry | undefined;
+        get to(): BuildingLevels.Entry | undefined;
     }
 }
 export default BuildingUpgradesJunction;

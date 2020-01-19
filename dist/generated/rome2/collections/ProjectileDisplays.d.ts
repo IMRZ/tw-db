@@ -17,12 +17,12 @@ export declare namespace ProjectileDisplays {
         readonly airborneAnim: string;
         readonly landingAnim: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly displayModel: WarscapeRigid.Entry | undefined;
-        readonly damagedDisplayModel: WarscapeRigid.Entry | undefined;
-        readonly launchFx: ParticleEffects.Entry | undefined;
-        readonly trailFx: ParticleEffects.Entry | undefined;
-        readonly stationaryFx: ParticleEffects.Entry | undefined;
-        readonly impact: ProjectileImpacts.Entry | undefined;
+        get displayModel(): WarscapeRigid.Entry | undefined;
+        get damagedDisplayModel(): WarscapeRigid.Entry | undefined;
+        get launchFx(): ParticleEffects.Entry | undefined;
+        get trailFx(): ParticleEffects.Entry | undefined;
+        get stationaryFx(): ParticleEffects.Entry | undefined;
+        get impact(): ProjectileImpacts.Entry | undefined;
     }
 }
 export default ProjectileDisplays;

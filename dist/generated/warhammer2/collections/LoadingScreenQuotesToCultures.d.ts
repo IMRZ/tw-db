@@ -8,8 +8,8 @@ export declare namespace LoadingScreenQuotesToCultures {
         readonly _loadingQuote: string;
         readonly _culture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly loadingQuote: LoadingScreenQuotes.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
+        get loadingQuote(): LoadingScreenQuotes.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default LoadingScreenQuotesToCultures;

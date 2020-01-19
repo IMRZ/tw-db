@@ -10,8 +10,8 @@ export declare namespace CdirEventsIncidentPayloads {
         readonly _payloadKey: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly incidentKey: Incidents.Entry | undefined;
-        readonly payloadKey: CdirEventsPayloads.Entry | undefined;
+        get incidentKey(): Incidents.Entry | undefined;
+        get payloadKey(): CdirEventsPayloads.Entry | undefined;
     }
 }
 export default CdirEventsIncidentPayloads;

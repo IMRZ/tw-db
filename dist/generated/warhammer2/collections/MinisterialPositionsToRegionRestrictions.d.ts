@@ -8,8 +8,8 @@ export declare namespace MinisterialPositionsToRegionRestrictions {
         readonly _ministerialPosition: string;
         readonly _requiredRegion: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ministerialPosition: MinisterialPositions.Entry | undefined;
-        readonly requiredRegion: Regions.Entry | undefined;
+        get ministerialPosition(): MinisterialPositions.Entry | undefined;
+        get requiredRegion(): Regions.Entry | undefined;
     }
 }
 export default MinisterialPositionsToRegionRestrictions;

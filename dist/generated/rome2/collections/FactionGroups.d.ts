@@ -10,7 +10,7 @@ export declare namespace FactionGroups {
         readonly _effectBundle: string;
         readonly descriptionLocalised: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default FactionGroups;

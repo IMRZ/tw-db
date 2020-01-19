@@ -11,9 +11,9 @@ export declare namespace WorkshopCategoriesProgressLevels {
         readonly _ancillaryReward: string;
         readonly _unitReward: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: WorkshopCategories.Entry | undefined;
-        readonly ancillaryReward: Ancillaries.Entry | undefined;
-        readonly unitReward: MainUnits.Entry | undefined;
+        get category(): WorkshopCategories.Entry | undefined;
+        get ancillaryReward(): Ancillaries.Entry | undefined;
+        get unitReward(): MainUnits.Entry | undefined;
     }
 }
 export default WorkshopCategoriesProgressLevels;

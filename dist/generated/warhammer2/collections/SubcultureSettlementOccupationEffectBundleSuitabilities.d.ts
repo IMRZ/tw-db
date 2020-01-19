@@ -8,8 +8,8 @@ export declare namespace SubcultureSettlementOccupationEffectBundleSuitabilities
         readonly _effectBundle: string;
         readonly _suitability: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly suitability: SubcultureSettlementOccupationSuitabilityTypes.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get suitability(): SubcultureSettlementOccupationSuitabilityTypes.Entry | undefined;
     }
 }
 export default SubcultureSettlementOccupationEffectBundleSuitabilities;

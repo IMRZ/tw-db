@@ -9,8 +9,8 @@ export declare namespace BuildingFactionwideEffectsJunctions {
         readonly _effect: string;
         readonly effectValue: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly building: BuildingLevels.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
+        get building(): BuildingLevels.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
     }
 }
 export default BuildingFactionwideEffectsJunctions;

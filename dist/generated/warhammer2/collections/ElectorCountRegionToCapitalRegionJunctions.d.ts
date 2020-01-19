@@ -7,8 +7,8 @@ export declare namespace ElectorCountRegionToCapitalRegionJunctions {
         readonly _region: string;
         readonly _capitalRegion: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly capitalRegion: Regions.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get capitalRegion(): Regions.Entry | undefined;
     }
 }
 export default ElectorCountRegionToCapitalRegionJunctions;

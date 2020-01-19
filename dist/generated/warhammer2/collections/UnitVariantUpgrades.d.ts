@@ -13,10 +13,10 @@ export declare namespace UnitVariantUpgrades {
         readonly _variantName: string;
         readonly cost: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly mainUnitKey: MainUnits.Entry | undefined;
-        readonly ancillaryPrimary: Ancillaries.Entry | undefined;
-        readonly ancillarySecondary: Ancillaries.Entry | undefined;
-        readonly variantName: Variants.Entry | undefined;
+        get mainUnitKey(): MainUnits.Entry | undefined;
+        get ancillaryPrimary(): Ancillaries.Entry | undefined;
+        get ancillarySecondary(): Ancillaries.Entry | undefined;
+        get variantName(): Variants.Entry | undefined;
     }
 }
 export default UnitVariantUpgrades;

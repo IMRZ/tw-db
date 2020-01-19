@@ -10,8 +10,8 @@ export declare namespace Videos {
         readonly audioTracks: number;
         readonly _scriptRef: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly videoType: VideoTypes.Entry | undefined;
-        readonly scriptRef: VoScripts.Entry | undefined;
+        get videoType(): VideoTypes.Entry | undefined;
+        get scriptRef(): VoScripts.Entry | undefined;
     }
 }
 export default Videos;

@@ -37,7 +37,7 @@ export declare namespace BattleSkeletons {
         readonly leftwheelNode: string;
         readonly rightwheelNode: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: BattleSkeletonCategoryEnums.Entry | undefined;
+        get category(): BattleSkeletonCategoryEnums.Entry | undefined;
     }
 }
 export default BattleSkeletons;

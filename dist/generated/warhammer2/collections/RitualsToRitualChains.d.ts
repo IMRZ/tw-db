@@ -9,8 +9,8 @@ export declare namespace RitualsToRitualChains {
         readonly _chain: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ritual: Rituals.Entry | undefined;
-        readonly chain: RitualChains.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
+        get chain(): RitualChains.Entry | undefined;
     }
 }
 export default RitualsToRitualChains;

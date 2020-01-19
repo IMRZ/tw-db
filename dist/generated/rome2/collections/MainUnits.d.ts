@@ -44,16 +44,16 @@ export declare namespace MainUnits {
         readonly _audioLanguage: string;
         readonly _audioVoActorGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly landUnit: LandUnits.Entry | undefined;
-        readonly navalUnit: NavalUnits.Entry | undefined;
-        readonly weight: UnitWeights.Entry | undefined;
-        readonly caste: UnitCastes.Entry | undefined;
-        readonly additionalBuildingRequirement: BuildingLevels.Entry | undefined;
-        readonly religionRequirement: Religions.Entry | undefined;
-        readonly resourceRequirement: Resources.Entry | undefined;
-        readonly regionUnitResourceRequirement: RegionUnitResources.Entry | undefined;
-        readonly audioLanguage: CulturesSubcultures.Entry | undefined;
-        readonly audioVoActorGroup: AudioVoActorGroups.Entry | undefined;
+        get landUnit(): LandUnits.Entry | undefined;
+        get navalUnit(): NavalUnits.Entry | undefined;
+        get weight(): UnitWeights.Entry | undefined;
+        get caste(): UnitCastes.Entry | undefined;
+        get additionalBuildingRequirement(): BuildingLevels.Entry | undefined;
+        get religionRequirement(): Religions.Entry | undefined;
+        get resourceRequirement(): Resources.Entry | undefined;
+        get regionUnitResourceRequirement(): RegionUnitResources.Entry | undefined;
+        get audioLanguage(): CulturesSubcultures.Entry | undefined;
+        get audioVoActorGroup(): AudioVoActorGroups.Entry | undefined;
     }
 }
 export default MainUnits;

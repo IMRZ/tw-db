@@ -8,8 +8,8 @@ export declare namespace CaiRitualRitualCheckTypeJunctions {
         readonly _ritual: string;
         readonly _ritualCheckType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ritual: Rituals.Entry | undefined;
-        readonly ritualCheckType: CaiRitualCheckTypes.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
+        get ritualCheckType(): CaiRitualCheckTypes.Entry | undefined;
     }
 }
 export default CaiRitualRitualCheckTypeJunctions;

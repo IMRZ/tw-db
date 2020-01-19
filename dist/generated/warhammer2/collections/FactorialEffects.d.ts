@@ -9,8 +9,8 @@ export declare namespace FactorialEffects {
         readonly _category: string;
         readonly _uiInfos: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: CampaignFactorialCategoryJunctions.Entry | undefined;
-        readonly uiInfos: CampaignFactorialUiInfos.Entry | undefined;
+        get category(): CampaignFactorialCategoryJunctions.Entry | undefined;
+        get uiInfos(): CampaignFactorialUiInfos.Entry | undefined;
     }
 }
 export default FactorialEffects;

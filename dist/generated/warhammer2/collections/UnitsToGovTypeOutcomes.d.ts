@@ -10,9 +10,9 @@ export declare namespace UnitsToGovTypeOutcomes {
         readonly _govType: string;
         readonly _outcome: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: Units.Entry | undefined;
-        readonly govType: GovernmentTypes.Entry | undefined;
-        readonly outcome: UnitsToGovTypeOutcomesEnum.Entry | undefined;
+        get key(): Units.Entry | undefined;
+        get govType(): GovernmentTypes.Entry | undefined;
+        get outcome(): UnitsToGovTypeOutcomesEnum.Entry | undefined;
     }
 }
 export default UnitsToGovTypeOutcomes;

@@ -12,7 +12,7 @@ export declare namespace PrologueLoadingScreens {
         readonly paneOnLeft: boolean;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default PrologueLoadingScreens;

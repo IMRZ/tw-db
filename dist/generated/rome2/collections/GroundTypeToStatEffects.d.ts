@@ -9,8 +9,8 @@ export declare namespace GroundTypeToStatEffects {
         readonly _affectedStat: string;
         readonly multiplier: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly groundType: GroundTypes.Entry | undefined;
-        readonly affectedStat: UiUnitStats.Entry | undefined;
+        get groundType(): GroundTypes.Entry | undefined;
+        get affectedStat(): UiUnitStats.Entry | undefined;
     }
 }
 export default GroundTypeToStatEffects;

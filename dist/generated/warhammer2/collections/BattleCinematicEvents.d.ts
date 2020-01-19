@@ -14,7 +14,7 @@ export declare namespace BattleCinematicEvents {
         readonly _eventCategory: string;
         readonly timeAfterEvent: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly eventCategory: BattleCinematicEventCategories.Entry | undefined;
+        get eventCategory(): BattleCinematicEventCategories.Entry | undefined;
     }
 }
 export default BattleCinematicEvents;

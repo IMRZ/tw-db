@@ -6,7 +6,7 @@ export declare namespace CampaignStormsExcludedRegions {
         private readonly collectionCache;
         readonly _region: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
+        get region(): Regions.Entry | undefined;
     }
 }
 export default CampaignStormsExcludedRegions;

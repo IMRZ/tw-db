@@ -11,11 +11,13 @@ export namespace RitualPayloadResourceTransactions {
 
     readonly _payload: string;
     readonly _transaction: string;
+    readonly isTransfer: boolean;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
       this._payload = values["payload"];
       this._transaction = values["transaction"];
+      this.isTransfer = !!values["is_transfer"];
     }
     
     get payload(): RitualPayloads.Entry | undefined {

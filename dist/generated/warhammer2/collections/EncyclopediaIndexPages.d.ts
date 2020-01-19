@@ -7,7 +7,7 @@ export declare namespace EncyclopediaIndexPages {
         readonly pageKey: string;
         readonly _annotation: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly annotation: EncyclopediaBlocks.Entry | undefined;
+        get annotation(): EncyclopediaBlocks.Entry | undefined;
     }
 }
 export default EncyclopediaIndexPages;

@@ -8,8 +8,8 @@ export declare namespace LoadingScreenQuotesToCampaigns {
         readonly _loadingQuote: string;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly loadingQuote: LoadingScreenQuotes.Entry | undefined;
-        readonly campaign: CampaignMapPlayableAreas.Entry | undefined;
+        get loadingQuote(): LoadingScreenQuotes.Entry | undefined;
+        get campaign(): CampaignMapPlayableAreas.Entry | undefined;
     }
 }
 export default LoadingScreenQuotesToCampaigns;

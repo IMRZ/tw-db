@@ -9,8 +9,8 @@ export declare namespace CdirMilitaryGeneratorUnitQualities {
         readonly _unitKey: string;
         readonly quality: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly groupKey: CdirMilitaryGeneratorUnitGroups.Entry | undefined;
-        readonly unitKey: MainUnits.Entry | undefined;
+        get groupKey(): CdirMilitaryGeneratorUnitGroups.Entry | undefined;
+        get unitKey(): MainUnits.Entry | undefined;
     }
 }
 export default CdirMilitaryGeneratorUnitQualities;

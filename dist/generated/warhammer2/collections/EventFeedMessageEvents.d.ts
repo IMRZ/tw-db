@@ -20,14 +20,14 @@ export declare namespace EventFeedMessageEvents {
         readonly _contextLocated: string;
         readonly overrideIcon: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly event: EventFeedEvents.Entry | undefined;
-        readonly target: EventFeedGroups.Entry | undefined;
-        readonly group: CampaignGroups.Entry | undefined;
-        readonly secondaryDetail: EventFeedStrings.Entry | undefined;
-        readonly flavourText: EventFeedStrings.Entry | undefined;
-        readonly layout: MessageEventLayoutTypes.Entry | undefined;
-        readonly layoutData: EventFeedGroups.Entry | undefined;
-        readonly contextLocated: EventFeedGroups.Entry | undefined;
+        get event(): EventFeedEvents.Entry | undefined;
+        get target(): EventFeedGroups.Entry | undefined;
+        get group(): CampaignGroups.Entry | undefined;
+        get secondaryDetail(): EventFeedStrings.Entry | undefined;
+        get flavourText(): EventFeedStrings.Entry | undefined;
+        get layout(): MessageEventLayoutTypes.Entry | undefined;
+        get layoutData(): EventFeedGroups.Entry | undefined;
+        get contextLocated(): EventFeedGroups.Entry | undefined;
     }
 }
 export default EventFeedMessageEvents;

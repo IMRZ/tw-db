@@ -8,8 +8,8 @@ export declare namespace CaiPersonalityDiplomaticEvents {
         readonly _diplomaticFactorGroupActive: string;
         readonly _diplomaticFactorGroupInactive: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly diplomaticFactorGroupActive: DiplomacyStrings.Entry | undefined;
-        readonly diplomaticFactorGroupInactive: DiplomacyStrings.Entry | undefined;
+        get diplomaticFactorGroupActive(): DiplomacyStrings.Entry | undefined;
+        get diplomaticFactorGroupInactive(): DiplomacyStrings.Entry | undefined;
     }
 }
 export default CaiPersonalityDiplomaticEvents;

@@ -7,7 +7,7 @@ export declare namespace RitualPayloadDiplomaticAttitudeChanges {
         readonly _payload: string;
         readonly attitudeDelta: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly payload: RitualPayloads.Entry | undefined;
+        get payload(): RitualPayloads.Entry | undefined;
     }
 }
 export default RitualPayloadDiplomaticAttitudeChanges;

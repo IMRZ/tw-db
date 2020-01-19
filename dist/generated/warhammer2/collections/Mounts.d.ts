@@ -15,11 +15,11 @@ export declare namespace Mounts {
         readonly _variant: string;
         readonly _voiceover: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly animation: BattleAnimationsTable.Entry | undefined;
-        readonly entity: BattleEntities.Entry | undefined;
-        readonly audioArmourType: AudioArmourTypes.Entry | undefined;
-        readonly variant: Variants.Entry | undefined;
-        readonly voiceover: AudioVoiceoverCultures.Entry | undefined;
+        get animation(): BattleAnimationsTable.Entry | undefined;
+        get entity(): BattleEntities.Entry | undefined;
+        get audioArmourType(): AudioArmourTypes.Entry | undefined;
+        get variant(): Variants.Entry | undefined;
+        get voiceover(): AudioVoiceoverCultures.Entry | undefined;
     }
 }
 export default Mounts;

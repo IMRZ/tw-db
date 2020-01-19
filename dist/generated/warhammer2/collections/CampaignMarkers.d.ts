@@ -9,8 +9,8 @@ export declare namespace CampaignMarkers {
         readonly file: string;
         readonly _group: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly markerType: CampaignMarkerTypes.Entry | undefined;
-        readonly group: CampaignGroups.Entry | undefined;
+        get markerType(): CampaignMarkerTypes.Entry | undefined;
+        get group(): CampaignGroups.Entry | undefined;
     }
 }
 export default CampaignMarkers;

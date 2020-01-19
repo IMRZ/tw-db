@@ -8,7 +8,7 @@ export declare namespace AdviceTriggers {
         readonly _testWhen: string;
         readonly conditionScript: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly testWhen: TriggerEvents.Entry | undefined;
+        get testWhen(): TriggerEvents.Entry | undefined;
     }
 }
 export default AdviceTriggers;

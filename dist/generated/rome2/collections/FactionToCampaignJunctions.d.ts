@@ -8,8 +8,8 @@ export declare namespace FactionToCampaignJunctions {
         readonly _faction: string;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default FactionToCampaignJunctions;

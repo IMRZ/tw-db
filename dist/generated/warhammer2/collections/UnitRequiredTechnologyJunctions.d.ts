@@ -8,8 +8,8 @@ export declare namespace UnitRequiredTechnologyJunctions {
         readonly _unitKey: string;
         readonly _technologyKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitKey: MainUnits.Entry | undefined;
-        readonly technologyKey: Technologies.Entry | undefined;
+        get unitKey(): MainUnits.Entry | undefined;
+        get technologyKey(): Technologies.Entry | undefined;
     }
 }
 export default UnitRequiredTechnologyJunctions;

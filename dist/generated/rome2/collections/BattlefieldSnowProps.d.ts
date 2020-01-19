@@ -7,7 +7,7 @@ export declare namespace BattlefieldSnowProps {
         readonly _prop: string;
         readonly _enableForSnow: any;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly prop: BattlefieldBuildings.Entry | undefined;
+        get prop(): BattlefieldBuildings.Entry | undefined;
     }
 }
 export default BattlefieldSnowProps;

@@ -9,9 +9,9 @@ export declare namespace CursorTransitions {
         readonly _resultingCursor: string;
         readonly _mouseEvent: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly initiatingCursor: Cursors.Entry | undefined;
-        readonly resultingCursor: Cursors.Entry | undefined;
-        readonly mouseEvent: CursorMouseEvents.Entry | undefined;
+        get initiatingCursor(): Cursors.Entry | undefined;
+        get resultingCursor(): Cursors.Entry | undefined;
+        get mouseEvent(): CursorMouseEvents.Entry | undefined;
     }
 }
 export default CursorTransitions;

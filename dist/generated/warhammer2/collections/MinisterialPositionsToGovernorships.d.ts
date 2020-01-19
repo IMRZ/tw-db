@@ -8,8 +8,8 @@ export declare namespace MinisterialPositionsToGovernorships {
         readonly _ministerialPosition: string;
         readonly _governorship: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ministerialPosition: MinisterialPositions.Entry | undefined;
-        readonly governorship: Governorships.Entry | undefined;
+        get ministerialPosition(): MinisterialPositions.Entry | undefined;
+        get governorship(): Governorships.Entry | undefined;
     }
 }
 export default MinisterialPositionsToGovernorships;

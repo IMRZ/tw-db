@@ -8,8 +8,8 @@ export declare namespace BattlesToBattleSkyTypesJunctions {
         readonly _battleKey: string;
         readonly _battleSkyTypeKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleKey: Battles.Entry | undefined;
-        readonly battleSkyTypeKey: BattleSkyTypes.Entry | undefined;
+        get battleKey(): Battles.Entry | undefined;
+        get battleSkyTypeKey(): BattleSkyTypes.Entry | undefined;
     }
 }
 export default BattlesToBattleSkyTypesJunctions;

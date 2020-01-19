@@ -8,8 +8,8 @@ export declare namespace NavalUnitsToUnitAbilitesJunctions {
         readonly _navalUnit: string;
         readonly _ability: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly navalUnit: NavalUnits.Entry | undefined;
-        readonly ability: UnitAbilities.Entry | undefined;
+        get navalUnit(): NavalUnits.Entry | undefined;
+        get ability(): UnitAbilities.Entry | undefined;
     }
 }
 export default NavalUnitsToUnitAbilitesJunctions;

@@ -10,9 +10,9 @@ export declare namespace CaiAgentTypeRecruitmentProfileJunctions {
         readonly _agentTypeKey: string;
         readonly _recruitmentTypeKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly recruitmentProfileKey: CaiAgentRecruitmentProfiles.Entry | undefined;
-        readonly agentTypeKey: CaiAgentTypes.Entry | undefined;
-        readonly recruitmentTypeKey: CaiAgentRecruitmentTypes.Entry | undefined;
+        get recruitmentProfileKey(): CaiAgentRecruitmentProfiles.Entry | undefined;
+        get agentTypeKey(): CaiAgentTypes.Entry | undefined;
+        get recruitmentTypeKey(): CaiAgentRecruitmentTypes.Entry | undefined;
     }
 }
 export default CaiAgentTypeRecruitmentProfileJunctions;

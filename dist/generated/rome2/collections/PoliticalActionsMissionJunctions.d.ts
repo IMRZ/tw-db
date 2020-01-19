@@ -9,8 +9,8 @@ export declare namespace PoliticalActionsMissionJunctions {
         readonly _mission: string;
         readonly weighting: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly politicalAction: PoliticalActions.Entry | undefined;
-        readonly mission: Missions.Entry | undefined;
+        get politicalAction(): PoliticalActions.Entry | undefined;
+        get mission(): Missions.Entry | undefined;
     }
 }
 export default PoliticalActionsMissionJunctions;

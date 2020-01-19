@@ -18,16 +18,16 @@ export declare namespace BattleEntityEffectsJunctions {
         readonly bloodSpurtLargeDecal: string;
         readonly _bloodExplosionDecal: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly walkDust: BattleEntityEffects.Entry | undefined;
-        readonly runDust: BattleEntityEffects.Entry | undefined;
-        readonly impactDust: BattleEntityEffects.Entry | undefined;
-        readonly meleeDust: BattleEntityEffects.Entry | undefined;
-        readonly footsteps: BattleEntityEffects.Entry | undefined;
-        readonly bloodSpurtSmall: ParticleEffects.Entry | undefined;
-        readonly bloodSpurtMedium: ParticleEffects.Entry | undefined;
-        readonly bloodSpurtLarge: ParticleEffects.Entry | undefined;
-        readonly bloodExplosion: ParticleEffects.Entry | undefined;
-        readonly bloodExplosionDecal: ParticleEffects.Entry | undefined;
+        get walkDust(): BattleEntityEffects.Entry | undefined;
+        get runDust(): BattleEntityEffects.Entry | undefined;
+        get impactDust(): BattleEntityEffects.Entry | undefined;
+        get meleeDust(): BattleEntityEffects.Entry | undefined;
+        get footsteps(): BattleEntityEffects.Entry | undefined;
+        get bloodSpurtSmall(): ParticleEffects.Entry | undefined;
+        get bloodSpurtMedium(): ParticleEffects.Entry | undefined;
+        get bloodSpurtLarge(): ParticleEffects.Entry | undefined;
+        get bloodExplosion(): ParticleEffects.Entry | undefined;
+        get bloodExplosionDecal(): ParticleEffects.Entry | undefined;
     }
 }
 export default BattleEntityEffectsJunctions;

@@ -8,8 +8,8 @@ export declare namespace SpecialAbilityToAutoDeactivateFlags {
         readonly _invalidUsageFlag: string;
         readonly _specialAbilityKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly invalidUsageFlag: SpecialAbilityInvalidUsageFlags.Entry | undefined;
-        readonly specialAbilityKey: UnitSpecialAbilities.Entry | undefined;
+        get invalidUsageFlag(): SpecialAbilityInvalidUsageFlags.Entry | undefined;
+        get specialAbilityKey(): UnitSpecialAbilities.Entry | undefined;
     }
 }
 export default SpecialAbilityToAutoDeactivateFlags;

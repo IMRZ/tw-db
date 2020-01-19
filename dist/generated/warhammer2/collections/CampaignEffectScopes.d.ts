@@ -15,11 +15,11 @@ export declare namespace CampaignEffectScopes {
         readonly _location: string;
         readonly _territory: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly source: CampaignEffectScopeObjects.Entry | undefined;
-        readonly target: CampaignEffectScopeObjects.Entry | undefined;
-        readonly ownership: CampaignEffectScopeOwnerships.Entry | undefined;
-        readonly location: CampaignEffectScopeLocations.Entry | undefined;
-        readonly territory: CampaignEffectScopeTerritories.Entry | undefined;
+        get source(): CampaignEffectScopeObjects.Entry | undefined;
+        get target(): CampaignEffectScopeObjects.Entry | undefined;
+        get ownership(): CampaignEffectScopeOwnerships.Entry | undefined;
+        get location(): CampaignEffectScopeLocations.Entry | undefined;
+        get territory(): CampaignEffectScopeTerritories.Entry | undefined;
     }
 }
 export default CampaignEffectScopes;

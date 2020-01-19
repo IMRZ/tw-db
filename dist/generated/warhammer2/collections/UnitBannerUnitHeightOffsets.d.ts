@@ -8,7 +8,7 @@ export declare namespace UnitBannerUnitHeightOffsets {
         readonly heightOffset: number;
         readonly campaignHeightOffset: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitRecord: MainUnits.Entry | undefined;
+        get unitRecord(): MainUnits.Entry | undefined;
     }
 }
 export default UnitBannerUnitHeightOffsets;

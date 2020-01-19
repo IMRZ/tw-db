@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaActorGenders {
         readonly _member: string;
         readonly _gender: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly gender: Genders.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaActorGenders;

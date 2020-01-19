@@ -12,11 +12,11 @@ export declare namespace MilitaryForceTypeHordeDetails {
         readonly _secondarySlotTemplate: string;
         readonly _secondarySlotType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly forceType: MilitaryForceTypes.Entry | undefined;
-        readonly primarySlotTemplate: SlotTemplates.Entry | undefined;
-        readonly primarySlotType: SlotTypes.Entry | undefined;
-        readonly secondarySlotTemplate: SlotTemplates.Entry | undefined;
-        readonly secondarySlotType: SlotTypes.Entry | undefined;
+        get forceType(): MilitaryForceTypes.Entry | undefined;
+        get primarySlotTemplate(): SlotTemplates.Entry | undefined;
+        get primarySlotType(): SlotTypes.Entry | undefined;
+        get secondarySlotTemplate(): SlotTemplates.Entry | undefined;
+        get secondarySlotType(): SlotTypes.Entry | undefined;
     }
 }
 export default MilitaryForceTypeHordeDetails;

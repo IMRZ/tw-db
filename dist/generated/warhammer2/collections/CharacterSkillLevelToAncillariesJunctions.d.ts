@@ -9,8 +9,8 @@ export declare namespace CharacterSkillLevelToAncillariesJunctions {
         readonly _grantedAncillary: string;
         readonly level: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly skill: CharacterSkills.Entry | undefined;
-        readonly grantedAncillary: Ancillaries.Entry | undefined;
+        get skill(): CharacterSkills.Entry | undefined;
+        get grantedAncillary(): Ancillaries.Entry | undefined;
     }
 }
 export default CharacterSkillLevelToAncillariesJunctions;

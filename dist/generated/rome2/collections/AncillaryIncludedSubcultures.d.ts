@@ -8,8 +8,8 @@ export declare namespace AncillaryIncludedSubcultures {
         readonly _ancillary: string;
         readonly _subculture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ancillary: AncillaryInfo.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
+        get ancillary(): AncillaryInfo.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
     }
 }
 export default AncillaryIncludedSubcultures;

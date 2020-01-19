@@ -8,7 +8,7 @@ export declare namespace ResourceEffects {
         readonly _effectKey: any;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly resourceKey: Resources.Entry | undefined;
+        get resourceKey(): Resources.Entry | undefined;
     }
 }
 export default ResourceEffects;

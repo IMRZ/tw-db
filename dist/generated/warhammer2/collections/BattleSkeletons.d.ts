@@ -64,8 +64,8 @@ export declare namespace BattleSkeletons {
         readonly torsoSpliceNode: string;
         readonly _gameExpansionKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly locomotion: BattleSkeletonsLocomotionEnums.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get locomotion(): BattleSkeletonsLocomotionEnums.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default BattleSkeletons;

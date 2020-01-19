@@ -9,9 +9,9 @@ export declare namespace FactionFeatureSetMilitaryForceTypes {
         readonly _defaultNavy: string;
         readonly _seaLockedSpecialist: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly defaultArmy: MilitaryForceTypes.Entry | undefined;
-        readonly defaultNavy: MilitaryForceTypes.Entry | undefined;
-        readonly seaLockedSpecialist: MilitaryForceTypes.Entry | undefined;
+        get defaultArmy(): MilitaryForceTypes.Entry | undefined;
+        get defaultNavy(): MilitaryForceTypes.Entry | undefined;
+        get seaLockedSpecialist(): MilitaryForceTypes.Entry | undefined;
     }
 }
 export default FactionFeatureSetMilitaryForceTypes;

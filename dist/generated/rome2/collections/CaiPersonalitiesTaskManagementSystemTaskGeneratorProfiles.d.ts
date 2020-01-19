@@ -8,8 +8,8 @@ export declare namespace CaiPersonalitiesTaskManagementSystemTaskGeneratorProfil
         readonly _defaultGeneratorGroupWhenOwningRegions: string;
         readonly _defaultGeneratorGroupWhenNoOwnedRegions: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly defaultGeneratorGroupWhenOwningRegions: CaiTaskManagementSystemTaskGeneratorGroups.Entry | undefined;
-        readonly defaultGeneratorGroupWhenNoOwnedRegions: CaiTaskManagementSystemTaskGeneratorGroups.Entry | undefined;
+        get defaultGeneratorGroupWhenOwningRegions(): CaiTaskManagementSystemTaskGeneratorGroups.Entry | undefined;
+        get defaultGeneratorGroupWhenNoOwnedRegions(): CaiTaskManagementSystemTaskGeneratorGroups.Entry | undefined;
     }
 }
 export default CaiPersonalitiesTaskManagementSystemTaskGeneratorProfiles;

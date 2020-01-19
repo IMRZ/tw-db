@@ -8,9 +8,9 @@ export declare namespace EncyclopediaHistoricalInfoPageLinkages {
         readonly _parentKey: string;
         readonly _nextKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly pageKey: EncyclopediaHistoricalInfoPages.Entry | undefined;
-        readonly parentKey: EncyclopediaHistoricalInfoPages.Entry | undefined;
-        readonly nextKey: EncyclopediaHistoricalInfoPages.Entry | undefined;
+        get pageKey(): EncyclopediaHistoricalInfoPages.Entry | undefined;
+        get parentKey(): EncyclopediaHistoricalInfoPages.Entry | undefined;
+        get nextKey(): EncyclopediaHistoricalInfoPages.Entry | undefined;
     }
 }
 export default EncyclopediaHistoricalInfoPageLinkages;

@@ -9,8 +9,8 @@ export declare namespace TradeDisplayGroups {
         readonly _model: string;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: CampaignGroups.Entry | undefined;
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get group(): CampaignGroups.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayGroups;

@@ -8,8 +8,8 @@ export declare namespace BuildingChainToSlots {
         readonly _chain: string;
         readonly _slot: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly chain: BuildingChains.Entry | undefined;
-        readonly slot: Slots.Entry | undefined;
+        get chain(): BuildingChains.Entry | undefined;
+        get slot(): Slots.Entry | undefined;
     }
 }
 export default BuildingChainToSlots;

@@ -7,8 +7,8 @@ export declare namespace CampaignSubjectEvolutionLinks {
         readonly _parent: string;
         readonly _child: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly parent: CampaignSubjectEvolutions.Entry | undefined;
-        readonly child: CampaignSubjectEvolutions.Entry | undefined;
+        get parent(): CampaignSubjectEvolutions.Entry | undefined;
+        get child(): CampaignSubjectEvolutions.Entry | undefined;
     }
 }
 export default CampaignSubjectEvolutionLinks;

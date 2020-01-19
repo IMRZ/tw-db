@@ -13,10 +13,10 @@ export declare namespace CultureSubcultureCharacterPortraits {
         readonly _faction: string;
         readonly path: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly portraitType: PortraitTypes.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get portraitType(): PortraitTypes.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default CultureSubcultureCharacterPortraits;

@@ -43,12 +43,12 @@ export declare namespace Projectiles {
         readonly canDamageBuildings: boolean;
         readonly isGrapple: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly shotType: ProjectileShotTypeEnum.Entry | undefined;
-        readonly explosionType: ProjectilesExplosions.Entry | undefined;
-        readonly projectileDisplay: ProjectileDisplays.Entry | undefined;
-        readonly overheadStatEffect: SpecialAbilityPhases.Entry | undefined;
-        readonly contactStatEffect: SpecialAbilityPhases.Entry | undefined;
-        readonly projectileAudio: AudioProjectiles.Entry | undefined;
+        get shotType(): ProjectileShotTypeEnum.Entry | undefined;
+        get explosionType(): ProjectilesExplosions.Entry | undefined;
+        get projectileDisplay(): ProjectileDisplays.Entry | undefined;
+        get overheadStatEffect(): SpecialAbilityPhases.Entry | undefined;
+        get contactStatEffect(): SpecialAbilityPhases.Entry | undefined;
+        get projectileAudio(): AudioProjectiles.Entry | undefined;
     }
 }
 export default Projectiles;

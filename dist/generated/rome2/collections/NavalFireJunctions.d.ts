@@ -9,8 +9,8 @@ export declare namespace NavalFireJunctions {
         readonly _unitCategory: string;
         readonly chanceOfFire: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly incendiaryLevel: ProjectileIncendiaryEnum.Entry | undefined;
-        readonly unitCategory: UnitCategory.Entry | undefined;
+        get incendiaryLevel(): ProjectileIncendiaryEnum.Entry | undefined;
+        get unitCategory(): UnitCategory.Entry | undefined;
     }
 }
 export default NavalFireJunctions;

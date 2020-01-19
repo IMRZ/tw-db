@@ -7,7 +7,7 @@ export declare namespace CampaignSettlementDisplayBuildingCultureOverlays {
         readonly _culture: string;
         readonly bmd: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayBuildingCultureOverlays;

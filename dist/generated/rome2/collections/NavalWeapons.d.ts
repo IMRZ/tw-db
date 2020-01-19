@@ -11,9 +11,9 @@ export declare namespace NavalWeapons {
         readonly _autonomousEngine: string;
         readonly _modelsEntityWeaponry: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: NavalWeaponsEnums.Entry | undefined;
-        readonly autonomousEngine: BattlefieldEnginesAutonomous.Entry | undefined;
-        readonly modelsEntityWeaponry: ModelsEntityWeapons.Entry | undefined;
+        get type(): NavalWeaponsEnums.Entry | undefined;
+        get autonomousEngine(): BattlefieldEnginesAutonomous.Entry | undefined;
+        get modelsEntityWeaponry(): ModelsEntityWeapons.Entry | undefined;
     }
 }
 export default NavalWeapons;

@@ -10,9 +10,9 @@ export declare namespace CampaignMapTooltips {
         readonly _adviceLine: string;
         readonly _mainLine: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly tooltipLine: CampaignMapTooltipTexts.Entry | undefined;
-        readonly adviceLine: CampaignMapTooltipTexts.Entry | undefined;
-        readonly mainLine: CampaignMapTooltipTexts.Entry | undefined;
+        get tooltipLine(): CampaignMapTooltipTexts.Entry | undefined;
+        get adviceLine(): CampaignMapTooltipTexts.Entry | undefined;
+        get mainLine(): CampaignMapTooltipTexts.Entry | undefined;
     }
 }
 export default CampaignMapTooltips;

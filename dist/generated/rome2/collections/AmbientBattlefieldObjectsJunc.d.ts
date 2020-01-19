@@ -8,7 +8,7 @@ export declare namespace AmbientBattlefieldObjectsJunc {
         readonly _season: any;
         readonly _ambientBattlefieldObject: any;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly climate: Climates.Entry | undefined;
+        get climate(): Climates.Entry | undefined;
     }
 }
 export default AmbientBattlefieldObjectsJunc;

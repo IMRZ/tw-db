@@ -9,8 +9,8 @@ export declare namespace StartPosNavalUnits {
         readonly _unitType: string;
         readonly _admiral: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitType: MainUnits.Entry | undefined;
-        readonly admiral: StartPosCharacters.Entry | undefined;
+        get unitType(): MainUnits.Entry | undefined;
+        get admiral(): StartPosCharacters.Entry | undefined;
     }
 }
 export default StartPosNavalUnits;

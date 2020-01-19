@@ -13,9 +13,9 @@ export declare namespace CampaignMapSettlements {
         readonly slotCount: number;
         readonly _slotType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly region: Regions.Entry | undefined;
-        readonly templateName: CampaignMapSettlementTemplates.Entry | undefined;
-        readonly slotType: Slots.Entry | undefined;
+        get region(): Regions.Entry | undefined;
+        get templateName(): CampaignMapSettlementTemplates.Entry | undefined;
+        get slotType(): Slots.Entry | undefined;
     }
 }
 export default CampaignMapSettlements;

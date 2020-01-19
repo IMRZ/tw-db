@@ -9,8 +9,8 @@ export declare namespace PoliticalActionsIncidentsJunctions {
         readonly _incident: string;
         readonly weighting: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly politicalAction: PoliticalActions.Entry | undefined;
-        readonly incident: Incidents.Entry | undefined;
+        get politicalAction(): PoliticalActions.Entry | undefined;
+        get incident(): Incidents.Entry | undefined;
     }
 }
 export default PoliticalActionsIncidentsJunctions;

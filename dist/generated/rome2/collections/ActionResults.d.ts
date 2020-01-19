@@ -8,8 +8,8 @@ export declare namespace ActionResults {
         readonly _actorEffectBundle: string;
         readonly _targetEffectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly actorEffectBundle: EffectBundles.Entry | undefined;
-        readonly targetEffectBundle: EffectBundles.Entry | undefined;
+        get actorEffectBundle(): EffectBundles.Entry | undefined;
+        get targetEffectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default ActionResults;

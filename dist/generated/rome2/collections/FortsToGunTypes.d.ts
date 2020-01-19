@@ -8,8 +8,8 @@ export declare namespace FortsToGunTypes {
         readonly _key: string;
         readonly _gunType: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly key: BuildingLevels.Entry | undefined;
-        readonly gunType: GunTypes.Entry | undefined;
+        get key(): BuildingLevels.Entry | undefined;
+        get gunType(): GunTypes.Entry | undefined;
     }
 }
 export default FortsToGunTypes;

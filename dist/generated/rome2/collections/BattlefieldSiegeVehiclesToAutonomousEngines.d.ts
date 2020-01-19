@@ -8,8 +8,8 @@ export declare namespace BattlefieldSiegeVehiclesToAutonomousEngines {
         readonly _vehicle: string;
         readonly _engine: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly vehicle: BattlefieldSiegeVehicles.Entry | undefined;
-        readonly engine: BattlefieldEnginesAutonomous.Entry | undefined;
+        get vehicle(): BattlefieldSiegeVehicles.Entry | undefined;
+        get engine(): BattlefieldEnginesAutonomous.Entry | undefined;
     }
 }
 export default BattlefieldSiegeVehiclesToAutonomousEngines;

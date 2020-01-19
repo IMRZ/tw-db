@@ -10,7 +10,7 @@ export declare namespace LoyaltyEventEffects {
         readonly loyaltyChange: number;
         readonly threshold: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly loyaltyFactor: LoyaltyFactors.Entry | undefined;
+        get loyaltyFactor(): LoyaltyFactors.Entry | undefined;
     }
 }
 export default LoyaltyEventEffects;

@@ -50,16 +50,16 @@ export declare namespace Units {
         readonly isMale: boolean;
         readonly supportsFirstPerson: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: UnitCategory.Entry | undefined;
-        readonly class: UnitClass.Entry | undefined;
-        readonly unitDescriptionText: UnitDescriptionTexts.Entry | undefined;
-        readonly regionUnitResource: RegionUnitResources.Entry | undefined;
-        readonly unitCaste: UnitCastes.Entry | undefined;
-        readonly additionalBuildingLevelRequirement: BuildingLevels.Entry | undefined;
-        readonly religionRequirement: Religions.Entry | undefined;
-        readonly resourceRequirement: Resources.Entry | undefined;
-        readonly unitRecruitedMovie: MovieEventStrings.Entry | undefined;
-        readonly pdlc: Pdlc.Entry | undefined;
+        get category(): UnitCategory.Entry | undefined;
+        get class(): UnitClass.Entry | undefined;
+        get unitDescriptionText(): UnitDescriptionTexts.Entry | undefined;
+        get regionUnitResource(): RegionUnitResources.Entry | undefined;
+        get unitCaste(): UnitCastes.Entry | undefined;
+        get additionalBuildingLevelRequirement(): BuildingLevels.Entry | undefined;
+        get religionRequirement(): Religions.Entry | undefined;
+        get resourceRequirement(): Resources.Entry | undefined;
+        get unitRecruitedMovie(): MovieEventStrings.Entry | undefined;
+        get pdlc(): Pdlc.Entry | undefined;
     }
 }
 export default Units;

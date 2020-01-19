@@ -9,8 +9,8 @@ export declare namespace AgentToAgentAttributes {
         readonly _agent: string;
         readonly defaultValue: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly attribute: AgentAttributes.Entry | undefined;
-        readonly agent: Agents.Entry | undefined;
+        get attribute(): AgentAttributes.Entry | undefined;
+        get agent(): Agents.Entry | undefined;
     }
 }
 export default AgentToAgentAttributes;

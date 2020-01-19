@@ -13,8 +13,8 @@ export declare namespace CaiPersonalityDiplomaticTreatyValues {
         readonly turn2: number;
         readonly _treaty: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly componentId: CaiPersonalityDiplomaticComponents.Entry | undefined;
-        readonly treaty: CaiPersonalityDiplomaticTreatyTypes.Entry | undefined;
+        get componentId(): CaiPersonalityDiplomaticComponents.Entry | undefined;
+        get treaty(): CaiPersonalityDiplomaticTreatyTypes.Entry | undefined;
     }
 }
 export default CaiPersonalityDiplomaticTreatyValues;

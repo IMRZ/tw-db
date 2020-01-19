@@ -8,7 +8,7 @@ export declare namespace Quotes {
         readonly _quotePerson: string;
         readonly key: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly quotePerson: QuotesPeople.Entry | undefined;
+        get quotePerson(): QuotesPeople.Entry | undefined;
     }
 }
 export default Quotes;

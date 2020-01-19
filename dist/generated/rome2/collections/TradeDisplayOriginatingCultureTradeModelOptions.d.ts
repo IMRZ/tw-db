@@ -11,8 +11,8 @@ export declare namespace TradeDisplayOriginatingCultureTradeModelOptions {
         readonly priority: number;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly originatingCulture: Cultures.Entry | undefined;
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get originatingCulture(): Cultures.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayOriginatingCultureTradeModelOptions;

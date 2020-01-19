@@ -9,8 +9,8 @@ export declare namespace WorkshopCategoriesToRituals {
         readonly _ritual: string;
         readonly order: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly category: WorkshopCategories.Entry | undefined;
-        readonly ritual: Rituals.Entry | undefined;
+        get category(): WorkshopCategories.Entry | undefined;
+        get ritual(): Rituals.Entry | undefined;
     }
 }
 export default WorkshopCategoriesToRituals;

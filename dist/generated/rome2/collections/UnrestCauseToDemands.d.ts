@@ -9,8 +9,8 @@ export declare namespace UnrestCauseToDemands {
         readonly levelOfUnrest: string;
         readonly _demand: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly cause: TExcUnrestCauses.Entry | undefined;
-        readonly demand: TExcUnrestDemands.Entry | undefined;
+        get cause(): TExcUnrestCauses.Entry | undefined;
+        get demand(): TExcUnrestDemands.Entry | undefined;
     }
 }
 export default UnrestCauseToDemands;

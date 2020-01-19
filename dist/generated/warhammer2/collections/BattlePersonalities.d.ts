@@ -20,12 +20,12 @@ export declare namespace BattlePersonalities {
         readonly _gameExpansionKey: string;
         readonly autonomousRiderHero: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly manAnimationsTable: BattleAnimationsTable.Entry | undefined;
-        readonly missileType: Projectiles.Entry | undefined;
-        readonly variant: Variants.Entry | undefined;
-        readonly battleEntity: BattleEntities.Entry | undefined;
-        readonly battleEntityStats: BattleEntityStats.Entry | undefined;
-        readonly gameExpansionKey: TexcExpansions.Entry | undefined;
+        get manAnimationsTable(): BattleAnimationsTable.Entry | undefined;
+        get missileType(): Projectiles.Entry | undefined;
+        get variant(): Variants.Entry | undefined;
+        get battleEntity(): BattleEntities.Entry | undefined;
+        get battleEntityStats(): BattleEntityStats.Entry | undefined;
+        get gameExpansionKey(): TexcExpansions.Entry | undefined;
     }
 }
 export default BattlePersonalities;

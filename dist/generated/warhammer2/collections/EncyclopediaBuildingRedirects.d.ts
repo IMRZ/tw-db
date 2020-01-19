@@ -7,8 +7,8 @@ export declare namespace EncyclopediaBuildingRedirects {
         readonly _building: string;
         readonly _redirectBuilding: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly building: BuildingLevels.Entry | undefined;
-        readonly redirectBuilding: BuildingLevels.Entry | undefined;
+        get building(): BuildingLevels.Entry | undefined;
+        get redirectBuilding(): BuildingLevels.Entry | undefined;
     }
 }
 export default EncyclopediaBuildingRedirects;

@@ -10,9 +10,9 @@ export declare namespace CdirEventsMissionFollowupDilemmas {
         readonly _statusKey: string;
         readonly _followupDilemmaKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly missionKey: Missions.Entry | undefined;
-        readonly statusKey: CdirEventsMissionStatuses.Entry | undefined;
-        readonly followupDilemmaKey: Dilemmas.Entry | undefined;
+        get missionKey(): Missions.Entry | undefined;
+        get statusKey(): CdirEventsMissionStatuses.Entry | undefined;
+        get followupDilemmaKey(): Dilemmas.Entry | undefined;
     }
 }
 export default CdirEventsMissionFollowupDilemmas;

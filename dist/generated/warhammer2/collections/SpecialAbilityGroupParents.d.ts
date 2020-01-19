@@ -7,8 +7,8 @@ export declare namespace SpecialAbilityGroupParents {
         readonly _child: string;
         readonly _parent: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly child: SpecialAbilityGroups.Entry | undefined;
-        readonly parent: SpecialAbilityGroups.Entry | undefined;
+        get child(): SpecialAbilityGroups.Entry | undefined;
+        get parent(): SpecialAbilityGroups.Entry | undefined;
     }
 }
 export default SpecialAbilityGroupParents;

@@ -8,8 +8,8 @@ export declare namespace CampaignHiddenSettlementOverrides {
         readonly _campaign: string;
         readonly _region: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly region: Regions.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get region(): Regions.Entry | undefined;
     }
 }
 export default CampaignHiddenSettlementOverrides;

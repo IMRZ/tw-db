@@ -8,8 +8,8 @@ export declare namespace BattleSiegeVehiclePermissions {
         readonly _vehicle: string;
         readonly _faction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly vehicle: BattlefieldSiegeVehicles.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
+        get vehicle(): BattlefieldSiegeVehicles.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
     }
 }
 export default BattleSiegeVehiclePermissions;

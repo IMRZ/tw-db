@@ -8,8 +8,8 @@ export declare namespace FactionPoliticalPartiesJunctions {
         readonly _factionKey: string;
         readonly _politicalPartyKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly factionKey: Factions.Entry | undefined;
-        readonly politicalPartyKey: PoliticalParties.Entry | undefined;
+        get factionKey(): Factions.Entry | undefined;
+        get politicalPartyKey(): PoliticalParties.Entry | undefined;
     }
 }
 export default FactionPoliticalPartiesJunctions;

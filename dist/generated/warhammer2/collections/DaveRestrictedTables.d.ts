@@ -6,7 +6,7 @@ export declare namespace DaveRestrictedTables {
         private readonly collectionCache;
         readonly _tableName: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly tableName: TExcImplementedTables.Entry | undefined;
+        get tableName(): TExcImplementedTables.Entry | undefined;
     }
 }
 export default DaveRestrictedTables;

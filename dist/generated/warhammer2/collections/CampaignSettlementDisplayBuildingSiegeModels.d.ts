@@ -8,7 +8,7 @@ export declare namespace CampaignSettlementDisplayBuildingSiegeModels {
         readonly blockade: boolean;
         readonly _culture: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CampaignSettlementDisplayBuildingSiegeModels;

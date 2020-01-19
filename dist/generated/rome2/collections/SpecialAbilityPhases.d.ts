@@ -22,9 +22,9 @@ export declare namespace SpecialAbilityPhases {
         readonly _uiVfx: string;
         readonly rallyAmount: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectType: SpecialAbilityPhaseEffectTypes.Entry | undefined;
-        readonly requestedStance: SpecialAbilityStanceEnums.Entry | undefined;
-        readonly uiVfx: UiEffects.Entry | undefined;
+        get effectType(): SpecialAbilityPhaseEffectTypes.Entry | undefined;
+        get requestedStance(): SpecialAbilityStanceEnums.Entry | undefined;
+        get uiVfx(): UiEffects.Entry | undefined;
     }
 }
 export default SpecialAbilityPhases;

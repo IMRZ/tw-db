@@ -13,20 +13,20 @@
     "generate": "ts-node scripts/index.ts"
   },
   "dependencies": {
-    "fast-xml-parser": "^3.12.18"
+    "fast-xml-parser": "3.16.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "@types/lodash": "^4.14.136",
     "@types/node": "^12.6.8",
-    "dotenv": "^8.1.0",
-    "fs-extra": "^8.1.0",
-    "jest": "^24.8.0",
-    "lodash": "^4.17.15",
-    "rollup": "^1.17.0",
-    "rollup-plugin-typescript2": "^0.23.0",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "dotenv": "8.2.0",
+    "fs-extra": "8.1.0",
+    "jest": "24.9.0",
+    "lodash": "4.17.15",
+    "rollup": "1.29.0",
+    "rollup-plugin-typescript2": "0.25.3",
+    "ts-jest": "24.3.0",
+    "ts-node": "8.6.2",
+    "typescript": "3.7.5"
   }
 }

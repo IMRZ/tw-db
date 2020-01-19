@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaDiplomaticStances {
         readonly _member: string;
         readonly _stance: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly stance: Stances.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get stance(): Stances.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaDiplomaticStances;

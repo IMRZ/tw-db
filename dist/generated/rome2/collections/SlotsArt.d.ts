@@ -25,12 +25,12 @@ export declare namespace SlotsArt {
         readonly _emptyBuildingModelAnimated: string;
         readonly displayEmptyBldgFromQuality: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly slot: Slots.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
-        readonly underlayTerrainTexture: WarscapeUnderlayTextures.Entry | undefined;
-        readonly templateModel: SlotsTemplatesModels.Entry | undefined;
-        readonly emptyBuildingModel: WarscapeRigid.Entry | undefined;
-        readonly emptyBuildingModelAnimated: WarscapeAnimated.Entry | undefined;
+        get slot(): Slots.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get underlayTerrainTexture(): WarscapeUnderlayTextures.Entry | undefined;
+        get templateModel(): SlotsTemplatesModels.Entry | undefined;
+        get emptyBuildingModel(): WarscapeRigid.Entry | undefined;
+        get emptyBuildingModelAnimated(): WarscapeAnimated.Entry | undefined;
     }
 }
 export default SlotsArt;

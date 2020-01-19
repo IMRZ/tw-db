@@ -10,9 +10,9 @@ export declare namespace CampaignAiCharacterSkillTreeManagerAgentJunctions {
         readonly _agentKey: string;
         readonly _agentManagerKey: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly managerKey: CampaignAiCharacterSkillTreeManagers.Entry | undefined;
-        readonly agentKey: CharacterSkillNodeSets.Entry | undefined;
-        readonly agentManagerKey: CampaignAiCharacterSkillTreeAgentManagers.Entry | undefined;
+        get managerKey(): CampaignAiCharacterSkillTreeManagers.Entry | undefined;
+        get agentKey(): CharacterSkillNodeSets.Entry | undefined;
+        get agentManagerKey(): CampaignAiCharacterSkillTreeAgentManagers.Entry | undefined;
     }
 }
 export default CampaignAiCharacterSkillTreeManagerAgentJunctions;

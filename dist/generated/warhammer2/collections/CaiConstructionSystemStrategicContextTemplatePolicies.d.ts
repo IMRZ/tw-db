@@ -7,7 +7,7 @@ export declare namespace CaiConstructionSystemStrategicContextTemplatePolicies {
         readonly key: string;
         readonly _defaultCaiConstructionSystemTemplate: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly defaultCaiConstructionSystemTemplate: CaiConstructionSystemTemplates.Entry | undefined;
+        get defaultCaiConstructionSystemTemplate(): CaiConstructionSystemTemplates.Entry | undefined;
     }
 }
 export default CaiConstructionSystemStrategicContextTemplatePolicies;

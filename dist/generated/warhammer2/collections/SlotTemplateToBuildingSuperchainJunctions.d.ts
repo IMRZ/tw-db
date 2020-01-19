@@ -9,8 +9,8 @@ export declare namespace SlotTemplateToBuildingSuperchainJunctions {
         readonly _slotTemplate: string;
         readonly _buildingSuperchain: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly slotTemplate: SlotTemplates.Entry | undefined;
-        readonly buildingSuperchain: BuildingSuperchains.Entry | undefined;
+        get slotTemplate(): SlotTemplates.Entry | undefined;
+        get buildingSuperchain(): BuildingSuperchains.Entry | undefined;
     }
 }
 export default SlotTemplateToBuildingSuperchainJunctions;

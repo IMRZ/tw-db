@@ -11,9 +11,9 @@ export declare namespace UiUnitStatToClasses {
         readonly listOrder: number;
         readonly _filter: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly statKey: UiUnitStats.Entry | undefined;
-        readonly unitClass: UnitClass.Entry | undefined;
-        readonly filter: UiUnitStatsFilters.Entry | undefined;
+        get statKey(): UiUnitStats.Entry | undefined;
+        get unitClass(): UnitClass.Entry | undefined;
+        get filter(): UiUnitStatsFilters.Entry | undefined;
     }
 }
 export default UiUnitStatToClasses;

@@ -10,8 +10,8 @@ export declare namespace CampaignRogueArmySetups {
         readonly _group: string;
         readonly budget: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly group: CampaignRogueArmyGroups.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get group(): CampaignRogueArmyGroups.Entry | undefined;
     }
 }
 export default CampaignRogueArmySetups;

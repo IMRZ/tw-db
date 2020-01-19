@@ -9,8 +9,8 @@ export declare namespace CampaignCharacterArtSetCampaignJunctions {
         readonly _artSetId: string;
         readonly _campaign: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly artSetId: CampaignCharacterArtSets.Entry | undefined;
-        readonly campaign: Campaigns.Entry | undefined;
+        get artSetId(): CampaignCharacterArtSets.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
     }
 }
 export default CampaignCharacterArtSetCampaignJunctions;

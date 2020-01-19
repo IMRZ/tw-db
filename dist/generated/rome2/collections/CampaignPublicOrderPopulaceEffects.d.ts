@@ -9,8 +9,8 @@ export declare namespace CampaignPublicOrderPopulaceEffects {
         readonly _culture: string;
         readonly _effectBundle: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culture: Cultures.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
     }
 }
 export default CampaignPublicOrderPopulaceEffects;

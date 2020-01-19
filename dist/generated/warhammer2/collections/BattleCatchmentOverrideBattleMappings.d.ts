@@ -16,12 +16,12 @@ export declare namespace BattleCatchmentOverrideBattleMappings {
         readonly _battleGroup: string;
         readonly requiredTileUpgrades: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly area: BattleCatchmentOverrideAreas.Entry | undefined;
-        readonly attacker: Cultures.Entry | undefined;
-        readonly defender: Cultures.Entry | undefined;
-        readonly battleType: CampaignBattleTypeEnums.Entry | undefined;
-        readonly battlePath: CampaignBattlePaths.Entry | undefined;
-        readonly battleGroup: BattleCatchmentOverrideGroups.Entry | undefined;
+        get area(): BattleCatchmentOverrideAreas.Entry | undefined;
+        get attacker(): Cultures.Entry | undefined;
+        get defender(): Cultures.Entry | undefined;
+        get battleType(): CampaignBattleTypeEnums.Entry | undefined;
+        get battlePath(): CampaignBattlePaths.Entry | undefined;
+        get battleGroup(): BattleCatchmentOverrideGroups.Entry | undefined;
     }
 }
 export default BattleCatchmentOverrideBattleMappings;

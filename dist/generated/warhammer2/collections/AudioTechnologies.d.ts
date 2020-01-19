@@ -8,8 +8,8 @@ export declare namespace AudioTechnologies {
         readonly _technology: string;
         readonly _uiAudio: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly technology: Technologies.Entry | undefined;
-        readonly uiAudio: AudioUiCategories.Entry | undefined;
+        get technology(): Technologies.Entry | undefined;
+        get uiAudio(): AudioUiCategories.Entry | undefined;
     }
 }
 export default AudioTechnologies;

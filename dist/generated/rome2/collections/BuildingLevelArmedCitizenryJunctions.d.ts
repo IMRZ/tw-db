@@ -9,8 +9,8 @@ export declare namespace BuildingLevelArmedCitizenryJunctions {
         readonly _buildingLevel: string;
         readonly _unitGroup: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingLevel: BuildingLevels.Entry | undefined;
-        readonly unitGroup: ArmedCitizenryUnitGroups.Entry | undefined;
+        get buildingLevel(): BuildingLevels.Entry | undefined;
+        get unitGroup(): ArmedCitizenryUnitGroups.Entry | undefined;
     }
 }
 export default BuildingLevelArmedCitizenryJunctions;

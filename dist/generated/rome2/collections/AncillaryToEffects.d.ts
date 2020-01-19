@@ -11,9 +11,9 @@ export declare namespace AncillaryToEffects {
         readonly value: number;
         readonly _effectScope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly ancillary: AncillaryInfo.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
+        get ancillary(): AncillaryInfo.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default AncillaryToEffects;

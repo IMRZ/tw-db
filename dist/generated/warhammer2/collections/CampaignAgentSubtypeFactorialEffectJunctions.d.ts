@@ -12,9 +12,9 @@ export declare namespace CampaignAgentSubtypeFactorialEffectJunctions {
         readonly value: number;
         readonly _scope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
-        readonly factorialEffect: FactorialEffects.Entry | undefined;
-        readonly scope: CampaignFactorialScopes.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
+        get factorialEffect(): FactorialEffects.Entry | undefined;
+        get scope(): CampaignFactorialScopes.Entry | undefined;
     }
 }
 export default CampaignAgentSubtypeFactorialEffectJunctions;

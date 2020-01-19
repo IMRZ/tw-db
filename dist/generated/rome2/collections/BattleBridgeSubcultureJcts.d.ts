@@ -9,8 +9,8 @@ export declare namespace BattleBridgeSubcultureJcts {
         readonly _simpleBridge: string;
         readonly _refinedBridge: any;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly simpleBridge: BattlefieldBuildings.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get simpleBridge(): BattlefieldBuildings.Entry | undefined;
     }
 }
 export default BattleBridgeSubcultureJcts;

@@ -8,7 +8,7 @@ export declare namespace BattleSetPieceCampaignBattleScenes {
         readonly bmd: string;
         readonly environment: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly battleSetPiece: BattleSetPieces.Entry | undefined;
+        get battleSetPiece(): BattleSetPieces.Entry | undefined;
     }
 }
 export default BattleSetPieceCampaignBattleScenes;

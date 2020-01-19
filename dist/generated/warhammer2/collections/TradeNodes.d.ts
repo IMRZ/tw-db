@@ -13,8 +13,8 @@ export declare namespace TradeNodes {
         readonly displayName: string;
         readonly _group: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly commodity: Commodities.Entry | undefined;
-        readonly group: TradeNodeGroups.Entry | undefined;
+        get commodity(): Commodities.Entry | undefined;
+        get group(): TradeNodeGroups.Entry | undefined;
     }
 }
 export default TradeNodes;

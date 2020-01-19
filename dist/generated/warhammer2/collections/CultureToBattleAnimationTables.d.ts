@@ -8,8 +8,8 @@ export declare namespace CultureToBattleAnimationTables {
         readonly _culturePack: string;
         readonly _battleAnimationsTable: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly culturePack: CulturePackIds.Entry | undefined;
-        readonly battleAnimationsTable: BattleAnimationsTable.Entry | undefined;
+        get culturePack(): CulturePackIds.Entry | undefined;
+        get battleAnimationsTable(): BattleAnimationsTable.Entry | undefined;
     }
 }
 export default CultureToBattleAnimationTables;

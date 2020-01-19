@@ -19,6 +19,7 @@ export namespace UnitsCustomBattlePermissions {
     readonly generalPortrait: string;
     readonly _generalUniform: string;
     readonly _setPieceCharacter: string;
+    readonly campaignExclusive: boolean;
 
     constructor(collectionCache: CollectionCache, values: any) {
       this.collectionCache = collectionCache;
@@ -30,6 +31,7 @@ export namespace UnitsCustomBattlePermissions {
       this.generalPortrait = values["general_portrait"];
       this._generalUniform = values["general_uniform"];
       this._setPieceCharacter = values["set_piece_character"];
+      this.campaignExclusive = !!values["campaign_exclusive"];
     }
     
     get unit(): MainUnits.Entry | undefined {

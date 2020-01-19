@@ -14,7 +14,7 @@ export declare namespace CaiBaseBuildingContextValues {
         readonly existingBuildingsDiscountPerBuilding: number;
         readonly existingBuildingsMaximumDiscount: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly buildingKey: BuildingLevels.Entry | undefined;
+        get buildingKey(): BuildingLevels.Entry | undefined;
     }
 }
 export default CaiBaseBuildingContextValues;

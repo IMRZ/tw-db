@@ -10,8 +10,8 @@ export declare namespace StartPosLandUnits {
         readonly _general: number;
         readonly soldiers: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unitType: MainUnits.Entry | undefined;
-        readonly general: StartPosCharacters.Entry | undefined;
+        get unitType(): MainUnits.Entry | undefined;
+        get general(): StartPosCharacters.Entry | undefined;
     }
 }
 export default StartPosLandUnits;

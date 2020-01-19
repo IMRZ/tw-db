@@ -15,10 +15,10 @@ export declare namespace TradeDisplayCampaignOwningFactionProducedResourceTradeM
         readonly priority: number;
         readonly relativeFrequency: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaign: Campaigns.Entry | undefined;
-        readonly owningFaction: Factions.Entry | undefined;
-        readonly producedResource: Resources.Entry | undefined;
-        readonly model: TradeDisplayTradeModels.Entry | undefined;
+        get campaign(): Campaigns.Entry | undefined;
+        get owningFaction(): Factions.Entry | undefined;
+        get producedResource(): Resources.Entry | undefined;
+        get model(): TradeDisplayTradeModels.Entry | undefined;
     }
 }
 export default TradeDisplayCampaignOwningFactionProducedResourceTradeModelOptions;

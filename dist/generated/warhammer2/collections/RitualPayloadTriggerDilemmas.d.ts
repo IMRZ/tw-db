@@ -8,8 +8,8 @@ export declare namespace RitualPayloadTriggerDilemmas {
         readonly _payload: string;
         readonly _dilemma: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly payload: RitualPayloads.Entry | undefined;
-        readonly dilemma: Dilemmas.Entry | undefined;
+        get payload(): RitualPayloads.Entry | undefined;
+        get dilemma(): Dilemmas.Entry | undefined;
     }
 }
 export default RitualPayloadTriggerDilemmas;

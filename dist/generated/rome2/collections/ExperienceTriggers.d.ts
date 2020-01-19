@@ -12,8 +12,8 @@ export declare namespace ExperienceTriggers {
         readonly localisedDescription: string;
         readonly _target: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly event: TriggerEvents.Entry | undefined;
-        readonly target: ExperienceTriggersTargets.Entry | undefined;
+        get event(): TriggerEvents.Entry | undefined;
+        get target(): ExperienceTriggersTargets.Entry | undefined;
     }
 }
 export default ExperienceTriggers;

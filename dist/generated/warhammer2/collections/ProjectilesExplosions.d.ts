@@ -31,14 +31,14 @@ export declare namespace ProjectilesExplosions {
         readonly fuseFixedTime: number;
         readonly affectsAllies: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly detonatorType: ProjectilesDetonatorTypesEnum.Entry | undefined;
-        readonly detonationType: ProjectilesDetonationTypesEnum.Entry | undefined;
-        readonly shrapnel: ProjectileShrapnels.Entry | undefined;
-        readonly explosionParticleEffect: ParticleEffects.Entry | undefined;
-        readonly explosionParticleEffectOnGround: ParticleEffects.Entry | undefined;
-        readonly explosionAudio: AudioExplosions.Entry | undefined;
-        readonly contactPhaseEffect: SpecialAbilityPhases.Entry | undefined;
-        readonly cameraShake: BattleCameraShakeParameters.Entry | undefined;
+        get detonatorType(): ProjectilesDetonatorTypesEnum.Entry | undefined;
+        get detonationType(): ProjectilesDetonationTypesEnum.Entry | undefined;
+        get shrapnel(): ProjectileShrapnels.Entry | undefined;
+        get explosionParticleEffect(): ParticleEffects.Entry | undefined;
+        get explosionParticleEffectOnGround(): ParticleEffects.Entry | undefined;
+        get explosionAudio(): AudioExplosions.Entry | undefined;
+        get contactPhaseEffect(): SpecialAbilityPhases.Entry | undefined;
+        get cameraShake(): BattleCameraShakeParameters.Entry | undefined;
     }
 }
 export default ProjectilesExplosions;

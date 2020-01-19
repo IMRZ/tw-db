@@ -22,14 +22,14 @@ export declare namespace CampaignCharacterAttributeEffects {
         readonly _factionRecord: string;
         readonly _campaignRecord: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentRecord: Agents.Entry | undefined;
-        readonly attributeRecord: AgentAttributes.Entry | undefined;
-        readonly effectRecord: Effects.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
-        readonly cultureRecord: Cultures.Entry | undefined;
-        readonly subcultureRecord: CulturesSubcultures.Entry | undefined;
-        readonly factionRecord: Factions.Entry | undefined;
-        readonly campaignRecord: Campaigns.Entry | undefined;
+        get agentRecord(): Agents.Entry | undefined;
+        get attributeRecord(): AgentAttributes.Entry | undefined;
+        get effectRecord(): Effects.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
+        get cultureRecord(): Cultures.Entry | undefined;
+        get subcultureRecord(): CulturesSubcultures.Entry | undefined;
+        get factionRecord(): Factions.Entry | undefined;
+        get campaignRecord(): Campaigns.Entry | undefined;
     }
 }
 export default CampaignCharacterAttributeEffects;

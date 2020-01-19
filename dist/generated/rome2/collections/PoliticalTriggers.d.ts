@@ -8,7 +8,7 @@ export declare namespace PoliticalTriggers {
         readonly _event: string;
         readonly conditions: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly event: TriggerEvents.Entry | undefined;
+        get event(): TriggerEvents.Entry | undefined;
     }
 }
 export default PoliticalTriggers;

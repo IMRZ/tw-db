@@ -600,6 +600,7 @@ export class Database {
   get campaignStatisticsStrings() { return <collections.CampaignStatisticsStrings.Entry[]>this.collectionCache.getCollection(collections.CampaignStatisticsStrings.KEY, collections.CampaignStatisticsStrings.Entry); }
   get campaignStorms() { return <collections.CampaignStorms.Entry[]>this.collectionCache.getCollection(collections.CampaignStorms.KEY, collections.CampaignStorms.Entry); }
   get campaignStormsExcludedRegions() { return <collections.CampaignStormsExcludedRegions.Entry[]>this.collectionCache.getCollection(collections.CampaignStormsExcludedRegions.KEY, collections.CampaignStormsExcludedRegions.Entry); }
+  get campaignStormRegionDisplaySettings() { return <collections.CampaignStormRegionDisplaySettings.Entry[]>this.collectionCache.getCollection(collections.CampaignStormRegionDisplaySettings.KEY, collections.CampaignStormRegionDisplaySettings.Entry); }
   get campaignStormTypes() { return <collections.CampaignStormTypes.Entry[]>this.collectionCache.getCollection(collections.CampaignStormTypes.KEY, collections.CampaignStormTypes.Entry); }
   get campaignStringVariables() { return <collections.CampaignStringVariables.Entry[]>this.collectionCache.getCollection(collections.CampaignStringVariables.KEY, collections.CampaignStringVariables.Entry); }
   get campaignSubjects() { return <collections.CampaignSubjects.Entry[]>this.collectionCache.getCollection(collections.CampaignSubjects.KEY, collections.CampaignSubjects.Entry); }
@@ -819,6 +820,7 @@ export class Database {
   get encyclopediaUnitAttributesLinks() { return <collections.EncyclopediaUnitAttributesLinks.Entry[]>this.collectionCache.getCollection(collections.EncyclopediaUnitAttributesLinks.KEY, collections.EncyclopediaUnitAttributesLinks.Entry); }
   get encyclopediaUnitRedirects() { return <collections.EncyclopediaUnitRedirects.Entry[]>this.collectionCache.getCollection(collections.EncyclopediaUnitRedirects.KEY, collections.EncyclopediaUnitRedirects.Entry); }
   get encyclopediaUrls() { return <collections.EncyclopediaUrls.Entry[]>this.collectionCache.getCollection(collections.EncyclopediaUrls.KEY, collections.EncyclopediaUrls.Entry); }
+  get entityVfxAttachTypes() { return <collections.EntityVfxAttachTypes.Entry[]>this.collectionCache.getCollection(collections.EntityVfxAttachTypes.KEY, collections.EntityVfxAttachTypes.Entry); }
   get events() { return <collections.Events.Entry[]>this.collectionCache.getCollection(collections.Events.KEY, collections.Events.Entry); }
   get eventsEffectsJunct() { return <collections.EventsEffectsJunct.Entry[]>this.collectionCache.getCollection(collections.EventsEffectsJunct.KEY, collections.EventsEffectsJunct.Entry); }
   get eventFeedCategories() { return <collections.EventFeedCategories.Entry[]>this.collectionCache.getCollection(collections.EventFeedCategories.KEY, collections.EventFeedCategories.Entry); }
@@ -1081,9 +1083,13 @@ export class Database {
   get ritualBeamTypes() { return <collections.RitualBeamTypes.Entry[]>this.collectionCache.getCollection(collections.RitualBeamTypes.KEY, collections.RitualBeamTypes.Entry); }
   get ritualCategories() { return <collections.RitualCategories.Entry[]>this.collectionCache.getCollection(collections.RitualCategories.KEY, collections.RitualCategories.Entry); }
   get ritualChains() { return <collections.RitualChains.Entry[]>this.collectionCache.getCollection(collections.RitualChains.KEY, collections.RitualChains.Entry); }
+  get ritualFactionTargetCriterias() { return <collections.RitualFactionTargetCriterias.Entry[]>this.collectionCache.getCollection(collections.RitualFactionTargetCriterias.KEY, collections.RitualFactionTargetCriterias.Entry); }
   get ritualIncursionStrengths() { return <collections.RitualIncursionStrengths.Entry[]>this.collectionCache.getCollection(collections.RitualIncursionStrengths.KEY, collections.RitualIncursionStrengths.Entry); }
+  get ritualMilitaryForceTargetCriterias() { return <collections.RitualMilitaryForceTargetCriterias.Entry[]>this.collectionCache.getCollection(collections.RitualMilitaryForceTargetCriterias.KEY, collections.RitualMilitaryForceTargetCriterias.Entry); }
   get ritualPayloads() { return <collections.RitualPayloads.Entry[]>this.collectionCache.getCollection(collections.RitualPayloads.KEY, collections.RitualPayloads.Entry); }
   get ritualPayloadAncillaries() { return <collections.RitualPayloadAncillaries.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadAncillaries.KEY, collections.RitualPayloadAncillaries.Entry); }
+  get ritualPayloadBasicComponents() { return <collections.RitualPayloadBasicComponents.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadBasicComponents.KEY, collections.RitualPayloadBasicComponents.Entry); }
+  get ritualPayloadBasicComponentTypes() { return <collections.RitualPayloadBasicComponentTypes.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadBasicComponentTypes.KEY, collections.RitualPayloadBasicComponentTypes.Entry); }
   get ritualPayloadDiplomaticAttitudeChanges() { return <collections.RitualPayloadDiplomaticAttitudeChanges.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadDiplomaticAttitudeChanges.KEY, collections.RitualPayloadDiplomaticAttitudeChanges.Entry); }
   get ritualPayloadEffectBundles() { return <collections.RitualPayloadEffectBundles.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadEffectBundles.KEY, collections.RitualPayloadEffectBundles.Entry); }
   get ritualPayloadResourceTransactions() { return <collections.RitualPayloadResourceTransactions.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadResourceTransactions.KEY, collections.RitualPayloadResourceTransactions.Entry); }
@@ -1092,7 +1098,11 @@ export class Database {
   get ritualPayloadSpawnMercenaries() { return <collections.RitualPayloadSpawnMercenaries.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadSpawnMercenaries.KEY, collections.RitualPayloadSpawnMercenaries.Entry); }
   get ritualPayloadSpawnStorms() { return <collections.RitualPayloadSpawnStorms.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadSpawnStorms.KEY, collections.RitualPayloadSpawnStorms.Entry); }
   get ritualPayloadTriggerDilemmas() { return <collections.RitualPayloadTriggerDilemmas.Entry[]>this.collectionCache.getCollection(collections.RitualPayloadTriggerDilemmas.KEY, collections.RitualPayloadTriggerDilemmas.Entry); }
+  get ritualPerformingCharacters() { return <collections.RitualPerformingCharacters.Entry[]>this.collectionCache.getCollection(collections.RitualPerformingCharacters.KEY, collections.RitualPerformingCharacters.Entry); }
+  get ritualPerformingCharacterJunctions() { return <collections.RitualPerformingCharacterJunctions.Entry[]>this.collectionCache.getCollection(collections.RitualPerformingCharacterJunctions.KEY, collections.RitualPerformingCharacterJunctions.Entry); }
   get ritualReactionConstraints() { return <collections.RitualReactionConstraints.Entry[]>this.collectionCache.getCollection(collections.RitualReactionConstraints.KEY, collections.RitualReactionConstraints.Entry); }
+  get ritualRegionTargetCriterias() { return <collections.RitualRegionTargetCriterias.Entry[]>this.collectionCache.getCollection(collections.RitualRegionTargetCriterias.KEY, collections.RitualRegionTargetCriterias.Entry); }
+  get ritualTargets() { return <collections.RitualTargets.Entry[]>this.collectionCache.getCollection(collections.RitualTargets.KEY, collections.RitualTargets.Entry); }
   get sacrificesToSotekRituals() { return <collections.SacrificesToSotekRituals.Entry[]>this.collectionCache.getCollection(collections.SacrificesToSotekRituals.KEY, collections.SacrificesToSotekRituals.Entry); }
   get scriptedObjectives() { return <collections.ScriptedObjectives.Entry[]>this.collectionCache.getCollection(collections.ScriptedObjectives.KEY, collections.ScriptedObjectives.Entry); }
   get scriptedSubtitles() { return <collections.ScriptedSubtitles.Entry[]>this.collectionCache.getCollection(collections.ScriptedSubtitles.KEY, collections.ScriptedSubtitles.Entry); }
@@ -1221,6 +1231,7 @@ export class Database {
   get triggerEffects() { return <collections.TriggerEffects.Entry[]>this.collectionCache.getCollection(collections.TriggerEffects.KEY, collections.TriggerEffects.Entry); }
   get triggerEvents() { return <collections.TriggerEvents.Entry[]>this.collectionCache.getCollection(collections.TriggerEvents.KEY, collections.TriggerEvents.Entry); }
   get triggerEventToExcludedAgentTypes() { return <collections.TriggerEventToExcludedAgentTypes.Entry[]>this.collectionCache.getCollection(collections.TriggerEventToExcludedAgentTypes.KEY, collections.TriggerEventToExcludedAgentTypes.Entry); }
+  get tristates() { return <collections.Tristates.Entry[]>this.collectionCache.getCollection(collections.Tristates.KEY, collections.Tristates.Entry); }
   get uiedComponentAddressesToTexts() { return <collections.UiedComponentAddressesToTexts.Entry[]>this.collectionCache.getCollection(collections.UiedComponentAddressesToTexts.KEY, collections.UiedComponentAddressesToTexts.Entry); }
   get uiedComponentTexts() { return <collections.UiedComponentTexts.Entry[]>this.collectionCache.getCollection(collections.UiedComponentTexts.KEY, collections.UiedComponentTexts.Entry); }
   get uiedTextLayouts() { return <collections.UiedTextLayouts.Entry[]>this.collectionCache.getCollection(collections.UiedTextLayouts.KEY, collections.UiedTextLayouts.Entry); }
@@ -1229,6 +1240,7 @@ export class Database {
   get uiColourProfileColourOverrides() { return <collections.UiColourProfileColourOverrides.Entry[]>this.collectionCache.getCollection(collections.UiColourProfileColourOverrides.KEY, collections.UiColourProfileColourOverrides.Entry); }
   get uiComponentAddressesWithLocalisation() { return <collections.UiComponentAddressesWithLocalisation.Entry[]>this.collectionCache.getCollection(collections.UiComponentAddressesWithLocalisation.KEY, collections.UiComponentAddressesWithLocalisation.Entry); }
   get uiComponentLocalisation() { return <collections.UiComponentLocalisation.Entry[]>this.collectionCache.getCollection(collections.UiComponentLocalisation.KEY, collections.UiComponentLocalisation.Entry); }
+  get uiInfoRitualTargetCriterias() { return <collections.UiInfoRitualTargetCriterias.Entry[]>this.collectionCache.getCollection(collections.UiInfoRitualTargetCriterias.KEY, collections.UiInfoRitualTargetCriterias.Entry); }
   get uiLargeImages() { return <collections.UiLargeImages.Entry[]>this.collectionCache.getCollection(collections.UiLargeImages.KEY, collections.UiLargeImages.Entry); }
   get uiTaggedImages() { return <collections.UiTaggedImages.Entry[]>this.collectionCache.getCollection(collections.UiTaggedImages.KEY, collections.UiTaggedImages.Entry); }
   get uiTextReplacements() { return <collections.UiTextReplacements.Entry[]>this.collectionCache.getCollection(collections.UiTextReplacements.KEY, collections.UiTextReplacements.Entry); }

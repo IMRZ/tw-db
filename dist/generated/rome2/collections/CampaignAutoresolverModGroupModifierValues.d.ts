@@ -10,8 +10,8 @@ export declare namespace CampaignAutoresolverModGroupModifierValues {
         readonly _modificationId: string;
         readonly value: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly groupId: CampaignAutoresolverModGroups.Entry | undefined;
-        readonly modificationId: CampaignAutoresolverModifiers.Entry | undefined;
+        get groupId(): CampaignAutoresolverModGroups.Entry | undefined;
+        get modificationId(): CampaignAutoresolverModifiers.Entry | undefined;
     }
 }
 export default CampaignAutoresolverModGroupModifierValues;

@@ -11,9 +11,9 @@ export declare namespace GovernmentTypesToEffects {
         readonly value: number;
         readonly _effectScope: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly govType: GovernmentTypes.Entry | undefined;
-        readonly effect: Effects.Entry | undefined;
-        readonly effectScope: CampaignEffectScopes.Entry | undefined;
+        get govType(): GovernmentTypes.Entry | undefined;
+        get effect(): Effects.Entry | undefined;
+        get effectScope(): CampaignEffectScopes.Entry | undefined;
     }
 }
 export default GovernmentTypesToEffects;

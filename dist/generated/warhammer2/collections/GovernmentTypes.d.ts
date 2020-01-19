@@ -12,7 +12,7 @@ export declare namespace GovernmentTypes {
         readonly _activeUpperClass: string;
         readonly _activeLowerClass: any;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly activeUpperClass: PopulationClasses.Entry | undefined;
+        get activeUpperClass(): PopulationClasses.Entry | undefined;
     }
 }
 export default GovernmentTypes;

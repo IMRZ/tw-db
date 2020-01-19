@@ -12,8 +12,8 @@ export declare namespace NakaiTemples {
         readonly _colour: string;
         readonly _cultureSettlementOccupationOption: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly colour: UiColours.Entry | undefined;
-        readonly cultureSettlementOccupationOption: CultureSettlementOccupationOptions.Entry | undefined;
+        get colour(): UiColours.Entry | undefined;
+        get cultureSettlementOccupationOption(): CultureSettlementOccupationOptions.Entry | undefined;
     }
 }
 export default NakaiTemples;

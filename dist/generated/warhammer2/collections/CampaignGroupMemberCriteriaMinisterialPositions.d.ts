@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaMinisterialPositions {
         readonly _member: string;
         readonly _ministerialPosition: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly ministerialPosition: MinisterialPositions.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get ministerialPosition(): MinisterialPositions.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaMinisterialPositions;

@@ -16,10 +16,10 @@ export declare namespace Animals {
         readonly _armour: string;
         readonly _variant: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly animation: BattleAnimationsTable.Entry | undefined;
-        readonly entity: BattleEntities.Entry | undefined;
-        readonly armour: UnitArmourTypes.Entry | undefined;
-        readonly variant: Variants.Entry | undefined;
+        get animation(): BattleAnimationsTable.Entry | undefined;
+        get entity(): BattleEntities.Entry | undefined;
+        get armour(): UnitArmourTypes.Entry | undefined;
+        get variant(): Variants.Entry | undefined;
     }
 }
 export default Animals;

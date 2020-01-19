@@ -8,7 +8,7 @@ export declare namespace MinisterialEffectivenessModifiers {
         readonly _governmentType: string;
         readonly effectivenessBonus: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly governmentType: GovernmentTypes.Entry | undefined;
+        get governmentType(): GovernmentTypes.Entry | undefined;
     }
 }
 export default MinisterialEffectivenessModifiers;

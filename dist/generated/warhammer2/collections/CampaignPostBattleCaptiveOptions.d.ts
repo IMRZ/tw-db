@@ -16,10 +16,10 @@ export declare namespace CampaignPostBattleCaptiveOptions {
         readonly description: string;
         readonly _resourceTransaction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly captiveOption: CampaignPostBattleCaptiveOptionIds.Entry | undefined;
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly resourceTransaction: ResourceCosts.Entry | undefined;
+        get captiveOption(): CampaignPostBattleCaptiveOptionIds.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get resourceTransaction(): ResourceCosts.Entry | undefined;
     }
 }
 export default CampaignPostBattleCaptiveOptions;

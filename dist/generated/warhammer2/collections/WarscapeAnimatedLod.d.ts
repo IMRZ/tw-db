@@ -9,7 +9,7 @@ export declare namespace WarscapeAnimatedLod {
         readonly range: number;
         readonly _animated: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly animated: WarscapeAnimated.Entry | undefined;
+        get animated(): WarscapeAnimated.Entry | undefined;
     }
 }
 export default WarscapeAnimatedLod;

@@ -9,8 +9,8 @@ export declare namespace CampaignAiManagerBehaviourJunctions {
         readonly _behaviour: string;
         readonly priority: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly manager: CampaignAiManagers.Entry | undefined;
-        readonly behaviour: CampaignAiBehaviours.Entry | undefined;
+        get manager(): CampaignAiManagers.Entry | undefined;
+        get behaviour(): CampaignAiBehaviours.Entry | undefined;
     }
 }
 export default CampaignAiManagerBehaviourJunctions;

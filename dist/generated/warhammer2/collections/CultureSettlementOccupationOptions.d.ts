@@ -22,12 +22,12 @@ export declare namespace CultureSettlementOccupationOptions {
         readonly buildingLootMod: number;
         readonly _resourceTransaction: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly group: CampaignGroups.Entry | undefined;
-        readonly option: SettlementOccupationOptions.Entry | undefined;
-        readonly actingArmyFactionEffectBundle: EffectBundles.Entry | undefined;
-        readonly targetSettlementFactionEffectBundle: EffectBundles.Entry | undefined;
-        readonly actingArmyEffectBundle: EffectBundles.Entry | undefined;
-        readonly resourceTransaction: ResourceCosts.Entry | undefined;
+        get group(): CampaignGroups.Entry | undefined;
+        get option(): SettlementOccupationOptions.Entry | undefined;
+        get actingArmyFactionEffectBundle(): EffectBundles.Entry | undefined;
+        get targetSettlementFactionEffectBundle(): EffectBundles.Entry | undefined;
+        get actingArmyEffectBundle(): EffectBundles.Entry | undefined;
+        get resourceTransaction(): ResourceCosts.Entry | undefined;
     }
 }
 export default CultureSettlementOccupationOptions;

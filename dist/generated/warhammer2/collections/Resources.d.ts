@@ -15,7 +15,7 @@ export declare namespace Resources {
         readonly inEncyclopedia: boolean;
         readonly showOnCityInfobar: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly unit: CommodityUnitNames.Entry | undefined;
+        get unit(): CommodityUnitNames.Entry | undefined;
     }
 }
 export default Resources;

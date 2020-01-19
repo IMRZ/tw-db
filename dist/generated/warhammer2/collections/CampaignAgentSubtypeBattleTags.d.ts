@@ -8,7 +8,7 @@ export declare namespace CampaignAgentSubtypeBattleTags {
         readonly battleTag: string;
         readonly attacking: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
     }
 }
 export default CampaignAgentSubtypeBattleTags;

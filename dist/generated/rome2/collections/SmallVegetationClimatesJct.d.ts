@@ -8,8 +8,8 @@ export declare namespace SmallVegetationClimatesJct {
         readonly _climate: string;
         readonly _rigidName: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly climate: Climates.Entry | undefined;
-        readonly rigidName: WarscapeRigid.Entry | undefined;
+        get climate(): Climates.Entry | undefined;
+        get rigidName(): WarscapeRigid.Entry | undefined;
     }
 }
 export default SmallVegetationClimatesJct;

@@ -20,14 +20,14 @@ export declare namespace HistoricalCharacters {
         readonly _clanNameKey: number;
         readonly _otherNameKey: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly gender: Genders.Entry | undefined;
-        readonly agentType: Agents.Entry | undefined;
-        readonly faction: Factions.Entry | undefined;
-        readonly nameKey: Names.Entry | undefined;
-        readonly surnameKey: Names.Entry | undefined;
-        readonly artSetId: CampaignCharacterArtSets.Entry | undefined;
-        readonly clanNameKey: Names.Entry | undefined;
-        readonly otherNameKey: Names.Entry | undefined;
+        get gender(): Genders.Entry | undefined;
+        get agentType(): Agents.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get nameKey(): Names.Entry | undefined;
+        get surnameKey(): Names.Entry | undefined;
+        get artSetId(): CampaignCharacterArtSets.Entry | undefined;
+        get clanNameKey(): Names.Entry | undefined;
+        get otherNameKey(): Names.Entry | undefined;
     }
 }
 export default HistoricalCharacters;

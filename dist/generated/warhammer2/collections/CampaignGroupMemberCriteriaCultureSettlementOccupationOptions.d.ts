@@ -8,8 +8,8 @@ export declare namespace CampaignGroupMemberCriteriaCultureSettlementOccupationO
         readonly _member: string;
         readonly _cultureSettlementOccupationOption: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly member: CampaignGroupMembers.Entry | undefined;
-        readonly cultureSettlementOccupationOption: CultureSettlementOccupationOptions.Entry | undefined;
+        get member(): CampaignGroupMembers.Entry | undefined;
+        get cultureSettlementOccupationOption(): CultureSettlementOccupationOptions.Entry | undefined;
     }
 }
 export default CampaignGroupMemberCriteriaCultureSettlementOccupationOptions;

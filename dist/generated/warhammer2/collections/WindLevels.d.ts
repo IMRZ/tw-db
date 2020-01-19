@@ -11,7 +11,7 @@ export declare namespace WindLevels {
         readonly magnitudeY: number;
         readonly sortOrder: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly seaSurface: SeaSurfaces.Entry | undefined;
+        get seaSurface(): SeaSurfaces.Entry | undefined;
     }
 }
 export default WindLevels;

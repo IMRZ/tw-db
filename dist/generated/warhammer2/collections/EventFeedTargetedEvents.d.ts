@@ -16,11 +16,11 @@ export declare namespace EventFeedTargetedEvents {
         readonly _located: string;
         readonly _targetCriteria: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly event: EventFeedEvents.Entry | undefined;
-        readonly target: EventFeedGroups.Entry | undefined;
-        readonly primaryDetail: EventFeedStrings.Entry | undefined;
-        readonly located: EventFeedGroups.Entry | undefined;
-        readonly targetCriteria: EventFeedGroups.Entry | undefined;
+        get event(): EventFeedEvents.Entry | undefined;
+        get target(): EventFeedGroups.Entry | undefined;
+        get primaryDetail(): EventFeedStrings.Entry | undefined;
+        get located(): EventFeedGroups.Entry | undefined;
+        get targetCriteria(): EventFeedGroups.Entry | undefined;
     }
 }
 export default EventFeedTargetedEvents;

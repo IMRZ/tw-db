@@ -19,9 +19,9 @@ export declare namespace PoliticalParties {
         readonly _trait1: string;
         readonly _trait2: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly effectBundle: EffectBundles.Entry | undefined;
-        readonly trait1: PoliticalTraits.Entry | undefined;
-        readonly trait2: PoliticalTraits.Entry | undefined;
+        get effectBundle(): EffectBundles.Entry | undefined;
+        get trait1(): PoliticalTraits.Entry | undefined;
+        get trait2(): PoliticalTraits.Entry | undefined;
     }
 }
 export default PoliticalParties;

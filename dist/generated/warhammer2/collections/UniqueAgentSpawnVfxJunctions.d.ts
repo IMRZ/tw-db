@@ -8,8 +8,8 @@ export declare namespace UniqueAgentSpawnVfxJunctions {
         readonly _uniqueAgent: string;
         readonly _compositeScene: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly uniqueAgent: UniqueAgents.Entry | undefined;
-        readonly compositeScene: CampaignCompositeScenes.Entry | undefined;
+        get uniqueAgent(): UniqueAgents.Entry | undefined;
+        get compositeScene(): CampaignCompositeScenes.Entry | undefined;
     }
 }
 export default UniqueAgentSpawnVfxJunctions;

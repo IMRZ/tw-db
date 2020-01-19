@@ -13,10 +13,10 @@ export declare namespace StartPosRegionSlotSetItems {
         readonly _slotTemplate: string;
         readonly _buildingLevel: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly startPosRegionSlotSet: StartPosRegionSlotSets.Entry | undefined;
-        readonly slotType: SlotTypes.Entry | undefined;
-        readonly slotTemplate: SlotTemplates.Entry | undefined;
-        readonly buildingLevel: BuildingLevels.Entry | undefined;
+        get startPosRegionSlotSet(): StartPosRegionSlotSets.Entry | undefined;
+        get slotType(): SlotTypes.Entry | undefined;
+        get slotTemplate(): SlotTemplates.Entry | undefined;
+        get buildingLevel(): BuildingLevels.Entry | undefined;
     }
 }
 export default StartPosRegionSlotSetItems;

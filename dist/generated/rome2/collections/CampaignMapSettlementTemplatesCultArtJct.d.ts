@@ -9,8 +9,8 @@ export declare namespace CampaignMapSettlementTemplatesCultArtJct {
         readonly _culture: string;
         readonly artpiece: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly settlementTemplate: CampaignMapSettlementTemplates.Entry | undefined;
-        readonly culture: Cultures.Entry | undefined;
+        get settlementTemplate(): CampaignMapSettlementTemplates.Entry | undefined;
+        get culture(): Cultures.Entry | undefined;
     }
 }
 export default CampaignMapSettlementTemplatesCultArtJct;

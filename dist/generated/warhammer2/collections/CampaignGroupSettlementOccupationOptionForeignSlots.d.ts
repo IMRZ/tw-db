@@ -8,8 +8,8 @@ export declare namespace CampaignGroupSettlementOccupationOptionForeignSlots {
         readonly _campaignGroup: string;
         readonly _foreignSlotSet: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly campaignGroup: CampaignGroups.Entry | undefined;
-        readonly foreignSlotSet: SlotSets.Entry | undefined;
+        get campaignGroup(): CampaignGroups.Entry | undefined;
+        get foreignSlotSet(): SlotSets.Entry | undefined;
     }
 }
 export default CampaignGroupSettlementOccupationOptionForeignSlots;

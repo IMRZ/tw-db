@@ -14,9 +14,9 @@ export declare namespace CampaignGroundTypes {
         readonly _standardCursor: string;
         readonly _selectionCursor: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly audioType: AudioCampaignGroundTypes.Entry | undefined;
-        readonly standardCursor: Cursors.Entry | undefined;
-        readonly selectionCursor: Cursors.Entry | undefined;
+        get audioType(): AudioCampaignGroundTypes.Entry | undefined;
+        get standardCursor(): Cursors.Entry | undefined;
+        get selectionCursor(): Cursors.Entry | undefined;
     }
 }
 export default CampaignGroundTypes;

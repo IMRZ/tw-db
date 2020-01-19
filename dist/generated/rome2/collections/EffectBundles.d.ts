@@ -10,7 +10,7 @@ export declare namespace EffectBundles {
         readonly uiIcon: string;
         readonly _bundleTarget: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly bundleTarget: EffectBundleTargets.Entry | undefined;
+        get bundleTarget(): EffectBundleTargets.Entry | undefined;
     }
 }
 export default EffectBundles;

@@ -73,13 +73,13 @@ export declare namespace Factions {
         readonly senatorTextGain1: string;
         readonly usesLegionNames: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly subculture: CulturesSubcultures.Entry | undefined;
-        readonly nameGroup: NamesGroups.Entry | undefined;
-        readonly militaryGroup: GroupingsMilitary.Entry | undefined;
-        readonly unitRegimentNameGroup: NamesGroups.Entry | undefined;
-        readonly shipNameGroup: NamesGroups.Entry | undefined;
-        readonly preBattleSpeechParameter: PreBattleSpeechParametersEnum.Entry | undefined;
-        readonly diplomacyCulture: Cultures.Entry | undefined;
+        get subculture(): CulturesSubcultures.Entry | undefined;
+        get nameGroup(): NamesGroups.Entry | undefined;
+        get militaryGroup(): GroupingsMilitary.Entry | undefined;
+        get unitRegimentNameGroup(): NamesGroups.Entry | undefined;
+        get shipNameGroup(): NamesGroups.Entry | undefined;
+        get preBattleSpeechParameter(): PreBattleSpeechParametersEnum.Entry | undefined;
+        get diplomacyCulture(): Cultures.Entry | undefined;
     }
 }
 export default Factions;

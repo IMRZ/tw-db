@@ -14,9 +14,9 @@ export declare namespace CampaignMapAttritions {
         readonly unitImmunityText: string;
         readonly _messageEventAssociation: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly type: CampaignMapAttritionTypes.Entry | undefined;
-        readonly damage: CampaignMapAttritionDamages.Entry | undefined;
-        readonly messageEventAssociation: MessageEvents.Entry | undefined;
+        get type(): CampaignMapAttritionTypes.Entry | undefined;
+        get damage(): CampaignMapAttritionDamages.Entry | undefined;
+        get messageEventAssociation(): MessageEvents.Entry | undefined;
     }
 }
 export default CampaignMapAttritions;

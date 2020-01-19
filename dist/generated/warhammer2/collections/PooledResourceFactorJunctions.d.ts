@@ -9,8 +9,8 @@ export declare namespace PooledResourceFactorJunctions {
         readonly _factor: string;
         readonly uniqueId: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly resource: PooledResources.Entry | undefined;
-        readonly factor: PooledResourceFactors.Entry | undefined;
+        get resource(): PooledResources.Entry | undefined;
+        get factor(): PooledResourceFactors.Entry | undefined;
     }
 }
 export default PooledResourceFactorJunctions;

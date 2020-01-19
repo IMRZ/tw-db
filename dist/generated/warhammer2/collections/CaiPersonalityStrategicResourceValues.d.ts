@@ -12,8 +12,8 @@ export declare namespace CaiPersonalityStrategicResourceValues {
         readonly ownershipValue: number;
         readonly ownershipFalloff: number;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly strategicComponent: CaiPersonalityStrategicComponents.Entry | undefined;
-        readonly resource: Resources.Entry | undefined;
+        get strategicComponent(): CaiPersonalityStrategicComponents.Entry | undefined;
+        get resource(): Resources.Entry | undefined;
     }
 }
 export default CaiPersonalityStrategicResourceValues;

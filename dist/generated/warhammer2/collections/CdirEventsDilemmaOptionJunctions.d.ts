@@ -10,8 +10,8 @@ export declare namespace CdirEventsDilemmaOptionJunctions {
         readonly _optionKey: string;
         readonly value: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly dilemmaKey: Dilemmas.Entry | undefined;
-        readonly optionKey: CdirEventsOptions.Entry | undefined;
+        get dilemmaKey(): Dilemmas.Entry | undefined;
+        get optionKey(): CdirEventsOptions.Entry | undefined;
     }
 }
 export default CdirEventsDilemmaOptionJunctions;

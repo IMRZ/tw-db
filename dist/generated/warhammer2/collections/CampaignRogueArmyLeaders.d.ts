@@ -17,13 +17,13 @@ export declare namespace CampaignRogueArmyLeaders {
         readonly _artset: string;
         readonly canNaturallySpawn: boolean;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly faction: Factions.Entry | undefined;
-        readonly agentSubtype: AgentSubtypes.Entry | undefined;
-        readonly name: Names.Entry | undefined;
-        readonly surname: Names.Entry | undefined;
-        readonly clanName: Names.Entry | undefined;
-        readonly otherName: Names.Entry | undefined;
-        readonly artset: CampaignCharacterArtSets.Entry | undefined;
+        get faction(): Factions.Entry | undefined;
+        get agentSubtype(): AgentSubtypes.Entry | undefined;
+        get name(): Names.Entry | undefined;
+        get surname(): Names.Entry | undefined;
+        get clanName(): Names.Entry | undefined;
+        get otherName(): Names.Entry | undefined;
+        get artset(): CampaignCharacterArtSets.Entry | undefined;
     }
 }
 export default CampaignRogueArmyLeaders;

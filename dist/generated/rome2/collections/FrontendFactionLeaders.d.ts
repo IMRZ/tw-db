@@ -10,7 +10,7 @@ export declare namespace FrontendFactionLeaders {
         readonly yOffset: number;
         readonly _party: string;
         constructor(collectionCache: CollectionCache, values: any);
-        readonly party: PoliticalParties.Entry | undefined;
+        get party(): PoliticalParties.Entry | undefined;
     }
 }
 export default FrontendFactionLeaders;
