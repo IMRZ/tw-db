@@ -1,6 +1,6 @@
 import * as Rome2 from "./generated/rome2";
 import * as Warhammer2 from "./generated/warhammer2";
-import * as ThreeKingdoms from "./generated/warhammer2";
+import * as ThreeKingdoms from "./generated/threekingdoms";
 
 export function createInstanceRome2(pathToDbDir: string) {
   return new Rome2.Database(pathToDbDir);
