@@ -22,7 +22,7 @@
     "dotenv": "8.2.0",
     "fs-extra": "8.1.0",
     "jest": "24.9.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "rollup": "1.29.0",
     "rollup-plugin-typescript2": "0.25.3",
     "ts-jest": "24.3.0",
